@@ -1,6 +1,65 @@
+:root{
+  --black: #000000;
+
+
+
+  --main-bg: var(--black);
+}
+
+
+/* Styles All Pages app Page Retains */
+
+
+.Page-Container{
+
+  /* Ensure page height is 100% on all body sections */
+  min-height: 100vh;
+
+
+  text-align: center;
+
+
+
+  background-color: var(--main-bg);
+
+
+
+
+  /* Most Text on site will be white, unless specified */
+  color: white;
+
+
+
+
+
+
+}
+
+
+
+/* Page body styling,
+to ensure full coverage and style, cover the entire page. 
+
+*/
+body{
+  margin: 0;
+}
+
+
+
+
+
+/* ********************************************************************* */
+
+
 .App {
   text-align: center;
+
+
 }
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -14,8 +73,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
