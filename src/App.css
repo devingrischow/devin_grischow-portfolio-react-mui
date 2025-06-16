@@ -14,6 +14,7 @@
 
   /* Ensure page height is 100% on all body sections */
   min-height: 100vh;
+  width: 100%;
 
 
   text-align: center;
@@ -43,6 +44,7 @@ to ensure full coverage and style, cover the entire page.
 */
 body{
   margin: 0;
+  background: black !important;
 }
 
 
@@ -93,3 +95,10 @@ body{
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+/*** Components Styles ***/
