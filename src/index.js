@@ -4,6 +4,8 @@ import App from './App';
 
 //Top Takes Priority
 
+import './styles/cssReset.css'
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 
