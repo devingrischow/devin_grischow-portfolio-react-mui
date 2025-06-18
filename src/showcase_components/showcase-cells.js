@@ -12,7 +12,11 @@ import { ShowcaseContainer } from './showcase-container';
 
 
 
+
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+
 
 
 
@@ -30,6 +34,7 @@ import EasyEatsAndroidCodePreview from '../images/easyeats_previews/android-ee-c
 
 
 import EasyEatsiOSCodePreview from '../images/easyeats_previews/ios-code-preview_adjusted.png';
+import { ShowcaseObjects } from '../data/showcase-objects';
 
 
 
@@ -52,7 +57,7 @@ const EEPreviewImages = [
         img:EasyEatsiOSCodePreview,
         alt:"Small snippet of EasyEats Code, showing off the native ad card for the food carousel."
     },
-
+    
     {
         img: EasyEatsiOSPreview,
         alt: "Preview of EasyEats on IOS showing a club sandwich in the scrollable section."
@@ -68,14 +73,19 @@ const EEPreviewImages = [
 
 
 //EasyEats Special Cell
-export function EasyEatsShowCaseCell(){
+//Cell Data Values: 
+//Title,
+//Description,
+//Badges? - {BadgeTitle, badges:[ {badgename, color},... ]
+export function ShowCaseCell(showcaseObject){
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
-
-
+    
+    
     const horizontalMargin = '10vw'
-
-
-
+    const borderRadius = '2vw'
+    
+    
+    
     const ShowcaseTitle = styled('h1')(({ theme }) => ({
         marginTop:'2vmin',
         marginLeft:'3vw',
@@ -85,16 +95,34 @@ export function EasyEatsShowCaseCell(){
         wordBreak: 'break-word',
         
         zIndex:2,
-
-        fontSize: 'calc(10px + 2vmin)',
-    
-    
-    
-    
+        
+        fontSize: 'calc(10px + 4vmin)',
+        
+        
+        
+        
     }));
-
-
-
+    
+    
+    const ShowcaseDescription = styled('h2')(({ theme }) => ({
+        marginTop:'2vmin',
+        marginLeft:'4.3vw',
+        
+        textAlign:'start',
+        
+        wordBreak: 'break-word',
+        
+        zIndex:2,
+        
+        fontSize: 'calc(2px + 1.5vmin)',
+        
+        
+        
+        
+    }));
+    
+    
+    
     
     
     const ImageBackground = styled(ImageList)(({ theme }) => ({
@@ -128,14 +156,13 @@ export function EasyEatsShowCaseCell(){
         sx={{
             
             minHeight:'50vmin',
-
+            
             
             position:'relative',
             
             height:'max-content',
             
             
-            zIndex:1,
             
             marginRight:horizontalMargin,
             marginLeft:horizontalMargin,
@@ -143,12 +170,12 @@ export function EasyEatsShowCaseCell(){
             // minHeight:'50vmin',
             
             //Border Radius on BG Image list 
-
+            
             border: 2.5,
-
+            
             borderColor:PortfolioColors.SectionDivider,
-    
-            borderRadius:'2vw',
+            
+            borderRadius:borderRadius,
             
             
             
@@ -158,185 +185,156 @@ export function EasyEatsShowCaseCell(){
             
             
             overflow:'none',
+
+            //Margin spacing from bottom of last cell
+            marginBottom:'50px'
             
         }}
         >
         
         
+        
+        <ImageList
+        // variant="quilted"
+        cols={4}
+        
+        
+        
+        sx={ {
+            
+            zIndex:1,
 
-<ImageList
-// variant="quilted"
-cols={4}
+            
+            
+            
+            height:'100%',
+            
+            
+            
+            
+            // width:'auto',
+            
+            
+            overflow:'hidden',
+            
+            
+            
+            position:'absolute',
+            
+            borderRadius:borderRadius,
+            
+            
+            
+            
+            
+        } }
+        >
+        {EEPreviewImages.map( (imageItem) =>  (
+            <ImageListItem
+            sx={{
+                transform: 'rotate(20deg)',
+                scale:4,
+                
+            }}
+            >
+            <img 
+            src={`${imageItem.img}`}
+            alt={imageItem.alt} 
+            style={ {
+                // objectFit:'scale-down'
+                
+            } }
+            />
+            </ImageListItem>
+        ))
+        
+    }
+    
+    
+    </ImageList>
+    
+    
+    
+    <Box 
+    sx={ {
+
+        width:'100%',
+        height:'100%',
+    
+        //Box Level above the images, so the gradient appears 
+        //over the images and makes the text more readable.
+        zIndex:2,
+
+        position:'absolute',
 
 
+        
+        background:'linear-gradient(162deg,rgba(219, 60, 27, 1) 10%, rgba(87, 199, 133, 0) 100%)',
 
-sx={ {
+        //Border Radius Applied to the Box
+        borderRadius:borderRadius,
 
-
-    
-    
-    height:'100%',
-
-
-
-    
-    // width:'auto',
-    
-   
-    overflow:'hidden',
-    
-    
-    
-    position:'absolute',
-
-    borderRadius:'2vw',
-    
-    
-    
-    
-    
-} }
->
-{EEPreviewImages.map( (imageItem) =>  (
-    <ImageListItem
-    sx={{
-        transform: 'rotate(20deg)',
-        scale:2,
-
-    }}
-    >
-    <img 
-    src={`${imageItem.img}`}
-    alt={imageItem.alt} 
-    style={ {
-        // objectFit:'scale-down'
         
     } }
-    />
-    </ImageListItem>
-))
-
-}
-
-
-</ImageList>
-
-
-
+    >
         
+    </Box>
+
+    
+    
+    
+    <Stack
+    useFlexGap
+    
+    sx={{
+        minHeight:'max-content',
+        alignContent:'end'
         
-        
-        <Stack
-        sx={{
-            minHeight:'max-content',
-            
-        }}
-        >
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-        
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        
-
-
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-        
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        <ShowcaseTitle>
-            EasyEats: Eating Made Easy
-        </ShowcaseTitle>
-
-        
-        
-        
-        </Stack>
-        
-        
-        </Box>
-        
-        
-        
-    )
+    }}
+    >
+    
+   
+    
+    <ShowcaseTitle>
+        {showcaseObject.showcaseTitle}
+    </ShowcaseTitle>
+    
+    <ShowcaseDescription>
+        {showcaseObject.showcaseDescription}
+    </ShowcaseDescription>
+    
+    
+    { 
+        //Call for badge showcase. 
+        //If badges are present then the cell handles and presents them from here.
+    }
+    
+    
+    
+    
+    </Stack>
+    
+    
+    </Box>
+    
+    
+    
+)
 }
 
 
 
+function ShowcaseBadges(badgesTitle, badgeObjects){
+
+    //First, return and do nothing if both: 
+    //A. title is not empty/null
+    //B. badge objects is not empty or null 
+
+    if(badgesTitle === null || badgesTitle.isEmpty() || badgeObjects === null ){
+       return 
+    }
+
+}
 
 
 
@@ -418,41 +416,41 @@ sx={ {
 
 
 
-        <Stack
-            direction="row"
-            sx={ {
-                position:'absolute',
-                minHeight:'50vmin',
-
-            } }
-        >
-        {
-            //Use a Stack of Images and resize them to fit 
-            
-            EEPreviewImages.map( (imageItem) =>  (
-
-                <img src={`${imageItem.img}`} alt={imageItem.alt}
-
-                style={ {
-                    objectFit:'cover',
-                    minHeight:'inherit'
-                } }
-                
-                />
-
-                // <ImageListItem
-                // sx={{
-
-                // }}
-                // >
-                // <img 
-                // src={`${imageItem.img}`}
-                // alt={imageItem.alt} 
-                // />
-                // </ImageListItem>
-            )
-        )
-            
-        }
+<Stack
+direction="row"
+sx={ {
+    position:'absolute',
+    minHeight:'50vmin',
+    
+} }
+>
+{
+    //Use a Stack of Images and resize them to fit 
+    
+    EEPreviewImages.map( (imageItem) =>  (
         
-        </Stack>
+        <img src={`${imageItem.img}`} alt={imageItem.alt}
+        
+        style={ {
+            objectFit:'cover',
+            minHeight:'inherit'
+        } }
+        
+        />
+        
+        // <ImageListItem
+        // sx={{
+        
+        // }}
+        // >
+        // <img 
+        // src={`${imageItem.img}`}
+        // alt={imageItem.alt} 
+        // />
+        // </ImageListItem>
+    )
+)
+
+}
+
+</Stack>

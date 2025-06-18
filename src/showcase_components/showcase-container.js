@@ -8,16 +8,26 @@ import { styled } from '@mui/material/styles';
 import { PortfolioColors } from '../ui/colors';
 
 
-
+import { ShowcaseObjects } from '../data/showcase-objects';
 
 
 //Import cells for showcase 
-import { EasyEatsShowCaseCell } from './showcase-cells'
+import { ShowCaseCell } from './showcase-cells'
 
 
 
 
 export function ShowcaseContainer(){
+
+
+    //Map through the objects of the showcase section, 
+    //THEN call the cells onto the screen 
+    const showCaseItems = ShowcaseObjects.map( showcaseObj => 
+
+        ShowCaseCell(showcaseObj)
+
+    );
+
 
     //Have the showcase header be STICKY and stay at the top while scrolling through 
     return (
@@ -28,12 +38,12 @@ export function ShowcaseContainer(){
             } }
         >
             
-                {ShowCaseHeader()}
+                { ShowCaseHeader() }
 
 
                 {
-                    //First Item, EasyEats 
-                    EasyEatsShowCaseCell()
+                    // EasyEats 
+                    showCaseItems
                 }
 
             
