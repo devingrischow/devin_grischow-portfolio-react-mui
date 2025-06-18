@@ -17,6 +17,9 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
   
   //Each Cell NEEDS line at the bottom 
   return (<Stack
+
+    key={`${workTitleText}-${employerName}-${workTime}-${workType}`}
+
     spacing={2}
     sx={ { 
 

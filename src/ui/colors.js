@@ -9,7 +9,18 @@ export const PortfolioColors = {
 
 
 
-    InfoDivider:'#5E5E5E'
+    InfoDivider:'#5E5E5E',
+
+
+
+
+
+    //EasyEats Badge Colors:
+    CloudBackendColor:'#08C1F9',
+    AdminPanelColor:'#EF1515',
+    AgileWorkFlowTrelloColor:'#380CFF',
+    CustomVideoEditorColor:'#2FA759'
+
 
     
 

@@ -18,8 +18,32 @@ export const ShowcaseObjects = [
             badges:[
                 {
                     badgeTitle:"Cloud backend",
-                    badgeColor:PortfolioColors.SectionDivider
-                }
+                    badgeColor:PortfolioColors.CloudBackendColor
+                },
+
+                {
+                    badgeTitle:"Admin Panel",
+                    badgeColor:PortfolioColors.AdminPanelColor
+                },
+
+
+                {
+                    badgeTitle:"Agile Workflow with Trello",
+                    badgeColor:PortfolioColors.AgileWorkFlowTrelloColor
+                },
+
+                {
+                    badgeTitle:"Custom Automated Video Editor for file size reduction",
+                    badgeColor:PortfolioColors.CustomVideoEditorColor
+                },
+
+                
+
+
+
+
+
+
             ]
 
         }
@@ -35,18 +59,10 @@ export const ShowcaseObjects = [
         
         
 
-        badgeShowcase: {
-            badgesTitle: "EasyEats Development used:",
-
-            badges:[
-                {
-                    badgeTitle:"Cloud backend",
-                    badgeColor:PortfolioColors.SectionDivider
-                }
-            ]
-
-        }
+        
     },
 
+
+    
 
 ]
