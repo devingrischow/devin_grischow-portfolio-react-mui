@@ -1,4 +1,6 @@
-import PortfolioPicture from './images/Portfolio Photo.png'
+import PortfolioPicture from './images/Portfolio Photo.png';
+
+
 import './App.css';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -17,9 +19,11 @@ import { PortfolioColors } from './ui/colors'
 
 
 //Data Imports for elements 
-import { workExperience } from './data/work-experience';
-import { ContactInfo } from './data/contact-info'
+import { ContactInfo } from './data/contact-info';
 
+import { WorkExperienceColumn } from './work_experience_components/work-experience-column';
+
+import { ShowcaseContainer } from './showcase_components/showcase-container';
 
 //Custom Components styled from other components, for easy use declaration 
 //From MUI
@@ -110,10 +114,61 @@ function App() {
    
 
 
-    <p>Body Section</p>
 
-    
+    { ShowcaseContainer() }
 
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+     <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+     <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+     <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+     <br />
+
+    <br />
+
+    <br />
+
+    <br />
 
     
     </div>
@@ -295,7 +350,10 @@ function VerticalContactsContainer(){
     
 
 
-    fontSize:'1.4rem'
+    fontSize:'1.4rem',
+
+    wordBreak: 'break-word',
+
     
     
     
@@ -313,7 +371,9 @@ function VerticalContactsContainer(){
       position:'sticky',
       top:'50px',
 
-      width:width,
+      width:'40%',
+
+      // width:width,
       //Border Between this cell and the next info cells 
       borderBottom:1,
       borderTop: 1,
@@ -359,135 +419,23 @@ function VerticalContactsContainer(){
 
 
 
-//Work Experience Container 
-//wExperience Will Only ever be a Column, 
-//Position may change, but colum stack layout will not.
-function WorkExperienceColumn(){
-  
-  //Rather than built buy hand, iterated over using for loops.
-  //More Modular + Faster
-  const workExperiences = workExperience.map( wE =>
-    WorkExperienceCell(
-      wE.workTitleText,
-      
-      wE.employerName,
-      wE.workTime,
-      wE.workType
-    )
-  );
-  
-  
-  //Work Experience Colum Gets Topped with a Dividing Bar 
-  //This is mirrored on Contacts Info for another divder/seperator
-  const WorkExperienceHeaderLabel = styled('h2')(({ theme }) => ({
-  }));
-  
-  
-  return (
-    <Stack
-    //started with 6
-    spacing={12}
-    
-    //Border 
-    sx={ {
-
-      
-
-      width:'80vw',
-
-      marginRight:'3vw',
-
-      
-
-      borderTop: 1,
-      borderColor:PortfolioColors.SectionDivider,
-      
-      
-      
-      
-      
-    } }
-    
-    >
-    
-    
-    
-    <WorkExperienceHeaderLabel>
-    Work Experience
-    </WorkExperienceHeaderLabel>
-    
-    
-    
-    
-    
-    
-    
-    {workExperiences}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </Stack>
-  )
-  
-}
 
 
-function WorkExperienceCell(workTitleText, employerName ,workTime, workType) {
-  
-  const PositionNameText = styled('h3')(({ theme }) => ({
-       textAlign:'start'
-  }));
-  
-  //Txt for Place, Date, and work type (contact/remote/full/part)
-  const SubInfoHeader = styled('h4')(({ theme }) => ({
-    textAlign:'start'
-  }));
-  
-  //Each Cell NEEDS line at the bottom 
-  return (<Stack
-    spacing={2}
-    sx={ { 
-
-      width: 'max-content',
 
 
-      borderBottom: 1, 
-      
-      borderColor: PortfolioColors.InfoDivider,
 
 
-    } }
-    
-    >
-    
-    
-    
-    <PositionNameText>
-    { workTitleText}
-    </PositionNameText>
-    
-    <SubInfoHeader>
-    {employerName}
-    </SubInfoHeader>
-    <SubInfoHeader>
-    {workTime}
-    </SubInfoHeader>
-    <SubInfoHeader>
-    {workType}
-    </SubInfoHeader>
-    
-    
-    
-    </Stack>)
-    
-  }
-  
+
+
+//ShowCase Components
+
+
+
+
+
+
+
+
   
   
   
