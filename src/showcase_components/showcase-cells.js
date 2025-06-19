@@ -28,45 +28,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
-import EasyEatsiOSPreview from '../images/easyeats_previews/ios_ee_preview_adjusted.png';
-import EasyEatsAndroidPreview from '../images/easyeats_previews/android-ee-preview_adjusted.png';
 
-
-import EasyEatsAndroidCodePreview from '../images/easyeats_previews/android-ee-code_adjusted.png';
-
-
-import EasyEatsiOSCodePreview from '../images/easyeats_previews/ios-code-preview_adjusted.png';
-import { ShowcaseObjects } from '../data/showcase-objects';
-
-
-
-
-//Array of EasyEats Images 
-const EEPreviewImages = [
-    
-    
-    {
-        img:EasyEatsAndroidCodePreview,
-        alt:"Some code for EasyEats on Android, showing off the kotlin code for the food carousel curation."
-    },
-    
-    {
-        img:EasyEatsAndroidPreview,
-        alt:"Preview of EasyEats on Android showing the grocery screen."
-    },
-    
-    {
-        img:EasyEatsiOSCodePreview,
-        alt:"Small snippet of EasyEats Code, showing off the native ad card for the food carousel."
-    },
-    
-    {
-        img: EasyEatsiOSPreview,
-        alt: "Preview of EasyEats on IOS showing a club sandwich in the scrollable section."
-    },
-    
-    
-];
 
 
 
@@ -222,7 +184,7 @@ export function ShowCaseCell(showcaseObject){
             
         } }
         >
-        {EEPreviewImages.map( (imageItem) =>  (
+        {showcaseObject.backgroundInfo.backgroundImages.map( (imageItem) =>  (
             <ImageListItem
             key={imageItem}
             sx={{
@@ -262,7 +224,7 @@ export function ShowCaseCell(showcaseObject){
 
 
         
-        background:'linear-gradient(162deg,rgba(219, 60, 27, 1) 10%, rgba(87, 199, 133, 0) 100%)',
+        background:showcaseObject.backgroundInfo.backgroundColorInfo,
 
         //Border Radius Applied to the Box
         borderRadius:borderRadius,
