@@ -25,6 +25,7 @@ import { WorkExperienceColumn } from './work_experience_components/work-experien
 
 import { ShowcaseContainer } from './showcase_components/showcase-container';
 import { SkillsContainer } from './skills_components/skills-container';
+import { MoreOnGithubContainer } from './github-pages-links/more-on-github-container';
 
 //Custom Components styled from other components, for easy use declaration 
 //From MUI
@@ -120,8 +121,10 @@ function App() {
 
 
 
-      { SkillsContainer() }
+    { SkillsContainer() }
 
+
+    { MoreOnGithubContainer() }
 
 
     <br />
@@ -418,7 +421,7 @@ function VerticalContactsContainer(){
 
 
 
-
+//Contact +  About, Education & more buttons
 
 
 

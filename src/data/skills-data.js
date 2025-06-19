@@ -61,7 +61,11 @@ export const SkillsData = [
 
         ],
 
-        skills:[]
+        skills:[
+            'Agile Workflow',
+            'Sprints',
+            'Competently handle adaptations to project and project parameters '
+        ]
     },
 
     {
@@ -76,6 +80,20 @@ export const SkillsData = [
             'Repository Collaboration', 
             'Git',
             'Pull Requests & Merging'
+        ]
+    },
+
+
+    {
+        skillset:'Development Skills',
+
+        notableSkills:[
+
+        ],
+
+
+        skills:[
+            'Microsoft & Google Office Products'
         ]
     },
 
