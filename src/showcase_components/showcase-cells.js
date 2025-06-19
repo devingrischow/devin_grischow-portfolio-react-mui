@@ -339,10 +339,15 @@ function ShowcaseBadges(showcaseObject){
 
                 //Both the title & Badges start from the start of it 
                 marginLeft:'4.3vw',
+                marginRight:'5vw',
+
+                
 
 
                 //Small amount of margin spacing 
-                marginTop:'6vmin'
+                marginTop:'6vmin',
+
+                marginBottom:'8vmin'
 
 
             } }
@@ -392,7 +397,7 @@ function ShowcaseBadges(showcaseObject){
 
 function ShowcaseBadge(text, color){
 
-    const matchesSmallScreenQuery = useMediaQuery('(min-width:700px)');
+    const matchesSmallScreenQuery = useMediaQuery('(min-width:=800px)');
 
 
     console.log('Badge Color: ')
@@ -434,7 +439,7 @@ function ShowcaseBadge(text, color){
             width:'20%',
 
 
-            height:'15vmin',
+            height:'10vmin',
 
 
             zIndex:4,

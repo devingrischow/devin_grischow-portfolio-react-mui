@@ -24,6 +24,7 @@ import { ContactInfo } from './data/contact-info';
 import { WorkExperienceColumn } from './work_experience_components/work-experience-column';
 
 import { ShowcaseContainer } from './showcase_components/showcase-container';
+import { SkillsContainer } from './skills_components/skills-container';
 
 //Custom Components styled from other components, for easy use declaration 
 //From MUI
@@ -116,6 +117,11 @@ function App() {
 
 
     { ShowcaseContainer() }
+
+
+
+      { SkillsContainer() }
+
 
 
     <br />
@@ -319,6 +325,7 @@ function ContactsAndWorkExperienceStackVertical(){
     
     
     { WorkExperienceColumn() }
+
 
 
 

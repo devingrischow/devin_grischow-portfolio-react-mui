@@ -12,7 +12,9 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
   
   //Txt for Place, Date, and work type (contact/remote/full/part)
   const SubInfoHeader = styled('h4')(({ theme }) => ({
-    textAlign:'start'
+    textAlign:'start',
+
+    color:PortfolioColors.SubInfoColor
   }));
   
   //Each Cell NEEDS line at the bottom 

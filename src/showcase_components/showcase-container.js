@@ -34,7 +34,7 @@ export function ShowcaseContainer(){
         <Stack
             //Ensure Stacked Centered
             sx={ {
-                
+                marginTop:'15vmin'
             } }
         >
             
@@ -89,7 +89,7 @@ function ShowCaseHeader(){
 
 
             //Margin Spacing on the bottom 
-            marginBottom:'2vmin'
+            marginBottom:'7vmin'
 
 
             

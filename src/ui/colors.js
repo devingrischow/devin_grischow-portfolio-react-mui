@@ -12,6 +12,9 @@ export const PortfolioColors = {
     InfoDivider:'#5E5E5E',
 
 
+    SubInfoColor:'#919191',
+
+
 
 
 
