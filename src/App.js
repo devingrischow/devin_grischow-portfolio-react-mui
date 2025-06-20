@@ -1,5 +1,8 @@
 import PortfolioPicture from './images/Portfolio Photo.png';
 
+import React, { useState } from 'react';
+
+
 
 import './App.css';
 
@@ -8,8 +11,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+
 
 import { styled } from '@mui/material/styles';
 
@@ -103,6 +110,15 @@ const TitleText = styled('h3')(({ theme }) => ({
 
 
 
+
+
+
+
+//Manage and enable turning on and off about me modes of the main screen 
+//(only main screen changes layout like this, details screens will use navigation.)
+
+
+
 function App() {
   return (
     <div className="Page-Container">
@@ -125,6 +141,11 @@ function App() {
 
 
     { MoreOnGithubContainer() }
+
+
+
+
+    { ContactAndAboutFooter() }
 
 
     <br />
@@ -422,6 +443,230 @@ function VerticalContactsContainer(){
 
 
 //Contact +  About, Education & more buttons
+
+
+function ContactAndAboutFooter(){
+
+  //Use multiple on hover trackers to track each hovered over item, 
+  //when Hovered over, Bolden 
+  const [isOverContactMe, setIsOverContactMe] = useState(false);
+  const [isOverTopJump, setIsOverTopJump] = useState(false);
+  const [isOverAbout, setIsOverAbout] = useState(false);
+
+
+  
+
+  const optionsFontSize = '5vmin';
+
+
+  //Used for all instances of hovering
+  const hoveredOverFontSize = '5.5vmin'
+
+
+
+
+  const horzMargin = '5px';
+
+  const normalFontWeight = '500'
+  const heightLightedWeight = '800'
+
+
+
+
+
+
+
+
+
+
+  const FooterLabel = styled('h3')(({ theme }) => ({
+    // wordBreak: 'break-word',
+
+
+    width:'25%',
+
+    color:"inherit",
+
+
+    cursor: 'pointer'
+  
+  }));
+
+
+  const JumpToToText = styled(Button)(({ theme }) => ({
+          
+  
+    textTransform:'none',
+  
+    color:PortfolioColors.SubInfoColor,
+  
+  
+  
+    width:'5%',
+    minWidth:'fit-content',
+
+
+    
+    fontSize: isOverTopJump ? hoveredOverFontSize : '4vmin',
+
+    fontWeight: isOverTopJump ? heightLightedWeight : normalFontWeight,
+  
+  
+          
+  
+         
+  
+  }));
+
+
+
+  const jumpToTopAction = () => {
+
+    window.scrollTo({
+      top: 0,
+
+      behavior:'smooth'
+
+    })
+
+  }
+
+
+
+
+  const contactLink = `mailto:${ContactInfo.email}?subject=Hello!`
+
+
+ 
+
+  return(
+    <Stack
+      direction={'row'}
+
+      sx={{
+
+        marginRight:horzMargin,
+        marginLeft:horzMargin,
+
+
+        // width:'100%',
+
+        height:'20vmin',
+
+        justifyContent:'space-around',
+        alignItems:'center'
+      }}
+    >
+
+      <FooterLabel
+      
+        href={contactLink}
+        underline="none"
+
+
+        onMouseEnter={() => setIsOverContactMe(true)}
+        onMouseLeave={() => setIsOverContactMe(false)}
+      >
+
+        <Typography 
+          variant="h2" 
+          sx={{
+            fontWeight: isOverContactMe ? heightLightedWeight : normalFontWeight,
+
+
+            fontSize:isOverContactMe ? hoveredOverFontSize : optionsFontSize,
+            
+
+          }} 
+        >
+          Contact
+        </Typography>
+        <Typography 
+          variant="h2" 
+          sx={{
+            fontWeight: isOverContactMe ? heightLightedWeight : normalFontWeight,
+
+
+            fontSize:isOverContactMe ? hoveredOverFontSize : optionsFontSize,
+
+          }} 
+        >
+          Me
+        </Typography>
+
+      </FooterLabel>
+
+
+
+
+
+
+      <JumpToToText
+
+        onClick={jumpToTopAction}
+
+        onMouseEnter={() => setIsOverTopJump(true)}
+        onMouseLeave={() => setIsOverTopJump(false)}
+
+
+
+      >
+        Top
+      </JumpToToText>
+
+
+
+
+
+
+
+      <FooterLabel
+
+        underline="none"
+
+
+        onMouseEnter={() => setIsOverAbout(true)}
+        onMouseLeave={() => setIsOverAbout(false)}
+      >
+        
+        <Typography
+          sx={{
+
+            fontWeight: isOverAbout ? heightLightedWeight : normalFontWeight,
+
+            fontSize: isOverAbout ? hoveredOverFontSize : optionsFontSize,
+
+          }}
+        >
+          About,
+        </Typography>
+
+        <Typography
+          sx={{
+              fontWeight: isOverAbout ? heightLightedWeight : normalFontWeight,
+
+              fontSize: isOverAbout ? hoveredOverFontSize : optionsFontSize,
+          }}
+        >
+          Education
+        </Typography>
+
+        <Typography
+          sx={{
+            fontWeight: isOverAbout ? heightLightedWeight : normalFontWeight,
+
+            fontSize: isOverAbout ? hoveredOverFontSize : optionsFontSize,
+          }}
+        >
+          & More
+        </Typography>
+
+      
+      </FooterLabel>
+
+    </Stack>
+  );
+}
 
 
 

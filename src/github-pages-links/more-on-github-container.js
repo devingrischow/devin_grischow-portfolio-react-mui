@@ -2,9 +2,14 @@ import Stack from '@mui/material/Stack';
 import { Box } from '@mui/system';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import React, { useState } from 'react';
+
 
 
 import { PortfolioColors } from '../ui/colors';
+
+import { GithubLinks } from './github-link-badges';
+
 
 
 
@@ -16,7 +21,6 @@ function MoreOnHeader() {
         wordBreak: 'break-word',
 
 
-        width:'100%'
 
     }));
 
@@ -28,12 +32,18 @@ function MoreOnHeader() {
     return (
         <Box
             sx={{
+                width:'100%',
+
+
                 borderBottom:1,
 
                 borderColor:PortfolioColors.SectionDivider,
+
+
+                marginBottom:'5vmin'
                 
-                marginRight:horizontalMargin,
-                marginLeft:horizontalMargin,
+                // marginRight:horizontalMargin,
+                // marginLeft:horizontalMargin,
 
             }}
         >
@@ -48,11 +58,18 @@ function MoreOnHeader() {
 
 
 export function MoreOnGithubContainer(){
+    const horizontalMargin = '10vw'
 
     return (
         <Stack
             sx={{
-                marginTop:'35vmin'
+                alignItems:'center',
+
+                marginTop:'35vmin',
+
+                //margin right and left instead of margin of header, should take care of links margins
+                marginRight:horizontalMargin,
+                marginLeft:horizontalMargin,
             }}
         >
         
@@ -63,13 +80,21 @@ export function MoreOnGithubContainer(){
 
 
             {
-
+                GithubLinks(
+                    "https://github.com/devingrischow",
+                    "My GitHub", 'white', 'black')
             }
 
 
 
             {
-                
+                GithubLinks(
+                    "https://github.com/Dgriscow",
+                    "College Github",
+                    'yellow', 
+                    'coral' 
+                    
+                    ,'25vmin', '24vw')
             }
 
 

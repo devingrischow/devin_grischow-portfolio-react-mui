@@ -22,8 +22,14 @@ export const PortfolioColors = {
     CloudBackendColor:'#08C1F9',
     AdminPanelColor:'#EF1515',
     AgileWorkFlowTrelloColor:'#380CFF',
-    CustomVideoEditorColor:'#2FA759'
+    CustomVideoEditorColor:'#2FA759',
 
+
+
+
+
+    CollegeGitColor:'##FFFF00',
+    CollegeGitHoverOverColor:'##FFFF00',
 
     
 
