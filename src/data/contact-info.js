@@ -4,4 +4,4 @@ export const ContactInfo = {
     email:"devingrischow@outlook.com",
     phoneNum:"(708)-227-4381",
     linkedIn_link:"https://www.linkedin.com/in/devin-grischow-11b281258/"
-}
+};
