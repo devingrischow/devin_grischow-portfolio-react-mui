@@ -6,6 +6,8 @@ import Paper from '@mui/material/Paper';
 
 import React, { useState } from 'react';
 
+import { useNavigate } from "react-router";
+
 
 
 import { PortfolioColors } from '../ui/colors';
@@ -188,16 +190,63 @@ function NotableSkillCell(notableSkills, index){
 
 
 
+    let notableSkill = notableSkills[index]
+
+    let navigate = useNavigate();
+
+
+
+    const handleClickSkillEvent = () => {
+
+        //Check the route type to use, and handle it 
+        
+        if ('pageLink' in notableSkill ){
+
+            const linkToVisit = notableSkill.pageLink
+
+            //open new page 
+            console.log("Opening New Page: ", linkToVisit)
+
+
+            window.open(linkToVisit)
+
+        }
+
+
+        if('route' in notableSkill) {
+            console.log("Routing to page: ", notableSkill.route)
+
+
+            navigate(notableSkills[index].route)
+
+
+        }
+
+
+
+
+        
+    }
+
+
+
+  
+
+
     return (
-        <Item
+        <Item key={notableSkill}
             variant="outlined"
 
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
 
 
+            onClick={handleClickSkillEvent}
+
+
             sx={{
                 
+                cursor: 'pointer',
 
                 // marginRight:'35px',
                 // marginLeft:'35px',

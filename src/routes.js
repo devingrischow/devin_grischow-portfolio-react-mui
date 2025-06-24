@@ -1,5 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+
+
+
 import { LandingPage } from "./landing_page/landing-page";
+
+
+import { DetailsPageHolder } from './details_pages/details-page-holder';
+
+
+import { PageNotFoundPage } from "./PageNotFound";
 
 
 
@@ -7,12 +16,17 @@ import { LandingPage } from "./landing_page/landing-page";
 export const PorfolioRoutes = createBrowserRouter([
     {
         path:'/',
-        Component:LandingPage
+        element:<LandingPage />,
     },
     
     {
         path:"/details/:detailType",
-        Component:LandingPage
+        Component:DetailsPageHolder
+    }, 
+
+    {
+        path:'*',
+        Component:PageNotFoundPage
     }
 
 ]);

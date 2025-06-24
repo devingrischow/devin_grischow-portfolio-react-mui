@@ -16,17 +16,14 @@ export const SkillsData = [
 
             {
                 nSkillTitle:'Cloud Databases',
-                pageLink:''
-            },
-            {
-                nSkillTitle:'Json',
-                pageLink:''
+                route:'/details/CloudDatabases'
             },
 
             {
-                nSkillTitle:'Adobe',
-                pageLink:''
+                nSkillTitle:'Php',
+                pageLink:`https://github.com/devingrischow/AirSearch`
             },
+            
             
         ],
 

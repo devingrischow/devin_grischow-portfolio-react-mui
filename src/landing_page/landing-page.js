@@ -57,6 +57,10 @@ import React, { useState } from 'react';
 
 
 
+
+
+
+
 export const LandingPage = () => {
     //Declared Function to change the page state
     const [isLandingPageAbout, setLandingPageAbout] = useState(false);
@@ -79,6 +83,10 @@ export const LandingPage = () => {
     return (
 
         <div>
+            <LandingPortfolioNavigationNavBar />
+
+
+
             <NameAndImageHeader />
 
 
@@ -88,7 +96,7 @@ export const LandingPage = () => {
                 handledClickEvent={handleChangePageToAboutMe}
             />
 
-            
+
         </div>
         
 
@@ -98,6 +106,53 @@ export const LandingPage = () => {
 }
 
 
+
+
+const  LandingPortfolioNavigationNavBar = () => {
+  return (
+
+    <AppBar position="static"
+      sx={{
+        bgcolor:'black',
+
+        borderBottom:1,
+
+        position:'sticky',
+        top:0,
+
+        zIndex:10
+        
+      }}
+    >
+      <Toolbar
+        sx={{
+          justifyContent:'space-between'
+        }}
+      >
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+            
+
+
+
+
+
+        <Button color="inherit">Back</Button>
+
+
+      </Toolbar>
+    </AppBar>
+
+  );
+}
 
 
 
@@ -266,13 +321,17 @@ function ContactAndAboutFooter({handleClickEvent}){
         marginRight:horzMargin,
         marginLeft:horzMargin,
 
+        marginBottom:'5vmin',
+
 
         // width:'100%',
 
         height:'20vmin',
 
         justifyContent:'space-around',
-        alignItems:'center'
+        alignItems:'center',
+
+
       }}
     >
 

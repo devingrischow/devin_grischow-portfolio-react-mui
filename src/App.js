@@ -16,10 +16,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
 
 
@@ -105,7 +101,6 @@ function App() {
 
 
 
-
       {/* {
         //Header Over Everything, which never changes. (details page )
         //Details Page use similar nav bars, but landing page has section press back button
@@ -154,58 +149,6 @@ function App() {
     { ContactAndAboutFooter(setIsOverContactMe) } */}
 
 
-    <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-
-     <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-
-     <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-
-     <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
-
-     <br />
-
-    <br />
-
-    <br />
-
-    <br />
-
     
     </div>
   );
@@ -213,51 +156,6 @@ function App() {
 
 
 
-function LandingPortfolioNavigationNavBar(){
-  return (
-
-    <AppBar position="static"
-      sx={{
-        bgcolor:'black',
-
-        borderBottom:1,
-
-        position:'sticky',
-        top:0,
-
-        zIndex:10
-        
-      }}
-    >
-      <Toolbar
-        sx={{
-          justifyContent:'space-between'
-        }}
-      >
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
-
-            
-
-
-
-
-
-        <Button color="inherit">Back</Button>
-
-
-      </Toolbar>
-    </AppBar>
-
-  );
-}
 
 
 
