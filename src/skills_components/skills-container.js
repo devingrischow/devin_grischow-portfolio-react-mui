@@ -24,7 +24,7 @@ import { SkillsData } from '../data/skills-data';
 
 
 
-export function SkillsContainer() {
+export function SkillsContainer({skillsRef}) {
     const horizontalMargin = '20vw'
 
 
@@ -36,6 +36,9 @@ export function SkillsContainer() {
 
     return (
         <Stack
+
+            ref={skillsRef}
+
             sx={{
                 marginTop:'40vmin',
                 

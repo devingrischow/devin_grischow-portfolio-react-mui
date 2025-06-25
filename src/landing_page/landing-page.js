@@ -23,13 +23,12 @@ import { PortfolioColors } from '../ui/colors'
 //Data Imports for elements 
 import { ContactInfo } from '../data/contact-info';
 
-import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
 import { ShowcaseContainer } from '../showcase_components/showcase-container';
 import { SkillsContainer } from '../skills_components/skills-container';
 import { MoreOnGithubContainer } from '../github-pages-links/more-on-github-container';
 
-
+import { PortfolioDrawer } from '../ui/portfolio-drawer'
 
 
 import PortfolioPicture from '../images/Portfolio Photo.png';
@@ -52,7 +51,8 @@ import { NameAndImageHeader, ContactsAndWorkExperienceStackVertical } from './la
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { workExperience } from '../data/work-experience-objects';
 
 
 
@@ -65,6 +65,19 @@ export const LandingPage = () => {
     //Declared Function to change the page state
     const [isLandingPageAbout, setLandingPageAbout] = useState(false);
 
+    //State controll for drawer open (on landing page)
+
+    const [isLandingDrawerOpen, setLandingDrawer] = useState(false);
+
+  
+
+    const openLandingDrawer = () => {
+        setLandingDrawer(true);
+    };
+
+    const closeLandingDrawer = () => {
+        setLandingDrawer(false);
+    };
 
 
     const handleChangePageToAboutMe = () => {
@@ -72,28 +85,53 @@ export const LandingPage = () => {
 
         setLandingPageAbout(true);
 
-    }
+    };
 
     const handleChangePageToLanding = () => {
         setLandingPageAbout(false);
-    }
+    };
 
+
+    //Location Refs to use for navigation points
+    const workExperienceRef = useRef(null);
+    const showcaseRef = useRef(null);
+    const skillsRef = useRef(null);
+    const gitHubRef = useRef(null);
 
     //Landing Page from box
     return (
 
         <div>
-            <LandingPortfolioNavigationNavBar />
+            <LandingPortfolioNavigationNavBar openDrawerToggle={openLandingDrawer} />
+            <PortfolioDrawer 
+              isDrawerOpen={isLandingDrawerOpen} 
+              closeLandingDrawer={closeLandingDrawer} 
 
+              workExperienceRef={workExperienceRef}
+              showcaseRef={showcaseRef} 
+              skillsRef={skillsRef}
+              gitHubRef={gitHubRef}
+            />
 
 
             <NameAndImageHeader />
+
+
+
 
 
             <LandingPageAboutMeHandler
                 isLandingPageAbout={isLandingPageAbout}
 
                 handledClickEvent={handleChangePageToAboutMe}
+
+                workExperienceRef={workExperienceRef}
+
+                showcaseRef={showcaseRef}
+
+                skillsRef={skillsRef}
+
+                gitHubRef={gitHubRef}
             />
 
 
@@ -108,7 +146,7 @@ export const LandingPage = () => {
 
 
 
-const  LandingPortfolioNavigationNavBar = () => {
+function LandingPortfolioNavigationNavBar({openDrawerToggle}) {
   return (
 
     <AppBar position="static"
@@ -135,8 +173,10 @@ const  LandingPortfolioNavigationNavBar = () => {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
+          onClick={openDrawerToggle}
         >
           <MenuIcon />
+          
         </IconButton>
 
             
@@ -158,7 +198,15 @@ const  LandingPortfolioNavigationNavBar = () => {
 
 
 
-function LandingPageAboutMeHandler({isLandingPageAbout, handledClickEvent}){
+function LandingPageAboutMeHandler({
+  isLandingPageAbout, 
+  handledClickEvent,
+
+  workExperienceRef,
+  showcaseRef,
+  skillsRef,
+  gitHubRef
+}){
 
   if(isLandingPageAbout){
     //Handle About me & Education Landing Page 
@@ -175,18 +223,18 @@ function LandingPageAboutMeHandler({isLandingPageAbout, handledClickEvent}){
 
 
 
-        <ContactsAndWorkExperienceStackVertical />
+        <ContactsAndWorkExperienceStackVertical workExperienceRef={workExperienceRef} />
 
 
 
-        { ShowcaseContainer() }
+        <ShowcaseContainer showcaseRef={showcaseRef} />
 
 
 
-        { SkillsContainer() }
+        < SkillsContainer skillsRef={skillsRef} />
 
 
-        { MoreOnGithubContainer() }
+        < MoreOnGithubContainer gitHubRef={gitHubRef} />
 
 
 

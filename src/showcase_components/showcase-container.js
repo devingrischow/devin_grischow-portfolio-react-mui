@@ -17,7 +17,7 @@ import { ShowCaseCell } from './showcase-cells'
 
 
 
-export function ShowcaseContainer(){
+export function ShowcaseContainer({showcaseRef}){
 
 
     //Map through the objects of the showcase section, 
@@ -32,6 +32,9 @@ export function ShowcaseContainer(){
     //Have the showcase header be STICKY and stay at the top while scrolling through 
     return (
         <Stack
+
+            ref={showcaseRef}
+
             //Ensure Stacked Centered
             sx={ {
                 marginTop:'15vmin'

@@ -13,7 +13,7 @@ import { WorkExperienceCell } from '../work_experience_components/work-experienc
 //Work Experience Container 
 //wExperience Will Only ever be a Column, 
 //Position may change, but colum stack layout will not.
-export function WorkExperienceColumn(){
+export function WorkExperienceColumn({workExperienceRef}) {
   
   //Rather than built buy hand, iterated over using for loops.
   //More Modular + Faster
@@ -38,6 +38,8 @@ export function WorkExperienceColumn(){
     <Stack
     //started with 6
     spacing={12}
+
+    ref={workExperienceRef}
     
     //Border 
     sx={ {
@@ -64,7 +66,7 @@ export function WorkExperienceColumn(){
     
     
     <WorkExperienceHeaderLabel>
-    Work Experience
+      Work Experience
     </WorkExperienceHeaderLabel>
     
     

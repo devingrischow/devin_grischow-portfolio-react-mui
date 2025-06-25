@@ -207,7 +207,7 @@ function NameAndTitle(){
 
 //Contact Container 
 //Uses 2 different versions. 1 vertical, 2 horizontal
-export const ContactsAndWorkExperienceStackVertical = () => {
+export function ContactsAndWorkExperienceStackVertical({workExperienceRef}) {
   // const matches = useMediaQuery('(min-width:600px)');
   
   
@@ -240,7 +240,7 @@ export const ContactsAndWorkExperienceStackVertical = () => {
     <VerticalContactsContainer />
     
     
-    { WorkExperienceColumn() }
+    <WorkExperienceColumn workExperienceRef={workExperienceRef} />
 
 
 

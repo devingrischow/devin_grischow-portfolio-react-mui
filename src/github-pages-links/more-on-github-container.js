@@ -57,11 +57,14 @@ function MoreOnHeader() {
 }
 
 
-export function MoreOnGithubContainer(){
+export function MoreOnGithubContainer({gitHubRef}){
     const horizontalMargin = '10vw'
 
     return (
         <Stack
+
+            ref={gitHubRef}
+
             sx={{
                 alignItems:'center',
 

@@ -29,7 +29,6 @@ import { PortfolioColors } from './ui/colors'
 //Data Imports for elements 
 import { ContactInfo } from './data/contact-info';
 
-import { WorkExperienceColumn } from './work_experience_components/work-experience-column';
 
 import { ShowcaseContainer } from './showcase_components/showcase-container';
 import { SkillsContainer } from './skills_components/skills-container';
