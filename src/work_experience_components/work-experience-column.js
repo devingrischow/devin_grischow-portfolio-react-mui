@@ -8,12 +8,13 @@ import { workExperience } from '../data/work-experience-objects';
 
 
 import { WorkExperienceCell } from '../work_experience_components/work-experience-cell';
+import { menuLabels } from '../data/menu-data';
 
 
 //Work Experience Container 
 //wExperience Will Only ever be a Column, 
 //Position may change, but colum stack layout will not.
-export function WorkExperienceColumn({workExperienceRef}) {
+export function WorkExperienceColumn({refs}) {
   
   //Rather than built buy hand, iterated over using for loops.
   //More Modular + Faster
@@ -39,7 +40,7 @@ export function WorkExperienceColumn({workExperienceRef}) {
     //started with 6
     spacing={12}
 
-    ref={workExperienceRef}
+    ref={ (element) => (refs.current[menuLabels.WorkExperience] = element) }
     
     //Border 
     sx={ {

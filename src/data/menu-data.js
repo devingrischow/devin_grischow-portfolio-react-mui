@@ -1,10 +1,24 @@
 
 
+
 export const menuLabels = {
     Home:"Home", 
+
+
     WorkExperience:"Work Experience",
+
+
     Showcase:"Showcase",
+    //Linked Showcases
+    EasyEats:"EasyEats",
+
+
+
     Skills:"Skills",
+    //Linked Skills:
+    CloudDatabases:"Cloud Databases",
+
+
     GitHub:"GitHub"
 }
 
@@ -30,7 +44,7 @@ export const MenuData = [
 
 
     {
-        detailsText:"EasyEats",
+        detailsText:menuLabels.EasyEats,
         icon:"",
         routeTo:"tt"
     },
@@ -42,6 +56,12 @@ export const MenuData = [
     {
         headerText:menuLabels.Skills    
         //No Link needed for home, reloads page 
+    },
+
+    {
+        detailsText:menuLabels.CloudDatabases,
+        icon:"",
+        routeTo:"tt"
     },
 
 

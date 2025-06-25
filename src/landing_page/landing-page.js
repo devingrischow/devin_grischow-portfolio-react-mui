@@ -93,24 +93,26 @@ export const LandingPage = () => {
 
 
     //Location Refs to use for navigation points
-    const workExperienceRef = useRef(null);
-    const showcaseRef = useRef(null);
-    const skillsRef = useRef(null);
-    const gitHubRef = useRef(null);
+    const refs = useRef({});
+    
+
+    const handleGoToGivenRef = (toGoToRef) => {
+      if(refs.current[toGoToRef]) {
+        refs.current[toGoToRef].scrollIntoView();
+      }
+    }
+
 
     //Landing Page from box
     return (
 
         <div>
-            <LandingPortfolioNavigationNavBar openDrawerToggle={openLandingDrawer} />
+            <LandingPortfolioNavigationNavBar openDrawerToggle={openLandingDrawer} handledClickEvent={handleChangePageToAboutMe} />
             <PortfolioDrawer 
               isDrawerOpen={isLandingDrawerOpen} 
               closeLandingDrawer={closeLandingDrawer} 
 
-              workExperienceRef={workExperienceRef}
-              showcaseRef={showcaseRef} 
-              skillsRef={skillsRef}
-              gitHubRef={gitHubRef}
+              handleGoToRef={handleGoToGivenRef}
             />
 
 
@@ -125,13 +127,9 @@ export const LandingPage = () => {
 
                 handledClickEvent={handleChangePageToAboutMe}
 
-                workExperienceRef={workExperienceRef}
+                refs={refs}
 
-                showcaseRef={showcaseRef}
-
-                skillsRef={skillsRef}
-
-                gitHubRef={gitHubRef}
+             
             />
 
 
@@ -146,7 +144,10 @@ export const LandingPage = () => {
 
 
 
-function LandingPortfolioNavigationNavBar({openDrawerToggle}) {
+function LandingPortfolioNavigationNavBar({openDrawerToggle, handledClickEvent}) {  
+  const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
+
+  
   return (
 
     <AppBar position="static"
@@ -185,7 +186,19 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle}) {
 
 
 
-        <Button color="inherit">Back</Button>
+        <Button 
+        onClick={handledClickEvent} 
+
+        onMouseEnter={() => setIsOverAboutMeNavBar(true)}
+        onMouseLeave={() => setIsOverAboutMeNavBar(false)}
+
+        sx={{
+          fontWeight: isOverAboutMeNavBar ? 650 : 500
+        }}
+
+        color="inherit">
+          About | Education | & More
+        </Button>
 
 
       </Toolbar>
@@ -202,10 +215,8 @@ function LandingPageAboutMeHandler({
   isLandingPageAbout, 
   handledClickEvent,
 
-  workExperienceRef,
-  showcaseRef,
-  skillsRef,
-  gitHubRef
+  refs
+  
 }){
 
   if(isLandingPageAbout){
@@ -223,18 +234,18 @@ function LandingPageAboutMeHandler({
 
 
 
-        <ContactsAndWorkExperienceStackVertical workExperienceRef={workExperienceRef} />
+        <ContactsAndWorkExperienceStackVertical refs={refs} />
 
 
 
-        <ShowcaseContainer showcaseRef={showcaseRef} />
+        <ShowcaseContainer refs={refs} />
 
 
 
-        < SkillsContainer skillsRef={skillsRef} />
+        < SkillsContainer refs={refs} />
 
 
-        < MoreOnGithubContainer gitHubRef={gitHubRef} />
+        < MoreOnGithubContainer refs={refs} />
 
 
 

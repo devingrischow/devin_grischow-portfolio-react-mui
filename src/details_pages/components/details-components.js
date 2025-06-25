@@ -1,11 +1,19 @@
 import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+
+import SvgIcon from '@mui/material/SvgIcon';
+
+
+
+import { DetailsIconLoader } from '../../ui/details-icon-loader';
+
+
+
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
 
-
-import Box from '@mui/material/Box';
-import { margin } from '@mui/system';
 
 
 
@@ -71,13 +79,37 @@ export const DetailsPageTheme = createTheme({
 
 
 export function DetailsHeader({
-    text
+    text,
+
+    detailsIcon
 }) {
 
     return(
-        <Typography variant='detailsHeader' >
+        <Stack
+
+
+
+            sx={{
+                height:'10vmin',
+
+                alignItems:'center'
+            }}
+
+            direction={'row'}
+        >
+
+
+            <DetailsIconLoader detailsIcon={detailsIcon}  />
+
+            
+
+            
             { text }
-        </Typography>
+
+
+
+        </Stack>
+        
     );
 
 }
@@ -89,16 +121,17 @@ export function DetailsHeader({
 
 
 export function DetailsBodyText({
-    text
+    text,
 }) {
 
 
     return (
         
-
+            
         <Typography variant='bodyText' >
             { text }
         </Typography>
+        
 
         
     );

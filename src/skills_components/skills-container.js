@@ -16,6 +16,7 @@ import { SkillsCell } from './skills-cell';
 
 
 import { SkillsData } from '../data/skills-data';
+import { menuLabels } from '../data/menu-data';
 
 
 
@@ -24,7 +25,7 @@ import { SkillsData } from '../data/skills-data';
 
 
 
-export function SkillsContainer({skillsRef}) {
+export function SkillsContainer({refs}) {
     const horizontalMargin = '20vw'
 
 
@@ -37,7 +38,7 @@ export function SkillsContainer({skillsRef}) {
     return (
         <Stack
 
-            ref={skillsRef}
+            ref={ (element) => (refs.current[menuLabels.Skills] = element) }
 
             sx={{
                 marginTop:'40vmin',

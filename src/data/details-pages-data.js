@@ -1,16 +1,12 @@
-import { DetailsHeader } from '../details_pages/components/details-components';
-
-
-
 
 import { DetailsComponentTypes } from '../details_pages/components/component-types'
 
 
 
 
-//Imported Images used on pages.
+import { menuLabels } from './menu-data';
 
-import CloudDataShowcase from '../images/cloud-data-showcase.png';
+
 
 
 
@@ -23,6 +19,7 @@ export const DetailsPageData = {
         pageTitle:"Devin G | EasyEats",
 
 
+
         detailsBody:[
             //Header on top
             {
@@ -30,12 +27,9 @@ export const DetailsPageData = {
                 text:"EasyEats"
             }, 
 
-            // {
-
-            // }
+           
 
 
-            // <DetailsHeader text={'hebo'} />,
 
 
 
@@ -58,6 +52,8 @@ export const DetailsPageData = {
 
         pageTitle:"Devin G | Cloud DataBases",
 
+        iconType:menuLabels.CloudDatabases,
+        
 
         detailsBody:[
            //Header on top

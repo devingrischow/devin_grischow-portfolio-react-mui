@@ -20,9 +20,6 @@ import { ContactInfo } from '../data/contact-info';
 
 import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
-import { ShowcaseContainer } from '../showcase_components/showcase-container';
-import { SkillsContainer } from '../skills_components/skills-container';
-import { MoreOnGithubContainer } from '../github-pages-links/more-on-github-container';
 
 
 import { VerticalContactsContainer } from '../contacts_and_info/contacts-components';
@@ -207,7 +204,7 @@ function NameAndTitle(){
 
 //Contact Container 
 //Uses 2 different versions. 1 vertical, 2 horizontal
-export function ContactsAndWorkExperienceStackVertical({workExperienceRef}) {
+export function ContactsAndWorkExperienceStackVertical({refs}) {
   // const matches = useMediaQuery('(min-width:600px)');
   
   
@@ -240,7 +237,7 @@ export function ContactsAndWorkExperienceStackVertical({workExperienceRef}) {
     <VerticalContactsContainer />
     
     
-    <WorkExperienceColumn workExperienceRef={workExperienceRef} />
+    <WorkExperienceColumn refs={refs} />
 
 
 

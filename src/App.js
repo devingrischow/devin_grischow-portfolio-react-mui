@@ -27,12 +27,8 @@ import { PortfolioColors } from './ui/colors'
 
 
 //Data Imports for elements 
-import { ContactInfo } from './data/contact-info';
 
 
-import { ShowcaseContainer } from './showcase_components/showcase-container';
-import { SkillsContainer } from './skills_components/skills-container';
-import { MoreOnGithubContainer } from './github-pages-links/more-on-github-container';
 
 
 import { RouterProvider } from 'react-router-dom';
@@ -133,14 +129,12 @@ function App() {
 
 
 
-    { ShowcaseContainer() }
 
 
 
     { SkillsContainer() }
 
 
-    { MoreOnGithubContainer() }
 
 
 

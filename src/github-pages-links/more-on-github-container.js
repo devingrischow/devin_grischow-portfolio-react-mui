@@ -10,6 +10,8 @@ import { PortfolioColors } from '../ui/colors';
 
 import { GithubLinks } from './github-link-badges';
 
+import { menuLabels } from '../data/menu-data';
+
 
 
 
@@ -57,13 +59,14 @@ function MoreOnHeader() {
 }
 
 
-export function MoreOnGithubContainer({gitHubRef}){
+export function MoreOnGithubContainer({refs}){
     const horizontalMargin = '10vw'
 
     return (
         <Stack
 
-            ref={gitHubRef}
+            ref={ (element) => (refs.current[menuLabels.GitHub] = element) }
+            // {}
 
             sx={{
                 alignItems:'center',

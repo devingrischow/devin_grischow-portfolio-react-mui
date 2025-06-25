@@ -18,7 +18,7 @@ import { bgcolor } from '@mui/system';
 
 import { MenuData, menuLabels } from '../data/menu-data';
 
-
+import { DetailsIconLoader } from '../ui/details-icon-loader';
 
 
 
@@ -27,10 +27,8 @@ export function PortfolioDrawer({
   closeLandingDrawer, 
 
 
-  workExperienceRef,
-  showcaseRef,
-  skillsRef,
-  gitHubRef
+
+  handleGoToRef
 }){
 
 
@@ -87,26 +85,23 @@ export function PortfolioDrawer({
                 return(
                   <ListItem key={menuItem} sx={{
                     borderBottom:2,
-                    borderColor:'white'
-                  }} >
+                    borderColor:'white',
+                    
+                    color:'white',
+
+
+                    '&:hover':{
+                      backgroundColor:'gray'
+                    } 
+
+
+
+                  }} disablePadding >
 
                     <ListItemButton onClick={ () => {
                       //On click switches destination/target depending on needs
-                      
-                        switch(menuItem.headerText){
-                          case(menuLabels.WorkExperience):
-                            //Take User Home
-                            workExperienceRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-                          case(menuLabels.Showcase):
-                            showcaseRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-                          case(menuLabels.Skills):
-                            skillsRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-                          case(menuLabels.GitHub):
-                            gitHubRef.current?.scrollIntoView({ behavior: 'smooth' });
-                        }
+                        handleGoToRef(menuItem.headerText)
+                        
                     }
                     }>
                       <h1 style={{
@@ -126,31 +121,61 @@ export function PortfolioDrawer({
                   
                 )
               }
+              //Handle detecting Details items 
+              //Since the menu array is the design of the output, theyl only ever be routes/proper items
+              else if('detailsText' in menuItem){
+
+                
+                
+                return(
+                <ListItem key={menuItem} sx={{
+                  color:'white',
+                  '&:hover':{
+                    backgroundColor:'gray'
+                  }
+
+                }} disablePadding >
+
+                  <ListItemButton
+                    sx={{
+                      // justifyContent:'center',
+                      alignContent:'center',
+                      alignItems:'center',
+
+                      
+                    }}
+                    onClick={ () => {
+                      //On click takes user to destination/target depending on needs
+                        // handleGoToRef(menuItem.headerText)
+                        
+                    }
+                    }>
+
+                    <ListItemIcon>
+                      <DetailsIconLoader detailsIcon={menuItem.detailsText}  />    
+                    </ListItemIcon>
+                    
+
+                    <ListItemText sx={{
+                      fontSize:'1.1em',
+                    }} primary={menuItem.detailsText} />
+
+                    
+
+                    </ListItemButton>
+
+                </ListItem>  
+                )
+                
+              }
+
+
+
               
             }
+            
                 
-                // {
-                //     if('headerText' in menuItem){
-
-                //         <ListItem key={menuItem} sx={{
-                //             fontWeight:'600'
-                //         }} >
-                            
-                //             <ListItemText primary={menuItem.headerText} />
-
-
-                //             <Divider />
-
-                //         </ListItem>
-
-
-                //     }
-
-                    
-                    
-                // }
-                
-            )
+          )
          }
         
         
@@ -161,32 +186,6 @@ export function PortfolioDrawer({
 
 
         
-        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
 
 
       </List>
@@ -204,7 +203,9 @@ export function PortfolioDrawer({
             //Used Slot Props since no good modern examples for drawer in 7, gotten from docs
             slotProps={{
                 paper:{
-                    sx:{backgroundColor:'gray'}
+                    sx:{backgroundColor:'black'},
+
+                    
                 }
             }}
 

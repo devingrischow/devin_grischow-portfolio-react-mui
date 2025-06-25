@@ -47,8 +47,9 @@ export function DetailsPageHolder() {
     let detailType = detailsPageDataParams.detailType
     console.log("Details Type: ", detailType)
 
+    let detailsItem = DetailsPageData[detailType]
 
-    let detailsBody = DetailsPageData[detailType].detailsBody
+    let detailsBody = detailsItem.detailsBody
 
     let detailsBodyCount = detailsBody.length;
 
@@ -56,7 +57,7 @@ export function DetailsPageHolder() {
     console.log("Details Body: ", detailsBodyCount)
 
 
-
+    const detailsIcon = detailsItem.iconType;
 
 
     
@@ -66,6 +67,8 @@ export function DetailsPageHolder() {
         
         {
             const detailType = detailItem.type
+
+
             console.log("Body Element Type: ", detailType)
 
             switch(detailType){
@@ -73,14 +76,16 @@ export function DetailsPageHolder() {
                 case DetailsComponentTypes.Header: 
                     const headerText = detailItem.text;
 
-                    return (<DetailsHeader key={detailItem} text={headerText} />);
+                    console.log("details icon to use: ", detailsIcon)
+
+                    return (<DetailsHeader key={detailItem} text={headerText} detailsIcon={detailsIcon} />);
                     
 
                 case DetailsComponentTypes.BodyText:
                     const bodyText = detailItem.text;
 
 
-                    return (<DetailsBodyText key={detailItem} text={bodyText} />);
+                    return (<DetailsBodyText key={detailItem} text={bodyText}  />);
 
 
                 //Image Components
@@ -93,20 +98,7 @@ export function DetailsPageHolder() {
             }
         }
         
-        // <div>
-        //     {
-        //         const detailType = detailItem.type
-
-        //         console.log("Details Type: ", detailType)
-
-        //         const detailsText = detailItem.text
-
-
-        //     }
-
-        //     <DetailsHeader text={detailsText} />
-        
-        // </div>
+      
 
     )
 

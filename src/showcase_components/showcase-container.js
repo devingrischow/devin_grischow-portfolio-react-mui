@@ -13,11 +13,12 @@ import { ShowcaseObjects } from '../data/showcase-objects';
 
 //Import cells for showcase 
 import { ShowCaseCell } from './showcase-cells'
+import { menuLabels } from '../data/menu-data';
 
 
 
 
-export function ShowcaseContainer({showcaseRef}){
+export function ShowcaseContainer({refs}){
 
 
     //Map through the objects of the showcase section, 
@@ -33,7 +34,7 @@ export function ShowcaseContainer({showcaseRef}){
     return (
         <Stack
 
-            ref={showcaseRef}
+            ref={ (element) => (refs.current[menuLabels.Showcase] = element) }
 
             //Ensure Stacked Centered
             sx={ {
