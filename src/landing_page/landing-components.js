@@ -97,6 +97,20 @@ const TitleText = styled('h3')(({ theme }) => ({
 
 
 
+
+
+export const LandingLocations = {
+  WorkExperience:"Work Experience",
+  Showcase:"Showcase",
+  Skills:"Skills",
+  Github:"GitHub"
+
+}
+
+
+
+
+
 export const  NameAndImageHeader = () => {
   //In the header, call another function for making the Hello Title 
   

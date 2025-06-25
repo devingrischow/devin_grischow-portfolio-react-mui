@@ -4,7 +4,6 @@ import { DetailsComponentTypes } from '../details_pages/components/component-typ
 
 
 
-import { menuLabels } from './menu-data';
 
 
 
@@ -14,9 +13,11 @@ export const DetailsPageData = {
 
    EasyEats: {
 
-        pageId:'easyeats',
+        pageId:'EasyEats',
 
         pageTitle:"Devin G | EasyEats",
+
+        menuLabel:"EasyEats",
 
 
 
@@ -48,11 +49,12 @@ export const DetailsPageData = {
 
    CloudDatabases:{
 
-        pageId:'clouddatabase',
+        pageId:'CloudDatabases',
 
         pageTitle:"Devin G | Cloud DataBases",
 
-        iconType:menuLabels.CloudDatabases,
+        menuLabel:"Cloud Databases",
+
         
 
         detailsBody:[
@@ -101,40 +103,3 @@ export const DetailsPageData = {
 
 
 
-
-// [
-
-//     {
-//         id:"EasyEats"
-//     },
-
-
-//     {
-//         id:"FigmaDesign"
-//     },
-
-
-//     {
-//         id:"VBA Production Work"
-//     },
-
-
-
-//     {
-//         id:"Trello"
-//     },
-
-
-
-//     {
-//         id:"ProblemSolving"
-//     },
-
-
-
-//     {
-//         id:"AI"
-//     }
-
-
-// ];

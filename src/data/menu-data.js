@@ -1,26 +1,6 @@
+import { DetailsPageData } from './details-pages-data';
 
 
-
-export const menuLabels = {
-    Home:"Home", 
-
-
-    WorkExperience:"Work Experience",
-
-
-    Showcase:"Showcase",
-    //Linked Showcases
-    EasyEats:"EasyEats",
-
-
-
-    Skills:"Skills",
-    //Linked Skills:
-    CloudDatabases:"Cloud Databases",
-
-
-    GitHub:"GitHub"
-}
 
 
 
@@ -28,25 +8,24 @@ export const menuLabels = {
 //All Built from objects
 export const MenuData = [
     {
-        headerText:menuLabels.Home
+        headerText:"Home"
         //No Link needed for home, reloads page 
     },
 
     {
-        headerText:menuLabels.WorkExperience
+        headerText:"Work Experience"
         //All OTHER experiences get loaded from name
     },
 
     {
-        headerText:menuLabels.Showcase
+        headerText:"Showcase"
         //No Link needed for home, reloads page 
     },
 
 
     {
-        detailsText:menuLabels.EasyEats,
-        icon:"",
-        routeTo:"tt"
+        detailsText:DetailsPageData.EasyEats.menuLabel,
+        routeTo:DetailsPageData.EasyEats.pageId
     },
 
 
@@ -54,19 +33,18 @@ export const MenuData = [
 
 
     {
-        headerText:menuLabels.Skills    
+        headerText:"Skills"    
         //No Link needed for home, reloads page 
     },
 
     {
-        detailsText:menuLabels.CloudDatabases,
-        icon:"",
-        routeTo:"tt"
+        detailsText:DetailsPageData.CloudDatabases.menuLabel,
+        routeTo:DetailsPageData.CloudDatabases.pageId
     },
 
 
     {
-        headerText:menuLabels.GitHub   
+        headerText:"GitHub"
         //No Link needed for home, reloads page 
     },
 

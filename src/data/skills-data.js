@@ -1,5 +1,6 @@
 //Skills Object: 
 //SkillName
+import { DetailsPageData } from './details-pages-data';
 
 
 
@@ -16,7 +17,7 @@ export const SkillsData = [
 
             {
                 nSkillTitle:'Cloud Databases',
-                route:'/details/CloudDatabases'
+                route:DetailsPageData.CloudDatabases.pageId
             },
 
             {

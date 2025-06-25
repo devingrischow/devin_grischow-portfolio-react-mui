@@ -16,9 +16,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import { bgcolor } from '@mui/system';
 
 
-import { MenuData, menuLabels } from '../data/menu-data';
+import { MenuData } from '../data/menu-data';
 
 import { DetailsIconLoader } from '../ui/details-icon-loader';
+
+import { useNavigate } from "react-router";
 
 
 
@@ -30,6 +32,8 @@ export function PortfolioDrawer({
 
   handleGoToRef
 }){
+
+    let navigate = useNavigate();
 
 
     const drawerSectionTitleHeader = styled('h2')(({ theme }) => ({
@@ -78,9 +82,11 @@ export function PortfolioDrawer({
       <List>
 
          {
+          
             //Map through the data of menu options, and place them 
             MenuData.map( menuItem =>
             {
+
               if('headerText' in menuItem){
                 return(
                   <ListItem key={menuItem} sx={{
@@ -124,6 +130,7 @@ export function PortfolioDrawer({
               //Handle detecting Details items 
               //Since the menu array is the design of the output, theyl only ever be routes/proper items
               else if('detailsText' in menuItem){
+                
 
                 
                 
@@ -146,13 +153,19 @@ export function PortfolioDrawer({
                     }}
                     onClick={ () => {
                       //On click takes user to destination/target depending on needs
-                        // handleGoToRef(menuItem.headerText)
+                      const routeTo = menuItem.routeTo
+                      console.log("Routing User to: ", routeTo)
+                        
+                      //Ensure route is in navigational 
+                      if('routeTo' in menuItem){
+                        navigate(`/details/${routeTo}`)
+                      }
                         
                     }
                     }>
 
                     <ListItemIcon>
-                      <DetailsIconLoader detailsIcon={menuItem.detailsText}  />    
+                      <DetailsIconLoader detailsIcon={menuItem.routeTo}  />    
                     </ListItemIcon>
                     
 

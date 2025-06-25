@@ -8,6 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 
 
+import { useNavigate } from "react-router";
+import { useState, useRef } from 'react';
+
+
 
 
 import { useParams } from "react-router";
@@ -28,10 +32,15 @@ import { DetailsHeader, DetailsBodyText, BigImageSection } from './components/de
 import { DetailsPageTheme } from './components/details-components';
 
 
+import { PortfolioDrawer } from '../ui/portfolio-drawer'
+
+
 
 
 
 export function DetailsPageHolder() {
+    let navigate = useNavigate();
+
     //Based on the details Type, fetch the object to load in, and load in the components from it 
     //The details type are built from the inner array of map components
     
@@ -57,7 +66,7 @@ export function DetailsPageHolder() {
     console.log("Details Body: ", detailsBodyCount)
 
 
-    const detailsIcon = detailsItem.iconType;
+    const detailsIcon = detailsItem.pageId;
 
 
     
@@ -104,15 +113,44 @@ export function DetailsPageHolder() {
 
 
 
+    //Controlls for given tab bar 
+    const [isLandingDrawerOpen, setLandingDrawer] = useState(false);
+    
+
+    const refs = useRef({});
+
+      
+    
+    const openLandingDrawer = () => {
+      setLandingDrawer(true);
+    };
+    
+    const closeLandingDrawer = () => {
+      setLandingDrawer(false);
+    };
 
 
+    //Handles the user going from this screen, to the home screen, then where to scroll FROM 
+    const handleGoToMainPage = (toGoToRef) => {
+      navigate(`/${toGoToRef}`);
+
+      
+    }
     
 
 
     return(
         //Provide Theme to the details page 
             <ThemeProvider theme={DetailsPageTheme}>
-                <DetailsPortfolioNavigationNavBar />
+                <DetailsPortfolioNavigationNavBar 
+                  openLandingDrawer={openLandingDrawer} 
+                />
+                <PortfolioDrawer 
+                  isDrawerOpen={isLandingDrawerOpen} 
+                  closeLandingDrawer={closeLandingDrawer} 
+                
+                  handleGoToRef={handleGoToMainPage}
+                />
 
 
                 <Stack>
@@ -142,7 +180,17 @@ export function DetailsPageHolder() {
 
 
 
-const  DetailsPortfolioNavigationNavBar = () => {
+function  DetailsPortfolioNavigationNavBar({ 
+  openLandingDrawer
+}) {
+
+  //Navigator to take back to home screen
+  let navigate = useNavigate();
+
+
+  
+
+
   return (
 
     <AppBar position="static"
@@ -169,6 +217,8 @@ const  DetailsPortfolioNavigationNavBar = () => {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
+
+          onClick={openLandingDrawer}
         >
           <MenuIcon />
         </IconButton>
@@ -179,7 +229,11 @@ const  DetailsPortfolioNavigationNavBar = () => {
 
 
 
-        <Button color="inherit">Back</Button>
+        <Button color="inherit"
+          onClick={ () => navigate("/") }
+        >
+          Back
+        </Button>
 
 
       </Toolbar>

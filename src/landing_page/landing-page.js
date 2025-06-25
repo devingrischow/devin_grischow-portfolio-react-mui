@@ -50,8 +50,8 @@ import { NameAndImageHeader, ContactsAndWorkExperienceStackVertical } from './la
 
 
 
-
-import React, { useState, useRef } from 'react';
+import { useParams } from "react-router";
+import React, { useState, useRef, useEffect } from 'react';
 import { workExperience } from '../data/work-experience-objects';
 
 
@@ -62,6 +62,11 @@ import { workExperience } from '../data/work-experience-objects';
 
 
 export const LandingPage = () => {
+    //Page CAN have parameters to controll where to initially scroll to 
+    let detailsPageDataParams = useParams();
+
+
+
     //Declared Function to change the page state
     const [isLandingPageAbout, setLandingPageAbout] = useState(false);
 
@@ -80,6 +85,8 @@ export const LandingPage = () => {
     };
 
 
+    
+
     const handleChangePageToAboutMe = () => {
         console.log("Changing Is Landing Value to True ". isLandingPageAbout)
 
@@ -97,17 +104,49 @@ export const LandingPage = () => {
     
 
     const handleGoToGivenRef = (toGoToRef) => {
+      console.log("Go To Section: ", toGoToRef)
       if(refs.current[toGoToRef]) {
         refs.current[toGoToRef].scrollIntoView();
       }
     }
 
 
+    //Use a effect loader to handle scrolling to next page 
+    //TO ONLY FIRE ONCE 
+    const [isToMoveToRef, setShouldMoveToSpot] = useState(false);
+
+    
+    console.log("Go To On Page ", detailsPageDataParams.goToOnPage)
+
+
+    if(detailsPageDataParams.goToOnPage != undefined && isToMoveToRef == false){
+        setTimeout(() => {
+          console.log("SCROLL TO NEW PAGE SECTION")
+
+        handleGoToGivenRef(detailsPageDataParams.goToOnPage)
+
+      }, 250);
+
+      setShouldMoveToSpot(true);
+
+
+    }
+
+
+
     //Landing Page from box
     return (
 
         <div>
-            <LandingPortfolioNavigationNavBar openDrawerToggle={openLandingDrawer} handledClickEvent={handleChangePageToAboutMe} />
+            <LandingPortfolioNavigationNavBar 
+                openDrawerToggle={openLandingDrawer}
+
+                handleChangePageToAboutMe={handleChangePageToAboutMe}
+                handleChangePageToLanding={handleChangePageToLanding}
+
+
+                isLandingPageAbout={isLandingPageAbout}
+              />
             <PortfolioDrawer 
               isDrawerOpen={isLandingDrawerOpen} 
               closeLandingDrawer={closeLandingDrawer} 
@@ -144,10 +183,14 @@ export const LandingPage = () => {
 
 
 
-function LandingPortfolioNavigationNavBar({openDrawerToggle, handledClickEvent}) {  
+function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout}) {  
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
 
+
+  const aboutText = "About | Education | & More"
   
+  const headerInfoText = isLandingPageAbout ? "Back" : aboutText
+
   return (
 
     <AppBar position="static"
@@ -187,7 +230,7 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handledClickEvent})
 
 
         <Button 
-        onClick={handledClickEvent} 
+        onClick={ isLandingPageAbout ? handleChangePageToLanding : handleChangePageToAboutMe } 
 
         onMouseEnter={() => setIsOverAboutMeNavBar(true)}
         onMouseLeave={() => setIsOverAboutMeNavBar(false)}
@@ -197,7 +240,7 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handledClickEvent})
         }}
 
         color="inherit">
-          About | Education | & More
+          { headerInfoText }
         </Button>
 
 

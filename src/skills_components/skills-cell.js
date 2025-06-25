@@ -214,10 +214,10 @@ function NotableSkillCell(notableSkills, index){
 
 
         if('route' in notableSkill) {
-            console.log("Routing to page: ", notableSkill.route)
+            console.log("Routing to page: ", notableSkill.route);
 
 
-            navigate(notableSkills[index].route)
+            navigate(`/details/${notableSkills[index].route}`);
 
 
         }

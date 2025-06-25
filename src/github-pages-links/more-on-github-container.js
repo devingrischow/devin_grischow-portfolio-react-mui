@@ -10,10 +10,10 @@ import { PortfolioColors } from '../ui/colors';
 
 import { GithubLinks } from './github-link-badges';
 
-import { menuLabels } from '../data/menu-data';
+import { DetailsPageData } from '../data/details-pages-data';
 
-
-
+import { LandingLocations } from '../landing_page/landing-components';
+ 
 
 
 function MoreOnHeader() {
@@ -65,7 +65,7 @@ export function MoreOnGithubContainer({refs}){
     return (
         <Stack
 
-            ref={ (element) => (refs.current[menuLabels.GitHub] = element) }
+            ref={ (element) => (refs.current[LandingLocations.Github] = element) }
             // {}
 
             sx={{

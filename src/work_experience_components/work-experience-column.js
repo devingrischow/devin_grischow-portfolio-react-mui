@@ -8,7 +8,10 @@ import { workExperience } from '../data/work-experience-objects';
 
 
 import { WorkExperienceCell } from '../work_experience_components/work-experience-cell';
-import { menuLabels } from '../data/menu-data';
+
+
+
+import { LandingLocations } from '../landing_page/landing-components';
 
 
 //Work Experience Container 
@@ -40,7 +43,7 @@ export function WorkExperienceColumn({refs}) {
     //started with 6
     spacing={12}
 
-    ref={ (element) => (refs.current[menuLabels.WorkExperience] = element) }
+    ref={ (element) => (refs.current[LandingLocations.WorkExperience] = element) }
     
     //Border 
     sx={ {

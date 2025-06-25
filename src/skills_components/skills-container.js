@@ -16,7 +16,7 @@ import { SkillsCell } from './skills-cell';
 
 
 import { SkillsData } from '../data/skills-data';
-import { menuLabels } from '../data/menu-data';
+import { LandingLocations } from '../landing_page/landing-components';
 
 
 
@@ -38,7 +38,7 @@ export function SkillsContainer({refs}) {
     return (
         <Stack
 
-            ref={ (element) => (refs.current[menuLabels.Skills] = element) }
+            ref={ (element) => (refs.current[LandingLocations.Skills] = element) }
 
             sx={{
                 marginTop:'40vmin',

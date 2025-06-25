@@ -13,8 +13,10 @@ import { ShowcaseObjects } from '../data/showcase-objects';
 
 //Import cells for showcase 
 import { ShowCaseCell } from './showcase-cells'
-import { menuLabels } from '../data/menu-data';
 
+
+
+import { LandingLocations } from '../landing_page/landing-components'
 
 
 
@@ -34,7 +36,7 @@ export function ShowcaseContainer({refs}){
     return (
         <Stack
 
-            ref={ (element) => (refs.current[menuLabels.Showcase] = element) }
+            ref={ (element) => (refs.current[LandingLocations.Showcase] = element) }
 
             //Ensure Stacked Centered
             sx={ {

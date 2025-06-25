@@ -1,6 +1,6 @@
 
 
-import { menuLabels } from '../data/menu-data';
+import { DetailsPageData } from '../data/details-pages-data';
 
 
 //Icons (imported in components to allow for the icon to be swapped on.)
@@ -21,7 +21,7 @@ export function DetailsIconLoader( {detailsIcon} ){
 
     switch(detailsIcon){
 
-        case(menuLabels.CloudDatabases):
+        case(DetailsPageData.CloudDatabases.pageId):
 
             return(
                 <FilterDramaIcon sx={{color:'white'}} />

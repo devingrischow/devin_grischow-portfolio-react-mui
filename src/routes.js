@@ -15,6 +15,11 @@ import { PageNotFoundPage } from "./PageNotFound";
 
 export const PorfolioRoutes = createBrowserRouter([
     {
+        path:'/:goToOnPage',
+        element:<LandingPage />,
+    },
+
+    {
         path:'/',
         element:<LandingPage />,
     },
