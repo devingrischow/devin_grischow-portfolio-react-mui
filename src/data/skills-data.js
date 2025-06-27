@@ -30,6 +30,10 @@ export const SkillsData = [
 
         skills:[
             'JSON',
+            'SQL',
+            'MyPhp',
+            'NoSQL',
+            'Database management',
             
             'Linux, Mac & Windows terminal comprehension'
         ]
@@ -39,12 +43,20 @@ export const SkillsData = [
         skillset:'Front End Skills',
 
         notableSkills:[
+            {
+                nSkillTitle:'Figma',
+                route:DetailsPageData.FigmaDesign.pageId
+            },
 
         ],
 
         skills:[
-            'Material 3',
-            'Adobe',
+            'Material Design 3',
+            'Javascript / React / Html & CSS Libraries',
+            'Adobe Suite',
+            'Communicating and Translating Design to Code', 
+
+
             
         ]
     },
@@ -56,13 +68,16 @@ export const SkillsData = [
         skillset:'Project Management',
 
         notableSkills:[
-
+            {
+                nSkillTitle:'Trello',
+                route:DetailsPageData.Trello.pageId
+            },
         ],
 
         skills:[
             'Agile Workflow',
             'Sprints',
-            'Competently handle adaptations to project and project parameters '
+            'Competently handle adaptations to project and project parameters'
         ]
     },
 
@@ -75,8 +90,8 @@ export const SkillsData = [
 
 
         skills:[
-            'Repository Collaboration', 
             'Git',
+            'Collaboration', 
             'Pull Requests & Merging'
         ]
     },
@@ -86,6 +101,15 @@ export const SkillsData = [
         skillset:'Development Skills',
 
         notableSkills:[
+            {
+                nSkillTitle:'Problem Solving',
+                route:DetailsPageData.Trello.pageId
+            },
+
+            {
+                nSkillTitle:'AI',
+                route:DetailsPageData.Trello.pageId
+            },
 
         ],
 

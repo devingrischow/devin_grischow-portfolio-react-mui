@@ -1,10 +1,15 @@
 import Stack from '@mui/material/Stack';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+
+
 import { styled } from '@mui/material/styles';
 import { PortfolioColors } from '../ui/colors';
 
 
 
-export function WorkExperienceCell(workTitleText, employerName ,workTime, workType) {
+export function WorkExperienceCell(workTitleText, employerName ,workTime, workType, points) {
   
   const PositionNameText = styled('h3')(({ theme }) => ({
        textAlign:'start'
@@ -16,6 +21,23 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
 
     color:PortfolioColors.SubInfoColor
   }));
+
+
+ 
+
+  const workPoints = points.map( pointText =>
+    {
+      return(
+        <ListItem >
+
+          <ListItemText primary={pointText} />
+          
+
+        </ListItem>
+        );
+    }
+  )
+  
   
   //Each Cell NEEDS line at the bottom 
   return (<Stack
@@ -52,6 +74,22 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
     <SubInfoHeader>
     {workType}
     </SubInfoHeader>
+
+    <List sx={{
+      display:'flex',
+      flexDirection:'column',
+      color:'white',
+
+      listStyleType: 'disc',
+      pl: '5vw',
+      '& .MuiListItem-root': {
+          // pr: '3vw',
+          display: 'list-item' 
+        }
+
+    }} >
+      {workPoints}
+    </List>
     
     
     

@@ -5,7 +5,7 @@
 
 export const DetailsComponentTypes = {
 
-    //Text Components
+    //**Text Components
     Header:'header',
 
     BodyTitle:'bodytitle',
@@ -14,7 +14,10 @@ export const DetailsComponentTypes = {
 
 
 
-    //Image Components
+    
+
+
+    //**Image Components
     BigImage:'bigimage',
 
 

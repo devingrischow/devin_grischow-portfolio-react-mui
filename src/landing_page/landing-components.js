@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 
 import { styled } from '@mui/material/styles';
@@ -22,7 +25,7 @@ import { WorkExperienceColumn } from '../work_experience_components/work-experie
 
 
 
-import { VerticalContactsContainer } from '../contacts_and_info/contacts-components';
+import { VerticalContactsContainer, VerticalHorizontalContactsContainer } from '../contacts_and_info/contacts-components';
 
 
 
@@ -43,7 +46,9 @@ const fontSize = '2rem'
 
 
 const HelloText = styled('h1')(({ theme }) => ({
-  color:'purple',
+  // color:'purple',
+
+
   width: 'fit-content',
   display:'block',
   fontWeight:'600',
@@ -60,7 +65,7 @@ const HelloText = styled('h1')(({ theme }) => ({
 
 
 const ImDevinText = styled('h2')(({ theme }) => ({
-  color:'green',
+  // color:'green',
   width: 'fit-content',
   display:'block',
   
@@ -82,7 +87,7 @@ const ImDevinText = styled('h2')(({ theme }) => ({
 
 
 const TitleText = styled('h3')(({ theme }) => ({
-  color:'yellow',
+  // color:'yellow',
   
   
   
@@ -179,7 +184,7 @@ function NameAndTitle(){
   return (
     
     <Stack 
-    spacing={2}
+    spacing={4}
     
     sx={ {
       justifyContent: "center",
@@ -216,9 +221,22 @@ function NameAndTitle(){
 //vertical will use contacts on side by side with work experience
 
 
+export function ContactsAndWorkExperienceHolder({refs}){
+  const matches = useMediaQuery('(min-width:600px)');
+  console.log("Matches Small: ", matches)
+  if(matches){
+    return(<ContactsAndWorkExperienceHorizontal refs={refs} />);
+  }else{
+    return(<ContactsAndWorkExperiencesVertical refs={refs} />);
+    
+  }
+
+}
+
+
 //Contact Container 
 //Uses 2 different versions. 1 vertical, 2 horizontal
-export function ContactsAndWorkExperienceStackVertical({refs}) {
+export function ContactsAndWorkExperienceHorizontal({refs}) {
   // const matches = useMediaQuery('(min-width:600px)');
   
   
@@ -248,6 +266,47 @@ export function ContactsAndWorkExperienceStackVertical({refs}) {
     
     >
     
+    <VerticalHorizontalContactsContainer />
+    
+    
+    <WorkExperienceColumn refs={refs} />
+
+
+
+
+    </Stack>
+    
+  );
+  
+}
+
+
+
+
+
+//Vertical Layout for Smaller phones
+function ContactsAndWorkExperiencesVertical({refs}){
+  return ( 
+    
+    <Stack
+    
+
+    sx={ {
+
+
+
+      //Content will always be in the center, flex parameters however, WILL change 
+      display:'flex',
+
+
+
+
+      justifyContent: "space-evenly",       
+      alignItems: "start",
+    } }
+    
+    >
+    
     <VerticalContactsContainer />
     
     
@@ -258,10 +317,8 @@ export function ContactsAndWorkExperienceStackVertical({refs}) {
 
     </Stack>
     
-  )
-  
+  );
 }
-
 
 
 

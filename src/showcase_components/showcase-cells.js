@@ -8,10 +8,10 @@ import { styled } from '@mui/material/styles';
 
 
 import { PortfolioColors } from '../ui/colors';
-import { ShowcaseContainer } from './showcase-container';
 import Paper from '@mui/material/Paper';
 
 
+import { useState } from 'react';
 
 
 
@@ -42,11 +42,20 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 //Description,
 //Badges? - {BadgeTitle, badges:[ {badgename, color},... ]
 export function ShowCaseCell(showcaseObject){
+    const [isOverShowCase, setIsOverShowCase] = useState(false);
+
+
+
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
     
     
     const horizontalMargin = '10vw'
     const borderRadius = '2vw'
+
+    //og size: 2.5
+    const normalBorderSize = 2.5
+    const HoveredBorderSize = 5
+    const borderSize = isOverShowCase ? HoveredBorderSize : normalBorderSize
     
     
     
@@ -85,6 +94,10 @@ export function ShowCaseCell(showcaseObject){
         
     }));
     
+
+    
+
+     
     
     
     
@@ -107,6 +120,8 @@ export function ShowCaseCell(showcaseObject){
         
         key={showcaseObject}
         
+        onMouseEnter={() => setIsOverShowCase(true)}
+        onMouseLeave={() => setIsOverShowCase(false)}
         
         sx={{
             
@@ -126,20 +141,22 @@ export function ShowCaseCell(showcaseObject){
             
             //Border Radius on BG Image list 
             
-            border: 2.5,
+            outline: borderSize,
             
             borderColor:PortfolioColors.SectionDivider,
             
             borderRadius:borderRadius,
             
+            boxSizing:'border-box',
+            
+            transition:'outline-width 0.2s',
+
             
             
             
             
             
-            
-            
-            overflow:'none',
+            overflow:'hidden',
 
             //Margin spacing from bottom of last cell
             marginBottom:'50px'
@@ -176,7 +193,7 @@ export function ShowCaseCell(showcaseObject){
             
             position:'absolute',
             
-            borderRadius:borderRadius,
+            // borderRadius:borderRadius,
             
             
             
@@ -227,7 +244,7 @@ export function ShowCaseCell(showcaseObject){
         background:showcaseObject.backgroundInfo.backgroundColorInfo,
 
         //Border Radius Applied to the Box
-        borderRadius:borderRadius,
+        // borderRadius:borderRadius,
 
         
     } }
@@ -397,6 +414,9 @@ function ShowcaseBadges(showcaseObject){
 
 function ShowcaseBadge(text, color){
 
+    
+
+
     const matchesSmallScreenQuery = useMediaQuery('(min-width:=800px)');
 
 
@@ -426,25 +446,29 @@ function ShowcaseBadge(text, color){
         
     }));
 
+
+
     return (
         <Paper 
 
-        key={ `${text}-${color}` }
-        sx={ {
-            bgcolor:`${color}`, 
-
-            display:'flex',
-            alignItems:'center',
-
-            width:'20%',
+           
+            key={ `${text}-${color}` }
+            sx={ {
+                bgcolor:`${color}`, 
 
 
-            height:'10vmin',
+                display:'flex',
+                alignItems:'center',
+
+                width:'20%',
 
 
-            zIndex:4,
+                height:'10vmin',
 
-        } }
+
+                zIndex:4,
+
+            } }
     >
         <BadgeTitle
             sx={ {

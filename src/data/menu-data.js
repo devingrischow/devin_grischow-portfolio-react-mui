@@ -32,6 +32,7 @@ export const MenuData = [
 
 
 
+
     {
         headerText:"Skills"    
         //No Link needed for home, reloads page 
@@ -41,6 +42,30 @@ export const MenuData = [
         detailsText:DetailsPageData.CloudDatabases.menuLabel,
         routeTo:DetailsPageData.CloudDatabases.pageId
     },
+    {
+        detailsText:DetailsPageData.FigmaDesign.menuLabel,
+        routeTo:DetailsPageData.FigmaDesign.pageId
+    },
+    {
+        detailsText:DetailsPageData.Trello.menuLabel,
+        routeTo:DetailsPageData.Trello.pageId
+    },
+    {
+        detailsText:DetailsPageData.ProblemSolving.menuLabel,
+        routeTo:DetailsPageData.ProblemSolving.pageId
+    },
+    {
+        detailsText:DetailsPageData.AI.menuLabel,
+        routeTo:DetailsPageData.AI.pageId
+    },
+
+
+
+
+
+
+
+
 
 
     {

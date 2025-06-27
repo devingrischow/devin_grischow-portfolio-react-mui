@@ -15,7 +15,7 @@
 
   /* Ensure page height is 100% on all body sections */
   min-height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 
 
   text-align: center;

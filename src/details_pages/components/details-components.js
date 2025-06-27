@@ -12,6 +12,7 @@ import { DetailsIconLoader } from '../../ui/details-icon-loader';
 
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
+import { fontWeight, lineHeight, margin } from '@mui/system';
 
 
 
@@ -26,7 +27,6 @@ import { styled } from '@mui/material/styles';
 
 
 
-const marginBodyText = '5vw'
 
 
 
@@ -37,26 +37,47 @@ const marginBodyText = '5vw'
 
 
 export const DetailsPageTheme = createTheme({
+
   typography: {
 
-    detailsHeader: {
-        fontSize: '3rem',
+
+    bodyText: {
+        fontSize: '1rem',
 
         textAlign:'start',
 
-        //Margins
-        marginTop:'5vmin',
-        marginRight:'3vw',
-        marginLeft:'3vw',
+        margin:'2vw'
+
 
     },
 
-    
-    bodyText: {
-        fontSize: '1rem',
-        margin:marginBodyText,
+
+    bodyTitle:{
+        fontSize: '1.7rem',
+
+
+        fontWeight:'500',
+
 
         textAlign:'start',
+
+        marginLeft:'2vw', 
+
+
+    },
+
+
+    headerText: {
+        fontSize: '2.5rem',
+        fontWeight:'600',
+
+        textAlign:'start',
+
+
+        marginLeft:'2%', 
+
+        lineHeight:'2rem'
+        
 
 
     },
@@ -87,24 +108,36 @@ export function DetailsHeader({
     return(
         <Stack
 
+            variant='headerText'
+
+
 
 
             sx={{
-                height:'10vmin',
+                minHeight:'fit-content',
 
-                alignItems:'center'
+                wordBreak: 'break-word',
+
+                alignItems:'center',
+
+                marginTop:'4vmin',
+                marginBottom:'2vmin'
+
             }}
 
             direction={'row'}
         >
 
 
-            <DetailsIconLoader detailsIcon={detailsIcon}  />
+            <DetailsIconLoader detailsIcon={detailsIcon} iconSize={'3rem'} />
 
             
 
             
-            { text }
+            <Typography variant='headerText'>
+                { text }
+            </Typography>
+            
 
 
 
@@ -138,6 +171,20 @@ export function DetailsBodyText({
 
 }
 
+
+
+
+export function DetailsBodyTitle({
+    text
+}){
+
+    return(
+        <Typography variant='bodyTitle' >
+            { text }
+        </Typography>
+    );
+
+}
 
 
 

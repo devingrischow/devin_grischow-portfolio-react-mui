@@ -27,7 +27,8 @@ export function WorkExperienceColumn({refs}) {
       
       wE.employerName,
       wE.workTime,
-      wE.workType
+      wE.workType,
+      wE.points
     )
   );
   

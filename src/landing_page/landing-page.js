@@ -43,7 +43,7 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 
 
-import { NameAndImageHeader, ContactsAndWorkExperienceStackVertical } from './landing-components'
+import { NameAndImageHeader, ContactsAndWorkExperienceHolder } from './landing-components'
 
 
 
@@ -51,8 +51,7 @@ import { NameAndImageHeader, ContactsAndWorkExperienceStackVertical } from './la
 
 
 import { useParams } from "react-router";
-import React, { useState, useRef, useEffect } from 'react';
-import { workExperience } from '../data/work-experience-objects';
+import { useState, useRef, useEffect } from 'react';
 
 
 
@@ -98,7 +97,8 @@ export const LandingPage = () => {
         setLandingPageAbout(false);
     };
 
-
+    //Idea from: https://www.dhiwise.com/blog/design-converter/react-multiple-refs-manage-refs-in-components-easily
+    //Example uses array, since array is just referencing from index, modified to use map data for page variation.
     //Location Refs to use for navigation points
     const refs = useRef({});
     
@@ -106,7 +106,18 @@ export const LandingPage = () => {
     const handleGoToGivenRef = (toGoToRef) => {
       console.log("Go To Section: ", toGoToRef)
       if(refs.current[toGoToRef]) {
+        //if ref is home, then scroll to TOP
+
+        
+
         refs.current[toGoToRef].scrollIntoView();
+        
+      }else if(toGoToRef == 'Home' ){
+          window.scrollTo({
+            top: 0,
+
+            behavior:'smooth'
+        })
       }
     }
 
@@ -267,6 +278,7 @@ function LandingPageAboutMeHandler({
     return (
       <Box>
         <h2>heg</h2>
+
       </Box>
     );
   }else{
@@ -277,7 +289,7 @@ function LandingPageAboutMeHandler({
 
 
 
-        <ContactsAndWorkExperienceStackVertical refs={refs} />
+        <ContactsAndWorkExperienceHolder refs={refs} />
 
 
 
