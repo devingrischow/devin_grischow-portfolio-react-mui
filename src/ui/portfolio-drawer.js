@@ -159,6 +159,7 @@ export function PortfolioDrawer({
                       //Ensure route is in navigational 
                       if('routeTo' in menuItem){
                         navigate(`/details/${routeTo}`)
+                        window.location.reload();
                       }
                         
                     }

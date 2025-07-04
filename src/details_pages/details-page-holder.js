@@ -25,7 +25,7 @@ import { DetailsPageData } from '../data/details-pages-data';
 
 import { DetailsComponentTypes } from "./components/component-types";
 
-import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection } from './components/details-components';
+import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel  } from './components/details-components';
 
 
 
@@ -42,7 +42,7 @@ export function DetailsPageHolder() {
   const marginBodyText = '5vw'
   
   
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   
   //Based on the details Type, fetch the object to load in, and load in the components from it 
   //The details type are built from the inner array of map components
@@ -51,19 +51,19 @@ export function DetailsPageHolder() {
   
   
   //Get access to the routes parameters
-  let detailsPageDataParams = useParams();
+  const detailsPageDataParams = useParams();
   
   console.log("Details Page parameters: ", detailsPageDataParams)
   
   //reference the details type 
-  let detailType = detailsPageDataParams.detailType
+  const detailType = detailsPageDataParams.detailType
   console.log("Details Type: ", detailType)
   
-  let detailsItem = DetailsPageData[detailType]
+  const detailsItem = DetailsPageData[detailType]
   
-  let detailsBody = detailsItem.detailsBody
+  const detailsBody = detailsItem.detailsBody
   
-  let detailsBodyCount = detailsBody.length;
+  const detailsBodyCount = detailsBody.length;
   
   
   console.log("Details Body: ", detailsBodyCount)
@@ -78,6 +78,7 @@ export function DetailsPageHolder() {
   const detailItems = detailsBody.map( detailItem => 
     
     {
+    
       const detailType = detailItem.type
       
       
@@ -91,9 +92,9 @@ export function DetailsPageHolder() {
         case DetailsComponentTypes.Header: 
         const headerText = detailItem.text;
         
-        console.log("details icon to use: ", detailsIcon)
+        console.log("details icon to use: ", detailsIcon);
         
-        return (<DetailsHeader key={detailItem} text={headerText} detailsIcon={detailsIcon} />);
+        return (<DetailsHeader key={headerText} text={headerText} detailsIcon={detailsIcon} />);
         
         
         case DetailsComponentTypes.BodyText:
@@ -107,7 +108,7 @@ export function DetailsPageHolder() {
         case DetailsComponentTypes.BodyTitle:
         const bodyTitleText = detailItem.text;
         
-        return(<DetailsBodyTitle text={bodyTitleText} />);
+        return(<DetailsBodyTitle key={detailItem} text={bodyTitleText} />);
         
         
         
@@ -117,9 +118,33 @@ export function DetailsPageHolder() {
         //**Image Components
         case DetailsComponentTypes.BigImage:
         
-        const image = detailItem.image
+        const image = detailItem.image;
         
-        return ( <BigImageSection imageSection={image} /> );
+        return ( <BigImageSection key={detailItem} imageSection={image} /> );
+
+
+        //**Image List Components */
+
+
+        case DetailsComponentTypes.WovenImagesDispaly:
+          const wovenImagesList = detailItem.imagesList;
+
+          console.log("Images to make Woven: ", wovenImagesList);
+
+          return (  <WovenImagesDispaly imageObjectList={wovenImagesList}  />);
+
+
+        case DetailsComponentTypes.CarouselImagesDisplay:
+            const carouselImages = detailItem.imagesList;
+
+            console.log("Carousel Images List: ", carouselImages)
+
+            return ( <DetailsImagesCarousel carouselImages={carouselImages} /> );
+
+
+        default:
+          break;
+        
         
       }
     }

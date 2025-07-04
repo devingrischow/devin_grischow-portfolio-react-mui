@@ -14,7 +14,7 @@ export const DetailsComponentTypes = {
 
 
 
-    
+
 
 
     //**Image Components
@@ -22,8 +22,11 @@ export const DetailsComponentTypes = {
 
 
 
-    //List Image Components
-    
+    //**List Image Components
+    WovenImagesDispaly:'wovenImagesDisplay',
+
+
+    CarouselImagesDisplay:'CarouselImagesDisplay'
 
 
 
