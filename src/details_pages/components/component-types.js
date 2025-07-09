@@ -26,7 +26,14 @@ export const DetailsComponentTypes = {
     WovenImagesDispaly:'wovenImagesDisplay',
 
 
-    CarouselImagesDisplay:'CarouselImagesDisplay'
+    CarouselImagesDisplay:'CarouselImagesDisplay',
+
+
+
+    //**Link Components 
+
+    //Github Link component
+    GitHubLink:"GitHubLink"
 
 
 

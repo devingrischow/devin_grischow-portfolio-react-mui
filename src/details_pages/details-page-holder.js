@@ -25,7 +25,7 @@ import { DetailsPageData } from '../data/details-pages-data';
 
 import { DetailsComponentTypes } from "./components/component-types";
 
-import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel  } from './components/details-components';
+import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel, DetailsGitHubRepoLink  } from './components/details-components';
 
 
 
@@ -141,6 +141,22 @@ export function DetailsPageHolder() {
 
             return ( <DetailsImagesCarousel carouselImages={carouselImages} /> );
 
+
+        case DetailsComponentTypes.GitHubLink:
+          const githubRepoLink = detailItem.repoLink;
+
+          const repoAuthor = detailItem.repoUser;
+          const repoTitle = detailItem.repoTitle;
+
+          console.log("Github Repo Link to Showcase Preview: ", githubRepoLink, "Author: ", repoAuthor, "title:", repoTitle);
+
+          return(<DetailsGitHubRepoLink
+            repoTitle={repoTitle}
+            repoAuthor={repoAuthor}
+            
+            repoLink={githubRepoLink}
+
+          /> );
 
         default:
           break;

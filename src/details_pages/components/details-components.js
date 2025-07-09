@@ -206,6 +206,10 @@ export function DetailsBodyTitle({
 const BigImage = styled('img')(({ DetailsPageTheme }) => ({
   
   textAlign: 'start',
+
+  width:'100%',
+
+//   margin:'4vw'
   
 
 
@@ -280,9 +284,16 @@ export function WovenImagesDispaly({imageObjectList}){
                         alt={imageObject.caption}
 
                         style={{
-                            // width:'25%',
+
+                            width: '100%',
+                            maxWidth: '400px',
+                            height: 'auto',
                             
-                            borderRadius:'1rem'
+
+                            objectFit: 'contain',
+
+                            borderRadius:'15%',
+
                         }}
                         />
 
@@ -393,34 +404,6 @@ export function DetailsImagesCarousel({carouselImages}){
                         <CarouselHoldingCell index={index} imageObject={imageObject} />
                     ) )
                 }
-{/* 
-                <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="..."/>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-                </div>
-
-
-                <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="..."/>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-                </div>
-
-
-                <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="..."/>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-                </div> */}
-
-
 
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -440,6 +423,47 @@ export function DetailsImagesCarousel({carouselImages}){
 }
 
 
+
+export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
+
+    
+
+
+    const repoShowcaseLink = `https://github-readme-stats.vercel.app/api/pin/?username=${repoAuthor}&repo=${repoTitle}`
+
+    const onClickToRepo  = () => {
+        window.open(repoLink)
+    }
+
+    return(
+        <img 
+            src={repoShowcaseLink}
+
+             onClick={onClickToRepo}
+
+            width="100%"
+            height="200vw"
+        
+
+            style={{
+                marginTop:'4vmin',
+
+                cursor:'pointer'
+
+            }}
+        
+        />
+        
+
+    )
+}
+<iframe 
+        
+
+       
+        
+
+        ></iframe>
 // return(
     
 //         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

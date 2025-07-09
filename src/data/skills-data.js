@@ -77,7 +77,7 @@ export const SkillsData = [
         skills:[
             'Agile Workflow',
             'Sprints',
-            'Competently handle adaptations to project and project parameters'
+            'Competently handle changes to project and project parameters'
         ]
     },
 
@@ -92,7 +92,9 @@ export const SkillsData = [
         skills:[
             'Git',
             'Collaboration', 
-            'Pull Requests & Merging'
+            'Pull Requests & Merging',
+            'Github Desktop App & Website',
+
         ]
     },
 
