@@ -1,5 +1,7 @@
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
+
+
 import { PortfolioColors } from '../ui/colors';
 
 
@@ -51,7 +53,7 @@ export function WorkExperienceColumn({refs}) {
 
       
 
-      // width:'80vw',
+      width:'90vw',
 
       marginRight:'3vw',
 
@@ -61,6 +63,7 @@ export function WorkExperienceColumn({refs}) {
       borderColor:PortfolioColors.SectionDivider,
       
       
+
       
       
       

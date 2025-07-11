@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 
 import { useState } from 'react';
 
+import { useNavigate } from "react-router";
 
 
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -49,7 +50,9 @@ export function ShowCaseCell(showcaseObject){
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
     
     
-    const horizontalMargin = '10vw'
+    const horizontalMargin = '17vw'
+
+
     const borderRadius = '2vw'
 
     //og size: 2.5
@@ -93,11 +96,44 @@ export function ShowCaseCell(showcaseObject){
         
         
     }));
-    
+
+    let navigate = useNavigate();
 
     
 
-     
+    
+
+    //Handles what to do when clicking on one of the showcase cells. 
+    //Each cell can either be a nav destionation link to a different page, or its just a direct link to another page.
+    const clickOnShowcaseAction = () => {
+
+        
+
+        //Check the showcase object for each nav handler type, and what it should do 
+        if('navDestination' in showcaseObject){
+            const navigationRoute = showcaseObject.navDestination 
+            //Showcase Object to take user to a page from the Site
+
+            //Use react-routes navigation 
+            navigate(navigationRoute);
+            
+            //Ensure when arriving to the page position will be at the top
+            window.scrollTo({
+                top: 0,
+                behavior:'instant'
+            });
+            
+            //ensure when arriving at the page only the latest and what should be there is there
+            window.location.reload();
+
+        }else if ('link' in showcaseObject){
+            const linkToGoTo = showcaseObject.link
+
+            //Showcase Object to just go to normal LINK
+            window.open(linkToGoTo);
+        }
+
+    }
     
     
     
@@ -122,6 +158,10 @@ export function ShowCaseCell(showcaseObject){
         
         onMouseEnter={() => setIsOverShowCase(true)}
         onMouseLeave={() => setIsOverShowCase(false)}
+
+        onClick={clickOnShowcaseAction}
+
+        
         
         sx={{
             
@@ -153,13 +193,13 @@ export function ShowCaseCell(showcaseObject){
 
             
             
-            
+            cursor:'pointer',
             
             
             overflow:'hidden',
 
             //Margin spacing from bottom of last cell
-            marginBottom:'50px'
+            marginBottom:'80px'
             
         }}
         >
@@ -193,7 +233,6 @@ export function ShowCaseCell(showcaseObject){
             
             position:'absolute',
             
-            // borderRadius:borderRadius,
             
             
             
@@ -206,7 +245,7 @@ export function ShowCaseCell(showcaseObject){
             key={imageItem}
             sx={{
                 transform: 'rotate(20deg)',
-                scale:4,
+                scale:2.8,
                 
             }}
             >
@@ -243,8 +282,6 @@ export function ShowCaseCell(showcaseObject){
         
         background:showcaseObject.backgroundInfo.backgroundColorInfo,
 
-        //Border Radius Applied to the Box
-        // borderRadius:borderRadius,
 
         
     } }

@@ -150,10 +150,11 @@ export const  VerticalHorizontalContactsContainer = () => {
     
     sx={ {
 
-      position:'sticky',
-      top:'50px',
 
-      width:'40%',
+      position:'sticky',
+      top:'150px',
+
+      maxWidth:'35%',
 
       // width:width,
       //Border Between this cell and the next info cells 

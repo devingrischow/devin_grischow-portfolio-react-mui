@@ -249,7 +249,12 @@ export const DetailsPageData = {
 
 
             //Link to EasyEats Repo
-
+            {
+                type:DetailsComponentTypes.GitHubLink,
+                repoTitle:"EasyEats-Code-Snippets",
+                repoUser:"devingrischow",
+                repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
+            },
 
 
             
@@ -282,8 +287,99 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Started learning cloud databases when my college class was begining to build higher level apps but not finalizing for the app store yet, there was still one more class before all that and learning cloud databases. My app needed a way to share data between all users, but also allow them to create personalized accounts, and be able to update the data from anywhere. Quickly I learned I would need the cloud, and started integrating it into my iOS app, before even knowing we would need it."
+                text:"I first started using Figma and learning professional design practices in college when taking a UI/UX class. It’s not my biggest or most often used skill, but prototyping and planning still play a big role in the entire process of app development."
             }, 
+
+
+            {//Woven of Prototypes
+                type:DetailsComponentTypes.WovenImagesDispaly,
+                imagesList:[
+                    {
+                        image:iOSMacroDashboard,
+                        caption:"Looking at Macro Dashboard on iOS"
+                    },
+
+
+                    {
+                        image:HorizontalVideoPlayer,
+                        caption:"Watching a horizontal video on Android"
+                    },
+                    
+                ]
+
+            },
+
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"I’ve designed a few softwares, and almost anytime they get big, Figma starts to get involved for prototyping and designing a quality UI. Whether for prototyping features or designing entire ideas out, it’s super important to have a knowledge of the process. Then there’s the important part, being able to transfer details from the designs to an app. I find the more you understand about how to design, the more you can transfer down to the software. Most designers design within a pattern or style most likely to be the most popular for apps at the time."
+            }, 
+
+
+            {//Carousel of various figma screenshots amd esogms 
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                imagesList:[
+                    {
+                        image:iOSMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:AndroidMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:iOSVideoPlayer,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+                    {
+                        image:AndroidEatingFoodLandscape,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+
+                    {
+                        image:AndroidScrollingPastAD,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                ]
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"I found it’s easier to build the software when you understand how the UI/UX is designed; usually, the same design principles can be applied in code. For example, Android and Apple UI have similar design requirements for bottom tab bars. Being able to understand what designers are designing for allows you to potentially see if anyone has built kits or has standardized uses already made, like Material Design or other plugins."
+            }, 
+
+
+
+            {//Woven of This pages Prototypes
+                type:DetailsComponentTypes.WovenImagesDispaly,
+                imagesList:[
+                    {
+                        image:iOSMacroDashboard,
+                        caption:"Looking at Macro Dashboard on iOS"
+                    },
+
+
+                    {
+                        image:HorizontalVideoPlayer,
+                        caption:"Watching a horizontal video on Android"
+                    },
+                    
+                ]
+
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"Prototyping and designing play such a big role in the workflow that even this site is designed in Figma! Details and designs are important not only for the look but also for designing how the features should work. "
+            }, 
+
+
+
         ]
     },
     
@@ -309,16 +405,59 @@ export const DetailsPageData = {
                 text:"Cloud Databases"
             }, 
             
-            
-            // {
-            //     type:DetailsComponentTypes.BigImage,
-            //     image:CloudDataShowcase
-            // },
-            
+        
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Started learning cloud databases when my college class was begining to build higher level apps but not finalizing for the app store yet, there was still one more class before all that and learning cloud databases. My app needed a way to share data between all users, but also allow them to create personalized accounts, and be able to update the data from anywhere. Quickly I learned I would need the cloud, and started integrating it into my iOS app, before even knowing we would need it."
+                text:"Cloud databases and services are versatile and often vital in modern-day software. I picked up learning Google Cloud Firebase before my classes required it because the app I was building required a way to store lots of data, be updated, and show information to users around the world. I couldn’t do it by bundling the data into the app, so I looked up what I’d need and started from there."
+            }, 
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"Fast forward, and I quickly found myself teaching and tutoring how to use cloud databases effectively and what the best practices are, how to use them and find documentation, and how to best use every part of a suite effectively."
+            }, 
+
+            {//Carousel of various firebase images to showcase
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                imagesList:[
+                    {
+                        image:iOSMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:AndroidMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:iOSVideoPlayer,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+                    {
+                        image:AndroidEatingFoodLandscape,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+
+                    {
+                        image:AndroidScrollingPastAD,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                ]
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Services & Usage"
+            }, 
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"Firebase is where I started, but the principles I learned and taught can be applied to every and any cloud service. I’ve even compared and investigated a few other services like AWS and MongoDB for uses in other projects and services. One of the most important things I learned and made sure everyone understood about every cloud service was the importance of bandwidth and reducing the amount you call to the server."
+            }, 
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"It’s really easy to make and overuse functions that call to the server, so understanding how to make and use effective calls is vital. Not just for making effective software but also for making sure the bandwidth cost and database are stable at any scale."
             }, 
             
             
@@ -345,19 +484,49 @@ export const DetailsPageData = {
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:"Trello"
+                text:"Trello & Agile"
             }, 
-            
-            
-            // {
-            //     type:DetailsComponentTypes.BigImage,
-            //     image:CloudDataShowcase
-            // },
             
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Started learning cloud databases when my college class was begining to build higher level apps but not finalizing for the app store yet, there was still one more class before all that and learning cloud databases. My app needed a way to share data between all users, but also allow them to create personalized accounts, and be able to update the data from anywhere. Quickly I learned I would need the cloud, and started integrating it into my iOS app, before even knowing we would need it."
+                text:"Concepts I was introduced to early on in my coding classes. However, once I started my iOS classes, we had to publish a full app. That’s when we really started to dive deep with Trello, Sprints, and every part of the workflow. After publishing 2 apps, I’ve had a lot of experience working with Trello & Agile. Along with learning and tutoring it in college, I also tutored it in some outside programs I did with Chicago where other students learned how to make apps and software as well. One of the big things I taught students was how to use Agile workflow and how to manage their time and tasks appropriately."
+            }, 
+
+
+            //Slideshow of Trello Pictures
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                imagesList:[
+                    {
+                        image:iOSMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:AndroidMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:iOSVideoPlayer,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+                    {
+                        image:AndroidEatingFoodLandscape,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+
+                    {
+                        image:AndroidScrollingPastAD,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                ]
+            },
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"In classes when we were working on our apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints in classes and overseen them in other programs, and the point of doing them so often is to get constant feedback on the project and make sure everyone is on the same page about the project. Learning this early on in coding has made my workflow for myself and the clients much faster than it would have normally been."
             }, 
             
             

@@ -84,6 +84,7 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
       pl: '5vw',
       '& .MuiListItem-root': {
           // pr: '3vw',
+          fontSize:'2rem',
           display: 'list-item' 
         }
 

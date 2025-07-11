@@ -21,7 +21,6 @@ import { PortfolioColors } from '../ui/colors'
 //Data Imports for elements 
 import { ContactInfo } from '../data/contact-info';
 
-import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
 
 
@@ -218,25 +217,38 @@ function NameAndTitle(){
 
 //contacts also has 2 different versions. 
 //Horizontal uses the laid out components, side by side, 
-//vertical will use contacts on side by side with work experience
-
-
-export function ContactsAndWorkExperienceHolder({refs}){
+//vertical will use contacts on side by side with the display element
+//the display element varies from on the home screen being work experience, to the about mode being the about page. 
+export function ContactsAndDisplayElementHolder({displayElement}){
   const matches = useMediaQuery('(min-width:600px)');
+
   console.log("Matches Small: ", matches)
+
   if(matches){
-    return(<ContactsAndWorkExperienceHorizontal refs={refs} />);
+    return(<ContactsAndDisplayElementHorizontal displayElement={displayElement} />);
   }else{
-    return(<ContactsAndWorkExperiencesVertical refs={refs} />);
+    return(<ContactsAndAndDisplayElementHorizontal displayElement={displayElement} />);
     
   }
 
 }
 
+// export function ContactsAndWorkExperienceHolder({refs}){
+//   const matches = useMediaQuery('(min-width:600px)');
+//   console.log("Matches Small: ", matches)
+//   if(matches){
+//     return(<ContactsAndWorkExperienceHorizontal refs={refs} />);
+//   }else{
+//     return(<ContactsAndWorkExperiencesVertical refs={refs} />);
+    
+//   }
+
+// }
+
 
 //Contact Container 
 //Uses 2 different versions. 1 vertical, 2 horizontal
-export function ContactsAndWorkExperienceHorizontal({refs}) {
+export function ContactsAndDisplayElementHorizontal({displayElement}) {
   // const matches = useMediaQuery('(min-width:600px)');
   
   
@@ -269,8 +281,8 @@ export function ContactsAndWorkExperienceHorizontal({refs}) {
     <VerticalHorizontalContactsContainer />
     
     
-    <WorkExperienceColumn refs={refs} />
-
+    {/*  */}
+    { displayElement }
 
 
 
@@ -285,7 +297,7 @@ export function ContactsAndWorkExperienceHorizontal({refs}) {
 
 
 //Vertical Layout for Smaller phones
-function ContactsAndWorkExperiencesVertical({refs}){
+function ContactsAndAndDisplayElementHorizontal({displayElement}){
   return ( 
     
     <Stack
@@ -310,8 +322,8 @@ function ContactsAndWorkExperiencesVertical({refs}){
     <VerticalContactsContainer />
     
     
-    <WorkExperienceColumn refs={refs} />
-
+    {/* <WorkExperienceColumn refs={refs} /> */}
+    { displayElement }
 
 
 

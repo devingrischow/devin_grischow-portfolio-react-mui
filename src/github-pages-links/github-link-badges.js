@@ -47,7 +47,6 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
         backgroundColor: isHovered ? '#fff' : 'black',
         
 
-        fontSize:'20%',
 
 
 
@@ -113,7 +112,8 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
         ...theme.typography.body2,
 
-       
+        fontSize:'2.5vw',
+
 
 
         color:isHovered ? 'black' : '#fff',

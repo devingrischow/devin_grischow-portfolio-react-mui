@@ -43,10 +43,11 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 
 
-import { NameAndImageHeader, ContactsAndWorkExperienceHolder } from './landing-components'
+import { NameAndImageHeader, ContactsAndDisplayElementHolder } from './landing-components'
 
+import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
-
+import { AboutMeEduAndMoreContainer } from '../about_me_edu_more/about-me-edu-more-container';
 
 
 
@@ -277,7 +278,7 @@ function LandingPageAboutMeHandler({
     //Handle About me & Education Landing Page 
     return (
       <Box>
-        <h2>heg</h2>
+        <ContactsAndDisplayElementHolder displayElement={<AboutMeEduAndMoreContainer />} />
 
       </Box>
     );
@@ -289,7 +290,7 @@ function LandingPageAboutMeHandler({
 
 
 
-        <ContactsAndWorkExperienceHolder refs={refs} />
+        <ContactsAndDisplayElementHolder displayElement={<WorkExperienceColumn refs={refs} />} />
 
 
 

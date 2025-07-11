@@ -81,6 +81,8 @@ export function SkillsCell(skillsItem) {
 
                                 wordBreak: 'break-word',
 
+                                fontSize:'1.7rem'
+
                             } }
                         >
                             { skill }
@@ -202,13 +204,13 @@ function NotableSkillCell(notableSkills, index){
         
         if ('pageLink' in notableSkill ){
 
-            const linkToVisit = notableSkill.pageLink
+            const linkToVisit = notableSkill.pageLink;
 
             //open new page 
-            console.log("Opening New Page: ", linkToVisit)
+            console.log("Opening New Page: ", linkToVisit);
 
 
-            window.open(linkToVisit)
+            window.open(linkToVisit);
 
         }
 

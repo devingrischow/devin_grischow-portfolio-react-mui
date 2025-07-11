@@ -14,6 +14,9 @@ import { PageNotFoundPage } from "./PageNotFound";
 
 
 export const PorfolioRoutes = createBrowserRouter([
+    
+    //parameter given to landing page to allow for scrolling to 
+    //landing page components based on the param
     {
         path:'/:goToOnPage',
         element:<LandingPage />,
@@ -29,6 +32,8 @@ export const PorfolioRoutes = createBrowserRouter([
         Component:DetailsPageHolder
     }, 
 
+
+    //Catch for Invalid Page
     {
         path:'*',
         Component:PageNotFoundPage
