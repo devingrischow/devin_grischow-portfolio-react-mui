@@ -121,7 +121,7 @@ export const ShowcaseObjects = [
                 },
 
                 {
-                    badgeTitle:"Custom Automated Video Editor for file size reduction",
+                    badgeTitle:"OpenCV Based Batch Video Compressor",
                     badgeColor:PortfolioColors.CustomVideoEditorColor
                 },
 
@@ -176,7 +176,7 @@ export const ShowcaseObjects = [
             ],
 
 
-            backgroundColorInfo:'linear-gradient(162deg,rgb(33, 219, 27) 10%, rgba(87, 199, 133, 0) 100%)',
+            backgroundColorInfo:'linear-gradient(162deg,rgb(39, 136, 35) 10%, rgba(87, 199, 133, 0) 100%)',
         },
 
 
@@ -224,7 +224,10 @@ export const ShowcaseObjects = [
                 },
             ],
 
-            scale:2,
+            scale:1.8,
+            rotation:'rotate(10deg)',
+
+
             backgroundColorInfo:'linear-gradient(162deg,rgb(33, 27, 219) 10%, rgba(87, 199, 133, 0) 100%)',
         },
 
@@ -271,6 +274,9 @@ export const ShowcaseObjects = [
                     alt: "Preview of EasyEats Figma Zoomed Out"
                 },
             ],
+
+            rotation:'rotate(5deg)',
+            scale:2,
 
 
             backgroundColorInfo:'linear-gradient(162deg,#A259FF 10%, rgba(87, 199, 133, 0) 100%)',

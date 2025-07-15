@@ -160,6 +160,11 @@ export function PortfolioDrawer({
                       if('routeTo' in menuItem){
                         navigate(`/details/${routeTo}`)
                         window.location.reload();
+
+                        window.scrollTo({
+                          top: 0,
+                          behavior:'instant'
+                        });
                       }
                         
                     }

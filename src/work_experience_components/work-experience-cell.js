@@ -8,18 +8,29 @@ import { styled } from '@mui/material/styles';
 import { PortfolioColors } from '../ui/colors';
 
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+
 
 export function WorkExperienceCell(workTitleText, employerName ,workTime, workType, points) {
+  const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
+
   
   const PositionNameText = styled('h3')(({ theme }) => ({
-       textAlign:'start'
+       textAlign:'start', 
+
+       paddingLeft:matchesSmallScreenQuery ? '0' : '2vw'
   }));
   
   //Txt for Place, Date, and work type (contact/remote/full/part)
   const SubInfoHeader = styled('h4')(({ theme }) => ({
     textAlign:'start',
 
-    color:PortfolioColors.SubInfoColor
+    color:PortfolioColors.SubInfoColor, 
+
+    paddingLeft:matchesSmallScreenQuery ? '0' : '2.5vw'
+
   }));
 
 
@@ -28,7 +39,9 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
   const workPoints = points.map( pointText =>
     {
       return(
-        <ListItem >
+        <ListItem 
+         
+        >
 
           <ListItemText primary={pointText} />
           
@@ -81,11 +94,14 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
       color:'white',
 
       listStyleType: 'disc',
-      pl: '5vw',
+      pl: 'revert-layer',
       '& .MuiListItem-root': {
           // pr: '3vw',
           fontSize:'2rem',
-          display: 'list-item' 
+          display: 'list-item',
+          pl:0 //Override Default Item Root Position
+          // paddingRight:'6vw'
+          // marginRight:'16x'
         }
 
     }} >

@@ -35,6 +35,15 @@ const AboutMeLabel = styled('h2')(({ theme }) => ({
 
     borderBottom:1,
 
+    textAlign:'start', 
+
+
+   
+    marginRight:'2vw',
+    marginLeft:'2vw'
+        
+
+
 
     
     
@@ -57,7 +66,8 @@ const LinkTextLabel = styled('h2')(({ theme }) => ({
 
     alignContent:'center',
 
-    marginBottom:'0px'
+    marginBottom:'0px',
+
 
     
     
@@ -67,7 +77,7 @@ const LinkTextLabel = styled('h2')(({ theme }) => ({
 
 
 
-function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSize}) {
+function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSize,shouldShowIcon = true}) {
   const cellTextMargin = '5%'
   //Only have border on bottom
 
@@ -75,6 +85,20 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
   //Cell Hover States 
   const [isHoveringOverInfo, setHoveringOverInfo] = useState(false);
+  
+
+
+  const ShowingCard = () => {
+    
+    if(shouldShowIcon){
+      return (
+        <span class="material-symbols-outlined">
+          arrow_menu_close
+        </span>
+      );
+    }
+
+  };
   
  
 
@@ -88,7 +112,7 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
       onMouseLeave={() => setHoveringOverInfo(false)}
 
       sx={{
-        justifyContent:'center',
+        justifyContent:shouldShowIcon ? 'start' : 'center', 
 
         cursor:'pointer',
 
@@ -96,7 +120,10 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
         //bg color goes to white and text color goes to black 
         bgcolor: isHoveringOverInfo ? 'white' : 'black',
-        color:isHoveringOverInfo ? 'black' : 'white'
+        color:isHoveringOverInfo ? 'black' : 'white',
+
+        display:'flex',
+        alignItems:'center'
 
 
       
@@ -106,6 +133,9 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
       }}
     >
+
+      <ShowingCard />
+      
 
       <LinkTextLabel
       
@@ -129,7 +159,8 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
 
 
-//The VERTICAL contacts container used for HORIZONTAL layout
+//The VERTICAL contacts container used for Wide HORIZONTAL layout
+
 export const  VerticalHorizontalContactsContainer = () => {
   
   //Internal width for the vertical container 
@@ -147,6 +178,8 @@ export const  VerticalHorizontalContactsContainer = () => {
   
   return(
     <Stack 
+
+    
     
     sx={ {
 
@@ -173,7 +206,9 @@ export const  VerticalHorizontalContactsContainer = () => {
       borderColor:PortfolioColors.SectionDivider,
 
     }} >
-      <AboutMeLabel>
+      <AboutMeLabel
+        
+      >
         {ContactInfo.quickAboutMe}
       </AboutMeLabel>
     </Box>
@@ -185,7 +220,7 @@ export const  VerticalHorizontalContactsContainer = () => {
     {
       //Each Subsiquent Item Occur from a box 
     }
-    <ContactLinkCell text={ContactInfo.email} link={''} />
+    <ContactLinkCell text={ContactInfo.email} link={''}  />
 
     <Divider sx={{bgcolor:'white'}} orientation="horizontal" flexItem />
 
@@ -251,15 +286,15 @@ export const VerticalContactsContainer = () => {
           marginTop:'7vmin'
         }}
       >
-        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.email} link={''} cellWidth={width} />
+        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.email} link={''} cellWidth={width} shouldShowIcon={false} />
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
-        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.phoneNum} link={''} cellWidth={width} />
+        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.phoneNum} link={''} cellWidth={width} shouldShowIcon={false} />
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
-        <ContactLinkCell cellFontSize={smallerFontSize} text={['Linkedin']} link={ContactInfo.phoneNum} cellWidth={width} />
+        <ContactLinkCell cellFontSize={smallerFontSize} text={['Linkedin']} link={ContactInfo.phoneNum} cellWidth={width} shouldShowIcon={false} />
       </Stack>
       
 

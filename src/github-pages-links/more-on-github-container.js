@@ -71,7 +71,7 @@ export function MoreOnGithubContainer({refs}){
             sx={{
                 alignItems:'center',
 
-                marginTop:'35vmin',
+                marginTop:'6vmin',
 
                 //margin right and left instead of margin of header, should take care of links margins
                 marginRight:horizontalMargin,

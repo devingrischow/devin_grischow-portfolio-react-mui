@@ -38,6 +38,40 @@ import EEiOSCurationCodeWhileLoop from '../images/easyeats_details_page_images/h
 import EEAdminPanelPic from '../images/easyeats_details_page_images/how_does_it_do_it_woven/admin-software-woven/Admin Panel for Adding food.png';
 import EECustomEditingSoftwarePic from '../images/easyeats_details_page_images/how_does_it_do_it_woven/admin-software-woven/Batch Editor Software Start Screen.png';
 
+
+
+
+
+
+
+
+
+
+/** Figma Page Images */
+
+
+//Woven Showcases
+import FigmaFocusGardenPrototype from '../images/figma-details-images/woven-prototypes/Figma-FocusGarden-Prototyping.png';
+import FigmaEEGeneralShowcase from '../images/figma-details-images/woven-prototypes/FIGMA-ee-showcase.png';
+import FigmaEEWebsitePrototyping from '../images/figma-details-images/woven-prototypes/Figma-ee-webpage-showcase.png';
+
+
+//Slideshow of images
+import FigmaReUseComponents from '../images/figma-details-images/slideshow-various-pictures/Figma-ee-Re-usable and testable components.png';
+import FigmaEEMaterialThemeComponents from '../images/figma-details-images/slideshow-various-pictures/figma-ee-material-color-theme.png';
+import FigmaEEEarlyPrototype from '../images/figma-details-images/slideshow-various-pictures/Figma-ee-prototype-showcase.png';
+import FigmaEEAppIconShowcase from '../images/figma-details-images/slideshow-various-pictures/Figma-EE-App-Icon-Showcase.png';
+import FigmaEEAppstoreShowcase from '../images/figma-details-images/slideshow-various-pictures/Figma-ee-appstore-showcases.png';
+
+
+
+//Slideshow of Portfolio Prototypes
+import FigmaPortfolioSiteComponents from '../images/figma-details-images/slideshow-portfolio-pictures/Figma-Portfolio-Components.png';
+import FigmaPortfolioSitePrototype from '../images/figma-details-images/slideshow-portfolio-pictures/Figa-Site-Med-High Fidelity Prototype.png';
+
+
+
+
 export const DetailsPageData = {
     
     EasyEats: {
@@ -72,6 +106,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"EasyEats_Showcase_General",
                 imagesList:[
                     {
                         image:iOSMain,
@@ -295,14 +330,19 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.WovenImagesDispaly,
                 imagesList:[
                     {
-                        image:iOSMacroDashboard,
-                        caption:"Looking at Macro Dashboard on iOS"
+                        image:FigmaFocusGardenPrototype,
+                        caption:"Prototype designs for an iOS app about the Pomodoro Technique"
                     },
 
 
                     {
-                        image:HorizontalVideoPlayer,
-                        caption:"Watching a horizontal video on Android"
+                        image:FigmaEEGeneralShowcase,
+                        caption:"In Figma App showcase for EasyEats"
+                    },
+
+                    {
+                        image:FigmaEEWebsitePrototyping,
+                        caption:"Prototype of a website for a mobile app"
                     },
                     
                 ]
@@ -319,29 +359,31 @@ export const DetailsPageData = {
 
             {//Carousel of various figma screenshots amd esogms 
                 type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"figma_prototyping_showcases",
+
                 imagesList:[
                     {
-                        image:iOSMain,
-                        caption:"Top of EasyEats on iOs"
+                        image:FigmaReUseComponents,
+                        caption:"Reusable Progress Bar, Grocery List, and Other Components"
                     },
                     {
-                        image:AndroidMain,
-                        caption:"Top of EasyEats on iOs"
+                        image:FigmaEEMaterialThemeComponents,
+                        caption:"A Color Pallete following Material Design made with Figma Tools"
                     },
                     {
-                        image:iOSVideoPlayer,
-                        caption:"Top of EasyEats on iOs"
-                    },
-
-                    {
-                        image:AndroidEatingFoodLandscape,
-                        caption:"Top of EasyEats on iOs"
+                        image:FigmaEEEarlyPrototype,
+                        caption:"Part of a low fidelity prototype that was designed for my app, EasyEats"
                     },
 
+                    {
+                        image:FigmaEEAppIconShowcase,
+                        caption:"Prototypes for App Icons in various stages of prototyping, tweaking, and finalization"
+                    },
+
 
                     {
-                        image:AndroidScrollingPastAD,
-                        caption:"Top of EasyEats on iOs"
+                        image:FigmaEEAppstoreShowcase,
+                        caption:"Various sizes and styles for Preview Images on the App Store and Play Store"
                     },
                 ]
             },
@@ -355,17 +397,19 @@ export const DetailsPageData = {
 
 
             {//Woven of This pages Prototypes
-                type:DetailsComponentTypes.WovenImagesDispaly,
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"figma_portfolio_pictures",
+
                 imagesList:[
                     {
-                        image:iOSMacroDashboard,
-                        caption:"Looking at Macro Dashboard on iOS"
+                        image:FigmaPortfolioSiteComponents,
+                        caption:"Components that make up this sites prototypes"
                     },
 
 
                     {
-                        image:HorizontalVideoPlayer,
-                        caption:"Watching a horizontal video on Android"
+                        image:FigmaPortfolioSitePrototype,
+                        caption:"Prototype that makes up this site"
                     },
                     
                 ]
@@ -418,6 +462,8 @@ export const DetailsPageData = {
 
             {//Carousel of various firebase images to showcase
                 type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"Cloud",
+
                 imagesList:[
                     {
                         image:iOSMain,
@@ -497,6 +543,7 @@ export const DetailsPageData = {
             //Slideshow of Trello Pictures
             {
                 type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"Trello_",
                 imagesList:[
                     {
                         image:iOSMain,
@@ -567,9 +614,102 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Started learning cloud databases when my college class was begining to build higher level apps but not finalizing for the app store yet, there was still one more class before all that and learning cloud databases. My app needed a way to share data between all users, but also allow them to create personalized accounts, and be able to update the data from anywhere. Quickly I learned I would need the cloud, and started integrating it into my iOS app, before even knowing we would need it."
+                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even with that, it’s something that still plays a big part in my skillset and that I’m very good at using and applying. There have been countless times I’ve had to fix issues in other software, working in frameworks, and even debugging mine and others git and GitHub."
             }, 
+
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Working with software limitations"
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"Recently, I was asked if I could help improve an Excel workflow for an accounting workbook and creating invoices.  For about a month, I worked in Excel and VBA, making features that would help accelerate their workbook productivity. Every so often, I would meet with him and tell him about the progress and ask him for more ideas on improving the workflow. He would tell me issues or ideas he had, and I would write them down and then later begin to integrate or change them. It went back and forth only a few times before we landed on the perfect design and workflow."
+            },
+
+            //SLIDESHOW OF FEATURES
+            //Slideshow of Trello Pictures
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"ps-showcase",
+                imagesList:[
+                    {
+                        image:iOSMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:AndroidMain,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                    {
+                        image:iOSVideoPlayer,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+                    {
+                        image:AndroidEatingFoodLandscape,
+                        caption:"Top of EasyEats on iOs"
+                    },
+
+
+                    {
+                        image:AndroidScrollingPastAD,
+                        caption:"Top of EasyEats on iOs"
+                    },
+                ]
+            },
+
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"He gave me some ideas for features he wanted, and I came up with solutions for implementing them. After meeting, I would look into researching solutions for trying to solve his specific needs efficiently. I used Excel in the past, so I knew going in what he was asking for could be done even if I hadn’t seen what he specifically wanted. Some features he needed were to be able to clear up the workbook and also be able to send copies for tax reasons. Unfortunately, Excel has no quick log feature. But it had everything I needed to create a suite of workbook tools for automating that need and more. I created a page for him to manage every part of the workbook. He could save PDF copies of the sheet, clear the book, or perform both at once with a multi-action. He could even change the date of the file through an input entry if needed, but it also automatically re calculated dates when nothing is given. With every feature following similar principles like this, his workbook was fully feature-filled in no time. He has been using it for a while and has saved so many hours in his workflow now."
+            },
+
+
+
+
+
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Working within framework limitations"
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"I’ve built lots of low and high-level systems, and I’ve used quite a few frameworks, and I’ve learned and taught the importance of DRY(Don’t Repeat Yourself) in programming, and how important it is to not repeat yourself. Following that principle, it’s important to know when to and not to use frameworks and libraries, and how important it is to understand the limitations as well. Repeating code can often lead to lots of slowdowns and unnecessary overhead. One big issue I had once occurred in SwiftUI. I needed to make an infinitely scrolling carousel that had swiping actions and could add new items to it, while being seamless. I found some examples and integrated them but always kept having issues. What I ended up doing was modifying a common carousel and giving it multiple arrays to use for seemingly infinite scrollability."
+            },
+
+
+            {//Woven of admin panel and custom software
+                type:DetailsComponentTypes.WovenImagesDispaly,
+                imagesList:[
+                    {
+                        image:EEAdminPanelPic,
+                        caption:"Section from the EasyEats Admin Panel for adding new Foods"
+                    },
+
+
+                    {
+                        image:EECustomEditingSoftwarePic,
+                        caption:"Starting Screen for Batch Video Editing Software"
+                    },
+                    
+                ]
+
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"Every swipe to a new direction, the array would determine: What’s in the active array, what’s in the de-activated array, what’s in the to-be-re-activated array, and what in the cache might fit in with these. Swiping forward puts data into de-activated, and swiping backward puts data into to-be-re-activated. Sounds like a lot to check, and for a while it was. But by shrinking the max size of the arrays to 4, each operation became much faster. With that many swipe states, I was even able to introduce tracking values so I could control every part of the carousel. Using the foods cache, multiple array storages, swaps, and shifts, performance was noticeably stable for all deployments, and even had simpler code by the end."
+            },
             
+
             
             
             
@@ -600,19 +740,31 @@ export const DetailsPageData = {
             {
                 type:DetailsComponentTypes.Header,
                 text:"AI - Usage & Grasp"
-            }, 
-            
-            
-            // {
-            //     type:DetailsComponentTypes.BigImage,
-            //     image:CloudDataShowcase
-            // },
+            },
             
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Started learning cloud databases when my college class was begining to build higher level apps but not finalizing for the app store yet, there was still one more class before all that and learning cloud databases. My app needed a way to share data between all users, but also allow them to create personalized accounts, and be able to update the data from anywhere. Quickly I learned I would need the cloud, and started integrating it into my iOS app, before even knowing we would need it."
-            }
+                text:"AI is a huge and booming part of the coding industry. Not only is it changing the way we code, it’s changing the way we make ideas and think about implementing them. What once was a simple chat box on websites can now be a full customer service agent that can even help users shop for exactly what they’re looking for, at the same time factoring in your inventory and what’s popular. Currently, the sky is the limit for ideas."
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"That’s why it’s so important for the average developer to be in the know with AI, at least some aspect of it. I’ve been following AI development years before ChatGPT became mainstream in 2022. Neural networks, models, data organization, visualization, all and every part of it has been a small passion of mine for a long time."
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"For one of my college summers, I was able to tutor over an AI learning program. We taught students the fundamentals of AI and to understand the differences and use cases of various AI models. We also taught them how to code better with AI and how to understand and code with it more effectively, while also stating the importance of code base safety. We also taught them how to visualize algorithms and data with Orange, and how to effectively organize data. With that knowledge, they were told to make some iOS apps about solving problems they were passionate about. They made tons of great ideas, some apps even went onto being published to the App Store in other programs."
+            },
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"What I discovered as a TA is that it’s easy to ask ChatGPT or any AI coding IDE to make every part of an app for you, but sometimes it will make bugs, or you will inevitably encounter an issue of some kind. That’s why it’s important for a coder to not only understand how to make effective prompts but to also understand the problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
+            },
             
             
             

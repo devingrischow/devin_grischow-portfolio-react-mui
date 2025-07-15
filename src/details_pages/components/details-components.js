@@ -275,7 +275,8 @@ export function WovenImagesDispaly({imageObjectList}){
                            display: 'flex',
                            width:'min-content',
                            flexDirection: 'column',
-                           alignItems:'center'
+                           alignItems:'center',
+                           
                         }}
                     >
 
@@ -292,7 +293,9 @@ export function WovenImagesDispaly({imageObjectList}){
 
                             objectFit: 'contain',
 
-                            borderRadius:'15%',
+                            borderRadius:'2vw'
+
+                            
 
                         }}
                         />
@@ -319,7 +322,10 @@ export function WovenImagesDispaly({imageObjectList}){
 
 
 
-export function DetailsImagesCarousel({carouselImages}){
+export function DetailsImagesCarousel({carouselImages ,carouselID}){
+
+
+
 
     const CarouselImageCell = ({imageObject}) => {
         console.log("Image Obj: ", imageObject.caption)
@@ -330,14 +336,18 @@ export function DetailsImagesCarousel({carouselImages}){
             }}
             >
                 <img class="mx-auto d-block" style={{
-                    height:'60vmin',
-                    borderRadius:'1rem',
+                    maxHeight:'30vw',
+                    minHeight:'30vw',
+
+                    maxWidth:'60%',
+
+
+                    objectFit:'contain'
                 }} src={imageObject.image} alt="Slide"
                 />
 
                 <div class="">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <p>{imageObject.caption}</p>
                 </div>
             </Stack>
         
@@ -375,11 +385,11 @@ export function DetailsImagesCarousel({carouselImages}){
 
         if(index === 0){
             //Inital starting item 
-            return(<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label={slideLabel}></button>);
+            return(<button type="button" data-bs-target={`#${carouselID}`} data-bs-slide-to="0" class="active" aria-current="true" aria-label={slideLabel}></button>);
 
 
         }else{
-            return(<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={index} aria-label={slideLabel}></button>);
+            return(<button type="button" data-bs-target={`#${carouselID}`} data-bs-slide-to={index} aria-label={slideLabel}></button>);
         }
         
 
@@ -388,7 +398,7 @@ export function DetailsImagesCarousel({carouselImages}){
 
 
     return(
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id={carouselID} class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 {
                     carouselImages.map( (imageObject, index) => (
@@ -406,11 +416,11 @@ export function DetailsImagesCarousel({carouselImages}){
                 }
 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target={`#${carouselID}`} data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target={`#${carouselID}`} data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -457,55 +467,4 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
 
     )
 }
-<iframe 
-        
 
-       
-        
-
-        ></iframe>
-// return(
-    
-//         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-//             <ol class="carousel-indicators">
-//                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-//                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-//                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-//             </ol>
-//             <div class="carousel-inner">
-//                 {
-//                     //map over the carousel images to assign them to the bootstrap carousel cells
-
-//                     //ensure index 0 is handled specially and made active 
-//                     carouselImages.map( (imageObject, index) => (
-//                         <CarouselHoldingCell index={index} imageObject={imageObject} />
-//                     ) )
-
-
-
-//                 }
-//                 {/* <div class="carousel-item active">
-//                 <img class="d-block w-100" src="..." alt="First slide"/>
-//                 </div>
-
-//                 <div class="carousel-item">
-//                 <img class="d-block w-100" src="..." alt="Second slide"/>
-//                 </div>
-
-//                 <div class="carousel-item">
-//                 <img class="d-block w-100" src="..." alt="Third slide"/>
-//                 </div> */}
-
-
-//             </div>
-//             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-//                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-//                 <span class="sr-only">Previous</span>
-//             </a>
-//             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-//                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-//                 <span class="sr-only">Next</span>
-//             </a>
-//         </div>
-       
-//     );

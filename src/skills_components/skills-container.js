@@ -41,7 +41,7 @@ export function SkillsContainer({refs}) {
             ref={ (element) => (refs.current[LandingLocations.Skills] = element) }
 
             sx={{
-                marginTop:'40vmin',
+                marginTop:'5vmin',
                 
             }}
         >

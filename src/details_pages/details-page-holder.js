@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 
 import { useNavigate } from "react-router";
@@ -32,7 +33,10 @@ import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, Wove
 import { DetailsPageTheme } from './components/details-components';
 
 
-import { PortfolioDrawer } from '../ui/portfolio-drawer'
+import { PortfolioDrawer } from '../ui/portfolio-drawer';
+
+
+import { GlobalFooter } from '../ui/globalFooter';
 
 
 
@@ -137,9 +141,11 @@ export function DetailsPageHolder() {
         case DetailsComponentTypes.CarouselImagesDisplay:
             const carouselImages = detailItem.imagesList;
 
-            console.log("Carousel Images List: ", carouselImages)
+            const currCarouselID = detailItem.carouselID;
 
-            return ( <DetailsImagesCarousel carouselImages={carouselImages} /> );
+            console.log("Carousel Images List: ", carouselImages, 'carouselID: ', currCarouselID)
+
+            return ( <DetailsImagesCarousel carouselImages={carouselImages} carouselID={currCarouselID} /> );
 
 
         case DetailsComponentTypes.GitHubLink:
@@ -224,7 +230,11 @@ export function DetailsPageHolder() {
     { detailItems }
     
     
-    
+    <Box
+      marginTop={'30vw'}
+    >
+      <GlobalFooter />
+    </Box>
     
     
     </Stack>
@@ -250,6 +260,15 @@ function  DetailsPortfolioNavigationNavBar({
   //Navigator to take back to home screen
   let navigate = useNavigate();
   
+
+  const goToHome = () => {
+    navigate("/")
+
+    window.scrollTo({
+      top: 0,
+      behavior:'instant'
+    })
+  }
   
   
   
@@ -293,7 +312,7 @@ function  DetailsPortfolioNavigationNavBar({
     
     
     <Button color="inherit"
-    onClick={ () => navigate("/") }
+    onClick={goToHome}
     >
     Back
     </Button>

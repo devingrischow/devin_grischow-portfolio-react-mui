@@ -15,11 +15,16 @@ import { WorkExperienceCell } from '../work_experience_components/work-experienc
 
 import { LandingLocations } from '../landing_page/landing-components';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 //Work Experience Container 
 //wExperience Will Only ever be a Column, 
 //Position may change, but colum stack layout will not.
 export function WorkExperienceColumn({refs}) {
+  const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
+
   
   //Rather than built buy hand, iterated over using for loops.
   //More Modular + Faster
@@ -38,6 +43,8 @@ export function WorkExperienceColumn({refs}) {
   //Work Experience Colum Gets Topped with a Dividing Bar 
   //This is mirrored on Contacts Info for another divder/seperator
   const WorkExperienceHeaderLabel = styled('h1')(({ theme }) => ({
+    // marginTop:'1.5vw'
+    paddingTop:'1vw'
   }));
   
   
@@ -53,9 +60,9 @@ export function WorkExperienceColumn({refs}) {
 
       
 
-      width:'90vw',
+      // width:'90vw',
 
-      marginRight:'3vw',
+
 
       
 
@@ -63,6 +70,7 @@ export function WorkExperienceColumn({refs}) {
       borderColor:PortfolioColors.SectionDivider,
       
       
+
 
       
       

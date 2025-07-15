@@ -32,7 +32,9 @@ const SkillSetTitle = styled('h3')(({ theme }) => ({
   
     color:PortfolioColors.SubInfoColor,
 
-    wordBreak: 'break-word',
+    // wordBreak: 'break-word',
+
+    fontSize:'20px'
 
   
 
@@ -79,9 +81,9 @@ export function SkillsCell(skillsItem) {
                             style={ {
                                 textAlign:'start',
 
-                                wordBreak: 'break-word',
+                                // wordBreak: 'break-word',
 
-                                fontSize:'1.7rem'
+                                fontSize:'calc(0.5rem + 2vw)'
 
                             } }
                         >
@@ -221,6 +223,10 @@ function NotableSkillCell(notableSkills, index){
 
             navigate(`/details/${notableSkills[index].route}`);
 
+            window.scrollTo({
+                top: 0,
+                behavior:'instant'
+            });
 
         }
 

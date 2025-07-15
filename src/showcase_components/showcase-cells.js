@@ -59,6 +59,8 @@ export function ShowCaseCell(showcaseObject){
     const normalBorderSize = 2.5
     const HoveredBorderSize = 5
     const borderSize = isOverShowCase ? HoveredBorderSize : normalBorderSize
+
+    const isBadgesPresent = shouldBadgesBeShowcased(showcaseObject)
     
     
     
@@ -72,7 +74,7 @@ export function ShowCaseCell(showcaseObject){
         
         zIndex:2,
         
-        fontSize: 'calc(10px + 4vmin)',
+        fontSize: 'calc(2rem + 0.6vw)',
         
         
         
@@ -81,8 +83,9 @@ export function ShowCaseCell(showcaseObject){
     
     
     const ShowcaseDescription = styled('h2')(({ theme }) => ({
-        marginTop:'2vmin',
-        marginLeft:'4.3vw',
+        marginTop:isBadgesPresent ? '1.6vw' : '4vw',
+        
+        margin:'2.3vw',
         
         textAlign:'start',
         
@@ -90,7 +93,7 @@ export function ShowCaseCell(showcaseObject){
         
         zIndex:2,
         
-        fontSize: 'calc(2px + 1.5vmin)',
+        fontSize: 'calc(1rem + 0.4vw)',
         
         
         
@@ -138,7 +141,8 @@ export function ShowCaseCell(showcaseObject){
     
     
     
-
+    const showcaseCellImagesScale = showcaseObject.backgroundInfo.scale || 2.8
+    const showcaseCellImagesRotation = showcaseObject.backgroundInfo.rotation || 'rotate(20deg)'
     
     
     
@@ -153,6 +157,8 @@ export function ShowCaseCell(showcaseObject){
         */
         
         <Box
+
+        
         
         key={showcaseObject}
         
@@ -244,8 +250,8 @@ export function ShowCaseCell(showcaseObject){
             <ImageListItem
             key={imageItem}
             sx={{
-                transform: 'rotate(20deg)',
-                scale:2.8,
+                transform: showcaseCellImagesRotation,
+                scale:showcaseCellImagesScale,
                 
             }}
             >
@@ -349,7 +355,7 @@ function ShowcaseBadges(showcaseObject){
         
         wordBreak: 'break-word',
 
-        fontSize:'2vmin',
+        fontSize:'calc(1rem + 1.5vw)',
 
         color:'white'
         
@@ -392,7 +398,7 @@ function ShowcaseBadges(showcaseObject){
                 //Margin Is the same as the description, being in line with it
 
                 //Both the title & Badges start from the start of it 
-                marginLeft:'4.3vw',
+                marginLeft:'5vw',
                 marginRight:'5vw',
 
                 
@@ -401,7 +407,11 @@ function ShowcaseBadges(showcaseObject){
                 //Small amount of margin spacing 
                 marginTop:'6vmin',
 
-                marginBottom:'8vmin'
+                marginBottom:'8vmin',
+
+
+
+                
 
 
             } }
@@ -411,9 +421,25 @@ function ShowcaseBadges(showcaseObject){
             </BadgesLabel>
 
             <Stack
-                spacing={4}
+                // spacing={2}
 
                 direction={'row'}
+
+                sx={{
+
+                    justifyContent:'center',
+
+                    flexWrap:'wrap',
+
+                    justifyContent: 'space-around',
+
+
+                    // height:''
+                    minHeight:'fit-content',
+
+
+
+                }}
             >
                 {
                     //HStack of the badges 
@@ -471,14 +497,20 @@ function ShowcaseBadge(text, color){
 
 
 
-        fontSize:matchesSmallScreenQuery ? '2vmin' : '1vmin',
+        fontSize:matchesSmallScreenQuery ? '2vw' : '1.8vw',
 
         color:'white',
     
-        width:'100%',
+        width:'fit-content',
+
+        // width:'100%',
         height:'fit-content',
 
-        margin:'1vmin'
+        // margin:'1vmin'
+
+        marginBottom:"0",
+
+        margin:'0.5vw'
         
         
     }));
@@ -493,15 +525,19 @@ function ShowcaseBadge(text, color){
             sx={ {
                 bgcolor:`${color}`, 
 
+                justifyContent: 'center',
+
+
 
                 display:'flex',
+
                 alignItems:'center',
 
-                width:'20%',
+                // width:'25%',
+                width:'12vw',
 
 
-                height:'10vmin',
-
+                height:'inherit',
 
                 zIndex:4,
 
@@ -511,8 +547,8 @@ function ShowcaseBadge(text, color){
             sx={ {
                 
 
-                marginTop:paddingVerticalValue,
-                marginBottom:paddingVerticalValue,
+                // marginTop:paddingVerticalValue,
+                // marginBottom:paddingVerticalValue,
 
             } }
         >

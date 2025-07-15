@@ -16,7 +16,7 @@ This site is based on many popular portfolio templates and themes/but stylied mo
 
 - Code is organized by sites with their components and features, utelizes organized `ui` structures, routes navigation with `react-router` and handling for wrong addresses, and more.
 
-- Almost all Infomation present on the website is not hard coded, and is actually coded into javaScript objects stored in the `data` folder. When loading on screen items the given data is `mapped` to the displayed components.
+- Almost all Infomation present on the website is not hard coded, and is actually coded into javaScript objects stored in the `data` folder. When loading on screen items the given data is `mapped` as the displayed components.
 
 ## Package Versions
 

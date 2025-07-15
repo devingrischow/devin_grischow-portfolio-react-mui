@@ -40,7 +40,7 @@ export function ShowcaseContainer({refs}){
 
             //Ensure Stacked Centered
             sx={ {
-                marginTop:'15vmin'
+                marginTop:'5vmin'
             } }
         >
             

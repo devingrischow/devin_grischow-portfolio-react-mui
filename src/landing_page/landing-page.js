@@ -34,7 +34,7 @@ import { PortfolioDrawer } from '../ui/portfolio-drawer'
 import PortfolioPicture from '../images/Portfolio Photo.png';
 
 
-
+import { GlobalFooter } from '../ui/globalFooter'
 
 
 
@@ -92,10 +92,20 @@ export const LandingPage = () => {
 
         setLandingPageAbout(true);
 
+        window.scrollTo({
+          top: 0,
+          behavior:'instant'
+        });
+
     };
 
     const handleChangePageToLanding = () => {
         setLandingPageAbout(false);
+
+        window.scrollTo({
+          top: 0,
+          behavior:'instant'
+        });
     };
 
     //Idea from: https://www.dhiwise.com/blog/design-converter/react-multiple-refs-manage-refs-in-components-easily
@@ -307,6 +317,7 @@ function LandingPageAboutMeHandler({
 
         <ContactAndAboutFooter handleClickEvent={handledClickEvent}  />
 
+        <GlobalFooter />
 
       </div>
 
@@ -329,7 +340,6 @@ function ContactAndAboutFooter({handleClickEvent}){
   //Use multiple on hover trackers to track each hovered over item, 
   //when Hovered over, Bolden 
   const [isOverContactMe, setIsOverContactMe] = useState(false);
-  const [isOverTopJump, setIsOverTopJump] = useState(false);
   const [isOverAbout, setIsOverAbout] = useState(false);
 
 
@@ -372,43 +382,11 @@ function ContactAndAboutFooter({handleClickEvent}){
   }));
 
 
-  const JumpToToText = styled(Button)(({ theme }) => ({
-          
+
+
+
+
   
-    textTransform:'none',
-  
-    color:PortfolioColors.SubInfoColor,
-  
-  
-  
-    width:'5%',
-    minWidth:'fit-content',
-
-
-    
-    fontSize: isOverTopJump ? hoveredOverFontSize : '4vmin',
-
-    fontWeight: isOverTopJump ? heightLightedWeight : normalFontWeight,
-  
-  
-          
-  
-         
-  
-  }));
-
-
-
-  const jumpToTopAction = () => {
-
-    window.scrollTo({
-      top: 0,
-
-      behavior:'smooth'
-
-    })
-
-  }
 
   const contactLink = `mailto:${ContactInfo.email}?subject=Hello!`
 
@@ -436,7 +414,6 @@ function ContactAndAboutFooter({handleClickEvent}){
         marginRight:horzMargin,
         marginLeft:horzMargin,
 
-        marginBottom:'5vmin',
 
 
         // width:'100%',
@@ -493,18 +470,7 @@ function ContactAndAboutFooter({handleClickEvent}){
 
 
 
-      <JumpToToText
-
-        onClick={jumpToTopAction}
-
-        onMouseEnter={() => setIsOverTopJump(true)}
-        onMouseLeave={() => setIsOverTopJump(false)}
-
-
-
-      >
-        Top
-      </JumpToToText>
+      
 
 
 

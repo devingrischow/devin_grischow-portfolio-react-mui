@@ -5,6 +5,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import React, { useEffect } from "react";
+
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -36,7 +38,8 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -86,11 +89,13 @@ const ImDevinText = styled('h2')(({ theme }) => ({
 
 
 const TitleText = styled('h3')(({ theme }) => ({
-  // color:'yellow',
+  color:PortfolioColors.SubInfoColor,
   
   
   
   fontFamily:'roboto',
+
+  fontWeight:'300',
   
   width: 'fit-content',
   
@@ -116,6 +121,12 @@ export const LandingLocations = {
 
 
 export const  NameAndImageHeader = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+  
   //In the header, call another function for making the Hello Title 
   
   //In the Header ALSO contains a horizontal MUI stack to hold the name+title and the image next to each other 
@@ -132,8 +143,8 @@ export const  NameAndImageHeader = () => {
       alignItems: "center",
       
       
-      marginTop: '10vmin',
-      marginBottom: '3vmin',
+      marginTop: '2vw',
+      marginBottom: '2vw',
       // 
       marginLeft: '7vw',
       marginRight:'2vw',
@@ -151,6 +162,9 @@ export const  NameAndImageHeader = () => {
     <Avatar 
     alt='Devin Grischow'
     src={PortfolioPicture}
+
+    data-aos="fade-left"
+
     sx={ { 
       display:'block',
       width: '20%',
