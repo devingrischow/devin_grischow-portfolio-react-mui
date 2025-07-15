@@ -105,12 +105,12 @@ export const SkillsData = [
         notableSkills:[
             {
                 nSkillTitle:'Problem Solving',
-                route:DetailsPageData.Trello.pageId
+                route:DetailsPageData.ProblemSolving.pageId
             },
 
             {
                 nSkillTitle:'AI',
-                route:DetailsPageData.Trello.pageId
+                route:DetailsPageData.AI.pageId
             },
 
         ],

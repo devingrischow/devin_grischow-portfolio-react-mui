@@ -220,7 +220,7 @@ export const  VerticalHorizontalContactsContainer = () => {
 
 
       position:'sticky',
-      top:'150px',
+      top:'12vmin',
 
       maxWidth:'35%',
 

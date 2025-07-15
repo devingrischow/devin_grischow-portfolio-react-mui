@@ -145,7 +145,7 @@ export const ShowcaseObjects = [
     //Workbook Invoicer VBA App Showcase
     {
         showcaseTitle:"Invoice & Excel Workflow Enhancer with VBA",
-        showcaseDescription:"An Excel implementation designed to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
+        showcaseDescription:"An Excel implementation designed for a client to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
         
         //Array of preview images to reference and use 
         //Background color for gradient cover

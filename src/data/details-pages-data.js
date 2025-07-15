@@ -91,9 +91,17 @@ import TrelloProjectsAidedWith from '../images/trello-images/slideshow-trello-us
 
 
 
+//** Problem Solving Images */
 
 
+//Software Carousel 
+import PSUsingNamesInWorkBooks from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-using-company-names.png';
+import PSPartNumbersDropDown from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-using-part-number-dropdown.png';
+import PSWorkBookControlls from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-workbook-controlls.png';
 
+//Woven of framework limitations
+import PSFourDimensionArrayModel from '../images/problem-solving-images/woven-framework-limitations/ps-4-array-showcase.png';
+import PSSimplifiedPositionCalculation from '../images/problem-solving-images/woven-framework-limitations/ps-simplified-position-rotation-calc.png';
 
 
 
@@ -668,28 +676,18 @@ export const DetailsPageData = {
                 carouselID:"ps-showcase",
                 imagesList:[
                     {
-                        image:iOSMain,
-                        caption:"Top of EasyEats on iOs"
+                        image:PSUsingNamesInWorkBooks,
+                        caption:"Editing a workbook entry with a dropdown of all company names worked with"
                     },
                     {
-                        image:AndroidMain,
-                        caption:"Top of EasyEats on iOs"
+                        image:PSPartNumbersDropDown,
+                        caption:"Editing a pricing chart entry showing a dropdown of all possible part numbers worked with before"
                     },
                     {
-                        image:iOSVideoPlayer,
-                        caption:"Top of EasyEats on iOs"
+                        image:PSWorkBookControlls,
+                        caption:"Controls I created for essential actions to be preformed easier and not risk accidentally breaking pointers"
                     },
 
-                    {
-                        image:AndroidEatingFoodLandscape,
-                        caption:"Top of EasyEats on iOs"
-                    },
-
-
-                    {
-                        image:AndroidScrollingPastAD,
-                        caption:"Top of EasyEats on iOs"
-                    },
                 ]
             },
 
@@ -721,14 +719,14 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.WovenImagesDispaly,
                 imagesList:[
                     {
-                        image:EEAdminPanelPic,
-                        caption:"Section from the EasyEats Admin Panel for adding new Foods"
+                        image:PSFourDimensionArrayModel,
+                        caption:"Showcase of the four dimensional arrays inside their model"
                     },
 
 
                     {
-                        image:EECustomEditingSoftwarePic,
-                        caption:"Starting Screen for Batch Video Editing Software"
+                        image:PSSimplifiedPositionCalculation,
+                        caption:"Simplified position calculation for swiping behaviors"
                     },
                     
                 ]
