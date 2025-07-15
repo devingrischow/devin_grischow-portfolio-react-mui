@@ -62,7 +62,7 @@ const HelloText = styled('h1')(({ theme }) => ({
   wordBreak: 'break-word',
   
   
-  fontFamily:'roboto'
+  // fontFamily:'roboto'
 }));
 
 
@@ -75,7 +75,7 @@ const ImDevinText = styled('h2')(({ theme }) => ({
   
   
   
-  fontFamily:'roboto',
+  // fontFamily:'roboto',
   
   fontSize:fontSize,
   
@@ -93,7 +93,7 @@ const TitleText = styled('h3')(({ theme }) => ({
   
   
   
-  fontFamily:'roboto',
+  // fontFamily:'roboto',
 
   fontWeight:'300',
   

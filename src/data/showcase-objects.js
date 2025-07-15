@@ -92,6 +92,7 @@ export const ShowcaseObjects = [
             ],
 
 
+            rotation:'rotate(16deg)',
 
             backgroundColorInfo:'linear-gradient(162deg,rgba(219, 60, 27, 1) 10%, rgba(87, 199, 133, 0) 100%)',
         },
@@ -248,6 +249,10 @@ export const ShowcaseObjects = [
         showcaseTitle:"Figma Design",
         showcaseDescription:`Showcase of various UI/UX projects Ive worked on in Figma and a demonstration of Figma’s importance for software development.`,
         
+
+        navDestination:`/details/${DetailsPageData.FigmaDesign.pageId}`,
+
+
         //Array of preview images to reference and use 
         //Background color for gradient cover
 

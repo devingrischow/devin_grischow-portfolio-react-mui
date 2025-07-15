@@ -22,7 +22,7 @@ import { styled } from '@mui/material/styles';
 import { fontWeight, lineHeight, margin } from '@mui/system';
 
 
-
+import { GetMatchesSmallScreen } from '../../ui/matchesSmallScreenCondition';
 
 
 
@@ -257,7 +257,8 @@ export function WovenImagesDispaly({imageObjectList}){
                 alignContent:'center',
                 display:'flex',
                 flexDirection:'row',
-                flexWrap:'wrap'
+                flexWrap:'wrap',
+
             }}
         >
 
@@ -273,9 +274,10 @@ export function WovenImagesDispaly({imageObjectList}){
                     <ImageListItem key={imageObject.caption}
                         sx={{
                            display: 'flex',
-                           width:'min-content',
+                        //    width:'min-content',
                            flexDirection: 'column',
                            alignItems:'center',
+                           justifyContent:'center'
                            
                         }}
                     >
@@ -285,10 +287,10 @@ export function WovenImagesDispaly({imageObjectList}){
                         alt={imageObject.caption}
 
                         style={{
+                                width: '70%',
+                                
 
-                            width: '100%',
-                            maxWidth: '400px',
-                            height: 'auto',
+                            // maxWidth: '400px',
                             
 
                             objectFit: 'contain',
@@ -300,7 +302,30 @@ export function WovenImagesDispaly({imageObjectList}){
                         }}
                         />
 
-                        <ImageListItemBar position="below" title={imageObject.caption} />
+                        <h4
+                            style={{
+                                margin:'5vw'
+                            }}
+                        >
+
+                            {imageObject.caption}
+                        </h4>
+
+                        {/* <ImageListItemBar 
+                            position="below" 
+                            title={imageObject.caption}
+
+                            sx={{
+                                width: '50%',
+                                height:'fit-content',
+
+                                '& .MuiImageListItemBar-title':{
+                                    width:"50%",
+                                }
+
+                                // maxWidth: '400px',
+                            }}
+                         /> */}
 
                     </ImageListItem>
 
@@ -325,9 +350,19 @@ export function WovenImagesDispaly({imageObjectList}){
 export function DetailsImagesCarousel({carouselImages ,carouselID}){
 
 
+    const doesSMatchSmall = GetMatchesSmallScreen()
+    
 
 
     const CarouselImageCell = ({imageObject}) => {
+        const normalImgLink = imageObject.image;
+        const optionalMobileLink = imageObject.mobileImage;
+
+
+        //is the screen is noy small it uses normal img link, if its small then it attempts to use the mobile link, but if it cant it falls 
+        //back to normal link
+        const toUseImg = doesSMatchSmall ? normalImgLink : optionalMobileLink || normalImgLink;
+
         console.log("Image Obj: ", imageObject.caption)
         return(
             <Stack
@@ -336,18 +371,27 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
             }}
             >
                 <img class="mx-auto d-block" style={{
-                    maxHeight:'30vw',
-                    minHeight:'30vw',
+                    maxHeight:doesSMatchSmall ? '37vw' : '100vw',
+                    minHeight:doesSMatchSmall ? '37vw' : '100vw',
+                    
 
-                    maxWidth:'60%',
+                    maxWidth:doesSMatchSmall ? '80%' : '77%',
+                    minWidth:'66%',
 
 
                     objectFit:'contain'
-                }} src={imageObject.image} alt="Slide"
+                }} src={toUseImg} alt="Slide"
                 />
 
-                <div class="">
-                    <p>{imageObject.caption}</p>
+                <div>
+                    <p
+                        style={{
+                            height:doesSMatchSmall ? '2vmin' : '20vmin',
+                            marginBottom:'20px'
+                        }}
+                    >
+                        {imageObject.caption}
+                    </p>
                 </div>
             </Stack>
         

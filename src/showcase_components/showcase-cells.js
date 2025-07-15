@@ -58,7 +58,7 @@ export function ShowCaseCell(showcaseObject){
     //og size: 2.5
     const normalBorderSize = 2.5
     const HoveredBorderSize = 5
-    const borderSize = isOverShowCase ? HoveredBorderSize : normalBorderSize
+    // const borderSize = isOverShowCase ? HoveredBorderSize : normalBorderSize
 
     const isBadgesPresent = shouldBadgesBeShowcased(showcaseObject)
     
@@ -162,8 +162,7 @@ export function ShowCaseCell(showcaseObject){
         
         key={showcaseObject}
         
-        onMouseEnter={() => setIsOverShowCase(true)}
-        onMouseLeave={() => setIsOverShowCase(false)}
+  
 
         onClick={clickOnShowcaseAction}
 
@@ -187,7 +186,9 @@ export function ShowCaseCell(showcaseObject){
             
             //Border Radius on BG Image list 
             
-            outline: borderSize,
+            outline: normalBorderSize,
+
+
             
             borderColor:PortfolioColors.SectionDivider,
             
@@ -205,7 +206,11 @@ export function ShowCaseCell(showcaseObject){
             overflow:'hidden',
 
             //Margin spacing from bottom of last cell
-            marginBottom:'80px'
+            marginBottom:'80px',
+
+            '&:hover':{
+                outline:HoveredBorderSize
+            }
             
         }}
         >
@@ -480,7 +485,7 @@ function ShowcaseBadge(text, color){
     
 
 
-    const matchesSmallScreenQuery = useMediaQuery('(min-width:=800px)');
+    const matchesSmallScreenQuery = useMediaQuery('(min-width:800px)');
 
 
     console.log('Badge Color: ')
@@ -493,11 +498,11 @@ function ShowcaseBadge(text, color){
         
         textAlign:'center',
         
-        wordBreak: 'break-word',
+        // wordBreak: 'break-word',
 
 
 
-        fontSize:matchesSmallScreenQuery ? '2vw' : '1.8vw',
+        fontSize:'calc(1rem + 0.2vw)',
 
         color:'white',
     
@@ -534,8 +539,13 @@ function ShowcaseBadge(text, color){
                 alignItems:'center',
 
                 // width:'25%',
-                width:'12vw',
+                width:matchesSmallScreenQuery ? '15vw' : '18vw',
+                
+                minWidth:'fit-content',
 
+                height:"inherit",
+
+                margin: '5px',
 
                 height:'inherit',
 

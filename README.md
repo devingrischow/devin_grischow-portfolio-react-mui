@@ -9,7 +9,6 @@ This repository is where my react based portfolio site about me and my work is h
 
 This site is based on many popular portfolio templates and themes/but stylied more to allow for features not possible without react and javascript. Components and items were designed with template building in mind. If I could create components with repeatability but high cusomization in mind then I could seperate the design from the data.
 
-
 ## Features
 
 - This react site utilizes `MUI` and `Bootstrap` for easy style management and creation, uses react reccomended coding syntax, and react best practices.

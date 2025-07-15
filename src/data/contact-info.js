@@ -5,3 +5,11 @@ export const ContactInfo = {
     phoneNum:"(708)-227-4381",
     linkedIn_link:"https://www.linkedin.com/in/devin-grischow-11b281258/"
 };
+
+
+
+export const ContactType = {
+    email:'email',
+    phoneNumber:'phoneNum',
+    linkedIn:'linkinLink'
+}

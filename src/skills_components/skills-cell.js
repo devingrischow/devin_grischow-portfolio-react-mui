@@ -34,7 +34,7 @@ const SkillSetTitle = styled('h3')(({ theme }) => ({
 
     // wordBreak: 'break-word',
 
-    fontSize:'20px'
+    fontSize:'calc(1rem + 1.2vw)'
 
   
 
@@ -83,7 +83,7 @@ export function SkillsCell(skillsItem) {
 
                                 // wordBreak: 'break-word',
 
-                                fontSize:'calc(0.5rem + 2vw)'
+                                fontSize:'calc(0.6rem + 1.2vw)'
 
                             } }
                         >
@@ -152,9 +152,10 @@ function NotableSkillCell(notableSkills, index){
     //active is white with white border
 
     const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: isHovered ? '#fff' : 'black',
+
+        backgroundColor:'black',
         
-        color:isHovered ? 'black' : '#fff',
+        color:'#fff',
 
         ...theme.typography.body2,
 
@@ -172,6 +173,8 @@ function NotableSkillCell(notableSkills, index){
 
 
 
+
+        fontSize:'calc(0.6rem + 0.3vw)',
        
 
      
@@ -179,12 +182,18 @@ function NotableSkillCell(notableSkills, index){
 
         textAlign: 'center',
 
-        padding:'5px'
+        padding:'5px',
 
 
         // minWidth:'5vw',
 
 
+
+
+        '&:hover':{
+            backgroundColor:'#fff',
+            color:'black'
+        }
 
         
 
@@ -245,9 +254,7 @@ function NotableSkillCell(notableSkills, index){
         <Item key={notableSkill}
             variant="outlined"
 
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-
+            
 
             onClick={handleClickSkillEvent}
 

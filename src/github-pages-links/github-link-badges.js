@@ -107,7 +107,7 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
     }));
 
-    const GithubBadgeTitleText = styled('h6')(({ theme }) => ({
+    const GithubBadgeTitleText = styled('h4')(({ theme }) => ({
         
 
         ...theme.typography.body2,

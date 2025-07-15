@@ -141,6 +141,9 @@ export function DetailsPageHolder() {
         case DetailsComponentTypes.CarouselImagesDisplay:
             const carouselImages = detailItem.imagesList;
 
+            //proper use for optional mobile use 
+            
+
             const currCarouselID = detailItem.carouselID;
 
             console.log("Carousel Images List: ", carouselImages, 'carouselID: ', currCarouselID)

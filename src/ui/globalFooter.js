@@ -23,7 +23,6 @@ export const GlobalFooter = () => {
 
 
 
-    const [isOverTopJump, setIsOverTopJump] = useState(false);
     
 
 
@@ -88,18 +87,26 @@ export const GlobalFooter = () => {
 
 
         
-        fontSize: isOverTopJump ? hoveredOverFontSize : '4vmin',
+        fontSize: '4vmin',
 
-        fontWeight: isOverTopJump ? heightLightedWeight : normalFontWeight,
+        fontWeight: normalFontWeight,
   
 
         marginBottom:'8vmin',
 
 
-        textAlign:'center'
+        textAlign:'center',
+
+
+        '&:hover':{
+            fontSize:hoveredOverFontSize ,
+
+            fontWeight: heightLightedWeight ,
+        }
   
           
   
+        
          
   
     }));
@@ -112,8 +119,7 @@ export const GlobalFooter = () => {
 
                 onClick={jumpToTopAction}
 
-                onMouseEnter={() => setIsOverTopJump(true)}
-                onMouseLeave={() => setIsOverTopJump(false)}
+                
 
 
 

@@ -17,6 +17,7 @@ import { PortfolioColors } from '../ui/colors'
 import { styled } from '@mui/material/styles';
 
 
+import { ContactType } from '../data/contact-info'
 
 
 
@@ -77,18 +78,47 @@ const LinkTextLabel = styled('h2')(({ theme }) => ({
 
 
 
-function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSize,shouldShowIcon = true}) {
+function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSize,shouldShowIcon = true, contactType=ContactType.linkedIn}) {
   const cellTextMargin = '5%'
   //Only have border on bottom
 
   //Built using small stack w text + link image
 
   //Cell Hover States 
-  const [isHoveringOverInfo, setHoveringOverInfo] = useState(false);
   
+  //on click go to given email link 
+  const contactLink = `mailto:${ContactInfo.email}?subject=Hello!`
+  const doContactDevAcvtion = () => {
+    window.open(contactLink,'_blank');
+  }
+
+  const openLILink = () => {
+    window.open(link,'_blank');
+  }
+  
+  
+  const contactClickLink = () => {
+    switch(contactType){
+
+      case ContactType.email:
+        console.log("Pressed Email Contact Button");
+        doContactDevAcvtion();
+
+        break;
+
+      case ContactType.linkedIn:
+        console.log("Pressed Open LinkedIn")
+
+        openLILink()
+
+        break;
+
+    }
+  }
 
 
-  const ShowingCard = () => {
+
+  const ShowIcon = () => {
     
     if(shouldShowIcon){
       return (
@@ -108,8 +138,8 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
       direction={'row'}
 
 
-      onMouseEnter={() => setHoveringOverInfo(true)}
-      onMouseLeave={() => setHoveringOverInfo(false)}
+      onClick={contactClickLink}
+     
 
       sx={{
         justifyContent:shouldShowIcon ? 'start' : 'center', 
@@ -119,11 +149,11 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
         width:cellWidth,
 
         //bg color goes to white and text color goes to black 
-        bgcolor: isHoveringOverInfo ? 'white' : 'black',
-        color:isHoveringOverInfo ? 'black' : 'white',
-
+        bgcolor: 'black',
+        color:'white',
+        
         display:'flex',
-        alignItems:'center'
+        alignItems:'center',
 
 
       
@@ -131,10 +161,15 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
         // borderColor:PortfolioColors.InfoDivider,
 
+        '&:hover':{
+          bgcolor:'white',
+          color:'black'
+        }
+
       }}
     >
 
-      <ShowingCard />
+      <ShowIcon />
       
 
       <LinkTextLabel
@@ -220,7 +255,7 @@ export const  VerticalHorizontalContactsContainer = () => {
     {
       //Each Subsiquent Item Occur from a box 
     }
-    <ContactLinkCell text={ContactInfo.email} link={''}  />
+    <ContactLinkCell text={ContactInfo.email} contactType={ContactType.email}  />
 
     <Divider sx={{bgcolor:'white'}} orientation="horizontal" flexItem />
 
@@ -228,7 +263,7 @@ export const  VerticalHorizontalContactsContainer = () => {
 
     <Divider sx={{bgcolor:'white'}} orientation="horizontal" flexItem />
 
-    <ContactLinkCell text={['Linkedin']} link={ContactInfo.phoneNum} />
+    <ContactLinkCell text={['Linkedin']} contactType={ContactType.linkedIn} link={ContactInfo.linkedIn_link} />
     
     </Stack>
   )
@@ -286,7 +321,7 @@ export const VerticalContactsContainer = () => {
           marginTop:'7vmin'
         }}
       >
-        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.email} link={''} cellWidth={width} shouldShowIcon={false} />
+        <ContactLinkCell cellFontSize={smallerFontSize} contactType={ContactType.email} text={ContactInfo.email} link={''} cellWidth={width} shouldShowIcon={false} />
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
@@ -294,7 +329,7 @@ export const VerticalContactsContainer = () => {
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
-        <ContactLinkCell cellFontSize={smallerFontSize} text={['Linkedin']} link={ContactInfo.phoneNum} cellWidth={width} shouldShowIcon={false} />
+        <ContactLinkCell cellFontSize={smallerFontSize} text={['Linkedin']} contactType={ContactType.linkedIn} link={ContactInfo.linkedIn_link} cellWidth={width} shouldShowIcon={false} />
       </Stack>
       
 
