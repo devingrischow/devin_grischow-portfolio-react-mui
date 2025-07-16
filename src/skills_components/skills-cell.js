@@ -1,5 +1,5 @@
 import Stack from '@mui/material/Stack';
-import { Box } from '@mui/system';
+import { Box, margin } from '@mui/system';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -22,6 +22,11 @@ const SkillSetStack = styled(Stack)(({ theme }) => ({
   
   padding: theme.spacing(2),
   textAlign: 'start',
+
+//   width:'inherit',
+
+  display:'flex',
+  justifyContent:'center'
   
 
 
@@ -48,11 +53,11 @@ export function SkillsCell(skillsItem) {
 
     return (
         <SkillSetStack spacing={2}
-            sx={{
+           sx={{
 
-                marginRight:'5%',
-                marginLeft:'5%'
-            }}
+           }
+            
+           }
         >
             <SkillSetTitle>
                 { skillsItem.skillset }
@@ -83,7 +88,7 @@ export function SkillsCell(skillsItem) {
 
                                 // wordBreak: 'break-word',
 
-                                fontSize:'calc(0.6rem + 1.2vw)'
+                                fontSize:'calc(0.6rem + 1.2vw - 20%)'
 
                             } }
                         >
@@ -123,11 +128,11 @@ function NotableSkillContainer(notableSkills){
 
          }} >
             {Array.from(Array(notableSkillsCount)).map((_, index) => (
-                <Grid key={index} size={{ xs: 2, sm: 4, md: 4 }}
+                <Grid key={index} size={{ xs: 3, sm: 4, md: 4 }}
                   sx={{
                     
                     
-                    minWidth:'fit-content',
+                    // minWidth:'fit-content',
 
                     
 

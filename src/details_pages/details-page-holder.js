@@ -132,10 +132,13 @@ export function DetailsPageHolder() {
 
         case DetailsComponentTypes.WovenImagesDispaly:
           const wovenImagesList = detailItem.imagesList;
+          const potentialModWith = detailItem.modMaxWidth;
+
+          const mobileDisplayMode = detailItem.displayMobileAs;
 
           console.log("Images to make Woven: ", wovenImagesList);
 
-          return (  <WovenImagesDispaly imageObjectList={wovenImagesList}  />);
+          return (  <WovenImagesDispaly modWidthWoven={potentialModWith} mobileDisplayMode={mobileDisplayMode} imageObjectList={wovenImagesList}  />);
 
 
         case DetailsComponentTypes.CarouselImagesDisplay:

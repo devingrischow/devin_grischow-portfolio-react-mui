@@ -1,7 +1,16 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import { useState } from 'react';
+import Snackbar from '@mui/material/Snackbar';
+import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
+
+import Grow from '@mui/material/Grow';
+
+
+
+import React, { useState } from 'react';
+
+
 
 
 
@@ -18,6 +27,12 @@ import { styled } from '@mui/material/styles';
 
 
 import { ContactType } from '../data/contact-info'
+
+
+
+function GrowTransition(props) {
+  return <Grow {...props} />;
+}
 
 
 
@@ -82,9 +97,21 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
   const cellTextMargin = '5%'
   //Only have border on bottom
 
-  //Built using small stack w text + link image
 
-  //Cell Hover States 
+
+  //Copied Number Feedback Related
+  const [state, setState] = useState(false);
+
+
+  const handleClick = () => {
+    setState(true);
+  };
+
+const handleClose = () => {
+    setState(false);
+  };
+
+
   
   //on click go to given email link 
   const contactLink = `mailto:${ContactInfo.email}?subject=Hello!`
@@ -113,11 +140,25 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
 
         break;
 
+      case ContactType.phoneNumber:
+        handleClick();
+
+        copyTextToClipboard(ContactInfo.phoneNum);
+
+        break;
+
+      default:
+        break;
+
+
     }
   }
 
 
 
+  //Built using small stack w text + link image
+
+  //** Icons Related */
   const ShowIcon = () => {
     
     if(shouldShowIcon){
@@ -129,11 +170,20 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
     }
 
   };
-  
+
+
+  const copiedToClipboardAction = (
+    <React.Fragment>
+      <AssignmentTurnedInIcon />
+    </React.Fragment>
+  );
+
  
 
-
-  return (
+  //If the contact type is phone, then return a different stack and container
+  const ContactReturnCell = () => {
+    
+    return (
     <Stack
       direction={'row'}
 
@@ -186,9 +236,40 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
         {text}
       </LinkTextLabel>
 
+      <Snackbar
+            open={state}
+           
+            onClose={handleClose}
+
+            
+            message="Copied Phone Number to Clipboard"
+
+            autoHideDuration={3000}
+
+            action={copiedToClipboardAction}
+
+            
+            
+
+           
+
+      />
 
     </Stack>
+  )
+
+  };
+
+
+
+  
+  return (
+    <ContactReturnCell />
+  
   );
+
+
+  
 
 }
 
@@ -259,7 +340,7 @@ export const  VerticalHorizontalContactsContainer = () => {
 
     <Divider sx={{bgcolor:'white'}} orientation="horizontal" flexItem />
 
-    <ContactLinkCell text={ContactInfo.phoneNum} link={''} />
+    <ContactLinkCell text={ContactInfo.phoneNum} contactType={ContactType.phoneNumber} />
 
     <Divider sx={{bgcolor:'white'}} orientation="horizontal" flexItem />
 
@@ -325,7 +406,7 @@ export const VerticalContactsContainer = () => {
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
-        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.phoneNum} link={''} cellWidth={width} shouldShowIcon={false} />
+        <ContactLinkCell cellFontSize={smallerFontSize} text={ContactInfo.phoneNum} contactType={ContactType.phoneNumber} cellWidth={width} shouldShowIcon={false} />
 
         <Divider sx={{bgcolor:'white'}} orientation="vertical" flexItem />
 
@@ -342,3 +423,14 @@ export const VerticalContactsContainer = () => {
 
 
 
+
+
+
+async function copyTextToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Text copied to clipboard successfully!');
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+}

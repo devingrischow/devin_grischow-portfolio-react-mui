@@ -29,6 +29,8 @@ export function SkillsContainer({refs}) {
     const horizontalMargin = '20vw'
 
 
+    const containerHorzMargin = '8vw'
+
 
   
 
@@ -38,10 +40,15 @@ export function SkillsContainer({refs}) {
     return (
         <Stack
 
+            spacing={1.5}
+
             ref={ (element) => (refs.current[LandingLocations.Skills] = element) }
 
             sx={{
                 marginTop:'5vmin',
+
+                marginRight:containerHorzMargin,
+                marginLeft:containerHorzMargin
                 
             }}
         >

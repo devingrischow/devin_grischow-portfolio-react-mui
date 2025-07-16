@@ -153,22 +153,22 @@ export const DetailsPageData = {
                     },
                     {
                         image:AndroidMain,
-                        caption:"Top of EasyEats on iOs"
+                        caption:"Viewing a Food on Android"
                     },
                     {
                         image:iOSVideoPlayer,
-                        caption:"Top of EasyEats on iOs"
+                        caption:"Watching a Recipe Step video on iOS"
                     },
 
                     {
                         image:AndroidEatingFoodLandscape,
-                        caption:"Top of EasyEats on iOs"
+                        caption:"Preparing to eat a Food in landscape mode on Android"
                     },
 
 
                     {
                         image:AndroidScrollingPastAD,
-                        caption:"Top of EasyEats on iOs"
+                        caption:"Swiping between an AD card and a Food on Android"
                     },
                 ]
             },
@@ -193,10 +193,12 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.WovenImagesDispaly,
+                modMaxWidth:'40%',
+
                 imagesList:[
                     {
                         image:iOSEatingFood,
-                        caption:"Eating a Food On iOs"
+                        caption:"Eating a Food On iOS"
                     },
 
 
@@ -208,7 +210,7 @@ export const DetailsPageData = {
 
                     {
                         image:GroceryListCheckingAndrioid,
-                        caption:"Grocery List Checking on Android"
+                        caption:"Checking the Grocery List on Android"
                     },
 
 
@@ -238,6 +240,10 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.WovenImagesDispaly,
+
+                displayMobileAs:'column',
+
+
                 imagesList:[
                     {
                         image:iOSMacroDashboard,
@@ -260,20 +266,8 @@ export const DetailsPageData = {
             },
 
             {//Woven of EE Curation Code
-                type:DetailsComponentTypes.WovenImagesDispaly,
-                imagesList:[
-                    {
-                        image:iOSMacroDashboard,
-                        caption:"Looking at Macro Dashboard on iOS"
-                    },
-
-
-                    {
-                        image:HorizontalVideoPlayer,
-                        caption:"Watching a horizontal video on Android"
-                    },
-                    
-                ]
+                type:DetailsComponentTypes.BigImage,
+                image:EEiOSCurationCodeWhileLoop
 
             },
 
@@ -287,10 +281,16 @@ export const DetailsPageData = {
 
             {//Woven of admin panel and custom software
                 type:DetailsComponentTypes.WovenImagesDispaly,
+
+                modMaxWidth:'80%',
+
+                displayMobileAs:'column',
+
+
                 imagesList:[
                     {
                         image:EEAdminPanelPic,
-                        caption:"Section from the EasyEats Admin Panel for adding new Foods"
+                        caption:"Part of the Admin Panel for adding new Foods"
                     },
 
 
@@ -367,6 +367,9 @@ export const DetailsPageData = {
 
             {//Woven of Prototypes
                 type:DetailsComponentTypes.WovenImagesDispaly,
+
+                modMaxWidth:'70%',
+
                 imagesList:[
                     {
                         image:FigmaFocusGardenPrototype,
@@ -677,11 +680,11 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:PSUsingNamesInWorkBooks,
-                        caption:"Editing a workbook entry with a dropdown of all company names worked with"
+                        caption:"Editing a sample workbook entry with a dropdown of all company names worked with"
                     },
                     {
                         image:PSPartNumbersDropDown,
-                        caption:"Editing a pricing chart entry showing a dropdown of all possible part numbers worked with before"
+                        caption:"Editing a sample pricing chart entry showing a dropdown of all possible part numbers worked with before"
                     },
                     {
                         image:PSWorkBookControlls,
@@ -717,6 +720,11 @@ export const DetailsPageData = {
 
             {//Woven of admin panel and custom software
                 type:DetailsComponentTypes.WovenImagesDispaly,
+                
+                modMaxWidth:'70%',
+
+                displayMobileAs:'column',
+
                 imagesList:[
                     {
                         image:PSFourDimensionArrayModel,

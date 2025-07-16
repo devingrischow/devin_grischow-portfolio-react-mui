@@ -87,7 +87,7 @@ export const GlobalFooter = () => {
 
 
         
-        fontSize: '4vmin',
+        fontSize: '5vmin',
 
         fontWeight: normalFontWeight,
   

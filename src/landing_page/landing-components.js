@@ -24,6 +24,8 @@ import { PortfolioColors } from '../ui/colors'
 import { ContactInfo } from '../data/contact-info';
 
 
+import { GetMatchesSmallScreen } from "../ui/matchesSmallScreenCondition";
+
 
 
 import { VerticalContactsContainer, VerticalHorizontalContactsContainer } from '../contacts_and_info/contacts-components';
@@ -121,6 +123,9 @@ export const LandingLocations = {
 
 
 export const  NameAndImageHeader = () => {
+  //Reference to if the screen is small or not 
+  const doesScreenMatchSmall = GetMatchesSmallScreen()
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -172,7 +177,9 @@ export const  NameAndImageHeader = () => {
       
       marginRight: '4vw',
       marginLeft: '4vw',
-      
+
+      marginTop: doesScreenMatchSmall ? '' : '5vw',
+       
       
     } }
     

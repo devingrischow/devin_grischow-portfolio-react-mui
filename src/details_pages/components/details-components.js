@@ -85,7 +85,7 @@ export const DetailsPageTheme = createTheme({
 
         marginLeft:'2%', 
 
-        lineHeight:'2rem'
+        lineHeight:'2.7rem'
         
 
 
@@ -203,17 +203,7 @@ export function DetailsBodyTitle({
 
 //*********** Image Components ***********/
 
-const BigImage = styled('img')(({ DetailsPageTheme }) => ({
-  
-  textAlign: 'start',
 
-  width:'100%',
-
-//   margin:'4vw'
-  
-
-
-}));
 
 
 
@@ -221,10 +211,42 @@ const BigImage = styled('img')(({ DetailsPageTheme }) => ({
 
 
 export function BigImageSection({imageSection}) {
+    
+
+    const doesMatchSmall = GetMatchesSmallScreen()
+
+
+    const BigImage = styled('img')(({ DetailsPageTheme }) => ({
+  
+        textAlign: 'start',
+
+        margin:'4vw',
+
+        width:doesMatchSmall ? '70vw' : '90vw',
+
+        borderRadius:'1.5vmin',
+
+
+        objectFit:'contain'
+
+        //   margin:'4vw'
+    
+
+
+    }));
+
+
 
     return(
+        <Box
+            sx={{
+                display:'flex',
+                justifyContent:'center'
+            }}
+        >
+            <BigImage src={imageSection} />
 
-        <BigImage src={imageSection} />
+        </Box>
 
     );
 
@@ -241,7 +263,25 @@ export function BigImageSection({imageSection}) {
 
 // Requires not just a list of components, but a list of Objects with images + titles
 // (simpler & quicker to load + design than using 2 lists)
-export function WovenImagesDispaly({imageObjectList}){
+export function WovenImagesDispaly({imageObjectList, modWidthWoven, mobileDisplayMode}){
+
+    const doesMatchSmall = GetMatchesSmallScreen()
+
+    //Mobile Colum is only active and unique WHEN the screen is small 
+    const mobileImageColum = {
+        justifyContent:'center',
+
+
+        display:'flex',
+        flexDirection:'row',
+
+        
+
+        flexWrap:'wrap',
+
+    }
+
+    const sxEffect = mobileDisplayMode === 'column' ? (doesMatchSmall ? {} : mobileImageColum) : {}
 
     return(
         <ImageList
@@ -252,14 +292,9 @@ export function WovenImagesDispaly({imageObjectList}){
 
             variant="woven"
 
-            sx={{
-                justifyContent:'center',
-                alignContent:'center',
-                display:'flex',
-                flexDirection:'row',
-                flexWrap:'wrap',
-
-            }}
+            sx={
+                sxEffect
+            }
         >
 
 
@@ -277,7 +312,9 @@ export function WovenImagesDispaly({imageObjectList}){
                         //    width:'min-content',
                            flexDirection: 'column',
                            alignItems:'center',
-                           justifyContent:'center'
+                           justifyContent:'center',
+
+                           
                            
                         }}
                     >
@@ -287,15 +324,17 @@ export function WovenImagesDispaly({imageObjectList}){
                         alt={imageObject.caption}
 
                         style={{
-                                width: '70%',
+                            //Width tries to use customized max width percent when provided, 
+                            width: doesMatchSmall ? modWidthWoven || '50%' :  '100%',
+                            
                                 
 
                             // maxWidth: '400px',
-                            
+                            height:'auto',
 
                             objectFit: 'contain',
 
-                            borderRadius:'2vw'
+                            borderRadius:'1.5vmin'
 
                             
 
@@ -304,7 +343,8 @@ export function WovenImagesDispaly({imageObjectList}){
 
                         <h4
                             style={{
-                                margin:'5vw'
+                                margin:'2vw',
+                                fontSize:'calc(1rem + 0.4vw)'
                             }}
                         >
 
@@ -350,7 +390,7 @@ export function WovenImagesDispaly({imageObjectList}){
 export function DetailsImagesCarousel({carouselImages ,carouselID}){
 
 
-    const doesSMatchSmall = GetMatchesSmallScreen()
+    const doesMatchSmall = GetMatchesSmallScreen()
     
 
 
@@ -361,7 +401,7 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
 
         //is the screen is noy small it uses normal img link, if its small then it attempts to use the mobile link, but if it cant it falls 
         //back to normal link
-        const toUseImg = doesSMatchSmall ? normalImgLink : optionalMobileLink || normalImgLink;
+        const toUseImg = doesMatchSmall ? normalImgLink : optionalMobileLink || normalImgLink;
 
         console.log("Image Obj: ", imageObject.caption)
         return(
@@ -371,11 +411,11 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
             }}
             >
                 <img class="mx-auto d-block" style={{
-                    maxHeight:doesSMatchSmall ? '37vw' : '100vw',
-                    minHeight:doesSMatchSmall ? '37vw' : '100vw',
+                    maxHeight:doesMatchSmall ? '37vw' : '100vw',
+                    minHeight:doesMatchSmall ? '37vw' : '100vw',
                     
 
-                    maxWidth:doesSMatchSmall ? '80%' : '77%',
+                    maxWidth:doesMatchSmall ? '80%' : '77%',
                     minWidth:'66%',
 
 
@@ -386,7 +426,7 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
                 <div>
                     <p
                         style={{
-                            height:doesSMatchSmall ? '2vmin' : '20vmin',
+                            height:doesMatchSmall ? '2vmin' : '20vmin',
                             marginBottom:'20px'
                         }}
                     >

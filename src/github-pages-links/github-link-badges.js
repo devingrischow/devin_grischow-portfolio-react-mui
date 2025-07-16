@@ -26,6 +26,9 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
     const [isHovered, setIsHovered] = useState(false);
     
 
+    const setIsHoverTrue = () => {
+        setIsHovered(true);
+    }
 
 
 
@@ -130,7 +133,9 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
 
     const onClickAction  = () => {
-        window.open(badgeLink)
+        window.open(badgeLink);
+
+        setIsHovered(false);
     }
 
 
@@ -138,12 +143,33 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
 
     return(
-        <GitHubBadgeItem
-            variant="outlined"
+        <div
+            onTouchEndCapture={
+               onClickAction
+               
+
+            }
+
             
+
             onClick={
                 onClickAction
             }
+        >
+
+        
+        <GitHubBadgeItem
+            variant="outlined"
+            
+            
+            onTouchStart={setIsHoverTrue}
+
+
+            
+            
+
+            
+            
 
 
             onMouseEnter={() => setIsHovered(true)}
@@ -194,6 +220,7 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
                 
 
         </GitHubBadgeItem>
+        </div>
         
     );
 

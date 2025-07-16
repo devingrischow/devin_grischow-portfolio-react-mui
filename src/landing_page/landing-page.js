@@ -349,7 +349,7 @@ function ContactAndAboutFooter({handleClickEvent}){
 
 
   //Used for all instances of hovering
-  const hoveredOverFontSize = '5.5vmin'
+  const hoveredOverFontSize = '5.5vmin';
 
 
 

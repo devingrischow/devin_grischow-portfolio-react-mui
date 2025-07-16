@@ -44,7 +44,7 @@ export function WorkExperienceColumn({refs}) {
   //This is mirrored on Contacts Info for another divder/seperator
   const WorkExperienceHeaderLabel = styled('h1')(({ theme }) => ({
     // marginTop:'1.5vw'
-    paddingTop:'1vw'
+    paddingTop: matchesSmallScreenQuery ? '1vw' : '5vw'
   }));
   
   
