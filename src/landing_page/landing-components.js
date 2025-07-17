@@ -217,7 +217,7 @@ function NameAndTitle(){
       flexWrap: 'wrap',
       // marginRight: '6vw'
     } }
-    > <HelloText >Hello!</HelloText> <ImDevinText >Im Devin Grischow,</ImDevinText> </Box>
+    > <HelloText >Hello!</HelloText> <ImDevinText >Im Devin Grischow</ImDevinText> </Box>
     
     
     

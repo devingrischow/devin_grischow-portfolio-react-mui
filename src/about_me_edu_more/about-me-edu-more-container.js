@@ -9,15 +9,24 @@ import { styled } from '@mui/material/styles';
 import { PortfolioColors } from '../ui/colors';
 
 
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
 
 export function AboutMeEduAndMoreContainer({}) {
+    const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
+
 
     
     
     const PageHeader = styled('h2')(({ theme }) => ({
+        textAlign:'start',
+
+        paddingTop: matchesSmallScreenQuery ? '1vw' : '5vw',
+        
+
+
 
         textAlign:'start',
         
@@ -27,16 +36,7 @@ export function AboutMeEduAndMoreContainer({}) {
 
     const sectionBorder = `2vw solid ${PortfolioColors.SectionDivider}`
 
-    const SectionHeaders = styled('h2')(({ theme }) => ({
 
-        textAlign:'start',
-
-        marginTop:'2vw',
-
-
-        
-        
-    }));
     
     
     const AboutText = styled('h6')(({ theme }) => ({
@@ -72,8 +72,9 @@ export function AboutMeEduAndMoreContainer({}) {
 
 
             marginRight:'3vw',
+            marginLeft:matchesSmallScreenQuery ? '0vw' : '5vw',
             
-           borderTop: 1,
+            borderTop: 1,
             borderColor:PortfolioColors.SectionDivider,
             
             
@@ -115,9 +116,9 @@ export function AboutMeEduAndMoreContainer({}) {
       
             }}
         >
-            <SectionHeaders>
+            <PageHeader>
                 Education
-            </SectionHeaders>
+            </PageHeader>
         </Box>
         
         
