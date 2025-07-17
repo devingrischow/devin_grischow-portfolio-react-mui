@@ -662,7 +662,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times.Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times."
+                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times. Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times."
             }, 
 
 
@@ -719,7 +719,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve used a variety of frameworks, languages, and libraries, and after coding with them all for a while I’ve come to understand the importance of following good coding principles. Principles like knowing when to and not to use frameworks and libraries, and how to understand their limitations as well. Patterns like repeating code can often lead to lots of slowdowns and unnecessary overhead. One major issue I once ran into was in SwiftUI. I needed to build an infinitely scrolling carousel with swiping actions that could also add new items, all while keeping things seamless. I found some examples and tried integrating them, but I kept running into problems. Eventually, I modified a common carousel and gave it multiple arrays to achieve a seamlessly scrollable, seemingly infinite setup."
+                text:"I’ve used a variety of frameworks, languages, and libraries, and after coding with them all for a while I’ve come to understand the importance of following good coding practices. Practices like knowing when to and not to use frameworks and libraries, and how to understand their limitations as well. Patterns like repeating code can often lead to lots of slowdowns and unnecessary overhead. One major issue I once ran into was in SwiftUI. I needed to build an infinitely scrolling carousel with swiping actions that could also add new items, all while keeping things seamless. I found some examples and tried integrating them, but I kept running into problems. Eventually, I modified a common carousel and gave it multiple arrays to achieve a seamlessly scrollable, seemingly infinite setup."
             },
 
 
