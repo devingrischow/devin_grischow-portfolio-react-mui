@@ -125,7 +125,8 @@ export const SkillsData = [
             'Android Jetpack Compose & Views',
             'Data Structures',
             'Microsoft & Google Office Products',
-            'VBA'
+            'VBA',
+            'IT'
         ]
     },
 
