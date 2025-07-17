@@ -1,5 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+// import { createBrowserRouter } from "react-router-dom";
 
+import {
+  createHashRouter,
+  RouterProvider
+} from 'react-router-dom';
 
 
 import { LandingPage } from "./landing_page/landing-page";
@@ -13,7 +17,7 @@ import { PageNotFoundPage } from "./PageNotFound";
 
 
 
-export const PorfolioRoutes = createBrowserRouter([
+export const PorfolioRoutes = createHashRouter([
     
     //parameter given to landing page to allow for scrolling to 
     //landing page components based on the param
