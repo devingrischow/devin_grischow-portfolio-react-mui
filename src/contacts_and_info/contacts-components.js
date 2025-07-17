@@ -161,13 +161,11 @@ const handleClose = () => {
   //** Icons Related */
   const ShowIcon = () => {
     
-    if(shouldShowIcon){
-      return (
-        <span class="material-symbols-outlined">
+    return(
+      <span class="material-symbols-outlined">
           arrow_menu_close
         </span>
-      );
-    }
+    );
 
   };
 
@@ -233,6 +231,7 @@ const handleClose = () => {
           marginLeft:cellTextMargin
         }}
       >
+        
         {text}
       </LinkTextLabel>
 

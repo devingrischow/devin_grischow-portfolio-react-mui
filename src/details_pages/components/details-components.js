@@ -222,7 +222,7 @@ export function BigImageSection({imageSection}) {
 
         margin:'4vw',
 
-        width:doesMatchSmall ? '70vw' : '90vw',
+        width:doesMatchSmall ? '80vw' : '90vw',
 
         borderRadius:'1.5vmin',
 
@@ -426,7 +426,7 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
                 <div>
                     <p
                         style={{
-                            height:doesMatchSmall ? '2vmin' : '20vmin',
+                            height:doesMatchSmall ? '20%' : '30%',
                             marginBottom:'20px'
                         }}
                     >

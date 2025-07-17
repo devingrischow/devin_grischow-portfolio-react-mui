@@ -24,7 +24,7 @@ export const workExperience = [
     },
 
     {
-        workTitleText: "Teaching & Program Assistant for Summer AI 2024",
+        workTitleText: "Teaching & Program Assistant for Spring Startup to 1k 2024",
         employerName:"Everyone Can Code Chicago",
         workTime:"Jan 2024 - April 2024",
         workType:"Contract - Remote",
@@ -38,10 +38,10 @@ export const workExperience = [
     {
         workTitleText: "Teaching & Program Assistant for Summer AI 2024",
         employerName:"Everyone Can Code Chicago",
-        workTime:"Sep 2023-Dec 2023",
+        workTime:"Sep 2023 - Dec 2023",
         workType:"Contract - Remote",
         points:[
-            "Provided tutoring & teaching assistance to 17 students to help develop & publish 5 SwiftUI apps onto the iOS App Store. Students went from being new to development, to knowing everything it takes to build fully modern and stable iOS apps.",
+            "Provided teaching & tutoring assistance to 17 students to help develop & publish 5 SwiftUI apps onto the iOS App Store. Students went from being new to development, to knowing everything it takes to build fully modern and stable iOS apps.",
             "Helped students learn to use and work with GitHub, Trello, Cloud Databases, and what is and how to follow best app development & deployment practices."
         ]
     },

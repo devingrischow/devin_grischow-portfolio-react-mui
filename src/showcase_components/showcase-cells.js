@@ -81,6 +81,23 @@ export function ShowCaseCell(showcaseObject){
         
     }));
     
+    const ShowcaseDate = styled('h2')(({ theme }) => ({
+        // marginTop:isBadgesPresent ? '1.6vw' : '4vw',
+        
+        marginLeft:'3vw',
+        
+        textAlign:'start',
+        
+        wordBreak: 'break-word',
+        
+        zIndex:2,
+        
+        fontSize: 'calc(1rem + 0.2vw)',
+        
+        
+        
+        
+    }));
     
     const ShowcaseDescription = styled('h2')(({ theme }) => ({
         marginTop:isBadgesPresent ? '1.6vw' : '4vw',
@@ -100,8 +117,24 @@ export function ShowCaseCell(showcaseObject){
         
     }));
 
+
+
+
     let navigate = useNavigate();
 
+
+
+    const DateLabelIfPresent = () => {
+
+        if('dateLabel' in showcaseObject){
+            return(<ShowcaseDate>
+                {showcaseObject.dateLabel}
+            </ShowcaseDate>);
+        }
+
+        //if the label is not found, then nothing is returned
+
+    }
     
 
     
@@ -321,6 +354,9 @@ export function ShowCaseCell(showcaseObject){
     <ShowcaseTitle>
         {showcaseObject.showcaseTitle}
     </ShowcaseTitle>
+
+    <DateLabelIfPresent />
+
     
     <ShowcaseDescription>
         {showcaseObject.showcaseDescription}

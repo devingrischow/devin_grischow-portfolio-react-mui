@@ -13,7 +13,7 @@ import AndroidMain from '../images/easyeats_details_page_images/what_is_easyeats
 import iOSVideoPlayer from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-iOS-VideoPlayer.png';
 import AndroidEatingFoodLandscape from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-Eating-Sideways-Android.png';
 import AndroidScrollingPastAD from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-Scrolling-Past-GPT-Ad-Android.png';
-
+import EEMindNodeDataStructure from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-MindNode-DataStructure.png';
 
 
 //What does it do section
@@ -139,7 +139,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"EasyEats is a multi-platform recipe dieting app I created and published on iOS and Android that I started back in college when learning to code in Swift. Starting from a final project consisting of some classes and function calls, to quickly outgrowing the curriculum of the second class, to now fully modern composition-based apps on both platforms."
+                text:"EasyEats is a multi-platform recipe dieting app I created and published on iOS and Android that I started when learning Swift back in college. Starting from a final project made up of a few objects, classes, and function calls - to now being a fully modern composition-based app on both platforms."
             }, 
 
 
@@ -149,34 +149,39 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:iOSMain,
-                        caption:"Top of EasyEats on iOs"
+                        caption:"Top of EasyEats on iOS"
                     },
                     {
                         image:AndroidMain,
-                        caption:"Viewing a Food on Android"
+                        caption:"Viewing a food on Android"
                     },
                     {
                         image:iOSVideoPlayer,
-                        caption:"Watching a Recipe Step video on iOS"
+                        caption:"Watching a recipe step video on iOS"
                     },
 
                     {
                         image:AndroidEatingFoodLandscape,
-                        caption:"Preparing to eat a Food in landscape mode on Android"
+                        caption:"Preparing to eat a food in landscape mode on Android"
                     },
 
 
                     {
                         image:AndroidScrollingPastAD,
-                        caption:"Swiping between an AD card and a Food on Android"
+                        caption:"Swiping between an AD and a food on Android"
                     },
+
+                    {
+                        image:EEMindNodeDataStructure,
+                        caption:"MindNode of EasyEats data structures"
+                    }
                 ]
             },
             
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'It takes tons of elements all involved in managing and creating the app, including NoSQL cloud databases, custom-created software & admin panels, project management & protocols, and much more. All this while being free on the app stores and monetized with Google ads.'
+                text:'It brings together tons of elements involved in managing and creating the app, including NoSQL cloud databases, custom-built software and admin panels, project management practices, protocols, and more, all while being free on app stores and monetized through Google Ads.'
             },
             
             
@@ -188,7 +193,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'It takes on the modern challenge of dieting, by leveraging technologies creatively and intelligently to tackle all sides of a person’s eating diet. Users are able to swipe through curated foods based on the data from their macro profile, view recipe info and modify serving sizes, and even watch videos on every step for every meal. After that, they can view their macros and make new shopping lists automatically and adjust them to their needs. If they’re done with all that, they can even work on building their own food journals.'
+                text:'It takes on the modern challenge of dieting by leveraging technology in creative and intelligent ways to tackle every side of a person’s eating habits. Users are able to swipe through curated foods based on the data from their macro profile, view adaptable recipe info, and even watch videos on every step for every meal. After that, they can view their macros, generate new shopping lists, and adjust them to fit their needs. If they’re done with all that, they can even start building their own food journals.'
             },
 
             {
@@ -198,7 +203,7 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:iOSEatingFood,
-                        caption:"Eating a Food On iOS"
+                        caption:"Eating a food on iOS"
                     },
 
 
@@ -234,7 +239,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'EasyEats is built using both iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help do various tasks like asynchronous image loading with KingFisher and Coil, Animation files with Lottie, and Cloud Database Storage & Authentication plus more using Firebase and Google Cloud. To try and provide users with the most accurate information about themselves, their macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
+                text:'EasyEats is built using both iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help handle various tasks like asynchronous image loading with Kingfisher and Coil, animations with Lottie, and cloud database storage and authentication using Firebase and Google Cloud. To try and provide users with the most accurate information about themselves, their macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
             },
 
 
@@ -247,7 +252,7 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:iOSMacroDashboard,
-                        caption:"Looking at Macro Dashboard on iOS"
+                        caption:"Looking at the Macro Dashboard on iOS"
                     },
 
 
@@ -262,7 +267,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Meals are presented to the user in a card-swiping format. A common design adapted for a traditionally difficult-to-decide-on task: what to eat. With each swipe, meal recommendations adapt to what time it is, what foods the user likes to eat, and their past eating trends. Using a tags and values cache-based map system, with data fed into a custom meal curation AI, recommendations are more varied but still personalized to the users. Providing them with tailored and more normal, reasonable recommendations."
+                text:"Meals are presented to the user in a card-swiping format. A common design adapted for a traditionally difficult-to-decide-on task: what to eat. With each swipe, meal recommendations adapt to the time of day, the user’s food preferences, and their past eating trends. Using a tags and values cache-based map system, with data fed into a custom meal curation AI, recommendations are more varied but still personalized to the users. Providing them with tailored and more normal, reasonable recommendations."
             },
 
             {//Woven of EE Curation Code
@@ -274,7 +279,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Powering all of the Cloud features is Firebase, Firestore, and Media Storage. Firebase has been essential in allowing EasyEats to be possible, thanks to its easy integration into iOS and Android, and extensive array of testing tools and documentation. Making everything was simple, fast, but incredibly customizable and in-depth for all the projects’ needs. However, because of how in-depth some items were getting, I wanted to reduce the chances of human error and increase efficiency. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to further reduce the file sizes of videos for step videos."
+                text:"Firebase has been essential in making EasyEats possible, thanks to its smooth integration with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth for the project’s needs. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to further reduce the file sizes of videos specifically for step videos. For even more help, everything is managed using Trello and agile workflow techniques so I can track, record and work on everything much smoother."
             }, 
 
 
@@ -290,13 +295,13 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:EEAdminPanelPic,
-                        caption:"Part of the Admin Panel for adding new Foods"
+                        caption:"Part of the Admin Panel for adding new foods"
                     },
 
 
                     {
                         image:EECustomEditingSoftwarePic,
-                        caption:"Starting Screen for Batch Video Editing Software"
+                        caption:"Starting screen for the Batch Video Editing Software"
                     },
                     
                 ]
@@ -361,7 +366,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I first started using Figma and learning professional design practices in college when taking a UI/UX class. It’s not my biggest or most often used skill, but prototyping and planning still play a big role in the entire process of app development."
+                text:"I first started using Figma and learning professional design practices in college while taking a UI/UX class. It’s not one of my most-used skill, but prototyping and planning still play a big role in the overall app development process."
             }, 
 
 
@@ -379,12 +384,12 @@ export const DetailsPageData = {
 
                     {
                         image:FigmaEEGeneralShowcase,
-                        caption:"In Figma App showcase for EasyEats"
+                        caption:"Figma app designs for EasyEats"
                     },
 
                     {
                         image:FigmaEEWebsitePrototyping,
-                        caption:"Prototype of a website for a mobile app"
+                        caption:"Prototypes of a website about a mobile app"
                     },
                     
                 ]
@@ -395,7 +400,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve designed a few softwares, and almost anytime they get big, Figma starts to get involved for prototyping and designing a quality UI. Whether for prototyping features or designing entire ideas out, it’s super important to have a knowledge of the process. Then there’s the important part, being able to transfer details from the designs to an app. I find the more you understand about how to design, the more you can transfer down to the software. Most designers design within a pattern or style most likely to be the most popular for apps at the time."
+                text:"I’ve designed a few pieces of software, and almost anytime a project gets big, Figma becomes part of the process to help prototype and design a quality UI. Whether you’re prototyping features or mapping out full concepts, it’s important to understand the entire process."
             }, 
 
 
@@ -406,15 +411,15 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:FigmaReUseComponents,
-                        caption:"Reusable Progress Bar, Grocery List, and Other Components"
+                        caption:"Reusable Progress Bar, Grocery List, and other components"
                     },
                     {
                         image:FigmaEEMaterialThemeComponents,
-                        caption:"A Color Pallete following Material Design made with Figma Tools"
+                        caption:"Part of a Material Design color pallete made with Figma tools"
                     },
                     {
                         image:FigmaEEEarlyPrototype,
-                        caption:"Part of a low fidelity prototype that was designed for my app, EasyEats"
+                        caption:"Small parts of a low-fidelity prototype that was designed for my app, EasyEats"
                     },
 
                     {
@@ -425,7 +430,7 @@ export const DetailsPageData = {
 
                     {
                         image:FigmaEEAppstoreShowcase,
-                        caption:"Various sizes and styles for Preview Images on the App Store and Play Store"
+                        caption:"Various sizes and styles for preview images on the App Store and Play Store"
                     },
                 ]
             },
@@ -433,7 +438,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I found it’s easier to build the software when you understand how the UI/UX is designed; usually, the same design principles can be applied in code. For example, Android and Apple UI have similar design requirements for bottom tab bars. Being able to understand what designers are designing for allows you to potentially see if anyone has built kits or has standardized uses already made, like Material Design or other plugins."
+                text:"I found it’s easier to build software when you understand how the UI/UX is designed — often the same design principles can be applied in code. For example, Android and Apple UI share similar requirements for bottom tab bars. Understanding what designers are aiming for helps you spot existing kits or standardized components, like Material Design or other plugins."
             }, 
 
 
@@ -445,13 +450,13 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:FigmaPortfolioSiteComponents,
-                        caption:"Components that make up this sites prototypes"
+                        caption:"Components that make up this site's prototypes"
                     },
 
 
                     {
                         image:FigmaPortfolioSitePrototype,
-                        caption:"Prototype that makes up this site"
+                        caption:"Prototype for this site"
                     },
                     
                 ]
@@ -461,7 +466,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Prototyping and designing play such a big role in the workflow that even this site is designed in Figma! Details and designs are important not only for the look but also for designing how the features should work. "
+                text:"Prototyping and design play a key role in the workflow that even this site is designed and prototyped in Figma! Details and designs are important not only for the look but also for designing how the features should work."
             }, 
 
 
@@ -495,11 +500,11 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Cloud databases and services are versatile and often vital in modern-day software. I picked up learning Google Cloud Firebase before my classes required it because the app I was building required a way to store lots of data, be updated, and show information to users around the world. I couldn’t do it by bundling the data into the app, so I looked up what I’d need and started from there."
+                text:"I began learning Google Cloud Firebase even before it was required in my classes, simply because the app I was building needed a way to store large amounts of data, deliver updates, and share content globally. Bundling data into the app wasn’t feasible, so I researched what I’d need and got to work."
             }, 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Fast forward, and I quickly found myself teaching and tutoring how to use cloud databases effectively and what the best practices are, how to use them and find documentation, and how to best use every part of a suite effectively."
+                text:"Before long, I was teaching and tutoring others on how to use cloud databases effectively—covering best practices, how to navigate documentation, and how to make the most of each part of a cloud suite."
             }, 
 
             {//Carousel of various firebase images to showcase
@@ -522,13 +527,13 @@ export const DetailsPageData = {
 
                     {
                         image:CDVideoFolderPaths,
-                        caption:"Cloud media folder orginization"
+                        caption:"Cloud media folder organization"
                     },
 
 
                     {
                         image:CDSecureUserAutoGeneratedIDsFromTestDB,
-                        caption:"User entries using secure auto generated Ids from a testing database"
+                        caption:"User entries using secure auto-generated IDs from a testing database"
                     },
 
                     {
@@ -546,11 +551,11 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Firebase is where I started, but the principles I learned and taught can be applied to every and any cloud service. I’ve even compared and investigated a few other services like AWS and MongoDB for uses in other projects and services. One of the most important things I learned and made sure everyone understood about every cloud service was the importance of bandwidth and reducing the amount you call to the server."
+                text:"Firebase was my starting point, but the principles I’ve learned and tutored apply to virtually any cloud platform. I’ve also researched and compared other services like AWS and MongoDB for use in different projects. One of the key lessons I’ve taken away (and always emphasize) is the importance of bandwidth: minimizing unnecessary server calls is critical for both performance and scalability."
             }, 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"It’s really easy to make and overuse functions that call to the server, so understanding how to make and use effective calls is vital. Not just for making effective software but also for making sure the bandwidth cost and database are stable at any scale."
+                text:"It’s really easy to make and overuse functions that call to the server, so understanding how to make and use effective calls is important. Not just for making effective softwares but also for making sure the bandwidth, cost, and the database are stable at any scale."
             }, 
             
             
@@ -577,13 +582,13 @@ export const DetailsPageData = {
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:"Trello & Agile"
+                text:"Trello & Agile Workflow"
             }, 
             
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Concepts I was introduced to early on in my coding classes. However, once I started my iOS classes, we had to publish a full app. That’s when we really started to dive deep with Trello, Sprints, and every part of the workflow. After publishing 2 apps, I’ve had a lot of experience working with Trello & Agile. Along with learning and tutoring it in college, I also tutored it in some outside programs I did with Chicago where other students learned how to make apps and software as well. One of the big things I taught students was how to use Agile workflow and how to manage their time and tasks appropriately."
+                text:"Concepts I was introduced to early on in my coding classes. My iOS classes involved starting and building a full app, that’s when we really started to dig into Trello, Sprints, and every part of the workflow. I used Agile and Trello when publishing 2 apps of mine, while tutoring it in college, and even tutoring some outside programs-where students learned how to make their own iOS apps. I taught students aspects like ideas how to use Agile workflow and how to how to effectively manage their time and tasks."
             }, 
 
 
@@ -595,11 +600,11 @@ export const DetailsPageData = {
                     {
                         image:TrelloFoodsProgressCards,
                         mobileImage:TrelloFoodsProgressCardsMOBILE,
-                        caption:"Tracked Progress of Foods being made, recorded, and added"
+                        caption:"Tracked progress of foods being made, recorded, and added"
                     },
                     {
                         image:TrelloCurationCards,
-                        caption:"Progress on screen features for an app using trello tags to seperate platform progress"
+                        caption:"Progress on features for an app using Trello tags to separate platform progress"
                     },
                     {
                         image:TrelloVersionGoalsCards,
@@ -609,14 +614,14 @@ export const DetailsPageData = {
 
                     {
                         image:TrelloProjectsAidedWith,
-                        caption:"Small showcase of some Trellos I’ve worked with other students on"
+                        caption:"Small showcase of some Trellos I’ve worked with other student teams on"
                     },
                 ]
             },
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"In classes when we were working on our apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints in classes and overseen them in other programs, and the point of doing them so often is to get constant feedback on the project and make sure everyone is on the same page about the project. Learning this early on in coding has made my workflow for myself and the clients much faster than it would have normally been."
+                text:"In class when we were working on our apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints in classes and overseen them in other programs, and the point of doing them so often is to get regular feedback on the project and make sure everyone is on the same page about the project. Learning this early on in coding has made my workflow for myself and clients a lot smoother and faster than it might have been otherwise."
             }, 
             
             
@@ -657,7 +662,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even with that, it’s something that still plays a big part in my skillset and that I’m very good at using and applying. There have been countless times I’ve had to fix issues in other software, working in frameworks, and even debugging mine and others git and GitHub."
+                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times.Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times."
             }, 
 
 
@@ -669,7 +674,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Recently, I was asked if I could help improve an Excel workflow for an accounting workbook and creating invoices.  For about a month, I worked in Excel and VBA, making features that would help accelerate their workbook productivity. Every so often, I would meet with him and tell him about the progress and ask him for more ideas on improving the workflow. He would tell me issues or ideas he had, and I would write them down and then later begin to integrate or change them. It went back and forth only a few times before we landed on the perfect design and workflow."
+                text:"Recently, I was asked to help improve an Excel workflow for an accounting workbook used to create invoices. For about a month, I worked in Excel and VBA, building features to boost productivity. Every so often, I’d meet with the client to share progress and see what we could keep improving in the new workflow. He’d tell me about new issues or requests, I’d take notes, and then go back to integrating or adjusting them. It only took a few rounds before we landed on the perfect design and workflow."
             },
 
             //SLIDESHOW OF FEATURES
@@ -688,7 +693,7 @@ export const DetailsPageData = {
                     },
                     {
                         image:PSWorkBookControlls,
-                        caption:"Controls I created for essential actions to be preformed easier and not risk accidentally breaking pointers"
+                        caption:"Controls I created for essential actions to be performed more easily and not risk accidentally breaking pointers"
                     },
 
                 ]
@@ -698,7 +703,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"He gave me some ideas for features he wanted, and I came up with solutions for implementing them. After meeting, I would look into researching solutions for trying to solve his specific needs efficiently. I used Excel in the past, so I knew going in what he was asking for could be done even if I hadn’t seen what he specifically wanted. Some features he needed were to be able to clear up the workbook and also be able to send copies for tax reasons. Unfortunately, Excel has no quick log feature. But it had everything I needed to create a suite of workbook tools for automating that need and more. I created a page for him to manage every part of the workbook. He could save PDF copies of the sheet, clear the book, or perform both at once with a multi-action. He could even change the date of the file through an input entry if needed, but it also automatically re calculated dates when nothing is given. With every feature following similar principles like this, his workbook was fully feature-filled in no time. He has been using it for a while and has saved so many hours in his workflow now."
+                text:"He’d share feature ideas, and I’d come up with ways to implement them. After each meeting, I’d research efficient solutions for his specific needs. Having worked with Excel in the past, I already had a good sense that most of what he wanted could be done relatively easily. Some of the features he needed included saving copies and starting new workbooks for tax purposes. While Excel doesn’t offer a built-in log feature, it had everything I needed to build a custom suite of automation tools to handle that and more. I created a dashboard where he could manage every part of the workbook. He could save PDF copies of the sheet, clear the workbook, or do both at once using multiple action buttons. He could even change the file’s date using a text input, though it would also auto-recalculate the date if left blank. By following similar principles across every feature, the workbook became fully equipped in no time. He’s been using it ever since and has saved countless hours in his workflow."
             },
 
 
@@ -714,7 +719,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve built lots of low and high-level systems, and I’ve used quite a few frameworks, and I’ve learned and taught the importance of DRY(Don’t Repeat Yourself) in programming, and how important it is to not repeat yourself. Following that principle, it’s important to know when to and not to use frameworks and libraries, and how important it is to understand the limitations as well. Repeating code can often lead to lots of slowdowns and unnecessary overhead. One big issue I had once occurred in SwiftUI. I needed to make an infinitely scrolling carousel that had swiping actions and could add new items to it, while being seamless. I found some examples and integrated them but always kept having issues. What I ended up doing was modifying a common carousel and giving it multiple arrays to use for seemingly infinite scrollability."
+                text:"I’ve used a variety of frameworks, languages, and libraries, and after coding with them all for a while I’ve come to understand the importance of following good coding principles. Principles like knowing when to and not to use frameworks and libraries, and how to understand their limitations as well. Patterns like repeating code can often lead to lots of slowdowns and unnecessary overhead. One major issue I once ran into was in SwiftUI. I needed to build an infinitely scrolling carousel with swiping actions that could also add new items, all while keeping things seamless. I found some examples and tried integrating them, but I kept running into problems. Eventually, I modified a common carousel and gave it multiple arrays to achieve a seamlessly scrollable, seemingly infinite setup."
             },
 
 
@@ -728,7 +733,7 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:PSFourDimensionArrayModel,
-                        caption:"Showcase of the four dimensional arrays inside their model"
+                        caption:"Showcase of the four-dimensional arrays inside their model"
                     },
 
 
@@ -744,7 +749,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Every swipe to a new direction, the array would determine: What’s in the active array, what’s in the de-activated array, what’s in the to-be-re-activated array, and what in the cache might fit in with these. Swiping forward puts data into de-activated, and swiping backward puts data into to-be-re-activated. Sounds like a lot to check, and for a while it was. But by shrinking the max size of the arrays to 4, each operation became much faster. With that many swipe states, I was even able to introduce tracking values so I could control every part of the carousel. Using the foods cache, multiple array storages, swaps, and shifts, performance was noticeably stable for all deployments, and even had simpler code by the end."
+                text:"With every swipe in either direction, the system would check: what’s in the active array, the deactivated array, the to-be-reactivated array, and what in the cache might match. Swiping forward would move data into the deactivated set; swiping back would shift it into to-be-reactivated. It sounds like a lot—and it was, at first. But by limiting each array to around a max of four items, performance improved significantly. With that many swipe states, I even introduced tracking values that let me control every part of the carousel. Using a food cache, multiple array stores, swaps, and shifts, performance stayed solid across all deployments—and the code ended up even simpler."
             },
             
 
@@ -801,7 +806,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"What I discovered as a TA is that it’s easy to ask ChatGPT or any AI coding IDE to make every part of an app for you, but sometimes it will make bugs, or you will inevitably encounter an issue of some kind. That’s why it’s important for a coder to not only understand how to make effective prompts but to also understand the problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
+                text:"What I discovered while coding a few complex projects and working as a TA is that it’s easy to ask ChatGPT or any AI to make every part of an app for you, but sometimes it will make bugs, or you will inevitably encounter an issue of some kind that’s normal but you don’t like and need to change it. That’s why it’s important for a coder to not only understand how to make effective prompts but to also understand the problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
             },
             
             

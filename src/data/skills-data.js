@@ -29,13 +29,15 @@ export const SkillsData = [
         ],
 
         skills:[
-            'JSON',
+            'Python',
+            'C++',
+            'Json',
             'SQL',
             'MyPhp',
             'NoSQL',
-            'Database management',
-            
-            'Linux, Mac & Windows terminal comprehension'
+            'Cloud Services',
+            'Database Management',
+            'Command Line Interfaces (CLI’s)'
         ]
     },
 
@@ -47,17 +49,21 @@ export const SkillsData = [
                 nSkillTitle:'Figma',
                 route:DetailsPageData.FigmaDesign.pageId
             },
+            {
+                nSkillTitle:'React',
+                pageLink:`https://github.com/devingrischow/devin_grischow-portfolio-react-mui`
+            }
 
         ],
 
         skills:[
             'Material Design 3',
-            'Javascript / React / Html & CSS Libraries',
-            'Adobe Suite',
-            'Communicating and Translating Design to Code', 
-
-
-            
+            'HTML, CSS, JavaScript',
+            'Wordpress',
+            'Adobe',
+            'UI/UX',
+            'Lottie Animations',
+            'Communicating and translating design to code'
         ]
     },
 
@@ -93,8 +99,6 @@ export const SkillsData = [
             'Git',
             'Collaboration', 
             'Pull Requests & Merging',
-            'Github Desktop App & Website',
-
         ]
     },
 
@@ -117,7 +121,11 @@ export const SkillsData = [
 
 
         skills:[
-            'Microsoft & Google Office Products'
+            'iOS SwiftUI & Storyboards',
+            'Android Jetpack Compose & Views',
+            'Data Structures',
+            'Microsoft & Google Office Products',
+            'VBA'
         ]
     },
 

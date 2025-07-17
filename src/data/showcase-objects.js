@@ -62,6 +62,8 @@ export const ShowcaseObjects = [
         showcaseTitle:"EasyEats: Eating Made Easy",
         showcaseDescription:"A multi-platform recipe dieting app I created and published on iOS and Android. Features personalized food recommendations & recipes, tailored macro calculations, smart grocery lists, and more.",
         
+        dateLabel:"iOS - April, 2024 | Android - Jun, 2025",
+
         //When clicked on showcase takes to EasyEats page 
         navDestination:`/details/${DetailsPageData.EasyEats.pageId}`,
 
@@ -147,6 +149,8 @@ export const ShowcaseObjects = [
         showcaseTitle:"Invoice & Excel Workflow Enhancer with VBA",
         showcaseDescription:"An Excel implementation designed for a client to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
         
+        dateLabel:"May, 2025",
+
         //Array of preview images to reference and use 
         //Background color for gradient cover
 
