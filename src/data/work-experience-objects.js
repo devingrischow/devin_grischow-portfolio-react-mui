@@ -36,7 +36,7 @@ export const workExperience = [
 
 
     {
-        workTitleText: "Teaching & Program Assistant for Summer AI 2024",
+        workTitleText: "Teaching & Program Assistant for App Accelerator 2023",
         employerName:"Everyone Can Code Chicago",
         workTime:"Sep 2023 - Dec 2023",
         workType:"Contract - Remote",
