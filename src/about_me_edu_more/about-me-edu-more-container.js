@@ -94,12 +94,10 @@ export function AboutMeEduAndMoreContainer({}) {
         </PageHeader>
         
             <AboutText>
-            I’m a developer who’s passionate and enthusiastic about technology and finding solutions to problems. Whatever it may be, I’d probably be interested in it and learning more about it. I enjoy breaking things down and seeing how they work, how they go together, looking for improvements and faults, anything and everything. Then being able to discuss it further with others and expand on the idea. 
+            I’m a developer who’s passionate about technology and finding solutions to problems. I’m always thinking of new ideas and ways to tackle challenges or to expand my horizons.
             </AboutText>
             
-            <AboutText>
-            I believe it’s these passions I have that lead me to strive to create better. Whenever I can, I’m always thinking of new ideas and ways to tackle challenges or to expand my horizons.
-            </AboutText>
+           
             
          
 

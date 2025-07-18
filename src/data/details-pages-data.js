@@ -588,7 +588,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Concepts I was introduced to early on in my coding classes. My iOS classes involved starting and building a full app, that’s when we really started to dig into Trello, Sprints, and every part of the workflow. I used Agile and Trello when publishing 2 apps of mine, while tutoring it in college, and even tutoring some outside programs-where students learned how to make their own iOS apps. I taught students aspects like ideas how to use Agile workflow and how to how to effectively manage their time and tasks."
+                text:"Concepts I was introduced to early on in my coding classes. My iOS classes involved starting and building a full app, that’s when we really started to dig into Trello, Sprints, and every part of the workflow. I used Agile and Trello when publishing 2 apps of mine, while tutoring it in college, and even tutoring it in some outside programs. Programs where studets would learn how to make and publish their own iOS apps. I taught students aspects like Agile workflow and how to effectively manage their tasks and time so they could publish their apps in just a few weeks."
             }, 
 
 

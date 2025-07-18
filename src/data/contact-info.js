@@ -1,5 +1,5 @@
 export const ContactInfo = {
-    quickAboutMe:"Im a Software Developer, enthusiastic about technology, always excited to learn something new, problem solve, and to understand and improve anything I can.",
+    quickAboutMe:"I'm a Software Developer enthusiastic about technology, always excited to learn something new, problem solve, understand and improve anything I can.",
 
     email:"devingrischow@outlook.com",
     phoneNum:"(708)-227-4381",
