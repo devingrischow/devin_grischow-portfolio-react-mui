@@ -28,20 +28,24 @@ import { GetMatchesSmallScreen } from "../ui/matchesSmallScreenCondition";
 
 
 
-import { VerticalContactsContainer, VerticalHorizontalContactsContainer } from '../contacts_and_info/contacts-components';
+import { HorizontalContactsContainer, VerticalHorizontalContactsContainer } from '../contacts_and_info/contacts-components';
 
 
 
 import PortfolioPicture from '../images/Portfolio Photo.png';
 
 
-
-
-
-
-
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
+
+
+
+
+
+
+const smallLabelVerticalPaddingAmount = '2vw'
 
 
 
@@ -106,6 +110,34 @@ const TitleText = styled('h3')(({ theme }) => ({
 }));
 
 
+const AboutMeLabel = styled('h4')(({ theme }) => ({
+    
+    
+    paddingTop:smallLabelVerticalPaddingAmount,
+    
+
+
+    fontSize:'calc(1rem + 0.5vw)',
+
+    wordBreak: 'break-word',
+
+    borderBottom:1,
+
+    textAlign:'start', 
+
+
+   
+    marginRight:'2vw',
+    marginLeft:'2vw'
+        
+
+
+
+    
+    
+    
+}));
+
 
 
 
@@ -114,7 +146,7 @@ export const LandingLocations = {
   WorkExperience:"Work Experience",
   Showcase:"Showcase",
   Skills:"Skills",
-  Github:"GitHub"
+  Github:"Contacts & GitHub"
 
 }
 
@@ -149,7 +181,6 @@ export const  NameAndImageHeader = () => {
       
       
       marginTop: '2vw',
-      marginBottom: '2vw',
       // 
       marginLeft: '7vw',
       marginRight:'2vw',
@@ -185,6 +216,10 @@ export const  NameAndImageHeader = () => {
     
     
     />
+    <AboutMeLabel>
+      { ContactInfo.quickAboutMe }
+    </AboutMeLabel>
+    
     
     </Stack>
     
@@ -217,11 +252,10 @@ function NameAndTitle(){
       flexWrap: 'wrap',
       // marginRight: '6vw'
     } }
-    > <HelloText >Hello!</HelloText> <ImDevinText >Im Devin Grischow</ImDevinText> </Box>
-    
-    
+    > <HelloText >Hello!</HelloText> <ImDevinText >I'm Devin Grischow</ImDevinText> </Box>
     
     <TitleText>Software Developer</TitleText>
+    
     </Stack>
     
   );
@@ -254,17 +288,7 @@ export function ContactsAndDisplayElementHolder({displayElement}){
 
 }
 
-// export function ContactsAndWorkExperienceHolder({refs}){
-//   const matches = useMediaQuery('(min-width:600px)');
-//   console.log("Matches Small: ", matches)
-//   if(matches){
-//     return(<ContactsAndWorkExperienceHorizontal refs={refs} />);
-//   }else{
-//     return(<ContactsAndWorkExperiencesVertical refs={refs} />);
-    
-//   }
 
-// }
 
 
 //Contact Container 
@@ -340,7 +364,7 @@ function ContactsAndAndDisplayElementHorizontal({displayElement}){
     
     >
     
-    <VerticalContactsContainer />
+    <HorizontalContactsContainer />
     
     
     {/* <WorkExperienceColumn refs={refs} /> */}

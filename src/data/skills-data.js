@@ -31,12 +31,14 @@ export const SkillsData = [
         skills:[
             'Python',
             'C++',
-            'Json',
             'SQL',
             'MyPhp',
             'NoSQL',
+            'Json',
+
             'Cloud Services',
             'Database Management',
+            'APIs',
             'Command Line Interfaces (CLI’s)'
         ]
     },
@@ -121,12 +123,15 @@ export const SkillsData = [
 
 
         skills:[
-            'iOS SwiftUI & Storyboards',
-            'Android Jetpack Compose & Views',
+            'iOS - SwiftUI & Storyboards',
+            'Android - Jetpack Compose & Views',
             'Data Structures',
+            'CRUD',
             'Microsoft & Google Office Products',
             'VBA',
-            'IT'
+            'IT',
+            'Visual Studio Code, Xcode, and Android Studio', 
+            'Algorithms'
         ]
     },
 

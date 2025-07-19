@@ -11,19 +11,43 @@ import { PortfolioColors } from '../ui/colors';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import { createTheme } from '@mui/material/styles';
 
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Grid from '@mui/material/Grid';
+
+
+
+
+import { useState } from 'react';
+
+
+
+import {ContactInfo} from '../data/contact-info';
+import { height } from '@mui/system';
+
+
+import { Fade } from '@mui/material';
 
 
 export function AboutMeEduAndMoreContainer({}) {
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
 
 
+
+    
+    
+
     
     
     const PageHeader = styled('h2')(({ theme }) => ({
         textAlign:'start',
 
-        paddingTop: matchesSmallScreenQuery ? '1vw' : '5vw',
+        paddingTop:'5vmin',
         
 
 
@@ -58,6 +82,142 @@ export function AboutMeEduAndMoreContainer({}) {
 
 
 
+    const HobbyImages = ({hobbyObject}) => {
+
+        const [ focusedOnHobby, setHobbyFocus ] = useState(false);
+
+        const setIsFocused = () => {
+            setHobbyFocus(true);
+        }
+
+        const setIsNotFocused = () => {
+            setHobbyFocus(false);
+        }
+
+
+
+        const HobbyLabel = styled('h3')(({ theme }) => ({
+            textAlign:'center',
+
+
+        
+        
+            color:PortfolioColors.SectionDivider,
+
+            
+        }));
+
+
+        const HobbyImageBackground = () => {
+            
+
+                return(
+                    <Fade in={focusedOnHobby} >
+
+                    
+                    <img 
+                        src={ focusedOnHobby ? hobbyObject.image : '' }
+                        alt={hobbyObject.text}  
+                        style={{
+                            height:'100vw',
+                            width:"100%",
+
+                            objectFit:'contain'
+                        }}
+                    />
+                    </Fade>
+                )
+            
+        }
+
+
+        const HobbyTextLogicLabel = () => {
+            if(focusedOnHobby === false){
+                return(
+                    <Box>
+                        <hobbyObject.icon sx={{
+                            transform:'scale(2)',
+
+                            marginBottom:'1vw'
+                            }}
+                        />
+                
+                        <HobbyLabel>
+                            {hobbyObject.text}
+                        </HobbyLabel>
+                    </Box>
+                )
+            }
+        }
+
+
+        return(
+
+            
+            <Grid
+
+                
+                onMouseEnter={setIsFocused}
+                onMouseLeave={setIsNotFocused}
+
+                
+
+
+                size={ 5 }
+
+                sx={{
+
+
+                    border:2,
+                    borderColor:PortfolioColors.SectionDivider, 
+                    borderRadius:'5%',
+
+                    minHeight:'15vw',
+                    maxHeight:'15vw',
+
+                    display:'flex',
+                    justifyContent:'center',
+                    alignItems:'center', 
+                    flexDirection:'column',
+
+                    overflow:'hidden'
+
+                }}
+            >
+
+                <Box
+                    sx={{
+                        
+                    }}
+                >
+
+
+                    
+                    <HobbyTextLogicLabel />
+                    
+                        
+                    
+                    <HobbyImageBackground />
+
+                </Box>
+                    
+                
+
+
+
+                
+                
+
+
+            </Grid>
+
+        );
+    
+
+    }
+
+
+
     
 
     
@@ -82,24 +242,91 @@ export function AboutMeEduAndMoreContainer({}) {
 
             minWidth:'auto',
 
-            marginBottom:'40vw'
+            marginBottom:'40vw',
         }}
         
         >
         
+
+        
         
         
         <PageHeader>
-        About
+            About
         </PageHeader>
         
-            <AboutText>
-            I’m a developer who’s passionate about technology and finding solutions to problems. I’m always thinking of new ideas and ways to tackle challenges or to expand my horizons.
-            </AboutText>
+        <AboutText>
+            I’m a developer who’s passionate about technology and finding solutions to problems. I’m always thinking of ideas and different ways to tackle challenges or to expand my horizons.
+        </AboutText>
             
            
             
-         
+        <Box
+            sx={{
+                borderTop: 1,
+                borderColor:PortfolioColors.SectionDivider,
+            }}
+        >
+            
+
+           
+
+
+            <Accordion
+                 sx={{
+                    width:'inherit',
+                    backgroundColor:'black',
+                    color:'white',
+
+
+                }}
+            >
+                <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{color:'white', width:"3rem", height:'inherit', marginBottom:'12px'}} />}
+                aria-controls="panel1-content"
+                id="hobbies-accordian"
+                sx={{
+                    alignItems:'flex-end',
+
+                    
+                }}
+                >
+
+                <PageHeader>
+                    Hobbies & Interests
+                </PageHeader>
+
+                </AccordionSummary>
+                <AccordionDetails>
+
+                <AboutText
+                    sx={{
+                        marginBottom:"2vw",
+
+                    }}
+                >
+                    Nothing’s more enjoyable than kayaking down a nice scenic river, camping, or hiking down a trail. In my spare time I also enjoy working on side projects. Creative work, programming work, all kinds of work. 
+                </AboutText>
+                
+                <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
+                
+                {
+                    ContactInfo.hobbyImages.map ( hobbyObj => (
+
+                        <HobbyImages hobbyObject={hobbyObj} />
+                    ) )
+                }
+
+                </Grid>
+
+
+                </AccordionDetails>
+            </Accordion>
+
+        </Box>
+
+
+        
 
 
 
@@ -110,8 +337,6 @@ export function AboutMeEduAndMoreContainer({}) {
             sx={{
                 borderTop: 1,
                 borderColor:PortfolioColors.SectionDivider,
-
-      
             }}
         >
             <PageHeader>

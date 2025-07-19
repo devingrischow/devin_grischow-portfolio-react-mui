@@ -2,6 +2,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Button from '@mui/material/Button';
 
 
 import { styled } from '@mui/material/styles';
@@ -117,6 +118,41 @@ export function ShowCaseCell(showcaseObject){
         
     }));
 
+    //Text to be used as a button to show the view more button 
+    const ViewMoreAction = styled(Button)(({ theme }) => ({
+        marginTop:isBadgesPresent ? '1.6vw' : '4vw',
+
+        width:'fit-content',
+
+        color:'white',
+        
+        margin:'2.3vw',
+        
+        textAlign:'start',
+        
+        wordBreak: 'break-word',
+        
+        zIndex:2,
+        
+        fontSize: 'calc(1rem + 0.4vw)',
+        
+        
+        //Underlined Text 
+        textDecoration: 'underline dashed white 2px',
+        textUnderlineOffset:'5px',
+
+        transition: 'text-decoration 0.8s ease, text-underline-offset 0.8s ease',
+
+        '&:hover':{
+            transition: 'text-decoration 0.8s ease, text-underline-offset 0.8s ease',
+
+            textDecoration: 'underline white 2px',
+            textUnderlineOffset:'9px',
+        }
+        
+        
+    }));
+
 
 
 
@@ -197,7 +233,6 @@ export function ShowCaseCell(showcaseObject){
         
   
 
-        onClick={clickOnShowcaseAction}
 
         
         
@@ -233,7 +268,6 @@ export function ShowCaseCell(showcaseObject){
 
             
             
-            cursor:'pointer',
             
             
             overflow:'hidden',
@@ -241,9 +275,7 @@ export function ShowCaseCell(showcaseObject){
             //Margin spacing from bottom of last cell
             marginBottom:'80px',
 
-            '&:hover':{
-                outline:HoveredBorderSize
-            }
+            
             
         }}
         >
@@ -337,11 +369,12 @@ export function ShowCaseCell(showcaseObject){
     
     
     <Stack
-    useFlexGap
+    // useFlexGap
     
     sx={{
-        minHeight:'max-content',
+        minHeight:'inherit',
         alignContent:'end',
+        justifyContent:'space-between'
 
 
         
@@ -350,7 +383,7 @@ export function ShowCaseCell(showcaseObject){
     >
     
    
-    
+    <Stack>
     <ShowcaseTitle>
         {showcaseObject.showcaseTitle}
     </ShowcaseTitle>
@@ -369,6 +402,14 @@ export function ShowCaseCell(showcaseObject){
         ShowcaseBadges(showcaseObject)
 
     }
+    </Stack>
+
+
+    <ViewMoreAction
+        onClick={clickOnShowcaseAction}
+    >
+        View More
+    </ViewMoreAction>
     
     
     

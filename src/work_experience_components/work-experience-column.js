@@ -61,8 +61,11 @@ export function WorkExperienceColumn({refs}) {
       
 
       // width:'90vw',
+      marginRight:'8vw',
+      marginLeft:'8vw',
 
-
+      marginTop:'4vw',
+      marginBottom:'4vw',
 
       
 

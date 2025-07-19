@@ -14,6 +14,8 @@ import { DetailsPageData } from '../data/details-pages-data';
 
 import { LandingLocations } from '../landing_page/landing-components';
  
+import { HorizontalContactsContainer } from '../contacts_and_info/contacts-components';
+
 
 
 function MoreOnHeader() {
@@ -22,6 +24,8 @@ function MoreOnHeader() {
 
         wordBreak: 'break-word',
 
+
+        paddingTop:'2vw'
 
 
     }));
@@ -37,12 +41,12 @@ function MoreOnHeader() {
                 width:'100%',
 
 
-                borderBottom:1,
+                borderTop:1,
 
                 borderColor:PortfolioColors.SectionDivider,
 
 
-                marginBottom:'5vmin'
+                // marginBottom:'5vmin'
                 
                 // marginRight:horizontalMargin,
                 // marginLeft:horizontalMargin,
@@ -51,7 +55,7 @@ function MoreOnHeader() {
         >
 
             <HeaderText>
-                More on my Github
+                Contacts & GitHub
             </HeaderText>
 
         </Box>
@@ -78,11 +82,21 @@ export function MoreOnGithubContainer({refs}){
                 marginLeft:horizontalMargin,
             }}
         >
-        
-            {
+
+             {
                 //Call on more header, then place the 2 icons under it (use 2 diff  funcs [1 file, share body])
                 MoreOnHeader()
             }
+
+
+            
+                <HorizontalContactsContainer/>
+           
+
+        
+           
+
+
 
 
             {

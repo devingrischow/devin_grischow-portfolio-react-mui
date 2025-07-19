@@ -13,11 +13,6 @@ export const MenuData = [
     },
 
     {
-        headerText:"Work Experience"
-        //All OTHER experiences get loaded from name
-    },
-
-    {
         headerText:"Showcase"
         //No Link needed for home, reloads page 
     },
@@ -66,12 +61,26 @@ export const MenuData = [
 
 
 
+    
+
+    {
+        headerText:"Work Experience"
+        //All OTHER experiences get loaded from name
+    },
+
+    
+
+
+
+
+
+
 
 
 
 
     {
-        headerText:"GitHub"
+        headerText:"Contacts & GitHub"
         //No Link needed for home, reloads page 
     },
 

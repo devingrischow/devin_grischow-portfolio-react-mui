@@ -55,6 +55,10 @@ import { useParams } from "react-router";
 import { useState, useRef, useEffect } from 'react';
 
 
+import { GetMatchesSmallScreen } from '../ui/matchesSmallScreenCondition';
+
+
+import { MenuData } from '../data/menu-data';
 
 
 
@@ -166,6 +170,9 @@ export const LandingPage = () => {
                 handleChangePageToAboutMe={handleChangePageToAboutMe}
                 handleChangePageToLanding={handleChangePageToLanding}
 
+                handleGoToRef={handleGoToGivenRef}
+
+
 
                 isLandingPageAbout={isLandingPageAbout}
               />
@@ -205,13 +212,69 @@ export const LandingPage = () => {
 
 
 
-function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout}) {  
+function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout}) {  
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
+
+  const isMatchingSmallScreen = GetMatchesSmallScreen('700px')
 
 
   const aboutText = "About | Education | & More"
   
   const headerInfoText = isLandingPageAbout ? "Back" : aboutText
+
+  //App Bar ALSO Includes Quick Buttons to go to the Specific Sections on the landing page
+  //ONLY if screen is large enough 
+  //ALSO dont show it on about me pages 
+  const NavHeaderButtons = () => {
+    console.log("Nav Header Buttons: Is Matching Small Screen?: ", isMatchingSmallScreen)
+    console.log("Nav Header Buttons: Is Landing Page About?: ", isLandingPageAbout)
+
+    if(isMatchingSmallScreen === true && isLandingPageAbout === false){
+      
+        return (
+          <Stack
+            direction={'row'}
+          >
+            {
+              
+              MenuData.map( menuItem =>
+              {
+
+                if('headerText' in menuItem){
+                  //ONLY show the Menu Headers
+                  return (
+                  <Button
+                    sx={{
+                      color:"inherit"
+                    }}
+
+                    onClick={() => {
+                      //On click switches destination/target depending on needs
+                        handleGoToRef(menuItem.headerText)
+                        
+                    }}
+
+
+                  >
+                    <h1 style={{
+                      fontWeight:'500',
+                      fontSize:'1em',
+                      
+
+                    }}>{menuItem.headerText}</h1>
+                  </Button>)
+                }
+
+              }
+            )
+
+            }
+           
+          </Stack>
+        );
+    }
+
+  }
 
   return (
 
@@ -244,6 +307,9 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
           <MenuIcon />
           
         </IconButton>
+
+
+        <NavHeaderButtons />
 
             
 
@@ -287,7 +353,12 @@ function LandingPageAboutMeHandler({
   if(isLandingPageAbout){
     //Handle About me & Education Landing Page 
     return (
-      <Box>
+      <Box
+        sx={{
+          marginTop:'5vmin'
+
+        }}
+      >
         <ContactsAndDisplayElementHolder displayElement={<AboutMeEduAndMoreContainer />} />
 
       </Box>
@@ -299,17 +370,12 @@ function LandingPageAboutMeHandler({
       <div>
 
 
-
-        <ContactsAndDisplayElementHolder displayElement={<WorkExperienceColumn refs={refs} />} />
-
-
-
         <ShowcaseContainer refs={refs} />
-
 
 
         < SkillsContainer refs={refs} />
 
+        <WorkExperienceColumn refs={refs} />
 
         < MoreOnGithubContainer refs={refs} />
 

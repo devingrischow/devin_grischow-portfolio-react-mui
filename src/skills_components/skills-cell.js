@@ -76,7 +76,8 @@ export function SkillsCell(skillsItem) {
 
 
             <ul style={ {
-                listStyle:'disc'
+                listStyle:'disc',
+                paddingLeft:0,
             } } >
     
                 { 
@@ -190,7 +191,7 @@ function NotableSkillCell(notableSkills, index){
         padding:'5px',
 
 
-        // minWidth:'5vw',
+        minWidth:'fit-content',
 
 
 

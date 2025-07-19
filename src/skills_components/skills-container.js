@@ -46,6 +46,7 @@ export function SkillsContainer({refs}) {
 
             sx={{
                 marginTop:'5vmin',
+                marginBottom:'5vmin',
 
                 marginRight:containerHorzMargin,
                 marginLeft:containerHorzMargin

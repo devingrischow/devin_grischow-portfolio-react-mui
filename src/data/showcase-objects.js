@@ -104,7 +104,7 @@ export const ShowcaseObjects = [
         
 
         badgeShowcase: {
-            badgesTitle: "EasyEats Development used:",
+            badgesTitle: "Development Used:",
 
             badges:[
                 {

@@ -86,9 +86,10 @@ function ShowCaseHeader(){
             //Box is mainly a showcase seperator, HOWEVER, 
             // it also needs to **STICK** to the top when the user scrolls to the section
 
-            borderBottom:1,
-
+            borderTop:1,
             borderColor:PortfolioColors.SectionDivider,
+            paddingTop:'0.7vw',
+            
             
             marginRight:horizontalMargin,
             marginLeft:horizontalMargin,
@@ -101,7 +102,7 @@ function ShowCaseHeader(){
             
         } }>
             <HeaderText>
-                Showcase
+                Projects & Showcases
             </HeaderText>
         </Box>
 

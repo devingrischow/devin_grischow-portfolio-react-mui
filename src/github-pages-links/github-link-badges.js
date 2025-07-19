@@ -95,8 +95,10 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
 
 
-        marginBottom:'30vmin'
 
+
+        marginTop:'10vw',
+        marginBottom:'10vw',
 
 
 
