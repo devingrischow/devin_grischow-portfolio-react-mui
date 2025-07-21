@@ -1,7 +1,10 @@
 {
   "files": {
     "main.css": "/devin_grischow-portfolio-react-mui/static/css/main.bec2dcfa.css",
-    "main.js": "/devin_grischow-portfolio-react-mui/static/js/main.a28b27c2.js",
+    "main.js": "/devin_grischow-portfolio-react-mui/static/js/main.163f0474.js",
+    "static/media/Launch Details Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/Launch Details Showcase.ecb4f8dfd8478da25de5.png",
+    "static/media/SpaceX Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/SpaceX Showcase.510e6edf5217c9f6e93a.png",
+    "static/media/Global Luanch Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/Global Luanch Showcase.b3075476971d565ab81e.png",
     "static/media/EE-iOS-VideoPlayer.png": "/devin_grischow-portfolio-react-mui/static/media/EE-iOS-VideoPlayer.2377ca85dcb181a8a1e4.png",
     "static/media/ios-code-preview_adjusted.png": "/devin_grischow-portfolio-react-mui/static/media/ios-code-preview_adjusted.68f548095350323b55b7.png",
     "static/media/EE-Center-ANDROID.png": "/devin_grischow-portfolio-react-mui/static/media/EE-Center-ANDROID.701bc6ad22500214a459.png",
@@ -21,6 +24,7 @@
     "static/media/EE-MindNode-DataStructure.png": "/devin_grischow-portfolio-react-mui/static/media/EE-MindNode-DataStructure.938f5f4e0415e3fed108.png",
     "static/media/camping.png": "/devin_grischow-portfolio-react-mui/static/media/camping.c431cfa0ee248f0d6e16.png",
     "static/media/Fig-EE-big-zoom.png": "/devin_grischow-portfolio-react-mui/static/media/Fig-EE-big-zoom.e62b68b0bac3d0eaf502.png",
+    "static/media/SQL-code.png": "/devin_grischow-portfolio-react-mui/static/media/SQL-code.6256f611ed8e31853883.png",
     "static/media/ps-4-array-showcase.png": "/devin_grischow-portfolio-react-mui/static/media/ps-4-array-showcase.9bd09c1e6481000840f8.png",
     "static/media/Fig-EE-out-in.png": "/devin_grischow-portfolio-react-mui/static/media/Fig-EE-out-in.56ec1be69d14889e4874.png",
     "static/media/Trello-EE-Version-Goals-MOBILE.png": "/devin_grischow-portfolio-react-mui/static/media/Trello-EE-Version-Goals-MOBILE.76dc5a71b926a90d6d9c.png",
@@ -40,6 +44,7 @@
     "static/media/Trello-ee-Curate-progress.png": "/devin_grischow-portfolio-react-mui/static/media/Trello-ee-Curate-progress.2c95289435d8174353c5.png",
     "static/media/Trello-EE-Version-Goals.png": "/devin_grischow-portfolio-react-mui/static/media/Trello-EE-Version-Goals.b44d8c60521f6d36621f.png",
     "static/media/ps-simplified-position-rotation-calc.png": "/devin_grischow-portfolio-react-mui/static/media/ps-simplified-position-rotation-calc.2352ab3fed786e1e6ad2.png",
+    "static/media/File-Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/File-Showcase.875b37e3a4659111d223.png",
     "static/media/EE-iOS-While-Looo-Curate-Code.png": "/devin_grischow-portfolio-react-mui/static/media/EE-iOS-While-Looo-Curate-Code.958a39126b751f787f93.png",
     "static/media/Figma-FocusGarden-Prototyping.png": "/devin_grischow-portfolio-react-mui/static/media/Figma-FocusGarden-Prototyping.aaabf232877e9b880fb4.png",
     "static/media/Figma-ee-appstore-showcases.png": "/devin_grischow-portfolio-react-mui/static/media/Figma-ee-appstore-showcases.e714d6187ed20c31e627.png",
@@ -47,6 +52,7 @@
     "static/media/ps-excel-using-company-names.png": "/devin_grischow-portfolio-react-mui/static/media/ps-excel-using-company-names.fd1d51e07505c61a05dd.png",
     "static/media/Cloud-Involved-Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/Cloud-Involved-Showcase.9e4b47e611ff3f4bc1a2.png",
     "static/media/Portfolio Photo.png": "/devin_grischow-portfolio-react-mui/static/media/Portfolio Photo.8ffba624d9c227a98ed9.png",
+    "static/media/DATA-showcase.png": "/devin_grischow-portfolio-react-mui/static/media/DATA-showcase.e3dd13b7a3a584b17105.png",
     "static/media/CloudData-Foods-Firestore.png": "/devin_grischow-portfolio-react-mui/static/media/CloudData-Foods-Firestore.9f11fda930acf8e4154b.png",
     "static/media/CATB - Custom Shape Code Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/CATB - Custom Shape Code Showcase.b7665db7789da685fd48.png",
     "static/media/Figma-ee-Re-usable and testable components.png": "/devin_grischow-portfolio-react-mui/static/media/Figma-ee-Re-usable and testable components.de1ead8e20391b342bfe.png",
@@ -57,6 +63,7 @@
     "static/media/Trello-View-of-projects-aided-with.png": "/devin_grischow-portfolio-react-mui/static/media/Trello-View-of-projects-aided-with.4463d24027b827a56fd3.png",
     "static/media/Batch Editor Software Start Screen.png": "/devin_grischow-portfolio-react-mui/static/media/Batch Editor Software Start Screen.6bdc2bbd833750246064.png",
     "static/media/Figma-ee-prototype-showcase.png": "/devin_grischow-portfolio-react-mui/static/media/Figma-ee-prototype-showcase.cec6689beab145cd1b6c.png",
+    "static/media/DATA-showcase2.png": "/devin_grischow-portfolio-react-mui/static/media/DATA-showcase2.e9ca7f84dd3883db1199.png",
     "static/media/CATB - Files.png": "/devin_grischow-portfolio-react-mui/static/media/CATB - Files.9c705edf0f1c075e6c1d.png",
     "static/media/CloudData-Recipe-Videos-Showcase.png": "/devin_grischow-portfolio-react-mui/static/media/CloudData-Recipe-Videos-Showcase.4661b2c6671b8770baa7.png",
     "static/media/Figma-Portfolio-Components.png": "/devin_grischow-portfolio-react-mui/static/media/Figma-Portfolio-Components.42149f00f222369a5c9b.png",
@@ -65,10 +72,10 @@
     "static/media/CATB-Tab 2.png": "/devin_grischow-portfolio-react-mui/static/media/CATB-Tab 2.dad5cedd8989c273955f.png",
     "index.html": "/devin_grischow-portfolio-react-mui/index.html",
     "main.bec2dcfa.css.map": "/devin_grischow-portfolio-react-mui/static/css/main.bec2dcfa.css.map",
-    "main.a28b27c2.js.map": "/devin_grischow-portfolio-react-mui/static/js/main.a28b27c2.js.map"
+    "main.163f0474.js.map": "/devin_grischow-portfolio-react-mui/static/js/main.163f0474.js.map"
   },
   "entrypoints": [
     "static/css/main.bec2dcfa.css",
-    "static/js/main.a28b27c2.js"
+    "static/js/main.163f0474.js"
   ]
 }
