@@ -37,6 +37,7 @@ import { Fade } from '@mui/material';
 export function AboutMeEduAndMoreContainer({}) {
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
 
+    const matchesMicroScreen = useMediaQuery('(min-width:500px)');
 
 
     
@@ -100,18 +101,21 @@ export function AboutMeEduAndMoreContainer({}) {
             textAlign:'center',
 
 
+            marginTop:'5%',
         
         
             color:PortfolioColors.SectionDivider,
 
+            fontSize:'1.5rem',
             
         }));
 
 
         const HobbyImageBackground = () => {
             
-
+                if(focusedOnHobby === true){
                 return(
+                    
                     <Fade in={focusedOnHobby} >
 
                     
@@ -119,6 +123,7 @@ export function AboutMeEduAndMoreContainer({}) {
                         src={ focusedOnHobby ? hobbyObject.image : '' }
                         alt={hobbyObject.text}  
                         style={{
+                            
                             height:'100vw',
                             width:"100%",
 
@@ -127,24 +132,48 @@ export function AboutMeEduAndMoreContainer({}) {
                     />
                     </Fade>
                 )
+            }
             
         }
 
+        //potential hobby label -
+            const PotHobbyLabel = () => {
+                
+                if(matchesMicroScreen === true){
+                    return(
+                        <HobbyLabel>
+                            {hobbyObject.text}
+                        </HobbyLabel>
+                    )
+                }
+            }
+
 
         const HobbyTextLogicLabel = () => {
+            
+            
+
+
+            
+
             if(focusedOnHobby === false){
                 return(
-                    <Box>
+                    <Box
+                        sx={{
+                            minHeight:"fit-content"
+                        }}
+                    >
+                        
                         <hobbyObject.icon sx={{
                             transform:'scale(2)',
 
                             marginBottom:'1vw'
                             }}
                         />
-                
-                        <HobbyLabel>
-                            {hobbyObject.text}
-                        </HobbyLabel>
+
+                        <PotHobbyLabel />
+                        
+                        
                     </Box>
                 )
             }
@@ -170,10 +199,13 @@ export function AboutMeEduAndMoreContainer({}) {
 
                     border:2,
                     borderColor:PortfolioColors.SectionDivider, 
-                    borderRadius:'5%',
+                    borderRadius:'2vw',
 
-                    minHeight:'15vw',
-                    maxHeight:'15vw',
+                    
+                    minHeight:'20vw',
+
+
+                    maxHeight:'20vw',
 
                     display:'flex',
                     justifyContent:'center',
@@ -187,7 +219,6 @@ export function AboutMeEduAndMoreContainer({}) {
 
                 <Box
                     sx={{
-                        
                     }}
                 >
 
@@ -308,7 +339,7 @@ export function AboutMeEduAndMoreContainer({}) {
                     Nothing’s more enjoyable than kayaking down a nice scenic river, camping, or hiking down a trail. In my spare time I also enjoy working on side projects. Creative work, programming work, all kinds of work. 
                 </AboutText>
                 
-                <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
+                <Grid container rowSpacing={2} sx={{ justifyContent:'center' }} spacing={{ xs: 2, md: 3 }} columns={{ xs: 8, sm: 8, md: 12 }} >
                 
                 {
                     ContactInfo.hobbyImages.map ( hobbyObj => (

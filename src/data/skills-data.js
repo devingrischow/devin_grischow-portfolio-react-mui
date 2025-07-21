@@ -126,12 +126,12 @@ export const SkillsData = [
             'iOS - SwiftUI & Storyboards',
             'Android - Jetpack Compose & Views',
             'Data Structures',
-            'CRUD',
             'Microsoft & Google Office Products',
             'VBA',
-            'IT',
+            'CRUD Applications',
+            'Algorithms',
             'Visual Studio Code, Xcode, and Android Studio', 
-            'Algorithms'
+            'IT',
         ]
     },
 

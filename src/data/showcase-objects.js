@@ -47,6 +47,26 @@ import EasyEatsZoomOutPreview from '../images/showcase-previews/figma_design_pre
 
 
 
+/**
+ * Launch Date Images 
+*/
+
+import GlobalLaunches from '../images/showcase-previews/launchdate_previews/Global Luanch Showcase.png';
+import DetailsPageShowcase from '../images/showcase-previews/launchdate_previews/Launch Details Showcase.png';
+import SpaceXShowcases from '../images/showcase-previews/launchdate_previews/SpaceX Showcase.png';
+
+
+
+/**
+ * Airsearch Images
+*/
+
+import SQLCode from '../images/showcase-previews/airsearch_previews/SQL-code.png'; 
+import DataShowcase from '../images/showcase-previews/airsearch_previews/DATA-showcase.png'; 
+import AirSearchCodeshowcase from '../images/showcase-previews/airsearch_previews/File-Showcase.png'; 
+import AnotherDataShowcase from '../images/showcase-previews/airsearch_previews/DATA-showcase2.png'; 
+
+
 
 
 /**
@@ -244,6 +264,89 @@ export const ShowcaseObjects = [
     },
 
 
+    //Launch Date
+    {
+        showcaseTitle:"Launch Date",
+        showcaseDescription:`A website that I made for my javascript class final that shows the schedule of upcoming rocket launches. It does this Utelizing API's, Javscript, and dynamic content.`,
+        
+       
+        link:'https://github.com/devingrischow/LaunchDate', 
+
+        backgroundInfo:{
+            backgroundImages: [
+                {
+                    img:GlobalLaunches,
+                    alt:"Section for LaunchDate that shows the upcoming global launches"
+                },
+        
+                {
+                    img:DetailsPageShowcase,
+                    alt:"The details page for viewing additional information abiout any given rocket"
+                },
+        
+                {
+                    img:SpaceXShowcases,
+                    alt:"Preview of the upcoming SpaceX launches section"
+                },
+                
+                
+            ],
+
+            scale:3.5,
+            rotation:'rotate(10deg)',
+
+
+            backgroundColorInfo:'linear-gradient(162deg,rgb(219, 27, 27) 10%, rgba(172, 228, 3, 0.5) 100%)',
+        },
+
+
+    },
+
+
+    //AirSearch
+    {
+        showcaseTitle:"AirSearch",
+        showcaseDescription:`A Website that I made for my javascript class final that shows the schedule of upcoming rocket launches. It does this Utelizing API's, Javscript, and dynamic content.`,
+        
+       
+        link:'https://github.com/devingrischow/AirSearch', 
+
+        backgroundInfo:{
+            backgroundImages: [
+                {
+                    img:SQLCode,
+                    alt:"Preview of the SQL code for building the database components"
+                },
+        
+                {
+                    img:DataShowcase,
+                    alt:"Preview of some of the data initialized within the database"
+                },
+        
+                {
+                    img:AirSearchCodeshowcase,
+                    alt:"Preview of some of the code for the site"
+                },
+
+                {
+                    img:AnotherDataShowcase,
+                    alt:"Another Preview of some of the data initialized."
+                },
+
+                
+                
+               
+            ],
+
+            scale:1.5,
+            // rotation:'rotate(10deg)',
+
+
+            backgroundColorInfo:'linear-gradient(162deg,rgb(82, 99, 99) 10%, rgba(172, 228, 3, 0) 100%)',
+        },
+
+
+    },
 
 
 
