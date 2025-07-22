@@ -329,7 +329,6 @@ export function ShowCaseCell(showcaseObject){
             src={`${imageItem.img}`}
             alt={imageItem.alt} 
             style={ {
-                // objectFit:'scale-down'
                 
             } }
             />

@@ -111,10 +111,31 @@ export const ShowcaseObjects = [
                     img: EasyEatsiOSPreview,
                     alt: "Preview of EasyEats on IOS showing a club sandwich in the scrollable section."
                 },
+
+                {
+                    img:EasyEatsAndroidCodePreview,
+                    alt:"Some code for EasyEats on Android, showing off the kotlin code for the food carousel curation."
+                },
+        
+                {
+                    img:EasyEatsAndroidPreview,
+                    alt:"Preview of EasyEats on Android showing the grocery screen."
+                },
+        
+                {
+                    img:EasyEatsiOSCodePreview,
+                    alt:"Small snippet of EasyEats Code, showing off the native ad card for the food carousel."
+                },
+                
+                {
+                    img: EasyEatsiOSPreview,
+                    alt: "Preview of EasyEats on IOS showing a club sandwich in the scrollable section."
+                },
             ],
 
 
             rotation:'rotate(16deg)',
+            
 
             backgroundColorInfo:'linear-gradient(162deg,rgba(219, 60, 27, 1) 10%, rgba(87, 199, 133, 0) 100%)',
         },
@@ -198,6 +219,26 @@ export const ShowcaseObjects = [
                     img: VBAInvPricesPreview,
                     alt: "Smart List of the inventory and also part prices."
                 },
+
+                 {
+                    img:VBAInvoicePreview,
+                    alt:"Preview of an invoice before being printed out."
+                },
+        
+                {
+                    img:VBAPricesPreview,
+                    alt:"Smart List of Prices fir clients."
+                },
+        
+                {
+                    img:VBAWorkbookPreview,
+                    alt:"Showcase of the smart work order book spread sheet."
+                },
+                
+                {
+                    img: VBAInvPricesPreview,
+                    alt: "Smart List of the inventory and also part prices."
+                },
             ],
 
 
@@ -247,9 +288,29 @@ export const ShowcaseObjects = [
                     img: ATBAnimationFile,
                     alt: "Preview of the animation file for the tab bars."
                 },
+
+                {
+                    img:ATBFilesPreview,
+                    alt:"All the files that make up The Tab bar showcase."
+                },
+        
+                {
+                    img:ATBShapePathPreview,
+                    alt:"Preview of the shape path code."
+                },
+        
+                {
+                    img:ATBTabTwoPreview,
+                    alt:"Preview of the Tab bar selected on tab 2"
+                },
+                
+                {
+                    img: ATBAnimationFile,
+                    alt: "Preview of the animation file for the tab bars."
+                },
             ],
 
-            scale:1.8,
+            // scale:1.8,
             rotation:'rotate(10deg)',
 
 
@@ -274,6 +335,21 @@ export const ShowcaseObjects = [
 
         backgroundInfo:{
             backgroundImages: [
+                {
+                    img:GlobalLaunches,
+                    alt:"Section for LaunchDate that shows the upcoming global launches"
+                },
+        
+                {
+                    img:DetailsPageShowcase,
+                    alt:"The details page for viewing additional information abiout any given rocket"
+                },
+        
+                {
+                    img:SpaceXShowcases,
+                    alt:"Preview of the upcoming SpaceX launches section"
+                },
+
                 {
                     img:GlobalLaunches,
                     alt:"Section for LaunchDate that shows the upcoming global launches"
@@ -333,12 +409,17 @@ export const ShowcaseObjects = [
                     alt:"Another Preview of some of the data initialized."
                 },
 
+                {
+                    img:SQLCode,
+                    alt:"Preview of the SQL code for building the database components"
+                },
+
                 
                 
                
             ],
 
-            scale:1.5,
+            scale:4,
             // rotation:'rotate(10deg)',
 
 
