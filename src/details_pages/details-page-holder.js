@@ -26,7 +26,7 @@ import { DetailsPageData } from '../data/details-pages-data';
 
 import { DetailsComponentTypes } from "./components/component-types";
 
-import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel, DetailsGitHubRepoLink  } from './components/details-components';
+import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel, DetailsGitHubRepoLink, DetailsLinkButton  } from './components/details-components';
 
 
 
@@ -169,6 +169,15 @@ export function DetailsPageHolder() {
             repoLink={githubRepoLink}
 
           /> );
+
+
+        case DetailsComponentTypes.ButtonLink: 
+            const linkString = detailItem.link;
+            const buttonText = detailItem.text;
+
+            return(
+              <DetailsLinkButton text={buttonText} link={linkString} />
+            );
 
         default:
           break;

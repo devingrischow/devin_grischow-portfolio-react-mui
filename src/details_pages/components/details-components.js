@@ -19,10 +19,11 @@ import { DetailsIconLoader } from '../../ui/details-icon-loader';
 
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
-import { fontWeight, lineHeight, margin } from '@mui/system';
+import { border, fontWeight, lineHeight, margin } from '@mui/system';
 
 
 import { GetMatchesSmallScreen } from '../../ui/matchesSmallScreenCondition';
+import Button from '@mui/material/Button';
 
 
 
@@ -516,6 +517,40 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
     
 }
 
+
+//**Github & Links Components */
+
+export function DetailsLinkButton({link, text}){
+    const onClickToRepo  = () => {
+        window.open(link)
+    }
+
+
+
+    return(
+        <Button
+            sx={{
+                border: 'white 4px solid',
+
+                margin:'6vw',
+                height:"24vw",
+                
+                color:"white",
+
+                borderRadius:'4vw',
+
+                '&:hover':{
+                    backgroundColor:"white",
+                    color:'black'
+                }
+            }}
+
+            onClick={onClickToRepo}
+        >
+            {text}
+        </Button>
+    );
+}
 
 
 export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){

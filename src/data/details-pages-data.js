@@ -312,7 +312,7 @@ export const DetailsPageData = {
             //Link to EasyEats Github Code Snippets
             {
                 type:DetailsComponentTypes.BodyTitle,
-                text:'GitHub Links'
+                text:'GitHub & Links'
             },
 
 
@@ -334,6 +334,14 @@ export const DetailsPageData = {
                 repoUser:"devingrischow",
                 repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
             },
+
+
+            {
+                type:DetailsComponentTypes.ButtonLink,
+                link:'https://easyeatsapp.com/',
+
+                text:"EasyEats Website"
+            }
 
 
             

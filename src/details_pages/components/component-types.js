@@ -32,6 +32,9 @@ export const DetailsComponentTypes = {
 
     //**Link Components 
 
+    //Link Button
+    ButtonLink:"ButtonLink",
+
     //Github Link component
     GitHubLink:"GitHubLink"
 

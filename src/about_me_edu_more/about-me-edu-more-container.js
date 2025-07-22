@@ -304,6 +304,8 @@ export function AboutMeEduAndMoreContainer({}) {
 
 
             <Accordion
+                
+
                  sx={{
                     width:'inherit',
                     backgroundColor:'black',
@@ -311,14 +313,21 @@ export function AboutMeEduAndMoreContainer({}) {
 
 
                 }}
+
+                
             >
-                <AccordionSummary
+                <AccordionSummary 
+                
                 expandIcon={<ExpandMoreIcon sx={{color:'white', width:"3rem", height:'inherit', marginBottom:'12px'}} />}
                 aria-controls="panel1-content"
                 id="hobbies-accordian"
                 sx={{
                     alignItems:'flex-end',
 
+
+
+                    padding:'0px'
+                    
                     
                 }}
                 >
@@ -328,6 +337,8 @@ export function AboutMeEduAndMoreContainer({}) {
                 </PageHeader>
 
                 </AccordionSummary>
+
+
                 <AccordionDetails>
 
                 <AboutText
