@@ -5,9 +5,9 @@
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-This repository is where my react based portfolio site about me and my work is hosted with GitHub pages.
+This repository is where my dynamic react based portfolio site about me and my work is hosted with GitHub pages.
 
-This site is based on many popular portfolio templates and themes/but stylied more to allow for features not possible without react and javascript. Components and items were designed with template building in mind. If I could create components with repeatability but high cusomization in mind then I could seperate the design from the data.
+This site is based on many popular portfolio templates and themes/but stylied more to allow for features not possible without react and javascript. Components and items were designed with dynamic template building in mind. If I could create components with repeatability but high cusomization in mind then I could seperate the design from the data.
 
 ## Features
 
@@ -15,7 +15,7 @@ This site is based on many popular portfolio templates and themes/but stylied mo
 
 - Code is organized by sites with their components and features, utelizes organized `ui` structures, routes navigation with `react-router` and handling for wrong addresses, and more.
 
-- Almost all Infomation present on the website is not hard coded, and is actually coded into javaScript objects stored in the `data` folder. When loading on screen items the given data is `mapped` as the displayed components.
+- Almost all Infomation present on the website is not hard coded, and is actually coded into javaScript objects stored in the `data` folder. When loading on screen items the given data is `mapped` as the displayed components, dynamically displaying content to the user.
 
 ## Package Versions
 
