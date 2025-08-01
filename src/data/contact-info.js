@@ -40,7 +40,7 @@ export const ContactInfo = {
         {
             image:CreativeWorks,
             icon:PaletteIcon,
-            text:'Creative Indie Work'
+            text:'Creative Work'
         }, 
 
 

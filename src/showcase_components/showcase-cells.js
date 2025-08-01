@@ -138,15 +138,18 @@ export function ShowCaseCell(showcaseObject){
         
         
         //Underlined Text 
-        textDecoration: 'underline dashed white 2px',
+        textDecoration:'underline dashed',
+
+
         textUnderlineOffset:'5px',
 
-        transition: 'text-decoration 0.8s ease, text-underline-offset 0.8s ease',
+        transition: 'text-decoration 0.8s, text-underline-offset 0.8s',
 
         '&:hover':{
-            transition: 'text-decoration 0.8s ease, text-underline-offset 0.8s ease',
+            transition: 'text-decoration 0.8s, text-underline-offset 0.8s',
 
-            textDecoration: 'underline white 2px',
+
+            textDecoration: 'underline white',
             textUnderlineOffset:'9px',
         }
         
