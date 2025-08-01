@@ -53,7 +53,7 @@ export const workExperience = [
         workTime:"Aug 2022 - Jun 2024",
         workType:"Part Time",
         points:[
-            "Tutored classes with around 15 students per class about becoming developers. I helped students learn to code, create, publish, and manage apps, websites, databases, and more using popular industry-leading tools. That and being able to understand and follow best practices like agile workflow.",
+            "Tutored classes with around 15 students per class about becoming developers. Helped students learn to code, create, publish, and manage apps, websites, databases, and more using popular industry-leading tools. Students were taught how to understand and follow best practices like agile workflow.",
             "Taught students concepts like debugging, coding languages differences & simularities, management, web development, app development, database development, best practices, and more while also following agile workflow.",
             "Students graduated with enough information ready to enter any development team with very little to no training needed."
         ]
