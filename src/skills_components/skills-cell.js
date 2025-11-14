@@ -77,7 +77,7 @@ export function SkillsCell(skillsItem) {
 
             <ul style={ {
                 listStyle:'disc',
-                paddingLeft:0,
+                // paddingLeft:0,
             } } >
     
                 { 
@@ -125,7 +125,7 @@ function NotableSkillContainer(notableSkills){
 
     return (
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ 
-            justifyContent:'center'
+            // justifyContent:'center'
 
          }} >
             {Array.from(Array(notableSkillsCount)).map((_, index) => (
