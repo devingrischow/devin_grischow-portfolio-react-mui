@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bec2dcfa.css",
-    "main.js": "/static/js/main.a8931cc3.js",
+    "main.js": "/static/js/main.aedb9fb9.js",
     "static/media/Launch Details Showcase.png": "/static/media/Launch Details Showcase.ecb4f8dfd8478da25de5.png",
     "static/media/SpaceX Showcase.png": "/static/media/SpaceX Showcase.510e6edf5217c9f6e93a.png",
     "static/media/Global Luanch Showcase.png": "/static/media/Global Luanch Showcase.b3075476971d565ab81e.png",
@@ -73,10 +73,10 @@
     "static/media/CATB-Tab 2.png": "/static/media/CATB-Tab 2.dad5cedd8989c273955f.png",
     "index.html": "/index.html",
     "main.bec2dcfa.css.map": "/static/css/main.bec2dcfa.css.map",
-    "main.a8931cc3.js.map": "/static/js/main.a8931cc3.js.map"
+    "main.aedb9fb9.js.map": "/static/js/main.aedb9fb9.js.map"
   },
   "entrypoints": [
     "static/css/main.bec2dcfa.css",
-    "static/js/main.a8931cc3.js"
+    "static/js/main.aedb9fb9.js"
   ]
 }
