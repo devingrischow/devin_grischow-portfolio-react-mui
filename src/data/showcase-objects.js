@@ -145,7 +145,7 @@ export const ShowcaseObjects = [
         
 
         badgeShowcase: {
-            badgesTitle: "Development Used:",
+            badgesTitle: "Features:",
 
             badges:[
                 {
@@ -160,12 +160,12 @@ export const ShowcaseObjects = [
 
 
                 {
-                    badgeTitle:"Agile Workflow with Trello",
+                    badgeTitle:"Tracked Agile Workflow",
                     badgeColor:PortfolioColors.AgileWorkFlowTrelloColor
                 },
 
                 {
-                    badgeTitle:"OpenCV Based Batch Video Compressor",
+                    badgeTitle:"Batch Video Compressor with OpenCV",
                     badgeColor:PortfolioColors.CustomVideoEditorColor
                 },
 

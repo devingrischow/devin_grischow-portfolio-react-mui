@@ -11,102 +11,7 @@ export const SkillsData = [
     //Notables skills include {name, link}
 
     {
-        skillset:'Back End Skills',
-
-        notableSkills:[
-
-            {
-                nSkillTitle:'Cloud Databases',
-                route:DetailsPageData.CloudDatabases.pageId
-            },
-
-            {
-                nSkillTitle:'Php',
-                pageLink:`https://github.com/devingrischow/AirSearch`
-            },
-            
-            
-        ],
-
-        skills:[
-            'Python',
-            'C++',
-            'SQL',
-            'MyPhp',
-            'NoSQL',
-            'Json',
-
-            'Cloud Services',
-            'Database Management',
-            'APIs',
-            'Command Line Interfaces (CLI’s)'
-        ]
-    },
-
-    {
-        skillset:'Front End Skills',
-
-        notableSkills:[
-            {
-                nSkillTitle:'Figma',
-                route:DetailsPageData.FigmaDesign.pageId
-            },
-            {
-                nSkillTitle:'React',
-                pageLink:`https://github.com/devingrischow/devin_grischow-portfolio-react-mui`
-            }
-
-        ],
-
-        skills:[
-            'Material Design 3',
-            'HTML, CSS, JavaScript',
-            'Wordpress',
-            'Adobe',
-            'UI/UX',
-            'Lottie Animations',
-            'Communicating and translating design to code'
-        ]
-    },
-
-
-
-    
-    {
-        skillset:'Project Management',
-
-        notableSkills:[
-            {
-                nSkillTitle:'Trello',
-                route:DetailsPageData.Trello.pageId
-            },
-        ],
-
-        skills:[
-            'Agile Workflow',
-            'Sprints',
-            'Competently handle changes to project and project parameters'
-        ]
-    },
-
-    {
-        skillset:'GitHub',
-
-        notableSkills:[
-
-        ],
-
-
-        skills:[
-            'Git',
-            'Collaboration', 
-            'Pull Requests & Merging',
-        ]
-    },
-
-
-    {
-        skillset:'Development Skills',
+        skillset:'Development',
 
         notableSkills:[
             {
@@ -125,15 +30,131 @@ export const SkillsData = [
         skills:[
             'iOS - SwiftUI & Storyboards',
             'Android - Jetpack Compose & Views',
+            'Multi-Platform Coding',
+            'Kotlin Multi Platform',
+            'Flutter',
+            'Python',
+            'C++',
+            'C#',
             'Data Structures',
-            'Microsoft & Google Office Products',
-            'VBA',
             'CRUD Applications',
             'Algorithms',
-            'Visual Studio Code, Xcode, and Android Studio', 
+            'Dart',
+
+            'JavaScript',
+            'Java',
+
+
+            'VBA',
+
+        ]
+    },
+
+    {
+        skillset:'Back End',
+
+        notableSkills:[
+
+            {
+                nSkillTitle:'Cloud Databases',
+                route:DetailsPageData.CloudDatabases.pageId
+            },
+
+            {
+                nSkillTitle:'Php',
+                pageLink:`https://github.com/devingrischow/AirSearch`
+            },
+            
+            
+        ],
+
+        skills:[
+            'SQL',
+            'MySQL',
+            'SQLite',
+            'NoSQL',
+            'Json',
+            'Cloud Services',
+            'Firebase',
+            'Google Cloud',
+            'Apache',
+            'Database Management, Entry, & Creation',
+            'APIs',
+            'Command Line Interfaces'
+        ]
+    },
+
+    {
+        skillset:'Front End',
+
+        notableSkills:[
+            {
+                nSkillTitle:'Figma',
+                route:DetailsPageData.FigmaDesign.pageId
+            },
+            {
+                nSkillTitle:'React',
+                pageLink:`https://github.com/devingrischow/devin_grischow-portfolio-react-mui`
+            }
+
+        ],
+
+        skills:[
+            'HTML, CSS, JavaScript',
+            'UI/UX',
+            'Lottie Animations',
+            'Wordpress',
+            'Adobe',
+            'Prototyping',
+            'Material Design 3',
+            'Communicating and translating design to code'
+        ]
+    },
+
+
+
+    
+    {
+        skillset:'Project Management',
+
+        notableSkills:[
+            {
+                nSkillTitle:'Trello & Kanban',
+                route:DetailsPageData.Trello.pageId
+            },
+        ],
+
+        skills:[
+            'Agile Workflow',
+            'Sprints',
+            'Documentation',
+            'Competently handle changes to project and project parameters',
+            'Office Products',
             'IT',
         ]
     },
+
+    {
+        skillset:'GitHub',
+
+        notableSkills:[
+
+        ],
+
+
+        skills:[
+            'Git',
+            'Collaboration', 
+            'Pull Requests',
+            'Merging',
+            'Branching',
+        ]
+    },
+
+
+    
+
+   
 
     
 

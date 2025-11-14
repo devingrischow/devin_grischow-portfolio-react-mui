@@ -14,9 +14,9 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 
 
 export const ContactInfo = {
-    quickAboutMe:"I'm a Software Developer enthusiastic about technology, always excited to learn something new, problem solve, understand and improve anything I can.",
+    quickAboutMe:"I'm a Software Developer enthusiastic and passionate about coding and creating. I'm always excited to learn something new, problem solve, and understand anything I can.",
 
-    email:"devingrischow@outlook.com",
+    email:"devingrischow\n@outlook.com",
     phoneNum:"(708)-227-4381",
     linkedIn_link:"https://www.linkedin.com/in/devin-grischow-11b281258/", 
 

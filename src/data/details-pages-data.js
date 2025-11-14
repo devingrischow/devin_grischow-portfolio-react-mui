@@ -80,6 +80,9 @@ import CDAnalyticsFromCloudDatabase from '../images/cloud-database-images/CloudD
 
 //Slideshow of Nominal Usages
 import TrelloFoodsProgressCards from '../images/trello-images/slideshow-trello-usage/Trello-EE-Foods-Progress-Showcase.png';
+
+import ObsidianKanbanCodeTodoBoard from '../images/trello-images/slideshow-trello-usage/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.png';
+
 import TrelloFoodsProgressCardsMOBILE from '../images/trello-images/slideshow-trello-usage/Trello-EE-Foods-Progress-Showcase-MOBILE.png';
 
 import TrelloCurationCards from '../images/trello-images/slideshow-trello-usage/Trello-ee-Curate-progress.png';
@@ -129,6 +132,8 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.Header,
                 text:"EasyEats: Eating Made Easy"
             }, 
+
+            
             
             
             {
@@ -182,6 +187,35 @@ export const DetailsPageData = {
             {
                 type:DetailsComponentTypes.BodyText,
                 text:'It brings together tons of elements involved in managing and creating the app, including NoSQL cloud databases, custom-built software and admin panels, project management practices, protocols, and more, all while being free on app stores and monetized through Google Ads.'
+            },
+
+            //Link to EasyEats Github Code Snippets
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Links'
+            },
+
+            {
+                type:DetailsComponentTypes.ButtonLink,
+                link:'https://easyeatsapp.com/',
+
+                text:"EasyEats App Website"
+            },
+
+            //Link to EasyEats Repo
+            {
+                type:DetailsComponentTypes.GitHubLink,
+                repoTitle:"EasyEats-Code-Snippets",
+                repoUser:"devingrischow",
+                repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
+            },
+
+            //Link to Editing project 
+            {
+                type:DetailsComponentTypes.GitHubLink,
+                repoTitle:"EasyEatsBatchEditor",
+                repoUser:"devingrischow",
+                repoLink:"https://github.com/devingrischow/EasyEatsBatchEditor"
             },
             
             
@@ -309,39 +343,10 @@ export const DetailsPageData = {
             },
 
 
-            //Link to EasyEats Github Code Snippets
-            {
-                type:DetailsComponentTypes.BodyTitle,
-                text:'GitHub & Links'
-            },
+            
 
 
-            //Link to Editing project 
-            {
-                type:DetailsComponentTypes.GitHubLink,
-                repoTitle:"EasyEatsBatchEditor",
-                repoUser:"devingrischow",
-                repoLink:"https://github.com/devingrischow/EasyEatsBatchEditor"
-            },
-
-
-
-
-            //Link to EasyEats Repo
-            {
-                type:DetailsComponentTypes.GitHubLink,
-                repoTitle:"EasyEats-Code-Snippets",
-                repoUser:"devingrischow",
-                repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
-            },
-
-
-            {
-                type:DetailsComponentTypes.ButtonLink,
-                link:'https://easyeatsapp.com/',
-
-                text:"EasyEats Website"
-            }
+            
 
 
             
@@ -584,19 +589,19 @@ export const DetailsPageData = {
         
         pageTitle:"Devin G | Trello",
         
-        menuLabel:"Trello & Agile",
+        menuLabel:"Agile",
         
         detailsBody:[
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:"Trello & Agile Workflow"
+                text:"Tracked Agile Workflow"
             }, 
             
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Concepts I was introduced to early on in my coding classes. My iOS classes involved starting and building a full app, that’s when we really started to dig into Trello, Sprints, and every part of the workflow. I used Agile and Trello when publishing 2 apps of mine, while tutoring it in college, and even tutoring it in some outside programs. Programs where studets would learn how to make and publish their own iOS apps. I taught students aspects like Agile workflow and how to effectively manage their tasks and time so they could publish their apps in just a few weeks."
+                text:"Concepts I was introduced to early on. I frequently use agile when working on projects and tracking lots of tasks, so I  efficiently and smoothly get work done. While I was tutoring I made sure students understood its importance. I taught them the aspects of agile workflow, like how to effectively manage their tasks and time so they could publish their apps in just a few weeks."
             }, 
 
 
@@ -609,6 +614,11 @@ export const DetailsPageData = {
                         image:TrelloFoodsProgressCards,
                         mobileImage:TrelloFoodsProgressCardsMOBILE,
                         caption:"Tracked progress of foods being made, recorded, and added"
+                    },
+                    
+                    {
+                        image:ObsidianKanbanCodeTodoBoard,
+                        caption:"Kanban board in Obsidian for a Multiplatform Mobile Project"
                     },
                     {
                         image:TrelloCurationCards,
@@ -629,7 +639,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"In class when we were working on our apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints in classes and overseen them in other programs, and the point of doing them so often is to get regular feedback on the project and make sure everyone is on the same page about the project. Learning this early on in coding has made my workflow for myself and clients a lot smoother and faster than it might have been otherwise."
+                text:"In college while working on apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints, and overseen them. Agile has helped my workflow and made my work needed for others go a lot smoother and faster."
             }, 
             
             

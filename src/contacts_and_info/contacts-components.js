@@ -39,7 +39,7 @@ function GrowTransition(props) {
 
 const smallLabelVerticalPaddingAmount = '5vmin';
 
-const linkFontSize = 'calc(1rem + 0.2vw)';
+const linkFontSize = 'calc(0.3rem + 0.7vw)';
 
 
 
@@ -50,12 +50,15 @@ const LinkTextLabel = styled('h2')(({ theme }) => ({
     paddingBottom:smallLabelVerticalPaddingAmount,
     
 
-    width:'',
+    // width:'',
 
 
     fontSize:linkFontSize,
 
     wordBreak: 'break-word',
+
+    maxHeight: '2.4m',
+    lineHeight: '1.4em',
 
 
     alignContent:'center',
@@ -85,7 +88,7 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
     setState(true);
   };
 
-const handleClose = () => {
+  const handleClose = () => {
     setState(false);
   };
 
@@ -138,12 +141,16 @@ const handleClose = () => {
 
   //** Icons Related */
   const ShowIcon = () => {
-    
-    return(
+
+    if(shouldShowIcon){
+      return(
       <span class="material-symbols-outlined">
           arrow_menu_close
         </span>
     );
+    }
+    
+    
 
   };
 
@@ -154,6 +161,8 @@ const handleClose = () => {
     </React.Fragment>
   );
 
+
+ 
  
 
   //If the contact type is phone, then return a different stack and container
@@ -169,6 +178,8 @@ const handleClose = () => {
      
 
       sx={{
+
+
         justifyContent:shouldShowIcon ? 'start' : 'center', 
 
         cursor:'pointer',
@@ -184,8 +195,8 @@ const handleClose = () => {
 
 
       
+      
         // borderTop:1,
-
         // borderColor:PortfolioColors.InfoDivider,
 
         '&:hover':{
@@ -195,25 +206,32 @@ const handleClose = () => {
 
       }}
     >
-
+      
       <ShowIcon />
       
 
       <LinkTextLabel
       
         sx={{
-
           fontSize:cellFontSize,
 
-          width:isScreenSmall ? 'fit-content' : '50%',
+          width: shouldShowIcon ? 'fit-content' : '50%',
+          height:'20%',
+          wordWrap:'break-word',
 
+          
+
+          
 
           marginRight:cellTextMargin,
-          marginLeft:cellTextMargin
+          marginLeft:cellTextMargin,
+          
         }}
       >
         
-        {text}
+          {text}
+          
+        
       </LinkTextLabel>
 
       <Snackbar
@@ -245,7 +263,6 @@ const handleClose = () => {
   
   return (
     <ContactReturnCell />
-  
   );
 
 
@@ -350,6 +367,7 @@ export const HorizontalContactsContainer = () => {
       sx={{
 
         width:'100%',
+        paddingBottom:'7vmin'
 
         // marginBottom:'7vmin'
       }}

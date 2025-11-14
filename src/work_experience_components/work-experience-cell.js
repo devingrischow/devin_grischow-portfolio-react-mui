@@ -9,11 +9,14 @@ import { PortfolioColors } from '../ui/colors';
 
 
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { Link } from 'react-router-dom';
+import { color } from '@mui/system';
+
+import React, { useState } from 'react';
 
 
 
-
-export function WorkExperienceCell(workTitleText, employerName ,workTime, workType, points) {
+export function WorkExperienceCell(workTitleText, employerName,employerSite=null ,workTime, workType, points) {
   const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
 
   
@@ -26,6 +29,7 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
   //Txt for Place, Date, and work type (contact/remote/full/part)
   const SubInfoHeader = styled('h4')(({ theme }) => ({
     textAlign:'start',
+    
 
     color:PortfolioColors.SubInfoColor, 
 
@@ -50,6 +54,48 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
         );
     }
   )
+
+  const onClickAuthorHeader  = () => {
+        window.open();
+  }
+
+  const [isHoveredOverEmployer, setHover] = useState(false);
+
+  const employerSiteLink = `${employerSite}`
+
+  const LinkSwapEmployerName = () => {
+    if  (employerSite != null){
+      
+      
+      //NOT NULL, USE LINKER
+      return (
+        <SubInfoHeader
+          
+        >
+
+    <a href={employerSiteLink}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+
+          style={{
+            color: isHoveredOverEmployer ? '#fff' : PortfolioColors.SubInfoColor, 
+          }}
+          target="_blank">{employerName}</a>
+
+    
+    </SubInfoHeader>
+      )
+    }else{
+      return (
+        <SubInfoHeader>
+
+      
+      {employerName}
+    
+    </SubInfoHeader>
+      )
+    }
+  }
   
   
   //Each Cell NEEDS line at the bottom 
@@ -78,9 +124,8 @@ export function WorkExperienceCell(workTitleText, employerName ,workTime, workTy
     { workTitleText}
     </PositionNameText>
     
-    <SubInfoHeader>
-    {employerName}
-    </SubInfoHeader>
+    < LinkSwapEmployerName />
+    
     <SubInfoHeader>
     {workTime}
     </SubInfoHeader>

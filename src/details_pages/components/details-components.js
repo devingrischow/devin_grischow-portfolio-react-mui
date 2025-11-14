@@ -532,12 +532,17 @@ export function DetailsLinkButton({link, text}){
             sx={{
                 border: 'white 4px solid',
 
-                margin:'6vw',
-                height:"24vw",
-                
+                marginRight:'15vw',
+                marginLeft:'15vw',
+                marginTop:'5vw',
+
+                height:"2.5rem",
+                // width:"50%",
                 color:"white",
 
-                borderRadius:'4vw',
+                fontSize:'2vw',
+
+                borderRadius:'2vw',
 
                 '&:hover':{
                     backgroundColor:"white",
@@ -571,11 +576,15 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
              onClick={onClickToRepo}
 
             width="100%"
-            height="200vw"
+            // height="200rem",
+            
         
 
             style={{
-                marginTop:'4vmin',
+                marginTop:'2rem',
+
+                paddingRight:'5rem',
+                paddingLeft:'5rem',
 
                 cursor:'pointer'
 

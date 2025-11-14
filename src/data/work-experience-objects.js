@@ -3,6 +3,7 @@ export const workExperience = [
     {
         workTitleText: "Teaching & Program Assistant for App Accelerator 2024",
         employerName:"Everyone Can Code Chicago",
+        employerSite:"https://www.eccchicago.org/2024-app-accelerator.html",
         workTime:"Sep 2024 - Dec 2024",
         workType:"Contract - Remote",
         points:[
@@ -27,6 +28,7 @@ export const workExperience = [
     {
         workTitleText: "Teaching & Program Assistant for Spring Startup to 1k 2024",
         employerName:"Everyone Can Code Chicago",
+        employerSite:"https://www.eccchicago.org/2024-startup-to-1000.html",
         workTime:"Jan 2024 - April 2024",
         workType:"Contract - Remote",
         points:[
@@ -39,6 +41,7 @@ export const workExperience = [
     {
         workTitleText: "Teaching & Program Assistant for App Accelerator 2023",
         employerName:"Everyone Can Code Chicago",
+        employerSite:"https://www.eccchicago.org/2023-app-accelerator.html",
         workTime:"Sep 2023 - Dec 2023",
         workType:"Contract - Remote",
         points:[

@@ -97,8 +97,8 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
 
 
 
-        marginTop:'10vw',
-        marginBottom:'10vw',
+        marginTop:'2vw',
+        marginBottom:'2vw',
 
 
 

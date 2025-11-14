@@ -31,8 +31,10 @@ export function WorkExperienceColumn({refs}) {
   const workExperiences = workExperience.map( wE =>
     WorkExperienceCell(
       wE.workTitleText,
-      
+
       wE.employerName,
+      wE.employerSite,
+
       wE.workTime,
       wE.workType,
       wE.points

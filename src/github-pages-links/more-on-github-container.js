@@ -36,29 +36,9 @@ function MoreOnHeader() {
 
 
     return (
-        <Box
-            sx={{
-                width:'100%',
-
-
-                borderTop:1,
-
-                borderColor:PortfolioColors.SectionDivider,
-
-
-                // marginBottom:'5vmin'
-                
-                // marginRight:horizontalMargin,
-                // marginLeft:horizontalMargin,
-
-            }}
-        >
-
-            <HeaderText>
+         <HeaderText>
                 Contacts & GitHub
             </HeaderText>
-
-        </Box>
     );
 }
 
@@ -76,10 +56,11 @@ export function MoreOnGithubContainer({refs}){
                 alignItems:'center',
 
                 marginTop:'6vmin',
+                marginBottom:'6vmin',
 
                 //margin right and left instead of margin of header, should take care of links margins
-                marginRight:horizontalMargin,
-                marginLeft:horizontalMargin,
+                // marginRight:horizontalMargin,
+                // marginLeft:horizontalMargin,
             }}
         >
 
