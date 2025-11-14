@@ -216,7 +216,7 @@ function ContactLinkCell ({text, link, cellWidth='100%', cellFontSize=linkFontSi
           fontSize:cellFontSize,
 
           width: shouldShowIcon ? 'fit-content' : '50%',
-          height:'20%',
+          // height:'20%',
           wordWrap:'break-word',
 
           

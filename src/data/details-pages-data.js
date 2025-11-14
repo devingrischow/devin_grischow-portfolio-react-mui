@@ -98,6 +98,7 @@ import TrelloProjectsAidedWith from '../images/trello-images/slideshow-trello-us
 
 
 //Software Carousel 
+import VBAInvoiceShowcase from '../images/problem-solving-images/slideshow-features-from-vba/VBA-invoice.png';
 import PSUsingNamesInWorkBooks from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-using-company-names.png';
 import PSPartNumbersDropDown from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-using-part-number-dropdown.png';
 import PSWorkBookControlls from '../images/problem-solving-images/slideshow-features-from-vba/ps-excel-workbook-controlls.png';
@@ -144,7 +145,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"EasyEats is a multi-platform recipe dieting app I created and published on iOS and Android that I started when learning Swift back in college. Starting from a final project made up of a few objects, classes, and function calls - to now being a fully modern composition-based app on both platforms."
+                text:"EasyEats is a multi-platform recipe dieting app I created and published on iOS and Android that I started when learning Swift back in college. Starting from a final project made of a few objects, classes, and function calls, to now being a modern composition based app on both major mobile platforms."
             }, 
 
 
@@ -186,7 +187,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'It brings together tons of elements involved in managing and creating the app, including NoSQL cloud databases, custom-built software and admin panels, project management practices, protocols, and more, all while being free on app stores and monetized through Google Ads.'
+                text:'Key features that were used in managing and creating the app include the likes of NoSQL cloud databases, custom-built solutions and admin panels, agile project management practices, and more. The results being an globally accessable app on the major mobile app stores, monetized through Google Ads.'
             },
 
             //Link to EasyEats Github Code Snippets
@@ -227,7 +228,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'It takes on the modern challenge of dieting by leveraging technology in creative and intelligent ways to tackle every side of a person’s eating habits. Users are able to swipe through curated foods based on the data from their macro profile, view adaptable recipe info, and even watch videos on every step for every meal. After that, they can view their macros, generate new shopping lists, and adjust them to fit their needs. If they’re done with all that, they can even start building their own food journals.'
+                text:'EasyEats helps with the modern challenge that is dieting and eating. It does this by leveraging technology in creative and intelligent ways to tackle every side of a person’s eating habits. Users are able to swipe through curated foods based on data from their Macro Profile, view scalable recipes, and even watch videos for any step of every meal. After that, they can view their daily macros, instantly create new smart shopping lists, and adjust it to fit their needs.'
             },
 
             {
@@ -268,12 +269,12 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyTitle,
-                text:'How does it do it?'
+                text:`How's it built?`
             },
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'EasyEats is built using both iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help handle various tasks like asynchronous image loading with Kingfisher and Coil, animations with Lottie, and cloud database storage and authentication using Firebase and Google Cloud. To try and provide users with the most accurate information about themselves, their macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
+                text:'Using iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help handle various tasks like asynchronous image loading with Kingfisher and Coil, animations with Lottie, and cloud database storage and authentication and more using Firebase and Google Cloud. To provide users with the most accurate as possible information about themselves, macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
             },
 
 
@@ -301,7 +302,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Meals are presented to the user in a card-swiping format. A common design adapted for a traditionally difficult-to-decide-on task: what to eat. With each swipe, meal recommendations adapt to the time of day, the user’s food preferences, and their past eating trends. Using a tags and values cache-based map system, with data fed into a custom meal curation AI, recommendations are more varied but still personalized to the users. Providing them with tailored and more normal, reasonable recommendations."
+                text:"Meals are presented to the user in a card-swiping format. A common design adapted for a traditionally difficult-to-decide-on task: what to eat. With each swipe, meal recommendations adapt to the time of day, food preferences, and past eating trends. Using a key-value pairs cache-based system, with data fed into a custom meal curation AI, recommendations are personalized to the users taste, but varied enough to also help them try new foods they might like. This helps provide them with more normal, reasonable recommendations."
             },
 
             {//Woven of EE Curation Code
@@ -313,7 +314,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Firebase has been essential in making EasyEats possible, thanks to its smooth integration with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth for the project’s needs. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to further reduce the file sizes of videos specifically for step videos. For even more help, everything is managed using Trello and agile workflow techniques so I can track, record and work on everything much smoother."
+                text:"Firebase has been essential in making EasyEats possible, thanks to its smooth integration with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency when entering new global items. So I made several tools to help, an admin panel for adding items to Firebase, and an editing tool with Python to further reduce the file sizes of videos specifically for step videos."
             }, 
 
 
@@ -413,7 +414,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve designed a few pieces of software, and almost anytime a project gets big, Figma becomes part of the process to help prototype and design a quality UI. Whether you’re prototyping features or mapping out full concepts, it’s important to understand the entire process."
+                text:"I’ve designed and prototyped lots of software, and almost anytime a project gets big or detailed, Figma becomes part of the process to help prototype and design a quality UI and UX. Whether you’re prototyping features or mapping out full concepts, it’s important to understand the entire process. When I tutored students about the stacks of app development, I told them that at every stage the more you understand how to design, develop, and preform other parts of the stack, the better and more efficient your and your entire team works."
             }, 
 
 
@@ -451,7 +452,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I found it’s easier to build software when you understand how the UI/UX is designed — often the same design principles can be applied in code. For example, Android and Apple UI share similar requirements for bottom tab bars. Understanding what designers are aiming for helps you spot existing kits or standardized components, like Material Design or other plugins."
+                text:"I found it’s easier to build software when you understand how the UI/UX is designed, often the same design principles can be applied in code. For example, Android and Apple UI share similar requirements for bottom tab bars. Understanding what designers are aiming for helps you spot existing kits or standardized components, like Material Design."
             }, 
 
 
@@ -479,7 +480,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Prototyping and design play a key role in the workflow that even this site is designed and prototyped in Figma! Details and designs are important not only for the look but also for designing how the features should work."
+                text:"Prototyping and design play a key role in the workflow, that even this site is designed and prototyped in Figma. Details and designs are important not only for the look but also for designing how the features should work."
             }, 
 
 
@@ -513,11 +514,11 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I began learning Google Cloud Firebase even before it was required in my classes, simply because the app I was building needed a way to store large amounts of data, deliver updates, and share content globally. Bundling data into the app wasn’t feasible, so I researched what I’d need and got to work."
+                text:"I began learning Google Cloud Firebase even before it was required in my classes, simply because the app I was building needed a way to store large amounts of data, deliver updates, and share content globally. Bundling data into the app wasn’t going to work for my needs, so I researched what I’d need and got to work."
             }, 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Before long, I was teaching and tutoring others on how to use cloud databases effectively—covering best practices, how to navigate documentation, and how to make the most of each part of a cloud suite."
+                text:"Before I knew it, I was teaching and tutoring others on how to use cloud databases effectively, covering best practices, how to navigate documentation, and how to make the most of each part of a cloud suite."
             }, 
 
             {//Carousel of various firebase images to showcase
@@ -564,7 +565,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Firebase was my starting point, but the principles I’ve learned and tutored apply to virtually any cloud platform. I’ve also researched and compared other services like AWS and MongoDB for use in different projects. One of the key lessons I’ve taken away (and always emphasize) is the importance of bandwidth: minimizing unnecessary server calls is critical for both performance and scalability."
+                text:"Firebase was my starting point, but the principles I’ve learned and tutored apply to virtually any cloud platform. I’ve also researched and compared other services like AWS, Azure, MongoDB, and more for use in other projects. One key point I always emphasize is the importance of bandwidth: minimizing unnecessary server calls is critical for both performance and scalability."
             }, 
             {
                 type:DetailsComponentTypes.BodyText,
@@ -680,7 +681,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times. Playing such a huge role in programming, I’ve already had to solve a lot of problems, but even now, it’s still a major part of my skillset and something I’m confident using and applying. I’ve fixed issues in other software, worked within frameworks, and debugged both my own and others’ Git and GitHub setups countless times."
+                text:"The broken part of the puzzle when of coding. As a developer and tutor, I've definetly had to fix lots of problems and issues, it’s a major part of my skillset, and something I’m confident using and applying. I'd go as far to even say I enjoy it. I enjoy the process of reasarching, testing and applying those solutions to complex problems."
             }, 
 
 
@@ -692,7 +693,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Recently, I was asked to help improve an Excel workflow for an accounting workbook used to create invoices. For about a month, I worked in Excel and VBA, building features to boost productivity. Every so often, I’d meet with the client to share progress and see what we could keep improving in the new workflow. He’d tell me about new issues or requests, I’d take notes, and then go back to integrating or adjusting them. It only took a few rounds before we landed on the perfect design and workflow."
+                text:"Recently, I was asked to help improve an Excel workflow of an accounting workbook that has information used to create invoices. For about a month, I worked in Excel and VBA, building features to help boost productivity. I’d routinely have meetings with the client to share progress and see what we could keep improving in the new workflow. He’d tell me about new issues or requests, I’d take notes, and then go back to integrating and adjusting based on the feedback. It only took a few rounds before we landed on the perfect design and workflow."
             },
 
             //SLIDESHOW OF FEATURES
@@ -701,6 +702,10 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.CarouselImagesDisplay,
                 carouselID:"ps-showcase",
                 imagesList:[
+                    {
+                        image:VBAInvoiceShowcase,
+                        caption:"Invoicing workspace that allows the client to make a entirely custom and configurable invoice for any piece of work."
+                    },
                     {
                         image:PSUsingNamesInWorkBooks,
                         caption:"Editing a sample workbook entry with a dropdown of all company names worked with"
@@ -721,9 +726,17 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"He’d share feature ideas, and I’d come up with ways to implement them. After each meeting, I’d research efficient solutions for his specific needs. Having worked with Excel in the past, I already had a good sense that most of what he wanted could be done relatively easily. Some of the features he needed included saving copies and starting new workbooks for tax purposes. While Excel doesn’t offer a built-in log feature, it had everything I needed to build a custom suite of automation tools to handle that and more. I created a dashboard where he could manage every part of the workbook. He could save PDF copies of the sheet, clear the workbook, or do both at once using multiple action buttons. He could even change the file’s date using a text input, though it would also auto-recalculate the date if left blank. By following similar principles across every feature, the workbook became fully equipped in no time. He’s been using it ever since and has saved countless hours in his workflow."
+                text:"He’d share feature ideas, and I’d come up with ways to implement them. After each meeting, I would go research and brainstorm efficient solutions for his different needs. Working with Excel in the past, I knew that most of what he wanted could be done relatively easily. While Excel doesn’t offer a large 'built-in tools suite', it had everything I needed to build a custom collection of automated tools to handle everything needed."
             },
 
+            
+
+            {
+                type: DetailsComponentTypes.BodyText,
+                text: "I created a several workspaces like a dashboard, invoice creation, inventory entry, and customer pricing. The workspaces allowed him to easily manage every part of the workbook. With features like quick save and clear PDF copies and data, enter orders into the workbook with information of priced components to each customer with settable default values and inventory availability, and an invoce creation system that allows for much easier invoice creation. By selecting an order number, it fills out the rest of the invoice with the required information, with adjustable settings for extra space, time, and descriptions."
+            },
+
+            
 
 
 
@@ -737,7 +750,12 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve used a variety of frameworks, languages, and libraries, and after coding with them all for a while I’ve come to understand the importance of following good coding practices. Practices like knowing when to and not to use frameworks and libraries, and how to understand their limitations as well. Patterns like repeating code can often lead to lots of slowdowns and unnecessary overhead. One major issue I once ran into was in SwiftUI. I needed to build an infinitely scrolling carousel with swiping actions that could also add new items, all while keeping things seamless. I found some examples and tried integrating them, but I kept running into problems. Eventually, I modified a common carousel and gave it multiple arrays to achieve a seamlessly scrollable, seemingly infinite setup."
+                text:"I’ve used a variety of frameworks, languages, and libraries, and from working with them I've become familiar with the similar patterns, problems, and simiarities they all share, and the important of resarching each enviornemnts best practices. Practices like knowing when to and not to use certain frameworks, libraries and features, and how to understand their limitations as well."
+            },
+
+            {
+                type: DetailsComponentTypes.BodyText,
+                text:"I once had major issue in SwiftUI, where I needed to build an infinitely scrolling carousel with swiping actions that could also add new items, all while keeping things seamless. I found some examples and tried integrating them, but I kept running into problems. Eventually, I modified a common carousel and gave it multiple arrays to achieve a seamlessly scrollable, seemingly infinite setup."
             },
 
 
@@ -767,7 +785,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"With every swipe in either direction, the system would check: what’s in the active array, the deactivated array, the to-be-reactivated array, and what in the cache might match. Swiping forward would move data into the deactivated set; swiping back would shift it into to-be-reactivated. It sounds like a lot—and it was, at first. But by limiting each array to around a max of four items, performance improved significantly. With that many swipe states, I even introduced tracking values that let me control every part of the carousel. Using a food cache, multiple array stores, swaps, and shifts, performance stayed solid across all deployments—and the code ended up even simpler."
+                text:"With every swipe in either direction, the system would check: what’s in the active array, the deactivated array, the to-be-reactivated array, and what in the cache might match. Swiping forward would move data into the deactivated set; swiping back would shift it into to-be-reactivated. It sounds like a lot, and it was at first. But by limiting each array to around a max of four items, performance improved significantly. With that many swipe states, I even introduced tracking values that let me control every part of the carousel. Using a food cache, multiple array stores, swaps, and shifts, performance stayed solid across all deployments—and the code ended up even simpler. CPU Utilization went from 99% during swipes to barley 10%."
             },
             
 
