@@ -535,6 +535,7 @@ export function DetailsLinkButton({link, text}){
                 marginRight:'15vw',
                 marginLeft:'15vw',
                 marginTop:'5vw',
+                marginBottom:'5vw',
 
                 height:"2.5rem",
                 // width:"50%",
@@ -584,9 +585,12 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
 
             style={{
 
-                margin:'auto',
+                margin:'5rem',
 
-                marginTop:'5rem',
+                
+
+                paddingTop:'2vw',
+                paddingBottom:'2vw',
                 // height:"25rem",
 
 
