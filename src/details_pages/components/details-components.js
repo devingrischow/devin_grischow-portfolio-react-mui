@@ -577,18 +577,23 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
 
              onClick={onClickToRepo}
 
-            width="100%"
+            // width="100%"
             // height="200rem",
             
         
 
             style={{
+
+                margin:'auto',
+
                 marginTop:'5rem',
-                height:"25rem",
+                // height:"25rem",
 
 
-                paddingRight:'10rem',
-                paddingLeft:'10rem',
+                // width:"50rem",
+
+                // paddingRight:'10rem',
+                // paddingLeft:'10rem',
 
                 cursor:'pointer'
 

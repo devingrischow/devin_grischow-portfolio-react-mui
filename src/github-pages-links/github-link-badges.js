@@ -31,10 +31,6 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
     }
 
 
-
-
-
-
     const GitHubBadgeItem = styled(Paper)(({ theme }) => ({
         cursor: 'pointer',
 
@@ -211,6 +207,8 @@ export function GithubLinks(badgeLink, badgeText, badgeColor, badgeHoverOverColo
                         badgeText
                     }
                 </GithubBadgeTitleText>   
+
+                
 
                 
 

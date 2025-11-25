@@ -162,13 +162,17 @@ export function DetailsPageHolder() {
 
           console.log("Github Repo Link to Showcase Preview: ", githubRepoLink, "Author: ", repoAuthor, "title:", repoTitle);
 
-          return(<DetailsGitHubRepoLink
+          return(
+            
+              <DetailsGitHubRepoLink
             repoTitle={repoTitle}
             repoAuthor={repoAuthor}
             
             repoLink={githubRepoLink}
 
-          /> );
+          /> 
+        
+        );
 
 
         case DetailsComponentTypes.ButtonLink: 
