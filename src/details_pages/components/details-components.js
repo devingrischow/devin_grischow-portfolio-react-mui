@@ -565,7 +565,7 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
     
 
 
-    const repoShowcaseLink = `https://github-readme-stats.vercel.app/api/pin/?username=${repoAuthor}&repo=${repoTitle}`
+    const repoShowcaseLink = `https://github-readme-stats-g-dev-g.vercel.app/api/pin/?username=${repoAuthor}&repo=${repoTitle}`
 
     const onClickToRepo  = () => {
         window.open(repoLink)
