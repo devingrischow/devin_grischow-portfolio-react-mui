@@ -19,7 +19,7 @@ import { DetailsIconLoader } from '../../ui/details-icon-loader';
 
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
-import { border, fontWeight, lineHeight, margin } from '@mui/system';
+import { border, fontWeight, lineHeight, margin, height } from '@mui/system';
 
 
 import { GetMatchesSmallScreen } from '../../ui/matchesSmallScreenCondition';
@@ -532,8 +532,8 @@ export function DetailsLinkButton({link, text}){
             sx={{
                 border: 'white 4px solid',
 
-                marginRight:'15vw',
-                marginLeft:'15vw',
+                marginRight:'15%',
+                marginLeft:'15%',
                 marginTop:'5vw',
                 marginBottom:'5vw',
 
@@ -578,6 +578,7 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
 
              onClick={onClickToRepo}
 
+
             // width="100%"
             // height="200rem",
             
@@ -585,12 +586,12 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
 
             style={{
 
-                margin:'5rem',
+                // margin:'33%',
 
-                
+                height:'15rem',
 
-                paddingTop:'2vw',
-                paddingBottom:'2vw',
+                paddingTop:'2rem',
+                paddingBottom:'2rem',
                 // height:"25rem",
 
 

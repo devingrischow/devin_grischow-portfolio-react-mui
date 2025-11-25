@@ -77,6 +77,7 @@ export const SkillsData = [
             'Cloud Services',
             'Firebase',
             'Google Cloud',
+            'Analytics',
             'Apache',
             'Database Management, Entry, & Creation',
             'APIs',
