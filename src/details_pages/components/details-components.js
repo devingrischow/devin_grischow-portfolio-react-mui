@@ -544,6 +544,8 @@ export function DetailsLinkButton({link, text}){
 
                 borderRadius:'2vw',
 
+                padding:'3vw',
+
                 '&:hover':{
                     backgroundColor:"white",
                     color:'black'
@@ -581,10 +583,12 @@ export function DetailsGitHubRepoLink({repoTitle, repoAuthor, repoLink}){
         
 
             style={{
-                marginTop:'2rem',
+                marginTop:'5rem',
+                height:"25rem",
 
-                paddingRight:'5rem',
-                paddingLeft:'5rem',
+
+                paddingRight:'10rem',
+                paddingLeft:'10rem',
 
                 cursor:'pointer'
 
