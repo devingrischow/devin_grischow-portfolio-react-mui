@@ -203,21 +203,46 @@ export const DetailsPageData = {
                 text:"EasyEats App Website"
             },
 
-            //Link to EasyEats Repo
+            
             {
-                type:DetailsComponentTypes.GitHubLink,
-                repoTitle:"EasyEats-Code-Snippets",
-                repoUser:"devingrischow",
-                repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
+                type:DetailsComponentTypes.WovenImagesDispaly,
+                modMaxWidth:'90%',
+
+                displayMobileAs:'column',
+
+
+                imagesList:[
+                    {
+                        image:'https://github-readme-stats-g-dev-g.vercel.app/api/pin/?username=devingrischow&repo=EasyEats-Code-Snippets',
+                        caption:"Repository of Code Snippets from EasyEats"
+                    },
+
+
+                    {
+                        image:'https://github-readme-stats-g-dev-g.vercel.app/api/pin/?username=devingrischow&repo=EasyEatsBatchEditor',
+                        caption:"Repository of Video Batch Editor"
+                    },
+
+                    
+                ]
+
             },
 
-            //Link to Editing project 
-            {
-                type:DetailsComponentTypes.GitHubLink,
-                repoTitle:"EasyEatsBatchEditor",
-                repoUser:"devingrischow",
-                repoLink:"https://github.com/devingrischow/EasyEatsBatchEditor"
-            },
+            // //Link to EasyEats Repo
+            // {
+            //     type:DetailsComponentTypes.GitHubLink,
+            //     repoTitle:"EasyEats-Code-Snippets",
+            //     repoUser:"devingrischow",
+            //     repoLink:"https://github.com/devingrischow/EasyEats-Code-Snippets"
+            // },
+
+            // //Link to Editing project 
+            // {
+            //     type:DetailsComponentTypes.GitHubLink,
+            //     repoTitle:"EasyEatsBatchEditor",
+            //     repoUser:"devingrischow",
+            //     repoLink:"https://github.com/devingrischow/EasyEatsBatchEditor"
+            // },
             
             
             {
