@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bec2dcfa.css",
-    "main.js": "/static/js/main.1ac47c1f.js",
+    "main.js": "/static/js/main.6700d84b.js",
     "static/media/Launch Details Showcase.png": "/static/media/Launch Details Showcase.ecb4f8dfd8478da25de5.png",
     "static/media/SpaceX Showcase.png": "/static/media/SpaceX Showcase.510e6edf5217c9f6e93a.png",
     "static/media/Global Luanch Showcase.png": "/static/media/Global Luanch Showcase.b3075476971d565ab81e.png",
@@ -65,18 +65,18 @@
     "static/media/Batch Editor Software Start Screen.png": "/static/media/Batch Editor Software Start Screen.6bdc2bbd833750246064.png",
     "static/media/Figma-ee-prototype-showcase.png": "/static/media/Figma-ee-prototype-showcase.cec6689beab145cd1b6c.png",
     "static/media/DATA-showcase2.png": "/static/media/DATA-showcase2.e9ca7f84dd3883db1199.png",
+    "static/media/CATB-Tab 2.png": "/static/media/CATB-Tab 2.8e0503fc8aa3512d5ce8.png",
     "static/media/CATB - Files.png": "/static/media/CATB - Files.9c705edf0f1c075e6c1d.png",
     "static/media/CloudData-Recipe-Videos-Showcase.png": "/static/media/CloudData-Recipe-Videos-Showcase.4661b2c6671b8770baa7.png",
     "static/media/Figma-Portfolio-Components.png": "/static/media/Figma-Portfolio-Components.42149f00f222369a5c9b.png",
     "static/media/ps-excel-workbook-controlls.png": "/static/media/ps-excel-workbook-controlls.0adc053505e8de98ee43.png",
     "static/media/CD-Showcase-secure-user-id-from-testing-database.png": "/static/media/CD-Showcase-secure-user-id-from-testing-database.f9d2006733bc13642c02.png",
-    "static/media/CATB-Tab 2.png": "/static/media/CATB-Tab 2.dad5cedd8989c273955f.png",
     "index.html": "/index.html",
     "main.bec2dcfa.css.map": "/static/css/main.bec2dcfa.css.map",
-    "main.1ac47c1f.js.map": "/static/js/main.1ac47c1f.js.map"
+    "main.6700d84b.js.map": "/static/js/main.6700d84b.js.map"
   },
   "entrypoints": [
     "static/css/main.bec2dcfa.css",
-    "static/js/main.1ac47c1f.js"
+    "static/js/main.6700d84b.js"
   ]
 }
