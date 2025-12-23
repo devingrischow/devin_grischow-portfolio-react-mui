@@ -12,6 +12,9 @@ export const DetailsComponentTypes = {
 
     BodyText:'bodytext',
 
+    //Bullet Point Lists
+    BulletPointBody:'bulletpointbody',
+
 
 
 

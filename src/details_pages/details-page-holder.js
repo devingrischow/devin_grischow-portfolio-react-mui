@@ -26,7 +26,7 @@ import { DetailsPageData } from '../data/details-pages-data';
 
 import { DetailsComponentTypes } from "./components/component-types";
 
-import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BigImageSection, WovenImagesDispaly, DetailsImagesCarousel, DetailsGitHubRepoLink, DetailsLinkButton  } from './components/details-components';
+import { DetailsHeader, DetailsBodyText, DetailsBodyTitle, BulletPointBody ,BigImageSection, WovenImagesDispaly, DetailsImagesCarousel, DetailsGitHubRepoLink, DetailsLinkButton  } from './components/details-components';
 
 
 
@@ -115,7 +115,9 @@ export function DetailsPageHolder() {
         return(<DetailsBodyTitle key={detailItem} text={bodyTitleText} />);
         
         
-        
+        case DetailsComponentTypes.BulletPointBody:
+        const bulletPoints = detailItem.textList;
+        return(<BulletPointBody textList={bulletPoints} />);
         
         
         

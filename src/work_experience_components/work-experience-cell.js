@@ -137,12 +137,15 @@ export function WorkExperienceCell(workTitleText, employerName,employerSite=null
       display:'flex',
       flexDirection:'column',
       color:'white',
+      fontSize:'2rem',
+
 
       listStyleType: 'disc',
       pl: 'revert-layer',
       '& .MuiListItem-root': {
+        justifyContent:'center',
           // pr: '3vw',
-          fontSize:'2rem',
+          fontSize:'1.5rem',
           display: 'list-item',
           pl:0 //Override Default Item Root Position
           // paddingRight:'6vw'

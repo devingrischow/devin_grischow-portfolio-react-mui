@@ -88,7 +88,7 @@ function ShowCaseHeader(){
 
             borderTop:1,
             borderColor:PortfolioColors.SectionDivider,
-            paddingTop:'0.7vw',
+            paddingTop:'1vw',
             
             
             marginRight:horizontalMargin,

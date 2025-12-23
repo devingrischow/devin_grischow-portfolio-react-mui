@@ -149,27 +149,27 @@ export const ShowcaseObjects = [
 
             badges:[
                 {
-                    badgeTitle:"Cloud backend",
+                    badgeTitle:"Google Cloud Backend",
                     badgeColor:PortfolioColors.CloudBackendColor
                 },
 
-                {
-                    badgeTitle:"Admin Panel",
-                    badgeColor:PortfolioColors.AdminPanelColor
-                },
+                
 
 
-                {
-                    badgeTitle:"Tracked Agile Workflow",
-                    badgeColor:PortfolioColors.AgileWorkFlowTrelloColor
-                },
+                // {
+                //     badgeTitle:"Tracked Agile Workflow",
+                //     badgeColor:PortfolioColors.AgileWorkFlowTrelloColor
+                // },
 
                 {
-                    badgeTitle:"Batch Video Compressor with OpenCV",
+                    badgeTitle:"Custom Workflow Tools",
                     badgeColor:PortfolioColors.CustomVideoEditorColor
                 },
 
-                
+                {
+                    badgeTitle:"Step-by-Step Food Tutorial Videos",
+                    badgeColor:PortfolioColors.AdminPanelColor
+                },
 
 
 
@@ -187,7 +187,7 @@ export const ShowcaseObjects = [
 
     //Workbook Invoicer VBA App Showcase
     {
-        showcaseTitle:"Invoice & Excel Workflow Enhancer with VBA",
+        showcaseTitle:"Invoice & Excel Workflow Enhancement with VBA",
         showcaseDescription:"An Excel implementation designed for a client to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
         
         dateLabel:"May, 2025",
@@ -311,7 +311,7 @@ export const ShowcaseObjects = [
             ],
 
             // scale:1.8,
-            rotation:'rotate(10deg)',
+            rotation:'rotate(15deg)',
 
 
             backgroundColorInfo:'linear-gradient(162deg,rgb(33, 27, 219) 10%, rgba(87, 199, 133, 0) 100%)',

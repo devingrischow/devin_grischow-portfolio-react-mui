@@ -106,6 +106,7 @@ import PSWorkBookControlls from '../images/problem-solving-images/slideshow-feat
 //Woven of framework limitations
 import PSFourDimensionArrayModel from '../images/problem-solving-images/woven-framework-limitations/ps-4-array-showcase.png';
 import PSSimplifiedPositionCalculation from '../images/problem-solving-images/woven-framework-limitations/ps-simplified-position-rotation-calc.png';
+import { type } from '@testing-library/user-event/dist/type';
 
 
 
@@ -134,7 +135,20 @@ export const DetailsPageData = {
                 text:"EasyEats: Eating Made Easy"
             }, 
 
-            
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Features'
+            },
+
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Cloud Backend with Google Firebase for NoSQL Databases, Authentication Services, and Video Image Hosting.",
+                    "Sign-up with Google, Apple, and Email; with User Data saved from an Onboarding Process.",
+                    "Custom Tools made to help with the workflow like a Javascript Admin Panel, and a Python based batch video editor."
+
+                ]
+            },
             
             
             {
@@ -214,13 +228,15 @@ export const DetailsPageData = {
                 imagesList:[
                     {
                         image:'https://github-readme-stats-g-dev-g.vercel.app/api/pin/?username=devingrischow&repo=EasyEats-Code-Snippets',
-                        caption:"Repository of Code Snippets from EasyEats"
+                        caption:"Repository of Code Snippets from EasyEats",
+                        link:"https://github.com/devingrischow/EasyEats-Code-Snippets"
                     },
 
 
                     {
                         image:'https://github-readme-stats-g-dev-g.vercel.app/api/pin/?username=devingrischow&repo=EasyEatsBatchEditor',
-                        caption:"Repository of Video Batch Editor"
+                        caption:"Repository of Video Batch Editor",
+                        link:"https://github.com/devingrischow/EasyEatsBatchEditor"
                     },
 
                     
@@ -339,7 +355,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Firebase has been essential in making EasyEats possible, thanks to its smooth integration with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency when entering new global items. So I made several tools to help, an admin panel for adding items to Firebase, and an editing tool with Python to further reduce the file sizes of videos specifically for step videos."
+                text:"Firebase has been essential in making EasyEats possible, thanks to its clean integrations with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency when entering new global items. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to batch edit videos, and helped further reduce the file sizes of videos specifically for the step based videos."
             }, 
 
 
@@ -867,7 +883,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"What I discovered while coding a few complex projects and working as a TA is that it’s easy to ask ChatGPT or any AI to make every part of an app for you, but sometimes it will make bugs, or you will inevitably encounter an issue of some kind that’s normal but you don’t like and need to change it. That’s why it’s important for a coder to not only understand how to make effective prompts but to also understand the problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
+                text:"What I discovered while coding a few complex projects and working as a TA is that it’s easy to ask ChatGPT or any AI to make every part of an app for you, but it will make bugs, and you will inevitably encounter an issue of some kind that seems normal, but you need to change how it works slightly. That’s why it’s important for a developer to not only understand how to make effective prompts but to also understand the underlying problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
             },
             
             

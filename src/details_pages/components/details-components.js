@@ -10,7 +10,9 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
-
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText'
 
 
 import { DetailsIconLoader } from '../../ui/details-icon-loader';
@@ -91,6 +93,29 @@ export const DetailsPageTheme = createTheme({
 
 
     },
+
+    
+    bulletPointText: {
+
+        fontSize: '1.7rem',
+
+
+        textAlign:'start',
+
+        listStyleType: 'disc',
+        pl: 'revert-layer',
+        '& .MuiListItem-root': {
+            // pr: '3vw',
+            fontSize:'2rem',
+            display: 'list-item',
+            pl:0 //Override Default Item Root Position
+        }
+
+
+    }
+
+
+
     // body1: {
     //   fontWeight: 500,
     // },
@@ -196,6 +221,40 @@ export function DetailsBodyTitle({
 }
 
 
+//Simply Create bullet points to display (no headers, keep it simple and reusable)
+export function BulletPointBody({
+    textList, 
+}){
+
+
+
+    //Return List Collection HTML Object
+    return(
+            <List sx={{ listStyleType: 'disc',
+                pl: 'revert-layer',
+                '& .MuiListItem-root': {
+                    // pr: '3vw',
+                    fontSize:'1.5rem',
+                    display: 'list-item',
+                    pl:0 //Override Default Item Root Position
+                }, pl: 10, lineHeight: 1.433 }}>
+                
+                {
+                    textList.map( (pointText, index) => (
+                        <ListItem sx={{ 
+                            display: 'list-item' }}>
+                            <Typography variant='bulletPointText' >
+                                {pointText}
+                            </Typography>
+                        </ListItem>
+                    ) )
+                }
+            </List>);
+    
+
+
+}
+
 
 
 
@@ -284,6 +343,13 @@ export function WovenImagesDispaly({imageObjectList, modWidthWoven, mobileDispla
 
     const sxEffect = mobileDisplayMode === 'column' ? (doesMatchSmall ? {} : mobileImageColum) : {}
 
+    const optionalOnClickToLink  = (link) => {
+        if(link != null){
+            window.open(link);
+        }
+        
+    }
+
     return(
         <ImageList
 
@@ -307,14 +373,16 @@ export function WovenImagesDispaly({imageObjectList, modWidthWoven, mobileDispla
 
                 imageObjectList.map( (imageObject) => (
 
-                    <ImageListItem key={imageObject.caption}
+                    <ImageListItem
+                    onClick={(event) => optionalOnClickToLink(imageObject.link)}
+                    key={imageObject.caption}
                         sx={{
                            display: 'flex',
                         //    width:'min-content',
                            flexDirection: 'column',
                            alignItems:'center',
                            justifyContent:'center',
-
+                           cursor: imageObject.link != null ? 'pointer' : 'auto'
                            
                            
                         }}

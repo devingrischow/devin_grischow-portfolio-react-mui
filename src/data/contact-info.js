@@ -14,7 +14,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 
 
 export const ContactInfo = {
-    quickAboutMe:"I'm a Software Developer enthusiastic and passionate about coding and creating. I'm always excited to learn something new, problem solve, and understand anything I can.",
+    quickAboutMe:"I'm a Software Developer enthusiastic and passionate about coding and creating. I'm always excited to learn something new, problem solve, and get invested into a project.",
 
     email:"devingrischow\n@outlook.com",
     phoneNum:"(708)-227-4381",

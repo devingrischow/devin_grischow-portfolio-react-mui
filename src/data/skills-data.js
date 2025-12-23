@@ -31,27 +31,21 @@ export const SkillsData = [
             'iOS - SwiftUI & Storyboards',
             'Android - Jetpack Compose & Views',
             'Multi-Platform Coding',
+            'Full Stack',
+            '.Net',
             'Kotlin Multi Platform',
-            'Flutter',
             'Python',
-            'C++',
-            'C#',
-            'Data Structures',
-            'CRUD Applications',
-            'Algorithms',
-            'Dart',
-
-            'JavaScript',
+            'C++ & C#',
+            'Flutter & Dart',
             'Java',
-
-
+            'MVVM & MVC',
             'VBA',
 
         ]
     },
 
     {
-        skillset:'Back End',
+        skillset:'Backend',
 
         notableSkills:[
 
@@ -75,13 +69,10 @@ export const SkillsData = [
             'NoSQL',
             'Json',
             'Cloud Services',
-            'Firebase',
-            'Google Cloud',
-            'Analytics',
-            'Apache',
             'Database Management, Entry, & Creation',
             'APIs',
             'Command Line Interfaces'
+
         ]
     },
 
@@ -101,14 +92,16 @@ export const SkillsData = [
         ],
 
         skills:[
-            'HTML, CSS, JavaScript',
+            'JavaScript, HTML, CSS',
+            'Razor Pages',
+            'WinForms',
             'UI/UX',
             'Lottie Animations',
             'Wordpress',
             'Adobe',
             'Prototyping',
             'Material Design 3',
-            'Communicating and translating design to code'
+            'Communicating and translating design to code',
         ]
     },
 
@@ -136,7 +129,7 @@ export const SkillsData = [
     },
 
     {
-        skillset:'GitHub',
+        skillset:'DevOps',
 
         notableSkills:[
 
@@ -144,11 +137,12 @@ export const SkillsData = [
 
 
         skills:[
-            'Git',
-            'Collaboration', 
-            'Pull Requests',
-            'Merging',
-            'Branching',
+            'Git & GitHub',
+            'Docker',
+            'Azure',
+            'Firebase & Google Cloud',
+            'Branching, Merging & Pull Requests',
+            'Code Collaboration', 
         ]
     },
 
