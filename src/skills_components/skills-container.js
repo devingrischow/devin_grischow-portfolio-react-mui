@@ -104,8 +104,8 @@ function SkillsHeader(){
         <Box
             sx={ {
                 //Border on the top of the box, seperate it more
-                borderTop:1,
-                borderColor:PortfolioColors.SectionDivider,
+                // borderTop:1,
+                // borderColor:PortfolioColors.SectionDivider,
 
 
                 marginRight:horizontalMargin,

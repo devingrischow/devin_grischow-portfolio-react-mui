@@ -347,7 +347,7 @@ export function AboutMeEduAndMoreContainer({}) {
 
                     }}
                 >
-                    Nothing’s more enjoyable than kayaking down a nice scenic river, camping, or hiking down a trail. In my spare time I also enjoy working on side projects. Creative work, programming work, all kinds of work. 
+                    Nothing’s more enjoyable than kayaking down a nice scenic river, camping, or hiking down a trail. In my spare time Im also working on some side projects. Creative work, programming work, I enjoy all kinds of work. 
                 </AboutText>
                 
                 <Grid container rowSpacing={2} sx={{ justifyContent:'center' }} spacing={{ xs: 2, md: 3 }} columns={{ xs: 8, sm: 8, md: 12 }} >

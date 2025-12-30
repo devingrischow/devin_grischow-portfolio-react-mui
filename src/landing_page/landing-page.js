@@ -372,10 +372,9 @@ function LandingPageAboutMeHandler({
 
         <ShowcaseContainer refs={refs} />
 
+        <WorkExperienceColumn refs={refs} />
 
         < SkillsContainer refs={refs} />
-
-        <WorkExperienceColumn refs={refs} />
 
         < MoreOnGithubContainer refs={refs} />
 

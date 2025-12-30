@@ -87,7 +87,7 @@ export function WorkExperienceColumn({refs}) {
     
     
     <WorkExperienceHeaderLabel>
-      Work Experience
+      Experience
     </WorkExperienceHeaderLabel>
     
     

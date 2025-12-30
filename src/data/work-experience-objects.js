@@ -1,6 +1,18 @@
 export const workExperience = [
 
     {
+        workTitleText: "Lead Full Stack Software Developer - .Net, SQL, Azure",
+        workTime:"Nov 2025 - Dec 2025",
+        workType:"Contract - Hybrid",
+        points:[
+            "Modernized an Excel company workflow with custom apps and an SQL Database, deploying app containers on Azure from Docker Hub.",
+            "Developed a .NET multiplatform library to use identical working logic in each app.",
+            "Created tools to help simplify tasks like Workbook jobs, Inventory management, Customer Specific Pricing, and Invoice creation.",
+            "Web and Windows apps developed and deployed using Docker, WinForms, ASP.NET, and Razor. Auth handled by Identity & Authorization."
+        ]
+    },
+
+    {
         workTitleText: "Teaching & Program Assistant for App Accelerator 2024",
         employerName:"Everyone Can Code Chicago",
         employerSite:"https://www.eccchicago.org/2024-app-accelerator.html",

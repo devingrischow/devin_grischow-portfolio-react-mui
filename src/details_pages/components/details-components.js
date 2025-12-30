@@ -97,7 +97,7 @@ export const DetailsPageTheme = createTheme({
     
     bulletPointText: {
 
-        fontSize: '1.7rem',
+        fontSize: '1.4rem',
 
 
         textAlign:'start',
@@ -334,6 +334,7 @@ export function WovenImagesDispaly({imageObjectList, modWidthWoven, mobileDispla
 
         display:'flex',
         flexDirection:'row',
+        margin:'2rem',
 
         
 
@@ -341,7 +342,7 @@ export function WovenImagesDispaly({imageObjectList, modWidthWoven, mobileDispla
 
     }
 
-    const sxEffect = mobileDisplayMode === 'column' ? (doesMatchSmall ? {} : mobileImageColum) : {}
+    const sxEffect = mobileDisplayMode === 'column' ? (doesMatchSmall ? {margin:'2rem'} : mobileImageColum) : {margin:'2rem'}
 
     const optionalOnClickToLink  = (link) => {
         if(link != null){
@@ -496,7 +497,9 @@ export function DetailsImagesCarousel({carouselImages ,carouselID}){
                     <p
                         style={{
                             height:doesMatchSmall ? '20%' : '30%',
-                            marginBottom:'20px'
+                            marginBottom:'20px',
+                            marginTop:'20px',
+
                         }}
                     >
                         {imageObject.caption}
@@ -609,11 +612,11 @@ export function DetailsLinkButton({link, text}){
                 // width:"50%",
                 color:"white",
 
-                fontSize:'2vw',
+                fontSize:'calc(0.96rem + 0.2vw)',
 
-                borderRadius:'2vw',
+                borderRadius:'1.2vw',
 
-                padding:'3vw',
+                padding:'1.5vw',
 
                 '&:hover':{
                     backgroundColor:"white",

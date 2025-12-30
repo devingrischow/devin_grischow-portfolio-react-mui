@@ -30,7 +30,8 @@ import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 //Ai / Auto awesome icon 
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
-
+//.NET AutoGlass Management Platform Images 
+import BusinessIcon from '@mui/icons-material/Business';
 
 
 export function DetailsIconLoader( {detailsIcon, iconSize='1.5rem'} ){
@@ -47,12 +48,14 @@ export function DetailsIconLoader( {detailsIcon, iconSize='1.5rem'} ){
 
     switch(detailsIcon){
 
-        case(DetailsPageData.CloudDatabases.pageId):
+        case (DetailsPageData.AutoGlassApps.pageId):
+        return (<BusinessIcon sx={iconSx} />);
 
+
+        case(DetailsPageData.CloudDatabases.pageId):
         return(
             <FilterDramaIcon sx={iconSx} />
         );
-
 
 
         case(DetailsPageData.EasyEats.pageId):
@@ -68,6 +71,7 @@ export function DetailsIconLoader( {detailsIcon, iconSize='1.5rem'} ){
         case(DetailsPageData.Trello.pageId):
         return(<SpaceDashboardIcon sx={iconSx} />);
 
+        
         case(DetailsPageData.ProblemSolving.pageId):
         return(<TipsAndUpdatesIcon sx={iconSx} />);
 

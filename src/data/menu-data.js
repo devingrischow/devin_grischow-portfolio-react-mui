@@ -17,6 +17,10 @@ export const MenuData = [
         //No Link needed for home, reloads page 
     },
 
+    {
+        detailsText:DetailsPageData.AutoGlassApps.menuLabel,
+        routeTo:DetailsPageData.AutoGlassApps.pageId
+    },
 
     {
         detailsText:DetailsPageData.EasyEats.menuLabel,
@@ -30,6 +34,10 @@ export const MenuData = [
 
 
 
+    {
+        headerText:"Experience"
+        //All OTHER experiences get loaded from name
+    },
 
 
 
@@ -55,28 +63,6 @@ export const MenuData = [
         detailsText:DetailsPageData.AI.menuLabel,
         routeTo:DetailsPageData.AI.pageId
     },
-
-
-
-
-
-
-    
-
-    {
-        headerText:"Work Experience"
-        //All OTHER experiences get loaded from name
-    },
-
-    
-
-
-
-
-
-
-
-
 
 
     {

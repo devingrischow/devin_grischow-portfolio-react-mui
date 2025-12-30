@@ -44,10 +44,14 @@ export function WorkExperienceCell(workTitleText, employerName,employerSite=null
     {
       return(
         <ListItem 
-         
+         sx={{
+            '.MuiTypography-body1':{
+              fontSize:'1.25rem'
+            }
+          }}
         >
 
-          <ListItemText primary={pointText} />
+          <ListItemText  primary={pointText} />
           
 
         </ListItem>
@@ -69,23 +73,21 @@ export function WorkExperienceCell(workTitleText, employerName,employerSite=null
       
       //NOT NULL, USE LINKER
       return (
-        <SubInfoHeader
-          
-        >
+        <SubInfoHeader>
 
-    <a href={employerSiteLink}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+          <a href={employerSiteLink}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
 
-          style={{
-            color: isHoveredOverEmployer ? '#fff' : PortfolioColors.SubInfoColor, 
-          }}
-          target="_blank">{employerName}</a>
+            style={{
+              color: isHoveredOverEmployer ? '#fff' : PortfolioColors.SubInfoColor, 
+            }}
+            target="_blank">{employerName}</a>
 
     
-    </SubInfoHeader>
+        </SubInfoHeader>
       )
-    }else{
+    }else if (employerName != null){
       return (
         <SubInfoHeader>
 
@@ -143,14 +145,17 @@ export function WorkExperienceCell(workTitleText, employerName,employerSite=null
       listStyleType: 'disc',
       pl: 'revert-layer',
       '& .MuiListItem-root': {
-        justifyContent:'center',
+          justifyContent:'center',
           // pr: '3vw',
           fontSize:'1.5rem',
           display: 'list-item',
           pl:0 //Override Default Item Root Position
           // paddingRight:'6vw'
           // marginRight:'16x'
-        }
+        },
+        
+
+        
 
     }} >
       {workPoints}

@@ -143,7 +143,7 @@ const AboutMeLabel = styled('h4')(({ theme }) => ({
 
 
 export const LandingLocations = {
-  WorkExperience:"Work Experience",
+  WorkExperience:"Experience",
   Showcase:"Showcase",
   Skills:"Skills",
   Github:"Contacts & GitHub"

@@ -2,6 +2,24 @@
 import { DetailsComponentTypes } from '../details_pages/components/component-types'
 
 
+//** AutoGlass Platform Images */
+
+
+//WEB APP PICS
+import AG_WA_Workbook from '../images/auto-management-platform-pictures/web-app/AG_WA_workbook.png';
+import AG_WA_edit_workbook from '../images/auto-management-platform-pictures/web-app/AG_WA_Edit_Workbook_Entry.png';
+import AG_WA_company_names from '../images/auto-management-platform-pictures/web-app/AG_WA_company_names_table.png';
+import AG_WA_inventory from '../images/auto-management-platform-pictures/web-app/AG_WA_inventory.png';
+import AG_WA_invoice_showcase from '../images/auto-management-platform-pictures/web-app/AG_WA_invoice_showcase.png';
+import AG_WA_prices_for_companys_and_info from '../images/auto-management-platform-pictures/web-app/AG_WA_prices_for_companys_and_info.png';
+//WIN APP PICS
+import AG_WN_company_part_pricing from '../images/auto-management-platform-pictures/windows-app/AG_WIN_company_part_pricing.png';
+import AG_WN_company_part_price_edit from '../images/auto-management-platform-pictures/windows-app/AG_WIN_company_part_pricing-Edit Page.png';
+import AG_WN_company_names from '../images/auto-management-platform-pictures/windows-app/AG_WIN_CompanyNames.png';
+import AG_WN_connection_config from '../images/auto-management-platform-pictures/windows-app/AG_WIN_ConnectionConfiguration.png';
+import AG_WN_home_launch from '../images/auto-management-platform-pictures/windows-app/AG_WIN_HomeLaunch.png';
+import AG_WN_inventory from '../images/auto-management-platform-pictures/windows-app/AG_WIN_inventory.png';
+import AG_WN_workbook from '../images/auto-management-platform-pictures/windows-app/AG_WIN_workbook.png';
 
 
 //** EasyEats Page Images */
@@ -15,24 +33,17 @@ import AndroidEatingFoodLandscape from '../images/easyeats_details_page_images/w
 import AndroidScrollingPastAD from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-Scrolling-Past-GPT-Ad-Android.png';
 import EEMindNodeDataStructure from '../images/easyeats_details_page_images/what_is_easyeats/showcase_images_carousel/EE-MindNode-DataStructure.png';
 
-
 //What does it do section
 import iOSEatingFood from '../images/easyeats_details_page_images/what_does_it_do_woven/EE-Eating-iOS.png';
 import GroceryListCheckingAndrioid from '../images/easyeats_details_page_images/what_does_it_do_woven/EE-GroceryList-Check-Android.png';
 import FoodJournaliOSChecking from '../images/easyeats_details_page_images/what_does_it_do_woven/EE-Food-Journal-Check-iOS.png';
 
-
-
-
 //How does it Do it dash player Woven
 import iOSMacroDashboard from '../images/easyeats_details_page_images/how_does_it_do_it_woven/dashboard_player_woven/EE-iOS-MacroDashboard.png';
 import HorizontalVideoPlayer from '../images/easyeats_details_page_images/how_does_it_do_it_woven/dashboard_player_woven/EE-Android-Horizontal-Player.png';
 
-
-
 //How does it Do it Curate showoff Big Img
 import EEiOSCurationCodeWhileLoop from '../images/easyeats_details_page_images/how_does_it_do_it_woven/curate_code_big_img/EE-iOS-While-Looo-Curate-Code.png';
-
 
 //How does it Do it Woven of Admin Panel & Software woven
 import EEAdminPanelPic from '../images/easyeats_details_page_images/how_does_it_do_it_woven/admin-software-woven/Admin Panel for Adding food.png';
@@ -47,7 +58,6 @@ import FigmaFocusGardenPrototype from '../images/figma-details-images/woven-prot
 import FigmaEEGeneralShowcase from '../images/figma-details-images/woven-prototypes/FIGMA-ee-showcase.png';
 import FigmaEEWebsitePrototyping from '../images/figma-details-images/woven-prototypes/Figma-ee-webpage-showcase.png';
 
-
 //Slideshow of images
 import FigmaReUseComponents from '../images/figma-details-images/slideshow-various-pictures/Figma-ee-Re-usable and testable components.png';
 import FigmaEEMaterialThemeComponents from '../images/figma-details-images/slideshow-various-pictures/figma-ee-material-color-theme.png';
@@ -55,16 +65,12 @@ import FigmaEEEarlyPrototype from '../images/figma-details-images/slideshow-vari
 import FigmaEEAppIconShowcase from '../images/figma-details-images/slideshow-various-pictures/Figma-EE-App-Icon-Showcase.png';
 import FigmaEEAppstoreShowcase from '../images/figma-details-images/slideshow-various-pictures/Figma-ee-appstore-showcases.png';
 
-
-
 //Slideshow of Portfolio Prototypes
 import FigmaPortfolioSiteComponents from '../images/figma-details-images/slideshow-portfolio-pictures/Figma-Portfolio-Components.png';
 import FigmaPortfolioSitePrototype from '../images/figma-details-images/slideshow-portfolio-pictures/Figa-Site-Med-High Fidelity Prototype.png';
 
 
-
 //** Cloud Data Images */
-
 
 //Slideshow of images
 import CDFoodDocumentObjectStructure from '../images/cloud-database-images/CloudData-Foods-Firestore.png';
@@ -80,18 +86,12 @@ import CDAnalyticsFromCloudDatabase from '../images/cloud-database-images/CloudD
 
 //Slideshow of Nominal Usages
 import TrelloFoodsProgressCards from '../images/trello-images/slideshow-trello-usage/Trello-EE-Foods-Progress-Showcase.png';
-
 import ObsidianKanbanCodeTodoBoard from '../images/trello-images/slideshow-trello-usage/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.png';
-
 import TrelloFoodsProgressCardsMOBILE from '../images/trello-images/slideshow-trello-usage/Trello-EE-Foods-Progress-Showcase-MOBILE.png';
-
 import TrelloCurationCards from '../images/trello-images/slideshow-trello-usage/Trello-ee-Curate-progress.png';
-
 import TrelloVersionGoalsCards from '../images/trello-images/slideshow-trello-usage/Trello-EE-Version-Goals.png';
 import TrelloVersionGoalsCardsMOBILE from '../images/trello-images/slideshow-trello-usage/Trello-EE-Version-Goals-MOBILE.png';
-
 import TrelloProjectsAidedWith from '../images/trello-images/slideshow-trello-usage/Trello-View-of-projects-aided-with.png';
-
 
 
 //** Problem Solving Images */
@@ -106,6 +106,8 @@ import PSWorkBookControlls from '../images/problem-solving-images/slideshow-feat
 //Woven of framework limitations
 import PSFourDimensionArrayModel from '../images/problem-solving-images/woven-framework-limitations/ps-4-array-showcase.png';
 import PSSimplifiedPositionCalculation from '../images/problem-solving-images/woven-framework-limitations/ps-simplified-position-rotation-calc.png';
+
+
 import { type } from '@testing-library/user-event/dist/type';
 
 
@@ -117,6 +119,224 @@ import { type } from '@testing-library/user-event/dist/type';
 
 
 export const DetailsPageData = {
+
+    AutoGlassApps: {
+        
+        pageId:'AutoGlassApps',
+        
+        pageTitle:"Devin G | .NET Modernized Management Apps",
+        
+        menuLabel:"Management Platform",
+        
+        
+        
+        detailsBody:[
+            //Header on top
+            {
+                type:DetailsComponentTypes.Header,
+                text:".NET Company Management Platform"
+            }, 
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Features'
+            },
+
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Enhanced Multiplatform Workflow, with new Windows and Web Apps.",
+                    "Shared Code Library - Drives all Main Working Logic for Platforms",
+                    "Microsoft Azure -  SQL Databases and Container Hosting",
+                    "New more Accurate Invoice Previews, Simplified Data Input with Smart Selection Fetching, and more Quality of Life features for every part"
+                ]
+            },
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"A client I had previously worked with told me they wanted an upgrade to their existing workflow. We had worked together before to enhance their existing Excel workflow. I provided them with everything they wanted, with the option to easily upgrade to a platform of apps in the future. This is the answer to that upgrade request."
+            }, 
+
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"AG_Sample_Showcase_General",
+                imagesList:[
+                    {
+                        image:AG_WA_invoice_showcase,
+                        caption:"Invoice Creation and Preview Webpage"
+                    },
+                    {
+                        image:AG_WA_Workbook,
+                        caption:"WorkBook Webpage"
+                    },
+                    {
+                        image:AG_WN_company_part_pricing,
+                        caption:"Windows Company Specific Pricing Table"
+                    },
+                    {
+                        image:AG_WA_inventory,
+                        caption:"Inventory Management Webpage"
+                    },
+                    
+                ]
+            },
+            
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"*(All content on this page is from testing/showcase databases, all data is placeholder.)*"
+            },
+
+            //---------------------------------------------
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Web App'
+            },
+
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"AG_Web_App_Showcase",
+                imagesList:[
+                    {
+                        image:AG_WA_Workbook,
+                        caption:"WorkBook Webpage"
+                    },
+                    {
+                        image:AG_WA_edit_workbook,
+                        caption:"Edit WorkBook Entry Webpage"
+                    },
+                    {
+                        image:AG_WA_invoice_showcase,
+                        caption:"Invoice Creation and Preview Webpage"
+                    },
+                    {
+                        image:AG_WA_company_names,
+                        caption:"Company Names Table WebPage"
+                    },
+                    {
+                        image:AG_WA_inventory,
+                        caption:"Inventory Management Webpage"
+                    },
+                    {
+                        image:AG_WA_prices_for_companys_and_info,
+                        caption:"Company Part Prices WebPage"
+                    },
+                    
+                ]
+            },
+            
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Web App Features'
+            },
+
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Built with ASP.NET using Razor & MVC",
+                    "Styled with TailWindCSS & Injected with NPM",
+                    "Containerized with Docker, allowing the app to be deployed almost anywhere"
+                ]
+            },
+
+
+            //--------------Web and Windows Seperator------------------
+
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Windows App'
+            },
+
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"AG_Windows_App_Showcase",
+                imagesList:[
+                    {
+                        image:AG_WN_connection_config,
+                        caption:"Connection Configuration Screen"
+                    },
+                    {
+                        image:AG_WN_workbook,
+                        caption:"Windows WorkBook Table"
+                    },
+                    {
+                        image:AG_WN_company_part_pricing,
+                        caption:"Company Client Part Pricing Table"
+                    },
+                    {
+                        image:AG_WN_company_part_price_edit,
+                        caption:"Edit Price Form"
+                    },
+                    {
+                        image:AG_WN_company_names,
+                        caption:"Company Names Table"
+                    },
+                    {
+                        image:AG_WN_home_launch,
+                        caption:"Form Launch Choice Selection"
+                    },
+                    {
+                        image:AG_WN_inventory,
+                        caption:"Inventory Table View"
+                    },
+                    
+                ]
+            },
+            
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Windows App Features'
+            },
+
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Built with WinForms using .Net Core",
+                    "Cloud Connected with Validation Checks Before Main User Actions",
+                    "Has Offline Database Features so during any Outage Operations can still continue"
+                ]
+            },
+
+            //--------------Web and Windows Seperator------------------
+
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"The Library is the most important part of all the apps. Almost all working logic is built and run from the library; the unique logic in each app is the differences in UI/UX."
+            },
+
+            
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Library Aspects'
+            },
+
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Handles Services and Actions for Each Workflow",
+                    "Manages Connection Methods and DAO Objects for UI/UX to Display",
+                    "Leverages Other Libraries for Complex Tasks like PDF Creation with QuestPDF and Excel CSV Creation from Database Objects with CsvHelper",
+                    "Database and Deployments were tested using a Local Linux-Hosted MySQL Server, before switching to SQL Server for Full Deployment",
+                ]
+            },
+
+            
+
+
+            
+
+
+            
+
+
+            
+            
+        ]
+        
+        
+    },
     
     EasyEats: {
         
@@ -137,7 +357,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyTitle,
-                text:'Features'
+                text:'Includes:'
             },
 
             {

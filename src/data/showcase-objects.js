@@ -6,6 +6,14 @@ import { DetailsPageData } from './details-pages-data';
 import { PortfolioColors } from '../ui/colors';
 
 
+//***** AG Images *****/
+import AG_WA_Workbook from '../images/auto-management-platform-pictures/web-app/AG_WA_workbook.png';
+import AG_WN_connection_config from '../images/auto-management-platform-pictures/windows-app/AG_WIN_ConnectionConfiguration.png';
+import AG_WA_invoice_showcase from '../images/auto-management-platform-pictures/web-app/AG_WA_invoice_showcase.png';
+import AG_WA_prices_for_companys_and_info from '../images/auto-management-platform-pictures/web-app/AG_WA_prices_for_companys_and_info.png';
+
+
+
 //***** EasyEats Images *****/
 import EasyEatsiOSPreview from '../images/showcase-previews/easyeats_previews/ios_ee_preview_adjusted.png';
 import EasyEatsAndroidPreview from '../images/showcase-previews/easyeats_previews/android-ee-preview_adjusted.png';
@@ -77,10 +85,62 @@ import AnotherDataShowcase from '../images/showcase-previews/airsearch_previews/
 export const ShowcaseObjects = [
 
 
+    //.NET Web & Windows Company Management App
+    {
+        showcaseTitle:"Modernized Web & Windows .NET Company Management Platform",
+        showcaseDescription:`Request from a client to modernize and overhaul an Excel Workflow with new features like cloud connectivity, database backends, and web app capabilities.`,
+        dateLabel:"Nov 2025 - Jan 2026",
+
+
+        navDestination:`/details/${DetailsPageData.AutoGlassApps.pageId}`,
+
+
+        //Array of preview images to reference and use 
+        //Background color for gradient cover
+
+        
+        backgroundInfo:{
+            backgroundImages: [
+                {
+                    img:AG_WA_Workbook,
+                    alt:"Preview of the Website Workbook"
+                },
+        
+                {
+                    img:AG_WN_connection_config,
+                    alt:"Preview of the Windows connection config"
+                },
+        
+                {
+                    img:AG_WA_invoice_showcase,
+                    alt:"Preview of the Invoice preview page"
+                },
+                
+                {
+                    img: AG_WA_prices_for_companys_and_info,
+                    alt: "Preview of Company Specific Part Prices"
+                },
+            ],
+
+            rotation:'rotate(5deg)',
+            scale:1.5,
+
+
+            backgroundColorInfo:'linear-gradient(98deg,rgba(0, 96, 144, 0.84) 39%, rgba(24, 139, 240, 0.59) 65%)',
+        },
+
+
+
+        
+
+        
+    },
+
+
     //EasyEats App Showcase
     {
         showcaseTitle:"EasyEats: Eating Made Easy",
-        showcaseDescription:"A multi-platform recipe dieting app I created and published on iOS and Android. Features personalized food recommendations & recipes, tailored macro calculations, smart grocery lists, and more.",
+        showcaseDescription:"A Multiplatform recipe dieting app I created and published on iOS and Android. Features personalized food recommendations & recipes, tailored macro calculations, smart grocery lists, and more.",
         
         dateLabel:"iOS - April, 2024 | Android - Jun, 2025",
 
@@ -481,6 +541,10 @@ export const ShowcaseObjects = [
 
         
     },
+
+
+
+    
 
 
 
