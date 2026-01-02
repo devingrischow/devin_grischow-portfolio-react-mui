@@ -3,7 +3,7 @@ export const workExperience = [
     {
         workTitleText: "Lead Full Stack Software Developer - .Net, SQL, Azure",
         workTime:"Nov 2025 - Dec 2025",
-        workType:"Contract - Hybrid",
+        workType:"Contract",
         points:[
             "Modernized an Excel company workflow with custom apps and an SQL Database, deploying app containers on Azure from Docker Hub.",
             "Developed a .NET multiplatform library to use identical working logic in each app.",
