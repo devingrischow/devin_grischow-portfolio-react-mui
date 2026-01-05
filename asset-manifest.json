@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bec2dcfa.css",
-    "main.js": "/static/js/main.2da900d3.js",
+    "main.js": "/static/js/main.d33e7a58.js",
     "static/media/Launch Details Showcase.png": "/static/media/Launch Details Showcase.ecb4f8dfd8478da25de5.png",
     "static/media/SpaceX Showcase.png": "/static/media/SpaceX Showcase.510e6edf5217c9f6e93a.png",
     "static/media/Global Luanch Showcase.png": "/static/media/Global Luanch Showcase.b3075476971d565ab81e.png",
@@ -51,12 +51,12 @@
     "static/media/Figma-FocusGarden-Prototyping.png": "/static/media/Figma-FocusGarden-Prototyping.aaabf232877e9b880fb4.png",
     "static/media/AG_WA_prices_for_companys_and_info.png": "/static/media/AG_WA_prices_for_companys_and_info.21f069e68ce8f3891bc8.png",
     "static/media/AG_WA_company_names_table.png": "/static/media/AG_WA_company_names_table.bca714cdc24410d6c6ce.png",
+    "static/media/Portfolio Photo.png": "/static/media/Portfolio Photo.8f6ac24a031156900620.png",
     "static/media/Figma-ee-appstore-showcases.png": "/static/media/Figma-ee-appstore-showcases.e714d6187ed20c31e627.png",
     "static/media/CATB - Custom Animation File.png": "/static/media/CATB - Custom Animation File.a73196b6b66f7bd136de.png",
     "static/media/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.png": "/static/media/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.ef14bb2ecf9d8945b143.png",
     "static/media/ps-excel-using-company-names.png": "/static/media/ps-excel-using-company-names.fd1d51e07505c61a05dd.png",
     "static/media/Cloud-Involved-Showcase.png": "/static/media/Cloud-Involved-Showcase.9e4b47e611ff3f4bc1a2.png",
-    "static/media/Portfolio Photo.png": "/static/media/Portfolio Photo.8ffba624d9c227a98ed9.png",
     "static/media/AG_WA_invoice_showcase.png": "/static/media/AG_WA_invoice_showcase.df00a39d82aab362fba7.png",
     "static/media/DATA-showcase.png": "/static/media/DATA-showcase.e3dd13b7a3a584b17105.png",
     "static/media/CloudData-Foods-Firestore.png": "/static/media/CloudData-Foods-Firestore.9f11fda930acf8e4154b.png",
@@ -86,10 +86,10 @@
     "static/media/AG_WIN_HomeLaunch.png": "/static/media/AG_WIN_HomeLaunch.f114d4e1615cfbe53725.png",
     "index.html": "/index.html",
     "main.bec2dcfa.css.map": "/static/css/main.bec2dcfa.css.map",
-    "main.2da900d3.js.map": "/static/js/main.2da900d3.js.map"
+    "main.d33e7a58.js.map": "/static/js/main.d33e7a58.js.map"
   },
   "entrypoints": [
     "static/css/main.bec2dcfa.css",
-    "static/js/main.2da900d3.js"
+    "static/js/main.d33e7a58.js"
   ]
 }
