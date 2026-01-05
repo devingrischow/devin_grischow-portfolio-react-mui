@@ -6,7 +6,7 @@ export const workExperience = [
         workType:"Contract",
         points:[
             "Modernized an Excel company workflow with custom apps and an SQL Database, deploying app containers on Azure from Docker Hub.",
-            "Developed a .NET multiplatform library to use identical working logic in each app.",
+            "Developed a .NET Multiplatform library to use identical working logic in each app.",
             "Created tools to help simplify tasks like Workbook jobs, Inventory management, Customer Specific Pricing, and Invoice creation.",
             "Web and Windows apps developed and deployed using Docker, WinForms, ASP.NET, and Razor. Auth handled by Identity & Authorization."
         ]
