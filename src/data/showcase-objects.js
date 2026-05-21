@@ -87,7 +87,7 @@ export const ShowcaseObjects = [
 
     //.NET Web & Windows Company Management App
     {
-        showcaseTitle:"Modernized Web & Windows .NET Company Management Platform",
+        showcaseTitle:"Web & Windows - .NET Company Management Platform",
         showcaseDescription:`Request from a client to modernize and overhaul an Excel Workflow with new features like cloud connectivity, database backends, and web app capabilities.`,
         dateLabel:"Nov 2025 - Jan 2026",
 
@@ -247,7 +247,7 @@ export const ShowcaseObjects = [
 
     //Workbook Invoicer VBA App Showcase
     {
-        showcaseTitle:"Invoice & Excel Workflow Enhancement with VBA",
+        showcaseTitle:"VBA Client Invoice Generator Within Excel Spreadshet",
         showcaseDescription:"An Excel implementation designed for a client to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
         
         dateLabel:"May, 2025",
@@ -439,55 +439,55 @@ export const ShowcaseObjects = [
     },
 
 
-    //AirSearch
-    {
-        showcaseTitle:"AirSearch",
-        showcaseDescription:`A Website that I made for my javascript class final that shows the schedule of upcoming rocket launches. It does this Utelizing API's, Javscript, and dynamic content.`,
+    // //AirSearch
+    // {
+    //     showcaseTitle:"AirSearch",
+    //     showcaseDescription:`A Website that I made for my javascript class final that shows the schedule of upcoming rocket launches. It does this Utelizing API's, Javscript, and dynamic content.`,
         
        
-        link:'https://github.com/devingrischow/AirSearch', 
+    //     link:'https://github.com/devingrischow/AirSearch', 
 
-        backgroundInfo:{
-            backgroundImages: [
-                {
-                    img:SQLCode,
-                    alt:"Preview of the SQL code for building the database components"
-                },
+    //     backgroundInfo:{
+    //         backgroundImages: [
+    //             {
+    //                 img:SQLCode,
+    //                 alt:"Preview of the SQL code for building the database components"
+    //             },
         
-                {
-                    img:DataShowcase,
-                    alt:"Preview of some of the data initialized within the database"
-                },
+    //             {
+    //                 img:DataShowcase,
+    //                 alt:"Preview of some of the data initialized within the database"
+    //             },
         
-                {
-                    img:AirSearchCodeshowcase,
-                    alt:"Preview of some of the code for the site"
-                },
+    //             {
+    //                 img:AirSearchCodeshowcase,
+    //                 alt:"Preview of some of the code for the site"
+    //             },
 
-                {
-                    img:AnotherDataShowcase,
-                    alt:"Another Preview of some of the data initialized."
-                },
+    //             {
+    //                 img:AnotherDataShowcase,
+    //                 alt:"Another Preview of some of the data initialized."
+    //             },
 
-                {
-                    img:SQLCode,
-                    alt:"Preview of the SQL code for building the database components"
-                },
+    //             {
+    //                 img:SQLCode,
+    //                 alt:"Preview of the SQL code for building the database components"
+    //             },
 
                 
                 
                
-            ],
+    //         ],
 
-            scale:4,
-            // rotation:'rotate(10deg)',
-
-
-            backgroundColorInfo:'linear-gradient(162deg,rgb(82, 99, 99) 10%, rgba(172, 228, 3, 0) 100%)',
-        },
+    //         scale:4,
+    //         // rotation:'rotate(10deg)',
 
 
-    },
+    //         backgroundColorInfo:'linear-gradient(162deg,rgb(82, 99, 99) 10%, rgba(172, 228, 3, 0) 100%)',
+    //     },
+
+
+    // },
 
 
 
