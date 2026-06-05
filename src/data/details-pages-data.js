@@ -107,6 +107,10 @@ import PSWorkBookControlls from '../images/problem-solving-images/slideshow-feat
 import PSFourDimensionArrayModel from '../images/problem-solving-images/woven-framework-limitations/ps-4-array-showcase.png';
 import PSSimplifiedPositionCalculation from '../images/problem-solving-images/woven-framework-limitations/ps-simplified-position-rotation-calc.png';
 
+//** AI Development Photos */
+import OrangeDataVisualization from '../images/ai-development-photos/AIDP-data-visualization-through-orange.png';
+import RoboFlowRoofAnnotationPrototype from '../images/ai-development-photos/AIDP-RoboFlow-Roof-Annotation-Prototype.png';
+
 
 import { type } from '@testing-library/user-event/dist/type';
 
@@ -179,11 +183,6 @@ export const DetailsPageData = {
                     },
                     
                 ]
-            },
-            
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"*(All content on this page is from testing/showcase databases, all data is placeholder.)*"
             },
 
             //---------------------------------------------
@@ -417,12 +416,27 @@ export const DetailsPageData = {
                     }
                 ]
             },
-            
-            
+
+
             {
-                type:DetailsComponentTypes.BodyText,
-                text:'Key features that were used in managing and creating the app include the likes of NoSQL cloud databases, custom-built solutions and admin panels, agile project management practices, and more. The results being an globally accessable app on the major mobile app stores, monetized through Google Ads.'
+                type:DetailsComponentTypes.BodyTitle,
+                text:'Key Features'
             },
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Google Cloud NoSQL Database Firebase",
+                    "Custom-built Software & Tools",
+                    "Built with Agile Project Management Practices",
+                    "Downloadable from iOS Appstore & Google Play",
+                    "Monetized with Google Ads"
+                ]
+            },
+            
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:'Key features that were used in managing and creating the app include the likes of NoSQL cloud databases, custom-built solutions and admin panels, agile project management practices, and more. The results being an globally accessable app on the major mobile app stores, monetized through Google Ads.'
+            // },
 
             //Link to EasyEats Github Code Snippets
             {
@@ -485,11 +499,16 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.BodyTitle,
                 text:'What does it do?'
             },
-            
+            // {
+            //     type:DetailsComponentTypes.BulletPointBody,
+            //     textList:[
+            //         "Google Cloud NoSQL Database Firebase"
+            //     ]
+            // },
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:'EasyEats helps with the modern challenge that is dieting and eating. It does this by leveraging technology in creative and intelligent ways to tackle every side of a person’s eating habits. Users are able to swipe through curated foods based on data from their Macro Profile, view scalable recipes, and even watch videos for any step of every meal. After that, they can view their daily macros, instantly create new smart shopping lists, and adjust it to fit their needs.'
+                text:'EasyEats helps with the modern challenge that is dieting and eating. It does this by leveraging mobile technology in creative and intelligent ways to help with every part of a person’s eating habits. Users are able to swipe through curated foods based on data from their Macro Profile, view scalable recipes, and even watch videos for any step of every meal. After that, they can view their daily macros, instantly create new smart shopping lists, and adjust it to fit their needs.'
             },
 
             {
@@ -532,11 +551,23 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.BodyTitle,
                 text:`How's it built?`
             },
-            
+
             {
-                type:DetailsComponentTypes.BodyText,
-                text:'Using iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help handle various tasks like asynchronous image loading with Kingfisher and Coil, animations with Lottie, and cloud database storage and authentication and more using Firebase and Google Cloud. To provide users with the most accurate as possible information about themselves, macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Front end built using iOS and Android’s native compositional frameworks, SwiftUI and Compose.",
+                    "Asynchronous images with libraries from Kingfisher and Coil.",
+                    "Multi-Platform Animations with Lottie.",
+                    "Database, Auth, and Image Storage using Google Cloud Firebase.",
+                    "Macros are calculated using equations and data from scientifically trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and the CDC."
+                    
+                ]
             },
+            
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:'Using iOS and Android’s native compositional libraries, SwiftUI and Compose. Both platforms use libraries to help handle various tasks like asynchronous image loading with Kingfisher and Coil, animations with Lottie, and cloud database storage and authentication and more using Firebase and Google Cloud. To provide users with the most accurate as possible information about themselves, macros are calculated using equations and data from scientifically accurate and trustworthy sources like the National Institutes of Health (NIH), Harvard Health, and even the CDC.'
+            // },
 
 
             {
@@ -575,7 +606,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Firebase has been essential in making EasyEats possible, thanks to its clean integrations with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency when entering new global items. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to batch edit videos, and helped further reduce the file sizes of videos specifically for the step based videos."
+                text:"Firebase was essential in making EasyEats possible, thanks to its clean integrations with iOS and Android, along with its extensive testing tools and documentation. It made development simple and fast, yet still incredibly customizable and in-depth. However, because of how in-depth some items were getting, I wanted to reduce the chances of error and increase efficiency when entering new global items. So I made several tools to help, like an admin panel for adding items to Firebase, and an editing tool with Python to batch edit videos and help quickly reduce the file sizes of videos, mainly for the step based videos."
             }, 
 
 
@@ -641,7 +672,7 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I first started using Figma and learning professional design practices in college while taking a UI/UX class. It’s not one of my most-used skill, but prototyping and planning still play a big role in the overall app development process."
+                text:"I first started using Figma and learning professional design practices in college while taking a UI/UX class. High quality UI design is not one of my most-used skill, but prototyping and planning still play a big role in the overall app development process."
             }, 
 
 
@@ -675,7 +706,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve designed and prototyped lots of software, and almost anytime a project gets big or detailed, Figma becomes part of the process to help prototype and design a quality UI and UX. Whether you’re prototyping features or mapping out full concepts, it’s important to understand the entire process. When I tutored students about the stacks of app development, I told them that at every stage the more you understand how to design, develop, and preform other parts of the stack, the better and more efficient your and your entire team works."
+                text:"I’ve created lots of softwares, and almost anytime a project gets big or detailed, Figma becomes part of the process to help prototype and design a quality UI and UX. Whether you’re prototyping features or mapping out full concepts, it’s important to understand the entire process. When I tutored app development students, I told them that at every stage the more you understand how to design, develop, and preform other parts of the stack, the better and more efficient your and your entire team works."
             }, 
 
 
@@ -731,7 +762,7 @@ export const DetailsPageData = {
 
                     {
                         image:FigmaPortfolioSitePrototype,
-                        caption:"Prototype for this site"
+                        caption:"Figma prototype for this site"
                     },
                     
                 ]
@@ -741,7 +772,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Prototyping and design play a key role in the workflow, that even this site is designed and prototyped in Figma. Details and designs are important not only for the look but also for designing how the features should work."
+                text:"Prototyping and design play a key role in the development workflow, even this site I designed and prototyped in Figma. Details and designs are important not only for the look but also for designing how the features should work."
             }, 
 
 
@@ -760,7 +791,7 @@ export const DetailsPageData = {
         
         pageTitle:"Devin G | Cloud DataBases",
         
-        menuLabel:"Cloud Databases",
+        menuLabel:"Cloud Services",
         
         
         
@@ -768,18 +799,18 @@ export const DetailsPageData = {
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:"Cloud Databases"
+                text:"Cloud Services"
             }, 
             
         
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I began learning Google Cloud Firebase even before it was required in my classes, simply because the app I was building needed a way to store large amounts of data, deliver updates, and share content globally. Bundling data into the app wasn’t going to work for my needs, so I researched what I’d need and got to work."
+                text:"I started learning cloud services early on. I had a class project where I needed individual saved user data, and globally accessable collections of data. Bundling all the data into the app wasn’t going to work, so I researched what I was going to need. I found Google Firebase, learned what it was and what it offered, and starting using Cloud Databases Since."
             }, 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Before I knew it, I was teaching and tutoring others on how to use cloud databases effectively, covering best practices, how to navigate documentation, and how to make the most of each part of a cloud suite."
+                text:"Before I knew it, I was teaching and tutoring others on how to use cloud databases effectively, covering best practices, usages, and more."
             }, 
 
             {//Carousel of various firebase images to showcase
@@ -797,7 +828,7 @@ export const DetailsPageData = {
                     },
                     {
                         image:CDIntegrationsWithASingleProject,
-                        caption:"App implementations used in one database"
+                        caption:"App implementations used in one project"
                     },
 
                     {
@@ -821,17 +852,57 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyTitle,
-                text:"Services & Usage"
+                text:"My Used Services"
             }, 
 
             {
-                type:DetailsComponentTypes.BodyText,
-                text:"Firebase was my starting point, but the principles I’ve learned and tutored apply to virtually any cloud platform. I’ve also researched and compared other services like AWS, Azure, MongoDB, and more for use in other projects. One key point I always emphasize is the importance of bandwidth: minimizing unnecessary server calls is critical for both performance and scalability."
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Firebase & Google Cloud"
             }, 
             {
-                type:DetailsComponentTypes.BodyText,
-                text:"It’s really easy to make and overuse functions that call to the server, so understanding how to make and use effective calls is important. Not just for making effective softwares but also for making sure the bandwidth, cost, and the database are stable at any scale."
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Firestore",
+                    "Authentication",
+                    "Hosting",
+                    "App Analytics",
+                    "Test Lab",
+                    "Push Notifications"
+                ]
+            },
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Azure"
             }, 
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Container App",
+                    "SQL database",
+                    "SQL server"
+                ]
+            },
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"CloudFlare"
+            }, 
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Tunnels",
+                ]
+            },
+
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"Firebase was my starting point, but the principles I’ve learned and tutored apply to virtually any cloud platform. I’ve also researched and compared other services like AWS, Azure, MongoDB, and more for use in other projects. One key point I always emphasize is the importance of bandwidth: minimizing unnecessary server calls is critical for both performance and scalability."
+            // }, 
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"It’s really easy to make and overuse functions that call to the server, so understanding how to make and use effective calls is important. Not just for making effective softwares but also for making sure the bandwidth, cost, and the database are stable at any scale."
+            // }, 
             
             
             
@@ -901,7 +972,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"In college while working on apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints, and overseen them. Agile has helped my workflow and made my work needed for others go a lot smoother and faster."
+                text:"In college while working on apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints, and overseen them. Agile has helped my workflow and made my work with for others go a lot smoother and faster."
             }, 
             
             
@@ -1081,30 +1152,87 @@ export const DetailsPageData = {
                 type:DetailsComponentTypes.Header,
                 text:"AI - Usage & Grasp"
             },
+
+            {
+                type:DetailsComponentTypes.BodyText,
+                text:"I’ve been following AI development years before ChatGPT hit the mainstream in 2022. I studied Neural networks, model concepts, data organization & visualization, all and any part of it has been a small passion of mine for a long time. Now more than ever I've working more and more with modern toolings, and with my previous knowledge im able to work with these new tools much more efficiently."
+            },
+
+           
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"AI Tools Used"
+            },
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "CVAT: Computer Vision Annotation Tool",
+                    "CreateML",
+                    "Orange Data Mining",
+                    "Ollama",
+                    "Cursor",
+                    
+                    
+                ]
+            },
+
+            // IMAGES OF AI USAGE EXAMPLES + TRAINING
+            //Slideshow of Trello Pictures
+
+            //Images to include: 
+            //CVAT with annotations
+            //Pictures From Orange Visualizing Data
+            {
+                type:DetailsComponentTypes.CarouselImagesDisplay,
+                carouselID:"Trello_showcases",
+                imagesList: [
+                    {
+                        image:RoboFlowRoofAnnotationPrototype,
+                        caption:"Inspecting an Object Detection Annotated Photo from Roboflow."
+                    },
+                    {
+                        image:OrangeDataVisualization,
+                        caption:"Visualizing a datset from inside orange."
+                    },
+                ]
+            },
             
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"What Have I used AI For?"
+            },
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Creating a Roof Damage Object Detection Model for a company client from proprietary photos and annotating them in CVAT, then training the models in CreateML.",
+                    "Taught Students how to train their own CreateML Models, best practices & differences for models, and how to integrate them into their apps.",
+                    "Setup & USed Locally Hosted AI in custom autonomous workflows for repetivive tasks through N8N"                    
+                ]
+            },
             
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"AI is a huge and booming part of the coding industry. Not only is it changing the way we code, it’s changing the way we make ideas and think about implementing them. What once was a simple chat box on websites can now be a full customer service agent that can even help users shop for exactly what they’re looking for, at the same time factoring in your inventory and what’s popular. Currently, the sky is the limit for ideas."
-            },
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"AI is a huge and booming part of the coding industry. Not only is it changing the way we code, it’s changing the way we make ideas and think about implementing them. What once was a simple chat box on websites can now be a full customer service agent that can even help users shop for exactly what they’re looking for, at the same time factoring in your inventory and what’s popular. Currently, the sky is the limit for ideas."
+            // },
 
 
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"That’s why it’s so important for the average developer to be in the know with AI, at least some aspect of it. I’ve been following AI development years before ChatGPT became mainstream in 2022. Neural networks, models, data organization, visualization, all and every part of it has been a small passion of mine for a long time."
-            },
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"That’s why it’s so important for the average developer to be in the know with AI, at least some aspect of it. I’ve been following AI development years before ChatGPT became mainstream in 2022. Neural networks, models, data organization, visualization, all and every part of it has been a small passion of mine for a long time."
+            // },
 
 
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"For one of my college summers, I was able to tutor over an AI learning program. We taught students the fundamentals of AI and to understand the differences and use cases of various AI models. We also taught them how to code better with AI and how to understand and code with it more effectively, while also stating the importance of code base safety. We also taught them how to visualize algorithms and data with Orange, and how to effectively organize data. With that knowledge, they were told to make some iOS apps about solving problems they were passionate about. They made tons of great ideas, some apps even went onto being published to the App Store in other programs."
-            },
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"For one of my college summers, I was able to tutor over an AI learning program. We taught students the fundamentals of AI and to understand the differences and use cases of various AI models. We also taught them how to code better with AI and how to understand and code with it more effectively, while also stating the importance of code base safety. We also taught them how to visualize algorithms and data with Orange, and how to effectively organize data. With that knowledge, they were told to make some iOS apps about solving problems they were passionate about. They made tons of great ideas, some apps even went onto being published to the App Store in other programs."
+            // },
 
 
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"What I discovered while coding a few complex projects and working as a TA is that it’s easy to ask ChatGPT or any AI to make every part of an app for you, but it will make bugs, and you will inevitably encounter an issue of some kind that seems normal, but you need to change how it works slightly. That’s why it’s important for a developer to not only understand how to make effective prompts but to also understand the underlying problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
-            },
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"What I discovered while coding a few complex projects and working as a TA is that it’s easy to ask ChatGPT or any AI to make every part of an app for you, but it will make bugs, and you will inevitably encounter an issue of some kind that seems normal, but you need to change how it works slightly. That’s why it’s important for a developer to not only understand how to make effective prompts but to also understand the underlying problems they’re trying to solve. You need to understand the fundamentals of coding and the environment you’re in order to be able to properly fix and make effective solutions."
+            // },
             
             
             

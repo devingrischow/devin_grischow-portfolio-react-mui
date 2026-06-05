@@ -492,55 +492,55 @@ export const ShowcaseObjects = [
 
 
 
-    //Figma Design showcase (same link as the figma skill)
-    {
-        showcaseTitle:"Figma Design",
-        showcaseDescription:`Showcase of various UI/UX projects Ive worked on in Figma and a demonstration of Figma’s importance for software development.`,
+    // //Figma Design showcase (same link as the figma skill)
+    // {
+    //     showcaseTitle:"Figma Design",
+    //     showcaseDescription:`Showcase of various UI/UX projects Ive worked on in Figma and a demonstration of Figma’s importance for software development.`,
         
 
-        navDestination:`/details/${DetailsPageData.FigmaDesign.pageId}`,
+    //     navDestination:`/details/${DetailsPageData.FigmaDesign.pageId}`,
 
 
-        //Array of preview images to reference and use 
-        //Background color for gradient cover
+    //     //Array of preview images to reference and use 
+    //     //Background color for gradient cover
 
         
-        backgroundInfo:{
-            backgroundImages: [
-                {
-                    img:PortfolioZoomOutPreview,
-                    alt:"Preview of This sites Zoomed out Figma"
-                },
+    //     backgroundInfo:{
+    //         backgroundImages: [
+    //             {
+    //                 img:PortfolioZoomOutPreview,
+    //                 alt:"Preview of This sites Zoomed out Figma"
+    //             },
         
-                {
-                    img:EasyEatsZoomInPreview,
-                    alt:"Preview of EasyEats zoomed In"
-                },
+    //             {
+    //                 img:EasyEatsZoomInPreview,
+    //                 alt:"Preview of EasyEats zoomed In"
+    //             },
         
-                {
-                    img:PortfolioZoomInPreview,
-                    alt:"Preview of this site zoomed in"
-                },
+    //             {
+    //                 img:PortfolioZoomInPreview,
+    //                 alt:"Preview of this site zoomed in"
+    //             },
                 
-                {
-                    img: EasyEatsZoomOutPreview,
-                    alt: "Preview of EasyEats Figma Zoomed Out"
-                },
-            ],
+    //             {
+    //                 img: EasyEatsZoomOutPreview,
+    //                 alt: "Preview of EasyEats Figma Zoomed Out"
+    //             },
+    //         ],
 
-            rotation:'rotate(5deg)',
-            scale:2,
-
-
-            backgroundColorInfo:'linear-gradient(162deg,#A259FF 10%, rgba(87, 199, 133, 0) 100%)',
-        },
+    //         rotation:'rotate(5deg)',
+    //         scale:2,
 
 
+    //         backgroundColorInfo:'linear-gradient(162deg,#A259FF 10%, rgba(87, 199, 133, 0) 100%)',
+    //     },
 
-        
+
 
         
-    },
+
+        
+    // },
 
 
 

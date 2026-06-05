@@ -237,7 +237,10 @@ export function BulletPointBody({
                     fontSize:'1.5rem',
                     display: 'list-item',
                     pl:0 //Override Default Item Root Position
-                }, pl: 10, lineHeight: 1.433 }}>
+                }, 
+                pl: 10, 
+                pb: 5 ,
+                lineHeight: 1.433 }}>
                 
                 {
                     textList.map( (pointText, index) => (

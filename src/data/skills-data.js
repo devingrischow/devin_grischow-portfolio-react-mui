@@ -14,10 +14,10 @@ export const SkillsData = [
         skillset:'Development',
 
         notableSkills:[
-            {
-                nSkillTitle:'Problem Solving',
-                route:DetailsPageData.ProblemSolving.pageId
-            },
+            // {
+            //     nSkillTitle:'Problem Solving',
+            //     route:DetailsPageData.ProblemSolving.pageId
+            // },
 
             {
                 nSkillTitle:'AI',
@@ -50,7 +50,7 @@ export const SkillsData = [
         notableSkills:[
 
             {
-                nSkillTitle:'Cloud Databases',
+                nSkillTitle:'Cloud Services',
                 route:DetailsPageData.CloudDatabases.pageId
             },
 
@@ -113,7 +113,7 @@ export const SkillsData = [
 
         notableSkills:[
             {
-                nSkillTitle:'Trello & Kanban',
+                nSkillTitle:'Tracked Agile Workflow',
                 route:DetailsPageData.Trello.pageId
             },
         ],
@@ -140,7 +140,9 @@ export const SkillsData = [
             'Git & GitHub',
             'Docker',
             'Azure',
+            'CloudFlare',
             'Firebase & Google Cloud',
+            'N8N',
             'Branching, Merging & Pull Requests',
             'Code Collaboration', 
         ]

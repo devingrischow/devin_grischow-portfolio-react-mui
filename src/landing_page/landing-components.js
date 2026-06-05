@@ -110,14 +110,14 @@ const TitleText = styled('h3')(({ theme }) => ({
 }));
 
 
-const AboutMeLabel = styled('h4')(({ theme }) => ({
+const AboutMeLabel = styled('p')(({ theme }) => ({
     
     
     paddingTop:smallLabelVerticalPaddingAmount,
     
 
 
-    fontSize:'calc(1rem + 0.5vw)',
+    fontSize:'calc(1rem + 0.2vw)',
 
     wordBreak: 'break-word',
 
@@ -195,7 +195,7 @@ export const  NameAndImageHeader = () => {
     
     
     {/* Profile Picture */}
-    <Avatar 
+    {/* <Avatar 
     alt='Devin Grischow'
     src={PortfolioPicture}
 
@@ -215,7 +215,7 @@ export const  NameAndImageHeader = () => {
     } }
     
     
-    />
+    /> */}
     <AboutMeLabel>
       { ContactInfo.quickAboutMe }
     </AboutMeLabel>
