@@ -934,8 +934,26 @@ export const DetailsPageData = {
             
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"Concepts I was introduced to early on. I frequently use agile when working on projects and tracking lots of tasks, so I  efficiently and smoothly get work done. While I was tutoring I made sure students understood its importance. I taught them the aspects of agile workflow, like how to effectively manage their tasks and time so they could publish their apps in just a few weeks."
+                text:"Concepts I was introduced to early on. I frequently use agile when working on projects and tracking lots of tasks, so I can efficiently and smoothly get work done. While I was tutoring I made sure students understood its importance. I taught them the aspects of agile workflow, like how to effectively manage their tasks and time so they could publish their apps in just a few weeks."
             }, 
+
+
+            {
+                type:DetailsComponentTypes.BodyTitle,
+                text:"Tools Ive Used for Agile Workflows"
+            },
+            {
+                type:DetailsComponentTypes.BulletPointBody,
+                textList:[
+                    "Trello",
+                    "Markdown",
+                    "Obsidian",
+                    "Slack",
+                    "Figma + Figma Jam",                    
+                    "MindNode"
+                    
+                ]
+            },
 
 
             //Slideshow of Trello Pictures
@@ -970,10 +988,12 @@ export const DetailsPageData = {
                 ]
             },
 
-            {
-                type:DetailsComponentTypes.BodyText,
-                text:"In college while working on apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints, and overseen them. Agile has helped my workflow and made my work with for others go a lot smoother and faster."
-            }, 
+            
+
+            // {
+            //     type:DetailsComponentTypes.BodyText,
+            //     text:"In college while working on apps, we would routinely have sprints to discuss our current progress, issues, how we planned to solve them, and what our strategy was moving forward to the next sprint. I’ve done sprints, and overseen them. Agile has helped my workflow and made my work with for others go a lot smoother and faster."
+            // }, 
             
             
             
@@ -1155,7 +1175,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyText,
-                text:"I’ve been following AI development years before ChatGPT hit the mainstream in 2022. I studied Neural networks, model concepts, data organization & visualization, all and any part of it has been a small passion of mine for a long time. Now more than ever I've working more and more with modern toolings, and with my previous knowledge im able to work with these new tools much more efficiently."
+                text:"I’ve been following AI development years before ChatGPT hit the mainstream in 2022. I studied Neural networks, model concepts, data organization & visualization, all and any part of it has been a small passion of mine for a long time. Now more than ever I've worked more and more with modern toolings, and with my prior knowledge im able to work with these new tools very efficiently."
             },
 
            
