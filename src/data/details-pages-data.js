@@ -138,7 +138,7 @@ export const DetailsPageData = {
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:".NET Company Management Platform"
+                text:".NET Vehicle Window Company Management Platform"
             }, 
 
             {
@@ -1190,7 +1190,7 @@ export const DetailsPageData = {
                     "CreateML",
                     "Orange Data Mining",
                     "Ollama",
-                    "Cursor",
+                    "Zed",
                     
                     
                 ]
@@ -1227,7 +1227,8 @@ export const DetailsPageData = {
                 textList:[
                     "Creating a Roof Damage Object Detection Model for a company client from proprietary photos and annotating them in CVAT, then training the models in CreateML.",
                     "Taught Students how to train their own CreateML Models, best practices & differences for models, and how to integrate them into their apps.",
-                    "Setup & USed Locally Hosted AI in custom autonomous workflows for repetivive tasks through N8N"                    
+                    "Setup & USed Locally Hosted AI in custom autonomous workflows for repetivive tasks through N8N",
+                    "Set up an Ubuntu Linux Docker development server to use Ollama, N8N, CVAT, and Agentic development workflows with zed on a local network."             
                 ]
             },
             

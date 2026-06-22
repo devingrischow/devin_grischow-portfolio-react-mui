@@ -158,7 +158,7 @@ export function MoreOnGithubContainer({refs}){
         ]} modWidthWoven={'100%'} mobileDisplayMode={'column'} />
         
 
-        <ThemeProvider theme={GithubHeaders}>
+        {/* <ThemeProvider theme={GithubHeaders}>
             <Typography variant='GithubLabel' >
                 <a href="https://github.com/Dgriscow"
                       onMouseEnter={() => setCollegeHover(true)}
@@ -180,7 +180,7 @@ export function MoreOnGithubContainer({refs}){
             },
             
 
-        ]} modWidthWoven={'100%'} mobileDisplayMode={'column'} />
+        ]} modWidthWoven={'100%'} mobileDisplayMode={'column'} /> */}
 
         </Stack>
     );

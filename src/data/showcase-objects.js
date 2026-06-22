@@ -87,7 +87,7 @@ export const ShowcaseObjects = [
 
     //.NET Web & Windows Company Management App
     {
-        showcaseTitle:"Web & Windows - .NET Company Management Platform",
+        showcaseTitle:".NET Vehicle Window Company Management Platform - Web & Windows",
         showcaseDescription:`Request from a client to modernize and overhaul an Excel Workflow with new features like cloud connectivity, database backends, and web app capabilities.`,
         dateLabel:"Nov 2025 - Jan 2026",
 

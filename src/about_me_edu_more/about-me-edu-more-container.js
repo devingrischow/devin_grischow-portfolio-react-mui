@@ -401,7 +401,7 @@ export function AboutMeEduAndMoreContainer({}) {
             
 
             <AboutText>
-                Associate's in Applied Science, Mobile Design And Development
+                Applied Science, Mobile Design And Development
             </AboutText>
         </Stack>
         
