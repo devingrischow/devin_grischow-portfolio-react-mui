@@ -204,41 +204,7 @@ export const ShowcaseObjects = [
 
         
 
-        badgeShowcase: {
-            badgesTitle: "Features:",
-
-            badges:[
-                {
-                    badgeTitle:"Google Cloud Backend",
-                    badgeColor:PortfolioColors.CloudBackendColor
-                },
-
-                
-
-
-                // {
-                //     badgeTitle:"Tracked Agile Workflow",
-                //     badgeColor:PortfolioColors.AgileWorkFlowTrelloColor
-                // },
-
-                {
-                    badgeTitle:"Custom Workflow Tools",
-                    badgeColor:PortfolioColors.CustomVideoEditorColor
-                },
-
-                {
-                    badgeTitle:"Step-by-Step Food Tutorial Videos",
-                    badgeColor:PortfolioColors.AdminPanelColor
-                },
-
-
-
-
-
-
-            ]
-
-        }
+        
     },
 
 
