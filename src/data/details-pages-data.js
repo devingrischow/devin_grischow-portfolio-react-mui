@@ -852,7 +852,7 @@ export const DetailsPageData = {
 
             {
                 type:DetailsComponentTypes.BodyTitle,
-                text:"My Used Services"
+                text:"Services Used"
             }, 
 
             {
@@ -891,7 +891,7 @@ export const DetailsPageData = {
             {
                 type:DetailsComponentTypes.BulletPointBody,
                 textList:[
-                    "Tunnels",
+                    "Tunnel Deployment with Docker",
                 ]
             },
 

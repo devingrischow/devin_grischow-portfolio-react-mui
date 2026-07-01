@@ -51,7 +51,7 @@ export function ShowCaseCell(showcaseObject){
     const matchesSmallScreenQuery = useMediaQuery('(min-width:600px)');
     
     
-    const horizontalMargin = '17vw'
+    const horizontalMargin = '6%'
 
 
     const borderRadius = '2vw'

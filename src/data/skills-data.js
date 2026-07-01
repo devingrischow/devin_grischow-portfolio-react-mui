@@ -120,6 +120,8 @@ export const SkillsData = [
 
         skills:[
             'Agile Workflow',
+            'Trello',
+            'Obsidian',
             'Sprints',
             'Documentation',
             'Competently handle changes to project and project parameters',
