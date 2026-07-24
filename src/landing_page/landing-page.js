@@ -43,7 +43,7 @@ import { GlobalFooter } from '../ui/globalFooter'
 
 
 
-import { NameAndImageHeader, ContactsAndDisplayElementHolder } from './landing-components'
+import { NameAndImageHeader, ContactsAndDisplayElementHolder, ContentNavigationOptions, AboutMeAndMoreNavOption } from './landing-components'
 
 import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
@@ -184,7 +184,9 @@ export const LandingPage = () => {
             />
 
 
-            <NameAndImageHeader />
+            <NameAndImageHeader
+              hideHeader={isLandingPageAbout}
+             />
 
 
 
@@ -199,6 +201,8 @@ export const LandingPage = () => {
 
              
             />
+
+            <GlobalFooter />
 
 
         </div>
@@ -218,10 +222,6 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
   const isMatchingSmallScreen = GetMatchesSmallScreen('700px')
 
 
-  const aboutText = "About | Education | & More"
-  
-  const headerInfoText = isLandingPageAbout ? "Back" : aboutText
-
   //App Bar ALSO Includes Quick Buttons to go to the Specific Sections on the landing page
   //ONLY if screen is large enough 
   //ALSO dont show it on about me pages 
@@ -232,45 +232,49 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
     if(isMatchingSmallScreen === true && isLandingPageAbout === false){
       
         return (
-          <Stack
-            direction={'row'}
-          >
-            {
+          
+          <ContentNavigationOptions
+            handleGoToRef={handleGoToRef}
+          />
+          // <Stack
+          //   direction={'row'}
+          // >
+          //   {
               
-              MenuData.map( menuItem =>
-              {
+          //     MenuData.map( menuItem =>
+          //     {
 
-                if('headerText' in menuItem){
-                  //ONLY show the Menu Headers
-                  return (
-                  <Button
-                    sx={{
-                      color:"inherit"
-                    }}
+          //       if('headerText' in menuItem){
+          //         //ONLY show the Menu Headers
+          //         return (
+          //         <Button
+          //           sx={{
+          //             color:"inherit"
+          //           }}
 
-                    onClick={() => {
-                      //On click switches destination/target depending on needs
-                        handleGoToRef(menuItem.headerText)
+          //           onClick={() => {
+          //             //On click switches destination/target depending on needs
+          //               handleGoToRef(menuItem.headerText)
                         
-                    }}
+          //           }}
 
 
-                  >
-                    <h1 style={{
-                      fontWeight:'500',
-                      fontSize:'1em',
+          //         >
+          //           <h1 style={{
+          //             fontWeight:'500',
+          //             fontSize:'1em',
                       
 
-                    }}>{menuItem.headerText}</h1>
-                  </Button>)
-                }
+          //           }}>{menuItem.headerText}</h1>
+          //         </Button>)
+          //       }
 
-              }
-            )
+          //     }
+          //   )
 
-            }
+          //   }
            
-          </Stack>
+          // </Stack>
         );
     }
 
@@ -316,20 +320,12 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
 
 
 
-
-        <Button 
-        onClick={ isLandingPageAbout ? handleChangePageToLanding : handleChangePageToAboutMe } 
-
-        onMouseEnter={() => setIsOverAboutMeNavBar(true)}
-        onMouseLeave={() => setIsOverAboutMeNavBar(false)}
-
-        sx={{
-          fontWeight: isOverAboutMeNavBar ? 650 : 500
-        }}
-
-        color="inherit">
-          { headerInfoText }
-        </Button>
+        <AboutMeAndMoreNavOption
+          handleChangePageToAboutMe={handleChangePageToAboutMe}
+          handleChangePageToLanding={handleChangePageToLanding}
+          isLandingPageAbout={isLandingPageAbout}
+        />
+        
 
 
       </Toolbar>
@@ -382,7 +378,7 @@ function LandingPageAboutMeHandler({
 
         <ContactAndAboutFooter handleClickEvent={handledClickEvent}  />
 
-        <GlobalFooter />
+        
 
       </div>
 

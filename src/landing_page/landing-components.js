@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -22,6 +22,8 @@ import { PortfolioColors } from '../ui/colors'
 
 //Data Imports for elements 
 import { ContactInfo } from '../data/contact-info';
+import { MenuData } from '../data/menu-data';
+
 
 
 import { GetMatchesSmallScreen } from "../ui/matchesSmallScreenCondition";
@@ -37,6 +39,7 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { AboutMeEduAndMoreContainer } from '../about_me_edu_more/about-me-edu-more-container';
 
 
 
@@ -113,7 +116,7 @@ const TitleText = styled('h3')(({ theme }) => ({
 const AboutMeLabel = styled('p')(({ theme }) => ({
     
     
-    paddingTop:smallLabelVerticalPaddingAmount,
+    // paddingTop:smallLabelVerticalPaddingAmount,
     
 
 
@@ -154,7 +157,7 @@ export const LandingLocations = {
 
 
 
-export const  NameAndImageHeader = () => {
+export const  NameAndImageHeader = ({hideHeader=false}) => {
   //Reference to if the screen is small or not 
   const doesScreenMatchSmall = GetMatchesSmallScreen()
 
@@ -167,21 +170,24 @@ export const  NameAndImageHeader = () => {
   //In the header, call another function for making the Hello Title 
   
   //In the Header ALSO contains a horizontal MUI stack to hold the name+title and the image next to each other 
+  if (hideHeader == false) {
+
+  
   return (
     <header className="name-image-header">
     
     <Stack 
-    direction="row"
+    // direction="row"
     sx={ { 
       
-      display:'flex',
-      
+      // display:'flex',
+      height: '90vh', //Should Make the heigh Expand to be the entire size of the browser size
       justifyContent: "space-between",       
-      alignItems: "center",
+      // alignItems: "center",
       
       
-      marginTop: '2vw',
-      // 
+      // marginTop: '2vw',
+      
       marginLeft: '7vw',
       marginRight:'2vw',
       
@@ -192,6 +198,7 @@ export const  NameAndImageHeader = () => {
     } }
     >
     { NameAndTitle() }
+    
     
     
     {/* Profile Picture */}
@@ -220,11 +227,17 @@ export const  NameAndImageHeader = () => {
       { ContactInfo.quickAboutMe }
     </AboutMeLabel>
     
+    <ContentNavigationOptions
+      fontSize='1.2rem'
+    />
+
+    <br />
     
     </Stack>
     
     </header>
   );
+  }
 }
 
 
@@ -239,10 +252,11 @@ function NameAndTitle(){
   return (
     
     <Stack 
-    spacing={4}
+    spacing={'4vh'}
     
     sx={ {
       justifyContent: "center",
+      padding:4
     } }
     >
     <Box
@@ -280,9 +294,9 @@ export function ContactsAndDisplayElementHolder({displayElement}){
   console.log("Matches Small: ", matches)
 
   if(matches){
-    return(<ContactsAndDisplayElementHorizontal displayElement={displayElement} />);
+    return(<ContactsAndDisplayElementVertical displayElement={displayElement} />);
   }else{
-    return(<ContactsAndAndDisplayElementHorizontal displayElement={displayElement} />);
+    return(<ContactsAndDisplayElementHorizontal displayElement={displayElement} />);
     
   }
 
@@ -293,7 +307,8 @@ export function ContactsAndDisplayElementHolder({displayElement}){
 
 //Contact Container 
 //Uses 2 different versions. 1 vertical, 2 horizontal
-export function ContactsAndDisplayElementHorizontal({displayElement}) {
+//**Mobile Display Element
+export function ContactsAndDisplayElementVertical({displayElement}) {
   // const matches = useMediaQuery('(min-width:600px)');
   
   
@@ -342,7 +357,7 @@ export function ContactsAndDisplayElementHorizontal({displayElement}) {
 
 
 //Vertical Layout for Smaller phones
-function ContactsAndAndDisplayElementHorizontal({displayElement}){
+function ContactsAndDisplayElementHorizontal({displayElement}){
   return ( 
     
     <Stack
@@ -364,6 +379,7 @@ function ContactsAndAndDisplayElementHorizontal({displayElement}){
     
     >
     
+    
     <HorizontalContactsContainer />
     
     
@@ -377,8 +393,83 @@ function ContactsAndAndDisplayElementHorizontal({displayElement}){
   );
 }
 
+//Navigaion Button that takes you to the About me and edu and hobbies page and shows back when you want to navigate back
+//Shows "About|Education|& More" or "BACK"
+export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout}) {
+  const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
+  
+  const aboutText = "About | Education | & More"
+  const headerInfoText = isLandingPageAbout ? "Back" : aboutText
+
+  return (
+    <Button 
+        onClick={ isLandingPageAbout ? handleChangePageToLanding : handleChangePageToAboutMe } 
+
+        onMouseEnter={() => setIsOverAboutMeNavBar(true)}
+        onMouseLeave={() => setIsOverAboutMeNavBar(false)}
+
+        sx={{
+          fontWeight: isOverAboutMeNavBar ? 650 : 500
+        }}
+
+        color="inherit">
+          { headerInfoText }
+        </Button>
+  );
+}
+
+//Navigation Buttons that allow the user to jump to where they want to go on the main content page
+//Shows various options like "Home" "Showcase" "Experience" etc...
+export const ContentNavigationOptions = ({handleGoToRef, fontSize='1rem'}) => {
+  return (
+    <Stack
+            direction={'row'}
+            sx={ { 
+              alignItems: "center",
+              justifyContent: "center",
+              display:'flex',
+              // minHeight:'64px',
+              
+             } }
+          >
+            {
+              
+              MenuData.map( menuItem =>
+              {
+
+                if('headerText' in menuItem){
+                  //ONLY show the Menu Headers
+                  return (
+                  <Button
+                    sx={{
+                      color:"inherit"
+                    }}
+
+                    onClick={() => {
+                      //On click switches destination/target depending on needs
+                        handleGoToRef(menuItem.headerText)
+                        
+                    }}
 
 
+                  >
+                    <h1 style={{
+                      fontWeight:'500',
+                      fontSize:fontSize,
+                      
+
+                    }}>{menuItem.headerText}</h1>
+                  </Button>)
+                }
+
+              }
+            )
+
+            }
+           
+          </Stack>
+  );
+}
 
 
 
