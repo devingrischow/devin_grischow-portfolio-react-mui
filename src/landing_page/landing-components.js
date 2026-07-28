@@ -157,7 +157,11 @@ export const LandingLocations = {
 
 
 
-export const  NameAndImageHeader = ({hideHeader=false}) => {
+export const FolioMainHeader = ({
+  hideHeader=false, 
+  handleGoToRef,
+  handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout,
+  ref}) => {
   //Reference to if the screen is small or not 
   const doesScreenMatchSmall = GetMatchesSmallScreen()
 
@@ -174,7 +178,7 @@ export const  NameAndImageHeader = ({hideHeader=false}) => {
 
   
   return (
-    <header className="name-image-header">
+    <header className="name-image-header" ref={ref} >
     
     <Stack 
     // direction="row"
@@ -227,8 +231,17 @@ export const  NameAndImageHeader = ({hideHeader=false}) => {
       { ContactInfo.quickAboutMe }
     </AboutMeLabel>
     
-    <ContentNavigationOptions
+    {/* <ContentNavigationOptions
       fontSize='1.2rem'
+      cnctNavBarRef={ref}
+    /> */}
+    <GuidedCombinedNavBar 
+      handleGoToRef={handleGoToRef}
+      fontSize={'1.2rem'}
+
+      handleChangePageToAboutMe={handleChangePageToAboutMe}
+      handleChangePageToLanding={handleChangePageToLanding}
+      isLandingPageAbout={isLandingPageAbout}
     />
 
     <br />
@@ -393,11 +406,37 @@ function ContactsAndDisplayElementHorizontal({displayElement}){
   );
 }
 
+
+export function GuidedCombinedNavBar({
+  handleGoToRef, fontSize,
+  handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout
+  }) {
+
+    return (
+    <Stack>
+      <ContentNavigationOptions 
+        handleGoToRef={handleGoToRef}
+        fontSize={fontSize}
+      />
+
+      <AboutMeAndMoreNavOption
+        handleChangePageToAboutMe={handleChangePageToAboutMe}
+        handleChangePageToLanding={handleChangePageToLanding}
+        isLandingPageAbout={isLandingPageAbout}
+        fontSize={fontSize}
+      />
+
+    </Stack>
+    );
+  
+}
+
+
 //Navigaion Button that takes you to the About me and edu and hobbies page and shows back when you want to navigate back
 //Shows "About|Education|& More" or "BACK"
-export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout}) {
+export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChangePageToLanding, isLandingPageAbout, fontSize='1rem'}) {
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
-  
+
   const aboutText = "About | Education | & More"
   const headerInfoText = isLandingPageAbout ? "Back" : aboutText
 
@@ -409,7 +448,8 @@ export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChange
         onMouseLeave={() => setIsOverAboutMeNavBar(false)}
 
         sx={{
-          fontWeight: isOverAboutMeNavBar ? 650 : 500
+          fontWeight: isOverAboutMeNavBar ? 650 : 500,
+          fontSize: fontSize
         }}
 
         color="inherit">
@@ -420,9 +460,10 @@ export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChange
 
 //Navigation Buttons that allow the user to jump to where they want to go on the main content page
 //Shows various options like "Home" "Showcase" "Experience" etc...
-export const ContentNavigationOptions = ({handleGoToRef, fontSize='1rem'}) => {
+export function ContentNavigationOptions({handleGoToRef, fontSize='1rem', cnctNavBarRef}) {
   return (
     <Stack
+            ref={cnctNavBarRef}
             direction={'row'}
             sx={ { 
               alignItems: "center",

@@ -166,65 +166,6 @@ function App() {
 
 
 
-//** Components
-
-
-
-
-
-
-
-
-//Container for BOTH styles of portfolio scrolling 
-
-
-
-
-//Container for 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Contact +  About, Education & more buttons
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//ShowCase Components
-
-
-
 
 
 

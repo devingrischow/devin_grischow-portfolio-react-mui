@@ -36,6 +36,7 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 import { GlobalFooter } from '../ui/globalFooter'
 
+import { useIsVisible } from '../Utilities'
 
 
 
@@ -43,7 +44,7 @@ import { GlobalFooter } from '../ui/globalFooter'
 
 
 
-import { NameAndImageHeader, ContactsAndDisplayElementHolder, ContentNavigationOptions, AboutMeAndMoreNavOption } from './landing-components'
+import { FolioMainHeader, ContactsAndDisplayElementHolder, ContentNavigationOptions, AboutMeAndMoreNavOption, GuidedCombinedNavBar } from './landing-components'
 
 import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
@@ -69,6 +70,11 @@ export const LandingPage = () => {
     //Page CAN have parameters to controll where to initially scroll to 
     let detailsPageDataParams = useParams();
 
+    //Used to detect/point to the main portfolio nav header
+    //when its no longer visible, this var is going to help enable the other other
+    const headerNavBarRef = useRef();
+
+    const mainHeaderIsVisible = useIsVisible(headerNavBarRef);
 
 
     //Declared Function to change the page state
@@ -175,6 +181,7 @@ export const LandingPage = () => {
 
 
                 isLandingPageAbout={isLandingPageAbout}
+                isMainHeaderInFocus={mainHeaderIsVisible}
               />
             <PortfolioDrawer 
               isDrawerOpen={isLandingDrawerOpen} 
@@ -184,8 +191,15 @@ export const LandingPage = () => {
             />
 
 
-            <NameAndImageHeader
+            <FolioMainHeader
               hideHeader={isLandingPageAbout}
+
+              handleGoToRef={handleGoToGivenRef}
+              handleChangePageToAboutMe={handleChangePageToAboutMe}
+              handleChangePageToLanding={handleChangePageToLanding}
+              isLandingPageAbout={isLandingPageAbout}
+
+              ref={headerNavBarRef}
              />
 
 
@@ -216,7 +230,7 @@ export const LandingPage = () => {
 
 
 
-function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout}) {  
+function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout, isMainHeaderInFocus=true}) {  
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
 
   const isMatchingSmallScreen = GetMatchesSmallScreen('700px')
@@ -229,7 +243,7 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
     console.log("Nav Header Buttons: Is Matching Small Screen?: ", isMatchingSmallScreen)
     console.log("Nav Header Buttons: Is Landing Page About?: ", isLandingPageAbout)
 
-    if(isMatchingSmallScreen === true && isLandingPageAbout === false){
+    if(isMatchingSmallScreen === true && isLandingPageAbout === false && isMainHeaderInFocus === false){
       
         return (
           
@@ -280,6 +294,20 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
 
   }
 
+  const HeaderControlledAboutMeElement = () => {
+    if (isMainHeaderInFocus === false) {
+      return(
+        <AboutMeAndMoreNavOption
+          handleChangePageToAboutMe={handleChangePageToAboutMe}
+          handleChangePageToLanding={handleChangePageToLanding}
+          isLandingPageAbout={isLandingPageAbout}
+        />
+      );
+    }
+  } 
+
+
+
   return (
 
     <AppBar position="static"
@@ -315,16 +343,13 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
 
         <NavHeaderButtons />
 
-            
+        
+        <HeaderControlledAboutMeElement />
 
 
 
 
-        <AboutMeAndMoreNavOption
-          handleChangePageToAboutMe={handleChangePageToAboutMe}
-          handleChangePageToLanding={handleChangePageToLanding}
-          isLandingPageAbout={isLandingPageAbout}
-        />
+        
         
 
 
