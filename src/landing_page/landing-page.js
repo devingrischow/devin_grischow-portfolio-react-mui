@@ -233,7 +233,7 @@ export const LandingPage = () => {
 function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout, isMainHeaderInFocus=true}) {  
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
 
-  const isMatchingSmallScreen = GetMatchesSmallScreen('700px')
+  const isMatchingSmallScreen = GetMatchesSmallScreen('900px')
 
 
   //App Bar ALSO Includes Quick Buttons to go to the Specific Sections on the landing page

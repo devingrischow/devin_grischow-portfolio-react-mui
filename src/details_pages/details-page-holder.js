@@ -9,13 +9,13 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
 
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useState, useRef } from 'react';
 
 
 
 
-import { useParams } from "react-router";
+// import { useParams } from "react-router";
 
 
 
@@ -274,7 +274,7 @@ export function DetailsPageHolder() {
 
 
 
-function  DetailsPortfolioNavigationNavBar({ 
+export function DetailsPortfolioNavigationNavBar({ 
   openLandingDrawer
 }) {
   

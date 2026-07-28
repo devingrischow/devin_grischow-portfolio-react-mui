@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import React, { useEffect, useState, useRef } from "react";
+import { useNavigate, useParams } from "react-router";
 
 
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -130,8 +131,9 @@ const AboutMeLabel = styled('p')(({ theme }) => ({
 
 
    
-    marginRight:'2vw',
-    marginLeft:'2vw'
+    marginLeft:'9vw',
+    marginRight:'4vw',
+    
         
 
 
@@ -192,8 +194,7 @@ export const FolioMainHeader = ({
       
       // marginTop: '2vw',
       
-      marginLeft: '7vw',
-      marginRight:'2vw',
+      
       
       
       flexWrap:'wrap',
@@ -269,7 +270,10 @@ function NameAndTitle(){
     
     sx={ {
       justifyContent: "center",
-      padding:4
+      padding:4,
+      
+      marginLeft: '7vw',
+      marginRight:'2vw',
     } }
     >
     <Box
@@ -440,9 +444,22 @@ export function AboutMeAndMoreNavOption({handleChangePageToAboutMe, handleChange
   const aboutText = "About | Education | & More"
   const headerInfoText = isLandingPageAbout ? "Back" : aboutText
 
+  const navigate = useNavigate();
+
+
+  const navigateToAboutPage = () => {
+    navigate(`/about`);
+
+    window.scrollTo({
+      top: 0,
+      behavior:'instant'
+    })
+  }
+
+
   return (
     <Button 
-        onClick={ isLandingPageAbout ? handleChangePageToLanding : handleChangePageToAboutMe } 
+        onClick={ navigateToAboutPage } 
 
         onMouseEnter={() => setIsOverAboutMeNavBar(true)}
         onMouseLeave={() => setIsOverAboutMeNavBar(false)}
@@ -469,6 +486,7 @@ export function ContentNavigationOptions({handleGoToRef, fontSize='1rem', cnctNa
               alignItems: "center",
               justifyContent: "center",
               display:'flex',
+              flexWrap: 'wrap'
               // minHeight:'64px',
               
              } }
