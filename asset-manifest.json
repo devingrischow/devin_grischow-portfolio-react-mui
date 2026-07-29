@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bec2dcfa.css",
-    "main.js": "/static/js/main.ed6d6331.js",
+    "main.js": "/static/js/main.ea64afd9.js",
     "static/media/Launch Details Showcase.png": "/static/media/Launch Details Showcase.ecb4f8dfd8478da25de5.png",
     "static/media/SpaceX Showcase.png": "/static/media/SpaceX Showcase.510e6edf5217c9f6e93a.png",
     "static/media/Global Luanch Showcase.png": "/static/media/Global Luanch Showcase.b3075476971d565ab81e.png",
@@ -45,6 +45,7 @@
     "static/media/AG_WA_inventory.png": "/static/media/AG_WA_inventory.51be669152137b979bce.png",
     "static/media/ps-excel-using-part-number-dropdown.png": "/static/media/ps-excel-using-part-number-dropdown.f33788392ba0d7c74f95.png",
     "static/media/Trello-ee-Curate-progress.png": "/static/media/Trello-ee-Curate-progress.2c95289435d8174353c5.png",
+    "static/media/Portfolio Photo.png": "/static/media/Portfolio Photo.63d4c763f6a56671e763.png",
     "static/media/Trello-EE-Version-Goals.png": "/static/media/Trello-EE-Version-Goals.b44d8c60521f6d36621f.png",
     "static/media/ps-simplified-position-rotation-calc.png": "/static/media/ps-simplified-position-rotation-calc.2352ab3fed786e1e6ad2.png",
     "static/media/AG_WA_workbook.png": "/static/media/AG_WA_workbook.658bf7bb4026fcfbab6d.png",
@@ -53,7 +54,6 @@
     "static/media/Figma-FocusGarden-Prototyping.png": "/static/media/Figma-FocusGarden-Prototyping.aaabf232877e9b880fb4.png",
     "static/media/AG_WA_prices_for_companys_and_info.png": "/static/media/AG_WA_prices_for_companys_and_info.21f069e68ce8f3891bc8.png",
     "static/media/AG_WA_company_names_table.png": "/static/media/AG_WA_company_names_table.bca714cdc24410d6c6ce.png",
-    "static/media/Portfolio Photo.png": "/static/media/Portfolio Photo.8f6ac24a031156900620.png",
     "static/media/Figma-ee-appstore-showcases.png": "/static/media/Figma-ee-appstore-showcases.e714d6187ed20c31e627.png",
     "static/media/CATB - Custom Animation File.png": "/static/media/CATB - Custom Animation File.a73196b6b66f7bd136de.png",
     "static/media/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.png": "/static/media/Obsidian-Kanban-LavaRocks-Code-Todo-Showcase.ef14bb2ecf9d8945b143.png",
@@ -88,10 +88,10 @@
     "static/media/AG_WIN_HomeLaunch.png": "/static/media/AG_WIN_HomeLaunch.f114d4e1615cfbe53725.png",
     "index.html": "/index.html",
     "main.bec2dcfa.css.map": "/static/css/main.bec2dcfa.css.map",
-    "main.ed6d6331.js.map": "/static/js/main.ed6d6331.js.map"
+    "main.ea64afd9.js.map": "/static/js/main.ea64afd9.js.map"
   },
   "entrypoints": [
     "static/css/main.bec2dcfa.css",
-    "static/js/main.ed6d6331.js"
+    "static/js/main.ea64afd9.js"
   ]
 }
