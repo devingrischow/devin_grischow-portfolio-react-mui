@@ -134,7 +134,7 @@ function NotableSkillContainer(notableSkills){
                     
                     
                     // minWidth:'fit-content',
-
+                    
                     
 
                   }}
@@ -175,7 +175,7 @@ function NotableSkillCell(notableSkills, index){
 
 
 
-        height:'100%',
+        height:'calc(1.6rem + 2vw)',
 
 
 
@@ -185,14 +185,15 @@ function NotableSkillCell(notableSkills, index){
 
      
 
-
+        margin:'5px',
         textAlign: 'center',
 
-        padding:'5px',
+        
 
-
-        minWidth:'fit-content',
-
+        width:'80%',
+        minWidth:'8vw',
+        maxWidth:'60vw',
+        
 
 
 

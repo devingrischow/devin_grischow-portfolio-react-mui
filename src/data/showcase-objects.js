@@ -211,72 +211,7 @@ export const ShowcaseObjects = [
 
 
 
-    //Workbook Invoicer VBA App Showcase
-    {
-        showcaseTitle:"VBA Client Invoice Generator Within Excel Spreadshet",
-        showcaseDescription:"An Excel implementation designed for a client to speed up an existing workflow and to help handle the workbook, creating invoices, managing inventory and prices, and more.",
-        
-        dateLabel:"May, 2025",
-
-        //Array of preview images to reference and use 
-        //Background color for gradient cover
-
-        link:'https://github.com/devingrischow/VBA-Excel-Invoicing-Workbook-System',
-
-        
-        backgroundInfo:{
-            backgroundImages: [
-                {
-                    img:VBAInvoicePreview,
-                    alt:"Preview of an invoice before being printed out."
-                },
-        
-                {
-                    img:VBAPricesPreview,
-                    alt:"Smart List of Prices fir clients."
-                },
-        
-                {
-                    img:VBAWorkbookPreview,
-                    alt:"Showcase of the smart work order book spread sheet."
-                },
-                
-                {
-                    img: VBAInvPricesPreview,
-                    alt: "Smart List of the inventory and also part prices."
-                },
-
-                 {
-                    img:VBAInvoicePreview,
-                    alt:"Preview of an invoice before being printed out."
-                },
-        
-                {
-                    img:VBAPricesPreview,
-                    alt:"Smart List of Prices fir clients."
-                },
-        
-                {
-                    img:VBAWorkbookPreview,
-                    alt:"Showcase of the smart work order book spread sheet."
-                },
-                
-                {
-                    img: VBAInvPricesPreview,
-                    alt: "Smart List of the inventory and also part prices."
-                },
-            ],
-
-
-            backgroundColorInfo:'linear-gradient(162deg,rgb(39, 136, 35) 10%, rgba(87, 199, 133, 0) 100%)',
-        },
-
-
-
-        
-
-        
-    },
+    
 
 
 
@@ -351,59 +286,7 @@ export const ShowcaseObjects = [
     },
 
 
-    //Launch Date
-    {
-        showcaseTitle:"Launch Date",
-        showcaseDescription:`A website that I made for my javascript class final that shows the schedule of upcoming rocket launches. It does this Utelizing API's, Javscript, and dynamic content.`,
-        
-       
-        link:'https://github.com/devingrischow/LaunchDate', 
-
-        backgroundInfo:{
-            backgroundImages: [
-                {
-                    img:GlobalLaunches,
-                    alt:"Section for LaunchDate that shows the upcoming global launches"
-                },
-        
-                {
-                    img:DetailsPageShowcase,
-                    alt:"The details page for viewing additional information abiout any given rocket"
-                },
-        
-                {
-                    img:SpaceXShowcases,
-                    alt:"Preview of the upcoming SpaceX launches section"
-                },
-
-                {
-                    img:GlobalLaunches,
-                    alt:"Section for LaunchDate that shows the upcoming global launches"
-                },
-        
-                {
-                    img:DetailsPageShowcase,
-                    alt:"The details page for viewing additional information abiout any given rocket"
-                },
-        
-                {
-                    img:SpaceXShowcases,
-                    alt:"Preview of the upcoming SpaceX launches section"
-                },
-                
-                
-            ],
-
-            scale:3.5,
-            rotation:'rotate(10deg)',
-
-
-            backgroundColorInfo:'linear-gradient(162deg,rgb(219, 27, 27) 10%, rgba(172, 228, 3, 0.5) 100%)',
-        },
-
-
-    },
-
+    
 
     // //AirSearch
     // {

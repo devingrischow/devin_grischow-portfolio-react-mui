@@ -928,7 +928,7 @@ export const DetailsPageData = {
             //Header on top
             {
                 type:DetailsComponentTypes.Header,
-                text:"Tracked Agile Workflow"
+                text:"Agile Workflow"
             }, 
             
             

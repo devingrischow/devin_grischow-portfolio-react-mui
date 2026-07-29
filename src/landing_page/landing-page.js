@@ -37,6 +37,7 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 import { GlobalFooter } from '../ui/globalFooter'
 
 import { useIsVisible } from '../Utilities'
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -72,9 +73,13 @@ export const LandingPage = () => {
 
     //Used to detect/point to the main portfolio nav header
     //when its no longer visible, this var is going to help enable the other other
-    const headerNavBarRef = useRef();
+    // const headerNavBarRef = useRef();
 
-    const mainHeaderIsVisible = useIsVisible(headerNavBarRef);
+    // const mainHeaderIsVisible = useIsVisible(headerNavBarRef);
+    const [headerNavBarRef, mainHeaderIsVisible] = useInView({
+      threshold: 0.1,
+      initialInView: true
+    });
 
 
     //Declared Function to change the page state

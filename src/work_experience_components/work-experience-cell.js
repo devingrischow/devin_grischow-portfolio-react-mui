@@ -46,7 +46,8 @@ export function WorkExperienceCell(workTitleText, employerName,employerSite=null
         <ListItem 
          sx={{
             '.MuiTypography-body1':{
-              fontSize:'1.25rem'
+              fontSize:'1.25rem',
+              wordBreak:'break-word'
             }
           }}
         >
