@@ -260,7 +260,7 @@ export const FolioMainHeader = ({
 
 function DisplayAvatar({textSeen}) {
   return (
-    <Slide in={textSeen} direction='left'
+    <Slide in={textSeen} direction='up'
     style={{ transitionDelay: textSeen ? '1200ms' : '0ms' }}
     >
     <Avatar
@@ -389,7 +389,7 @@ function NameAndTitle({textSeen}){
     </Slide>
     
     <Slide in={textSeen}
-    direction='left'
+    direction='up'
     style={{ transitionDelay: textSeen ? '400ms' : '0ms' }}
     >
     <ImDevinText >Devin Grischow</ImDevinText> 
