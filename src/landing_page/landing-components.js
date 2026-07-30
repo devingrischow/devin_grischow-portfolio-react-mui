@@ -43,7 +43,7 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { AboutMeEduAndMoreContainer } from '../about_me_edu_more/about-me-edu-more-container';
-import { Slide } from '@mui/material';
+import { Slide, Zoom } from '@mui/material';
 
 
 
@@ -260,7 +260,7 @@ export const FolioMainHeader = ({
 
 function DisplayAvatar({textSeen}) {
   return (
-    <Slide in={textSeen} direction='up'
+    <Zoom in={textSeen} direction='up'
     style={{ transitionDelay: textSeen ? '1200ms' : '0ms' }}
     >
     <Avatar
@@ -288,7 +288,7 @@ function DisplayAvatar({textSeen}) {
     
     />
     
-    </Slide>
+    </Zoom>
   );
 }
 

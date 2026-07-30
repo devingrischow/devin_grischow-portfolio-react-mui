@@ -2,6 +2,7 @@ export const workExperience = [
 
     {
         workTitleText: "Lead Full Stack Software Developer - .Net, SQL, Azure",
+        employerName:"Felipe Semitruck & Auto Glass Inc.",
         workTime:"Nov 2025 - Dec 2025",
         workType:"Contract",
         points:[
