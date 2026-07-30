@@ -12,9 +12,10 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import PaletteIcon from '@mui/icons-material/Palette';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 
-
+// I'm a Software Developer enthusiastic and passionate about coding and creating. 
+// I'm always excited to learn something new, problem solve, and get invested into a project.
 export const ContactInfo = {
-    quickAboutMe:"I'm a Software Developer enthusiastic and passionate about coding and creating. I'm always excited to learn something new, problem solve, and get invested into a project.",
+    quickAboutMe:"I find unique solutions for unique problems.",
 
     email:"devingrischow\n@outlook.com",
     phoneNum:"(708)-227-4381",

@@ -14,7 +14,7 @@ import { DetailsPageHolder } from './details_pages/details-page-holder';
 
 import { PageNotFoundPage } from "./PageNotFound";
 
-
+import { AboutMeAndMorePage } from './about_me_edu_more/about-me-more-page';
 
 
 export const PorfolioRoutes = createHashRouter([
@@ -35,6 +35,11 @@ export const PorfolioRoutes = createHashRouter([
         path:"/details/:detailType",
         Component:DetailsPageHolder
     }, 
+
+    {
+        path:'/about',
+        element: <AboutMeAndMorePage />
+    },
 
 
     //Catch for Invalid Page

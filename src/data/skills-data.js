@@ -113,7 +113,7 @@ export const SkillsData = [
 
         notableSkills:[
             {
-                nSkillTitle:'Tracked Agile Workflow',
+                nSkillTitle:'Agile Workflow',
                 route:DetailsPageData.Trello.pageId
             },
         ],

@@ -36,6 +36,8 @@ import PortfolioPicture from '../images/Portfolio Photo.png';
 
 import { GlobalFooter } from '../ui/globalFooter'
 
+import { useIsVisible } from '../Utilities'
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -43,7 +45,7 @@ import { GlobalFooter } from '../ui/globalFooter'
 
 
 
-import { NameAndImageHeader, ContactsAndDisplayElementHolder } from './landing-components'
+import { FolioMainHeader, ContactsAndDisplayElementHolder, ContentNavigationOptions, AboutMeAndMoreNavOption, GuidedCombinedNavBar } from './landing-components'
 
 import { WorkExperienceColumn } from '../work_experience_components/work-experience-column';
 
@@ -69,6 +71,15 @@ export const LandingPage = () => {
     //Page CAN have parameters to controll where to initially scroll to 
     let detailsPageDataParams = useParams();
 
+    //Used to detect/point to the main portfolio nav header
+    //when its no longer visible, this var is going to help enable the other other
+    // const headerNavBarRef = useRef();
+
+    // const mainHeaderIsVisible = useIsVisible(headerNavBarRef);
+    const [headerNavBarRef, mainHeaderIsVisible] = useInView({
+      threshold: 0.1,
+      initialInView: true
+    });
 
 
     //Declared Function to change the page state
@@ -175,6 +186,7 @@ export const LandingPage = () => {
 
 
                 isLandingPageAbout={isLandingPageAbout}
+                isMainHeaderInFocus={mainHeaderIsVisible}
               />
             <PortfolioDrawer 
               isDrawerOpen={isLandingDrawerOpen} 
@@ -184,7 +196,16 @@ export const LandingPage = () => {
             />
 
 
-            <NameAndImageHeader />
+            <FolioMainHeader
+              hideHeader={isLandingPageAbout}
+
+              handleGoToRef={handleGoToGivenRef}
+              handleChangePageToAboutMe={handleChangePageToAboutMe}
+              handleChangePageToLanding={handleChangePageToLanding}
+              isLandingPageAbout={isLandingPageAbout}
+
+              ref={headerNavBarRef}
+             />
 
 
 
@@ -200,6 +221,8 @@ export const LandingPage = () => {
              
             />
 
+            <GlobalFooter />
+
 
         </div>
         
@@ -212,15 +235,11 @@ export const LandingPage = () => {
 
 
 
-function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout}) {  
+function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToAboutMe, handleChangePageToLanding, handleGoToRef, isLandingPageAbout, isMainHeaderInFocus=true}) {  
   const [isOverAboutMeNavBar, setIsOverAboutMeNavBar] = useState(false);
 
-  const isMatchingSmallScreen = GetMatchesSmallScreen('700px')
+  const isMatchingSmallScreen = GetMatchesSmallScreen('900px')
 
-
-  const aboutText = "About | Education | & More"
-  
-  const headerInfoText = isLandingPageAbout ? "Back" : aboutText
 
   //App Bar ALSO Includes Quick Buttons to go to the Specific Sections on the landing page
   //ONLY if screen is large enough 
@@ -229,52 +248,70 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
     console.log("Nav Header Buttons: Is Matching Small Screen?: ", isMatchingSmallScreen)
     console.log("Nav Header Buttons: Is Landing Page About?: ", isLandingPageAbout)
 
-    if(isMatchingSmallScreen === true && isLandingPageAbout === false){
+    if(isMatchingSmallScreen === true && isLandingPageAbout === false && isMainHeaderInFocus === false){
       
         return (
-          <Stack
-            direction={'row'}
-          >
-            {
+          
+          <ContentNavigationOptions
+            handleGoToRef={handleGoToRef}
+          />
+          // <Stack
+          //   direction={'row'}
+          // >
+          //   {
               
-              MenuData.map( menuItem =>
-              {
+          //     MenuData.map( menuItem =>
+          //     {
 
-                if('headerText' in menuItem){
-                  //ONLY show the Menu Headers
-                  return (
-                  <Button
-                    sx={{
-                      color:"inherit"
-                    }}
+          //       if('headerText' in menuItem){
+          //         //ONLY show the Menu Headers
+          //         return (
+          //         <Button
+          //           sx={{
+          //             color:"inherit"
+          //           }}
 
-                    onClick={() => {
-                      //On click switches destination/target depending on needs
-                        handleGoToRef(menuItem.headerText)
+          //           onClick={() => {
+          //             //On click switches destination/target depending on needs
+          //               handleGoToRef(menuItem.headerText)
                         
-                    }}
+          //           }}
 
 
-                  >
-                    <h1 style={{
-                      fontWeight:'500',
-                      fontSize:'1em',
+          //         >
+          //           <h1 style={{
+          //             fontWeight:'500',
+          //             fontSize:'1em',
                       
 
-                    }}>{menuItem.headerText}</h1>
-                  </Button>)
-                }
+          //           }}>{menuItem.headerText}</h1>
+          //         </Button>)
+          //       }
 
-              }
-            )
+          //     }
+          //   )
 
-            }
+          //   }
            
-          </Stack>
+          // </Stack>
         );
     }
 
   }
+
+  const HeaderControlledAboutMeElement = () => {
+    if (isMainHeaderInFocus === false) {
+      return(
+        <AboutMeAndMoreNavOption
+          handleChangePageToAboutMe={handleChangePageToAboutMe}
+          handleChangePageToLanding={handleChangePageToLanding}
+          isLandingPageAbout={isLandingPageAbout}
+        />
+      );
+    }
+  } 
+
+
 
   return (
 
@@ -311,25 +348,14 @@ function LandingPortfolioNavigationNavBar({openDrawerToggle, handleChangePageToA
 
         <NavHeaderButtons />
 
-            
+        
+        <HeaderControlledAboutMeElement />
 
 
 
 
-
-        <Button 
-        onClick={ isLandingPageAbout ? handleChangePageToLanding : handleChangePageToAboutMe } 
-
-        onMouseEnter={() => setIsOverAboutMeNavBar(true)}
-        onMouseLeave={() => setIsOverAboutMeNavBar(false)}
-
-        sx={{
-          fontWeight: isOverAboutMeNavBar ? 650 : 500
-        }}
-
-        color="inherit">
-          { headerInfoText }
-        </Button>
+        
+        
 
 
       </Toolbar>
@@ -382,7 +408,7 @@ function LandingPageAboutMeHandler({
 
         <ContactAndAboutFooter handleClickEvent={handledClickEvent}  />
 
-        <GlobalFooter />
+        
 
       </div>
 
